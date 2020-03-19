@@ -63,8 +63,8 @@ else if game.app.state == fsm_game.menuGraphic begin
 	draw_item(1, menu_proportion, 200)
 	draw_item(2, menu_resolution, 200)
 	draw_bars(3, menu_font_speed, 200)
-	draw_chck(4, game.app.render.font_hd, 200)
-	draw_chck(5, game.app.render.colorize, 200)
+	//draw_chck(4, game.app.render.font_hd, 200)
+	//draw_chck(5, game.app.render.colorize, 200)
 	draw_chck(6, menu_fullscreen, 200)
 end
 #endregion

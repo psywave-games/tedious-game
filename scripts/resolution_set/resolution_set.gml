@@ -4,8 +4,8 @@
 var _mode_resolution = argument0 
 var _mode_ratio = argument1
 
-game.app.render.mode_resolution = _mode_resolution
-game.app.render.mode_ratio = _mode_ratio
+//game.app.render.mode_resolution = _mode_resolution
+/*game.app.render.mode_ratio = _mode_ratio
 
 var resolution_height= game.app.render.resolutions[_mode_resolution]
 var resolution_width = round(game.app.render.size_ratio[_mode_ratio] * resolution_height)
@@ -32,5 +32,5 @@ view_set_hport(0, camera_height)
 camera_set_view_size(view_camera[0], camera_width, camera_height)
 
 display_set_gui_size(resolution_width, resolution_height)
-window_set_size(resolution_width, resolution_height)
+window_set_size(resolution_width, resolution_height)*/
 		

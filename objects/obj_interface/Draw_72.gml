@@ -1,9 +1,6 @@
 /// @description camera
 // You can write your code in this editor
 
-draw_clear(game.app.color[0])
-
-
 
 if instance_exists(game.app.player) and game.app.state = fsm_game.play begin 
 

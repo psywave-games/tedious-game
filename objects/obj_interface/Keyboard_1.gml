@@ -103,7 +103,7 @@ end
 
 #region SET MENU GRAPHIC
 else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuGraphic begin
-	switch game.app.interface.select begin
+	/*switch game.app.interface.select begin
 		/// alterar paleta de cores
 		case 0:
 			var color = game.app.render.mode + _in 
@@ -155,7 +155,8 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuGrap
 			state_back( game.app )
 			self.select = 0
 			break
-	end
+		
+	end*/
 end
 #endregion
 

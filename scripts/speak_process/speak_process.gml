@@ -51,7 +51,7 @@ if self.speak_init <= self.speak_step and self.speak_step < self.speak_finish be
 				var _size = 0.3
 				
 				/// colorir texto
-				var _color = game.app.color[15]
+				var _color = 0xFF00FF
 				
 				/// renderizar
 				draw_text_transformed_color(_xx, _yy, _text, _size, _size, 0, _color, _color, _color, _color, 1)	

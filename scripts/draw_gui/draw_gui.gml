@@ -16,7 +16,7 @@ var _av = argument[3]
 var _text = argument[4] 
 var _font = argument[5]
 var _alpha = argument[7]
-var _color = game.app.color[argument[6]]
+var _color = 0xFFFFFF//game.app.color[argument[6]]
 var _padding = 10
 var _size = argument_count > 8? argument[8]: 0.2
 #endregion
@@ -73,7 +73,7 @@ _yy = clamp(_yy, min_y, max_y)
 
 
 #region DRAW GUI
-if game.app.render.font_hd begin
+if true begin
 	gpu_set_texfilter(true)
 	draw_text_transformed_color(_xx,_yy, _text, _size, _size, 0, _color, _color, _color, _color, _alpha)
 	gpu_set_texfilter(false)

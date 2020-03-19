@@ -114,22 +114,6 @@ audio = instance_create_layer(x,y, "Instances", obj_audio)
 
 #endregion
 
-#region INIT GRAPHYCS
-///////
-///
-///	@author RodrigoDornelles <rodrigo@dornelles.me>
-///
-///	@version	1.0		(22/12/2019)		  
-///
-///////
-
-/// @see				estabelece as cores do jogo
-/// @pattern			singleton
-/// @example			game.app.audio.volume
-/// @return object		instancia do obj_display
-render = instance_create_layer(x,y, "Instances", obj_render)
-
-#endregion
 
 #region INIT INTERFACE
 ///////
