@@ -8,7 +8,9 @@
         "b778f7d5-9da4-487f-b13d-cfbeea62ad02",
         "677b67e9-4117-4cee-8e60-2a40ced0608f",
         "00d33183-ab7a-4092-9f7d-280e10e09444",
-        "653643f6-0c08-423a-baef-03293a1a21b4"
+        "0d7d9e3e-8ab4-4fe8-8ba5-20daf0496415",
+        "653643f6-0c08-423a-baef-03293a1a21b4",
+        "e6be5a39-5b92-4e8b-8df6-da15c9ae1201"
     ],
     "filterType": "GMSprite",
     "folderName": "walls",

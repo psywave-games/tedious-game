@@ -28,6 +28,14 @@
 #macro	finish				event_user(1)	/// @example with game.app.interface finish
 #macro	start				event_user(15)	/// @example with game.app start
 
+
+
+enum word {
+	gravity	= 4,
+	slop = -3
+}
+
+
 /// FINITE STATE MACHINE PLAYER MODE
 enum fsm_player{
 	none,									/// Quando não ativado

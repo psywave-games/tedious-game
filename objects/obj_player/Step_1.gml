@@ -25,11 +25,17 @@ axis_x = game.app.input.key_axis_x
 
 #region COLISON
 
-next_x = self.x + (spd * axis_x) + (16 * axis_x)
+var descendo = self.escada == 1 and place_meeting(x,y+2, obj_wall2)
+var next_x = self.x + (spd * axis_x) + (16 * axis_x)
 
 /// não sair do mapa horizontalmente
 if next_x < 0 or next_x > room_width then
 	axis_x = 0
+
+if place_meeting(x, y + 1, obj_baseWall) and not descendo then
+	self.gravity = 0
+else 
+	self.gravity = word.gravity
 
 #endregion
 

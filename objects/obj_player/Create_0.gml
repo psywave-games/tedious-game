@@ -15,7 +15,10 @@ self.state = fsm_player.idle
 
 self.spd = 8
 
-self.gravity = 0.8
+self.escada = 0
+
+
+self.gravity = 1
 
 
 install_speak
