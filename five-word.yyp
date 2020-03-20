@@ -31,27 +31,11 @@
     },
     "resources": [
         {
-            "Key": "00247cca-af9d-45bc-a6a0-899de12db90a",
-            "Value": {
-                "id": "ad89b6b1-e1c6-4f0e-b388-2ff91de60839",
-                "resourcePath": "datafiles_yy\/geladeira.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "00d33183-ab7a-4092-9f7d-280e10e09444",
             "Value": {
                 "id": "d2a0d614-1113-4187-8570-9352f2cf2ac2",
                 "resourcePath": "sprites\/spr_sloop3\/spr_sloop3.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "03a43794-7bdf-4075-8acc-26c9c94a356a",
-            "Value": {
-                "id": "ffcc91ca-934c-4959-a28a-7d04d949847d",
-                "resourcePath": "datafiles_yy\/abajur_comoda_quarto.png.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -111,35 +95,11 @@
             }
         },
         {
-            "Key": "0e3d7ec1-59a5-45ab-adf7-f0fa05c462ab",
-            "Value": {
-                "id": "953283a0-0d8d-4414-af46-3ec0aad1d187",
-                "resourcePath": "datafiles_yy\/1balcão.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "12f6f453-138a-4e17-a54a-ceae3f7371bb",
             "Value": {
                 "id": "c6d57995-857f-40ba-9146-8dbaf6c030f9",
                 "resourcePath": "sprites\/spr_cama\/spr_cama.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "180f7e61-0344-4a4d-9794-fd90c6212367",
-            "Value": {
-                "id": "6fc53447-1e59-4a41-b98a-353916ce2155",
-                "resourcePath": "datafiles_yy\/cama.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
-            "Key": "1a26e05f-6fc9-46a3-8027-b6cfa5d3385e",
-            "Value": {
-                "id": "a093ecb3-ab56-4e7d-996e-ffb5f9df5f02",
-                "resourcePath": "datafiles_yy\/quadro.png.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -167,14 +127,6 @@
             }
         },
         {
-            "Key": "2b8dda7d-a194-41dc-975f-38368f931ae5",
-            "Value": {
-                "id": "52bb8da9-1627-449f-a2e9-98e2b3cac623",
-                "resourcePath": "datafiles_yy\/2balcão.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "2e8365e0-3442-4422-b6a9-f84b8da66d01",
             "Value": {
                 "id": "cf67bffe-3602-4865-b2c0-b3466ec32709",
@@ -183,27 +135,11 @@
             }
         },
         {
-            "Key": "30f457bc-c123-480c-bc6a-149e8ca1cb1e",
-            "Value": {
-                "id": "ae311809-259d-435a-b8bf-b795d87447bd",
-                "resourcePath": "datafiles_yy\/3balcão.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "30fed892-1072-4169-b688-03d62a891f50",
             "Value": {
                 "id": "df398f7c-ab3f-4837-854c-fcc411bd5fe2",
                 "resourcePath": "scripts\/draw_menu\/draw_menu.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "3342b7d9-f0f7-4ffe-b325-6668f073412e",
-            "Value": {
-                "id": "551affd3-51f8-4df5-a36b-f0b2a460b5fd",
-                "resourcePath": "datafiles_yy\/tomada.png.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -239,14 +175,6 @@
             }
         },
         {
-            "Key": "451912ef-dbcf-4c1b-99a8-4968adeaeb9c",
-            "Value": {
-                "id": "236687ba-641e-437e-913c-8d9b6e76cc16",
-                "resourcePath": "datafiles_yy\/negociofogao.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "48664881-fdd2-4863-842e-dd2a1512e066",
             "Value": {
                 "id": "4ed667e6-8730-431c-91c5-b2af728599f2",
@@ -260,14 +188,6 @@
                 "id": "96a53d39-6a68-452a-8976-950cafe7bb55",
                 "resourcePath": "views\/48f334a2-cc16-40ba-b25f-0e26909f14c8.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "4918422b-b110-41a1-a160-305b3b3911e2",
-            "Value": {
-                "id": "9a6136a3-0e81-4c9d-bb17-447debd25ea0",
-                "resourcePath": "datafiles_yy\/3armario_cozinha.png.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -303,27 +223,11 @@
             }
         },
         {
-            "Key": "533cd975-90e3-4b04-9f2e-1e6322282c1b",
-            "Value": {
-                "id": "b9267042-61fb-40e4-90ce-32b2724ba978",
-                "resourcePath": "datafiles_yy\/2porta.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "58d79194-8c18-4ca6-9968-2e31cc4b0149",
             "Value": {
                 "id": "c0d69e14-1e18-45f8-8b20-41e1d2ecc277",
                 "resourcePath": "views\/58d79194-8c18-4ca6-9968-2e31cc4b0149.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "5eef15f5-c09e-4b9a-aba8-56bc7c4afb3f",
-            "Value": {
-                "id": "2cad0447-3157-4c37-bff2-752d1cab08d6",
-                "resourcePath": "datafiles_yy\/1fogao.png.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -340,30 +244,6 @@
                 "id": "33bced04-ae30-4249-9d31-d2d7622b610e",
                 "resourcePath": "sprites\/spr_sloop5\/spr_sloop5.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "65a6ae8b-72df-4c31-9003-f4eb9d5f0d84",
-            "Value": {
-                "id": "91bf7245-e653-40fa-9194-7482a55dad32",
-                "resourcePath": "datafiles_yy\/travesseiro.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
-            "Key": "6765b0eb-4880-4d28-adc9-52c8529520b9",
-            "Value": {
-                "id": "781c059d-4442-4ef3-94ab-52a280b8b7be",
-                "resourcePath": "datafiles_yy\/tv balcao.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
-            "Key": "676f7632-67a0-4bec-b82e-cb28ee2b1123",
-            "Value": {
-                "id": "06e0e85a-503d-4ee6-b624-d253c0e4a0d5",
-                "resourcePath": "datafiles_yy\/janela.png.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -399,14 +279,6 @@
             }
         },
         {
-            "Key": "6f393045-3932-4d7a-b3e2-8bf5a46af592",
-            "Value": {
-                "id": "2151c717-1f58-441d-b9ac-ed6887a57db5",
-                "resourcePath": "datafiles_yy\/porta_lado.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "6fcc8f6c-d60a-448d-b21a-5ae5b1ccd6f7",
             "Value": {
                 "id": "78f4ca67-389c-408f-a23e-6d2cd9fb3699",
@@ -428,14 +300,6 @@
                 "id": "7bf839a7-5c20-4c86-9b75-e37ab8a1b7a5",
                 "resourcePath": "options\/html5\/options_html5.yy",
                 "resourceType": "GMHtml5Options"
-            }
-        },
-        {
-            "Key": "76adbb58-7623-417e-9f00-127572fba48e",
-            "Value": {
-                "id": "1dbe443d-98d2-43e5-8871-c57c0e957495",
-                "resourcePath": "datafiles_yy\/1geladeira.png.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -471,14 +335,6 @@
             }
         },
         {
-            "Key": "8d01ceed-70d5-4cef-aba2-6506394b5965",
-            "Value": {
-                "id": "ec16bb2b-1a7f-431e-a209-f6d74ef6068e",
-                "resourcePath": "datafiles_yy\/2fogao.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "8d9913c3-bf33-40bd-8b93-eddaa63eeeae",
             "Value": {
                 "id": "10ef0690-495c-4e74-8830-cb816ac5c58d",
@@ -503,22 +359,6 @@
             }
         },
         {
-            "Key": "92e8d13d-3a71-4984-bb72-175b64f5e821",
-            "Value": {
-                "id": "45ea6daf-b439-48e8-b1b2-0ec56b54b895",
-                "resourcePath": "datafiles_yy\/tela.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
-            "Key": "980954c2-79a7-4692-8632-228213eef3cf",
-            "Value": {
-                "id": "9a2e317d-d3d4-4ea3-98b7-aa57e6b70e6b",
-                "resourcePath": "datafiles_yy\/desktop.ini.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "9a850962-c5d3-4f3f-b169-409071299725",
             "Value": {
                 "id": "9d0fb638-c832-4a96-90b0-87724df8777a",
@@ -535,35 +375,11 @@
             }
         },
         {
-            "Key": "a98c6851-e7ae-4316-9be1-49319a46f40b",
-            "Value": {
-                "id": "69642636-fbbd-4a67-9867-6a986d5c6a3c",
-                "resourcePath": "datafiles_yy\/2armario_cozinha.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "b52317da-6f5a-4b7e-9449-918b196aa82c",
             "Value": {
                 "id": "84e4a8a5-45c8-475c-823a-3f4f84794e6f",
                 "resourcePath": "views\/b52317da-6f5a-4b7e-9449-918b196aa82c.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "b6ada782-ef6a-4b05-bb40-0b139c6450d7",
-            "Value": {
-                "id": "3c8ed6f0-6879-41e2-a44e-fe574f1a7bbf",
-                "resourcePath": "datafiles_yy\/tv.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
-            "Key": "b761042e-2f39-4ed3-abf2-83c4ad85d2d4",
-            "Value": {
-                "id": "8064fdb9-18ae-4eb1-ac0c-636de0993bd4",
-                "resourcePath": "datafiles_yy\/livro_comoda_quarto.png.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -580,14 +396,6 @@
                 "id": "b3bad35a-b082-4a45-887d-d9e611f2ef42",
                 "resourcePath": "views\/b8e0764c-e292-4e6d-ac3e-15b85521423f.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "bb00cda0-4a55-4480-9f2d-04792be91d9a",
-            "Value": {
-                "id": "79a6236f-1df4-4be7-9506-06458267ed8f",
-                "resourcePath": "datafiles_yy\/interruptor.png.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -612,22 +420,6 @@
                 "id": "2069caba-960e-422c-bb33-7612b34e35ed",
                 "resourcePath": "scripts\/state_back\/state_back.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "c2ead8b0-1480-493b-8867-17bb406ec04a",
-            "Value": {
-                "id": "7637912c-0783-4762-8a6b-aea9545e23ee",
-                "resourcePath": "datafiles_yy\/sotao_enter.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
-            "Key": "c3f0f479-22ef-4654-87ab-91b31f9f3795",
-            "Value": {
-                "id": "f7e53b6c-84e0-46ef-a1b9-3ba4358f2c9c",
-                "resourcePath": "datafiles_yy\/sofa.png.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -703,14 +495,6 @@
             }
         },
         {
-            "Key": "d6fa0bdb-ead2-4aae-9012-f9496103fb30",
-            "Value": {
-                "id": "072fd896-0f1b-43ae-93d3-2603cd58a9c5",
-                "resourcePath": "datafiles_yy\/4armario_cozinha.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "d879cc5d-e806-44d3-85ce-e3c526fd9086",
             "Value": {
                 "id": "92ba9577-1b0e-4c7f-b702-2779244b539d",
@@ -751,14 +535,6 @@
             }
         },
         {
-            "Key": "df43198e-37b7-4efd-be33-d034959f412d",
-            "Value": {
-                "id": "3194e50b-5606-459c-896e-f9bc29c3ae23",
-                "resourcePath": "datafiles_yy\/comoda_quarto.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "e4a9f843-2038-4830-85db-ad514765fd46",
             "Value": {
                 "id": "e7f576ec-de7a-4969-be00-84269ca227b3",
@@ -783,14 +559,6 @@
             }
         },
         {
-            "Key": "e79fd5cb-6e86-4f37-b47a-a6439ca66ddd",
-            "Value": {
-                "id": "20011778-7865-4909-b06d-e55a77b265f5",
-                "resourcePath": "datafiles_yy\/1porta.png.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "e88961da-5f96-4e79-8662-69a43178580a",
             "Value": {
                 "id": "ab6495cc-70ed-4d23-b22c-f8f33bc15734",
@@ -812,14 +580,6 @@
                 "id": "0dd9b922-c790-460f-be6a-0c09a383e133",
                 "resourcePath": "objects\/obj_wall1\/obj_wall1.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "f11e1c05-708c-439d-91f8-2b6ccbe102da",
-            "Value": {
-                "id": "4cdfe3b4-e626-4543-8298-b44b7dbdde2f",
-                "resourcePath": "datafiles_yy\/armario_cozinha1.png.yy",
-                "resourceType": "GMIncludedFile"
             }
         },
         {
