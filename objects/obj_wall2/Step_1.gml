@@ -7,7 +7,7 @@
 
 
 if place_meeting(x,y, game.app.player) then with game.app.player begin 
-	if game.app.player.escada <= 0 begin
+	if game.app.player.escada <= 0 and self.y <= other.y begin
 		self.y += word.slop
 		self.vspeed = 0
 	end
