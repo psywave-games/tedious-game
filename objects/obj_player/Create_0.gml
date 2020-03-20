@@ -1,4 +1,3 @@
-
 ///	@see				verifica se o player já foi criado
 /// @description		seta posição do jogador e se auto-destroi se nescessario, para não duplicar jogadores
 /// @return				void
@@ -15,5 +14,8 @@ game.app.player = self.id
 self.state = fsm_player.idle
 
 self.spd = 8
+
+self.gravity = 0.8
+
 
 install_speak

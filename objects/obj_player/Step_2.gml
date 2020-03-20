@@ -26,8 +26,7 @@ switch self.state begin
 		break
 		
 	case fsm_player.walk:
-		direction = point_direction(0,0, axis_x, axis_y)
-		speed = spd
+		hspeed = spd * sign(self.axis_x)
 		break
 		
 end
