@@ -42,11 +42,11 @@ end
 
 #region INTERFACE MENU GRAPHIC
 else if game.app.state == fsm_game.menuGraphic begin
-	var menu_color_name = game.app.render.names[game.app.render.mode]
+	//var menu_color_name = game.app.render.names[game.app.render.mode]
 	var menu_resolution = string(display_get_gui_width()) + "x" + string(display_get_gui_height())
-	var menu_proportion = game.app.render.name_ratio[game.app.render.mode_ratio]
+	//var menu_proportion = game.app.render.name_ratio[game.app.render.mode_ratio]
 	var menu_fullscreen = window_get_fullscreen()
-	var menu_font_speed = game.app.render.font_speed
+	//var menu_font_speed = game.app.render.font_speed
 	
 	
 	draw_menu(0, t(msg.video_palete))
@@ -59,10 +59,10 @@ else if game.app.state == fsm_game.menuGraphic begin
 	draw_menu(7, t(msg.back), 10, 60)
 	
 	
-	draw_item(0, menu_color_name, 200)
-	draw_item(1, menu_proportion, 200)
+	//draw_item(0, menu_color_name, 200)
+	//draw_item(1, menu_proportion, 200)
 	draw_item(2, menu_resolution, 200)
-	draw_bars(3, menu_font_speed, 200)
+	//draw_bars(3, menu_font_speed, 200)
 	//draw_chck(4, game.app.render.font_hd, 200)
 	//draw_chck(5, game.app.render.colorize, 200)
 	draw_chck(6, menu_fullscreen, 200)
