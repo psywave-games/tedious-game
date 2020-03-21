@@ -28,9 +28,6 @@ if instance_exists(game.app.player) and game.app.state = fsm_game.play begin
 		game.app.earthquake -= 0.1
 	end
 	
-	show_debug_message(camy)
-	
-	
 	
 	camera_set_view_pos(view_camera[0], self.camx, self.camy)
 #endregion
