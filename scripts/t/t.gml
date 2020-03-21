@@ -48,6 +48,52 @@ if game.app.lang == msg.en begin
 		case msg.beta:
 			return "WARNING: This game is a low demo,\nthe game is not finished because the programmer drank too much.\n THKX!"
 		
+		case msg.menu_exit:
+		   return "exit"
+		case msg.scorebord:
+		   return "scoreleaders"
+		case msg.interact_on:
+		   return "turn on"
+		case msg.interact_off:
+		   return "turn off "
+		case msg.interact_gap:
+		   return "grab" 
+		case msg.menu_config:
+		   return "options"
+		case msg.game_name:
+		   return"Tedious Simulator"
+		case msg.video_lighthd:
+		   return "HD Lights"
+		case msg.psy_light:
+		   return"Light"
+		case msg.psy_bed:
+		   return"Bed"
+		case msg.psy_tv:
+		   return"Television"
+		case msg.psy_freezer:
+		   return"Refrigerator"
+		case msg.psy_radio:
+		   return"Radio"
+		case msg.psy_furnace:
+		   return"Stove"
+		case msg.psy_microwave:
+		   return"Microwave"
+		case msg.psy_chair:
+		   return"Chair"
+		case msg.psy_laterna:
+		   return"Flashlight"
+		case msg.psy_ruindows:
+		   return"Window"
+		case msg.psy_instagram:
+		   return"Toilet"
+		case msg.psy_power:
+		   return"Outlet"
+		case msg.psy_switch:
+		   return"Switch"
+		case msg.suicide_power:
+		   return "Sticks a fork in the outlet"
+		case msg.video_camspeed:
+		   return "Cam Speed"
 	
 	end
 end
@@ -97,6 +143,53 @@ switch argument[0] begin
 		
 	case msg.beta:
 		return "ATENCAO: este jogo e uma demo muito inicial,\n o jogo nao esta concluido porque o programador bebeu demais.\n obrigado!"
+
+	case msg.menu_exit:
+		return "Sair"
+	case msg.scorebord:
+		return "Placar dos Lideres"
+	case msg.interact_on:
+		return "Ligar"
+	case msg.interact_off:
+		return "Desligar"
+	case msg.interact_gap:
+		return "Pegar" 
+	case msg.menu_config:
+		return "Configuracoes"
+	case msg.game_name:
+		return"Simulador de Tedio"
+	case msg.video_lighthd:
+		return "Luzes em HD"
+	case msg.psy_light:
+		return"Luzes"
+	case msg.psy_bed:
+		return"Cama"
+	case msg.psy_tv:
+		return"Televisão"
+	case msg.psy_freezer:
+		return"Geladeira"
+	case msg.psy_radio:
+		return"Radio"
+	case msg.psy_furnace:
+		return"Fogão"
+	case msg.psy_microwave:
+		return"Microondas"
+	case msg.psy_chair:
+		return"Cadeira"
+	case msg.psy_laterna:
+		return"Laterna"
+	case msg.psy_ruindows:
+		return"Janela"
+	case msg.psy_instagram:
+		return"Toilet"
+	case msg.psy_power:
+		return"Tomada"
+	case msg.psy_switch:
+		return"Interruptor"
+	case msg.suicide_power:
+		return "Enfiar o garfo na tomada"
+	case msg.video_camspeed:
+		return "Cam Speed"
 
 end
 

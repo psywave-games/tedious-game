@@ -17,4 +17,5 @@ self.select = 0
 /// @return	boolean				visible or hide
 self.alpha_start = true
 
+
 init

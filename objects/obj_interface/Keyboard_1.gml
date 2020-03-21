@@ -61,6 +61,11 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuMain
 			state_set( game.app, fsm_game.menuOptions)
 			game.app.interface.select = 0
 			break
+			
+		/// Abrir placar dos lideres
+		case 2:
+			url_open_ext("https://tediusgame.com/scoreboard", "_blank")
+			break
 				
 		/// Sair do jogo		
 		case 3:
@@ -103,12 +108,13 @@ end
 
 #region SET MENU GRAPHIC
 else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuGraphic begin
-	/*switch game.app.interface.select begin
-		/// alterar paleta de cores
+	switch game.app.interface.select begin
+		/// alterar resolucao
 		case 0:
-			var color = game.app.render.mode + _in 
-			game.app.render.mode = clamp(color, 0, 9)
-			with game.app.render init 
+			var last_resolution = array_length_1d(game.app.render.resolutions) - 1
+			var resolution = game.app.render.mode_resolution + _in
+			var mode = clamp(resolution, 0, last_resolution)
+			resolution_set (mode, game.app.render.mode_ratio)
 			break
 			
 		/// alterar proporção (ratio)
@@ -118,31 +124,30 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuGrap
 			resolution_set (game.app.render.mode_resolution, mode)
 			break
 			
-		/// alterar resolucao
-		case 2:
-			var last_resolution = array_length_1d(game.app.render.resolutions) - 1
-			var resolution = game.app.render.mode_resolution + _in
-			var mode = clamp(resolution, 0, last_resolution)
-			resolution_set (mode, game.app.render.mode_ratio)
-			break
-			
-		/// Font Speed
-		case 3:
-			var font_speed = game.app.render.font_speed + _in
-			game.app.render.font_speed = clamp(font_speed, 1, 10)
-			break
-		
 		/// alternar fontes em HD
-		case 4:
+		case 2:
 			gpu_set_texfilter(false)
 			game.app.render.font_hd ^= true
 			break
 			
-		/// alternar colorização
-		case 5:
-			game.app.render.colorize ^= true
-			with game.app.render init
+		/// alternar Luzes em HD
+		case 3:
+			game.app.render.light_hd ^= true
 			break
+		
+			
+		/// Font Speed
+		case 4:
+			var font_speed = game.app.render.font_speed + _in
+			game.app.render.font_speed = clamp(font_speed, 1, 10)
+			break
+		
+		/// Font Speed
+		case 5:
+			var font_speed = game.app.render.camera_speed + _in
+			game.app.render.camera_speed = clamp(font_speed, 1, 10)
+			break
+		
 			
 		/// alternal tela cheia
 		case 6:
@@ -156,7 +161,7 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuGrap
 			self.select = 0
 			break
 		
-	end*/
+	end
 end
 #endregion
 

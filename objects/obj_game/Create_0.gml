@@ -78,6 +78,14 @@ audio = instance_create_layer(x,y, "Instances", obj_audio)
 
 #endregion
 
+#region INIT RENDER 
+/// @see				estabelece as cores do jogo
+/// @pattern			singleton
+/// @example			game.app.render.light_hd
+/// @return object		instancia do obj_display
+self.render = instance_create_layer(x,y, "Instances", obj_render)
+#endregion
+
 #region INIT INTERFACE
 ///////
 /// @see				controle de menus do jogo (depedente do game.app.state)

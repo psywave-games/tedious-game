@@ -75,7 +75,31 @@ enum msg {
 	video_fnthd,
 	video_color,
 	video_full,
-	beta
+	beta,
+	menu_exit,
+	scorebord,
+	interact_on,
+	interact_off,
+	interact_gap,
+	menu_config,
+	game_name,
+	video_lighthd,
+	psy_light,
+	psy_bed,
+	psy_tv,
+	psy_freezer,
+	psy_sofa,
+	psy_radio,
+	psy_furnace,
+	psy_microwave,
+	psy_chair,
+	psy_laterna,
+	psy_ruindows,
+	psy_instagram,
+	psy_power,
+	psy_switch,
+	suicide_power,
+	video_camspeed
 }
 
 #macro	install_speak					self.speak_finish=0;self.speak_init=0;self.speak_mode=0;self.speak_text="";self.speak_step=0
