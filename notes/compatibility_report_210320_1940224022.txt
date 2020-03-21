@@ -1,0 +1,6 @@
+Font Font has been converted to font family Impact (Regular)
+GameMaker Studio 1 font texture has been backed up at ${project_dir}/fonts/Font/Font.gms1.png
+!!! Font FontTitle uses a font (Earth Orbiter) not installed on this system - Font has NOT been regenerated
+GameMaker Studio 1 font texture has been backed up at ${project_dir}/fonts/FontTitle/FontTitle.gms1.png
+!!! Font FontS uses a font (Bebas Neue) not installed on this system - Font has NOT been regenerated
+GameMaker Studio 1 font texture has been backed up at ${project_dir}/fonts/FontS/FontS.gms1.png
