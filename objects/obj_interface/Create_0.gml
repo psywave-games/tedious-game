@@ -1,6 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
-
 /// @see						para uso interno de funções
 /// @example					game.app.interface.step
 /// @return	integer				atualizações da interface

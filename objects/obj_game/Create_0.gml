@@ -1,21 +1,13 @@
 /// @description construct game.app
 
 #region CREATE INSTANCE SINGLETON MODE
-///////
-///
-///	@author RodrigoDornelles <rodrigo@dornelles.me>
-///
-///	@version	1.0		(17/12/2019)		  
-///
-///////
-
 
 /// @pattern			singleton
 ///	@see				só ira permitir este objeto ser instanciado uma vez
 if variable_global_exists("app") begin
 	/// verificado se é conflitante
 	instance_destroy(self)	/// auto destruir-se
-	return void				/// parar execução
+	exit					/// parar execução
 end 
 
 /// @patern				singleton
@@ -53,21 +45,9 @@ self.lang = msg.pt
 /// @return	float		força do terremoto
 self.earthquake = 0
 
-/// @see				faz trovejar no jogo
-///	@example			game.app.thunderbolt += 5
-/// @return	integer		trovões restantes
-self.thunderbolt = 0
-
 #endregion
 
 #region INIT FINITE SATE MACHINE
-///////
-///
-///	@author RodrigoDornelles <rodrigo@dornelles.me>
-///
-///	@version	1.0		(17/12/2019)		  
-///
-///////
 
 /// @see				controla o padrão comportamental do estado de jogo
 /// @pattern			Finite State Machine
@@ -77,14 +57,6 @@ state = fsm_game.intro
 #endregion
 
 #region INIT INPUT
-///////
-///
-///	@author RodrigoDornelles <rodrigo@dornelles.me>
-///
-///	@version	1.0		(25/12/2019)		  
-///
-///////
-
 /// @see				controles do jogo
 /// @pattern			singleton
 /// @example			game.app.input.menu[key_enter]
@@ -98,14 +70,6 @@ keyboard_set_map(ord("D"), vk_right)
 #endregion 
 
 #region INIT AUDIO
-///////
-///
-///	@author RodrigoDornelles <rodrigo@dornelles.me>
-///
-///	@version	1.0		(21/12/2019)		  
-///
-///////
-
 /// @see				estabelece sons do jogo
 /// @pattern			singleton
 /// @example			game.app.audio.volume
@@ -114,16 +78,8 @@ audio = instance_create_layer(x,y, "Instances", obj_audio)
 
 #endregion
 
-
 #region INIT INTERFACE
 ///////
-///
-///	@author RodrigoDornelles <rodrigo@dornelles.me>
-///
-///	@version	1.0		(17/12/2019)		  
-///
-///////
-
 /// @see				controle de menus do jogo (depedente do game.app.state)
 /// @pattern			singleton
 /// @example			game.app.mediator.player.[0].state
@@ -133,14 +89,6 @@ interface = instance_create_layer(x,y, "Instances", obj_interface)
 #endregion
 
 #region INIT MEMENTO
-///////
-///
-///	@author RodrigoDornelles <rodrigo@dornelles.me>
-///
-///	@version	1.0		(17/12/2019)		  
-///
-///////
-
 /// @see				controle de continuidade ao estados anterires do jogo
 /// @pattern			mementum
 /// @example			comming...

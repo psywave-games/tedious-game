@@ -26,15 +26,11 @@
 #macro	start				event_user(15)	/// @example with game.app start
 
 
-enum interact {
-	primary = 1,
-	secondary = 2
-}
-
-
 enum word {
-	gravity	= 3,
-	slop = -2
+	gravity	= 2,
+	slop = -1,
+	limit_left = 10,
+	limit_right = 502
 }
 
 

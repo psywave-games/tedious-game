@@ -10,3 +10,6 @@ key_menu_open = false
 key_menu_esc = false
 key_menu_go = 0
 key_menu_in = 0
+
+key_run = false
+key_jump = false

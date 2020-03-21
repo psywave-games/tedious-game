@@ -4,12 +4,12 @@
 if instance_exists(game.app.player) and game.app.state = fsm_game.play begin 
 
 #region CAMERA
-	var vw = camera_get_view_width(view_camera[0]) / 2;
-	var vh = camera_get_view_height(view_camera[0]) / 2;
+	var vw = camera_get_view_width(view_camera[0]);
+	var vh = camera_get_view_height(view_camera[0]);
 
-	self.camx += (game.app.player.x - vw - self.camx) * 0.2
-	self.camy += (game.app.player.y - vh - self.camy) * 0.2
-
+	self.camx += (game.app.player.x - (vw/2) - self.camx) * 0.2
+	self.camy += (game.app.player.y - (vh/2) - self.camy) * 0.2
+	
 
 	self.camx = clamp(self.camx, 0, room_width - vw)
 	self.camy = clamp(self.camy, 0, room_height - vh)

@@ -1,44 +1,36 @@
-///////
-///
-///	@function Create
-///	@author RodrigoDornelles <rodrigo@dornelles.me>
-///
-///	@version	1.1		(12/12/2019) #c6db2a4 gameplay test
-///	@revison	1.1.1	(12/12/2019) #4776e3c added smooth camera
-///	@revison	1.2		(12/12/2019) #7b5387a started using pattern design mediator
-///
-///////
-///
-/// @see				movimentação e animação do jogador
-///	@description		moviment/animation
-///
-///////
-///
-///	@return void		
-///
-///////
 
 #region MOVIMENTACAO
 switch self.state begin
 	case fsm_player.died:
 	case fsm_player.idle:
+		image_speed = 0
 		speed = 0
 		break
 		
 	case fsm_player.walk:
-		hspeed = spd * sign(self.axis_x)
+		/// se for movimentar para o lado contrario parar
+		if sign(hspeed) != sign(self.axis_x) then
+			hspeed = 0
+			
+		/// aumentar velocidade	
+		if abs(hspeed) <= p_max_speed() then
+			hspeed += sign(self.axis_x) * 0.1
+			
+		/// diminuir velocidade
+		else
+			hspeed -= sign(self.axis_x) * 0.1
+		
+
+		/// velocidade da animação
+		image_speed = hspeed/5
+		 
 		break
 		
 end
 #endregion
 
-
 #region ANIMACAO
-switch self.state begin
-	case fsm_player.walk:
-		if self.axis_x != 0 then
-			image_xscale = sign (self.axis_x)
-		break
-end
+if sign(hspeed) != 0 then
+	image_xscale = sign (hspeed)
 
 #endregion
