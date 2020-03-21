@@ -13,7 +13,7 @@ game.app.player = self.id
 
 self.state = fsm_player.idle
 
-self.spd = 8
+self.spd = 4
 
 self.escada = 0
 

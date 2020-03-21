@@ -20,7 +20,7 @@ else if game.app.state == fsm_game.menuMain begin
 	draw_gui(0, 0, fa_right, fa_middle, "5 Word", fnt_title, 5, 1, 0.4)
 	
 	
-	draw_menu(0, game.app.started? "Continuar": "Novo Jogo")
+	draw_menu(0, t(msg.menu_start))
 	draw_menu(1, "Configurar")
 	draw_menu(2, "Conquistas")
 	draw_menu(3, "Sair", 10, 50)

@@ -1,15 +1,18 @@
 /// @description camera
 // You can write your code in this editor
 
-
 if instance_exists(game.app.player) and game.app.state = fsm_game.play begin 
 
-	self.camx += (game.app.player.x - (view_wport[0]/2) - self.camx) * 0.5
-	self.camy += (game.app.player.y - (view_hport[0]/2) - self.camy) * 0.5
+#region CAMERA
+	var vw = camera_get_view_width(view_camera[0]) / 2;
+	var vh = camera_get_view_height(view_camera[0]) / 2;
+
+	self.camx += (game.app.player.x - vw - self.camx) * 0.2
+	self.camy += (game.app.player.y - vh - self.camy) * 0.2
 
 
-	self.camx = clamp(self.camx, 0, room_width - view_wport)
-	self.camy = clamp(self.camy, 0, room_height - view_hport)
+	self.camx = clamp(self.camx, 0, room_width - vw)
+	self.camy = clamp(self.camy, 0, room_height - vh)
 	
 	
 	/// fazer camera tremer quando tiver terremoto
@@ -25,6 +28,11 @@ if instance_exists(game.app.player) and game.app.state = fsm_game.play begin
 		game.app.earthquake -= 0.1
 	end
 	
+	show_debug_message(camy)
+	
+	
 	
 	camera_set_view_pos(view_camera[0], self.camx, self.camy)
+#endregion
+
 end

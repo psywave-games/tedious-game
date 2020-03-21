@@ -19,20 +19,22 @@
 
 
 /// GML MAIS AMIGAVEL
-#macro	use					;				/// @example use variable_global()
-#macro	void				;				/// @example return void
 #macro	game				global			/// @example game.app.players
 
 /// USER EVENTS MAIS AMIGAVEIS
 #macro	init				event_user(0)	/// @example with game.app.interface init
-#macro	finish				event_user(1)	/// @example with game.app.interface finish
 #macro	start				event_user(15)	/// @example with game.app start
 
 
+enum interact {
+	primary = 1,
+	secondary = 2
+}
+
 
 enum word {
-	gravity	= 4,
-	slop = -3
+	gravity	= 3,
+	slop = -2
 }
 
 
@@ -46,30 +48,6 @@ enum fsm_player{
 	atck,									/// Jogador está atacando
 }
 
-/// FINITE STATE MACHINE BOSS IA MODE	
-enum fsm_ia_boss {
-	none,									/// NPC não ativado
-	sleep,									/// NPC está parado
-	attack0,								/// NPC está usando ataque primario
-	attack1,								/// NPC está usando ataque secundario
-	especial								/// NPC está usando ataque ultimate
-}
-
-/// FINITE STATE MACHINE NPC IA MODE	
-enum fsm_ia_npc {
-	none,									/// NPC não ativado
-	sleep,									/// NPC está parado
-	attack,									/// NPC está atacando
-	hunter,									/// NPC está está caçando
-	escape									/// NPC está fugindo
-}
-
-enum fsm_attack {
-	none,									/// ATTACK não está ativado
-	prepare,								/// ATTACK está sendo preparado
-	wait,									/// ATTACK está esperando por oportunidade
-	ing										/// ATTACK está sendo executado
-}
 
 
 /// FINITE STATE MACHINE GAME MODE
@@ -85,32 +63,11 @@ enum fsm_game {
 }
 
 
-/// TEAM FLAG
-enum clan {
-	c,										/// Flag Clan Computer
-	p,										//	Flag Clan Player
-}
-
-
-/// COLOR PALLETE MODE
-enum pallete {
-	cga_8,									/// 1 - CGA 8 Colors
-	cga_4a,									/// 2 - CGA 4 Colors A
-	cga_4b,									/// 3 - CGA 4 Colors B
-	gb,										/// 4 - Game Boy Classic
-	gbca,									/// 5 - Game Boy Color A
-	gbcb,									/// 6 - Game Boy Color B
-	gbcc,									/// 7 - Game Boy Color C
-	gbcd,									/// 8 - Game Boy Color D
-	ega_8,									/// 0 - EGA 8 Colors
-	binary									/// 0 - Binary A
-}
-
-
 enum msg {
 	pt,	
 	en,
 	press_start,
+	menu_start,
 	menu_lang,
 	menu_video,
 	menu_audio,
