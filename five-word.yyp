@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "0b094254-2016-4156-9bc0-d908e53db32e",
+            "Value": {
+                "id": "56e14ffb-a49c-48c7-83fa-9342bed30de8",
+                "resourcePath": "sprites\/spr_comoda2\/spr_comoda2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0c197514-fb90-4929-adc2-71aa42d35bf7",
             "Value": {
                 "id": "9d14044f-02b4-4c8e-8624-9ecdfa7bbeea",
@@ -140,6 +148,14 @@
                 "id": "df398f7c-ab3f-4837-854c-fcc411bd5fe2",
                 "resourcePath": "scripts\/draw_menu\/draw_menu.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3668e469-effb-4155-ad42-4c0ca6696887",
+            "Value": {
+                "id": "458826f8-b10c-4eb9-b6d8-7c062693b89d",
+                "resourcePath": "objects\/obj_tv\/obj_tv.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -231,6 +247,14 @@
             }
         },
         {
+            "Key": "5ca247a6-e708-4627-b583-545b178f9fe7",
+            "Value": {
+                "id": "006bd92c-129e-438e-b6ef-b7857c157fdc",
+                "resourcePath": "sprites\/spr_janela\/spr_janela.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "63cde12b-7a28-465d-b035-9625d7503960",
             "Value": {
                 "id": "09f2b21e-239f-4f5c-844f-bea167e57943",
@@ -319,6 +343,22 @@
             }
         },
         {
+            "Key": "7cfab4b9-2559-418c-836d-b318833db557",
+            "Value": {
+                "id": "840b1740-53eb-42fd-9db0-7a46feb55555",
+                "resourcePath": "sprites\/spr_comoda0\/spr_comoda0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7dc4b0f7-7471-4a39-bae3-b2283f76398b",
+            "Value": {
+                "id": "243a3d59-10d7-4a62-8b53-6e6152e752b0",
+                "resourcePath": "sprites\/spr_tv1\/spr_tv1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8256dda6-c855-4a39-b88b-abcf66614aa2",
             "Value": {
                 "id": "dc8e384b-36d5-4284-a44a-cb2ab860571c",
@@ -375,6 +415,22 @@
             }
         },
         {
+            "Key": "b03d3f5f-b35e-4fab-b5d0-ee1388eef048",
+            "Value": {
+                "id": "45ba6f0d-1442-4c10-90a5-4ab3f63763db",
+                "resourcePath": "sprites\/spr_tv0\/spr_tv0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b0a2de61-dd4f-4398-8726-804f8194d5dc",
+            "Value": {
+                "id": "98dcf19a-916b-419e-a0dc-e19f65e1a642",
+                "resourcePath": "sprites\/spr_tv2\/spr_tv2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b52317da-6f5a-4b7e-9449-918b196aa82c",
             "Value": {
                 "id": "84e4a8a5-45c8-475c-823a-3f4f84794e6f",
@@ -388,6 +444,14 @@
                 "id": "71b0211d-1b68-4342-90b5-98a9a4c54849",
                 "resourcePath": "sprites\/spr_sloop1\/spr_sloop1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b7a64f69-a4ce-40f4-bdf0-4f0de36b0dae",
+            "Value": {
+                "id": "af62c932-97ac-455d-b11e-9b5ae95ab9c4",
+                "resourcePath": "objects\/obj_janela\/obj_janela.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -431,6 +495,14 @@
             }
         },
         {
+            "Key": "c5111f78-6987-4096-9e40-a09412cc976c",
+            "Value": {
+                "id": "a6db9061-c42c-4e2f-8ef6-a128d559355d",
+                "resourcePath": "sprites\/spr_comoda1\/spr_comoda1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c6de093f-691e-4276-b2b5-e30d229ce6ca",
             "Value": {
                 "id": "649f0e97-24ba-417b-91d7-3a731997a3b9",
@@ -468,6 +540,14 @@
                 "id": "9e312b8e-8e42-4af2-a43c-510bfcd4ab55",
                 "resourcePath": "scripts\/speak\/speak.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ce4538ab-11c7-4e78-879a-b611c3ec9480",
+            "Value": {
+                "id": "9b081b28-5283-4b10-813e-762771e14c01",
+                "resourcePath": "objects\/obj_comoda\/obj_comoda.yy",
+                "resourceType": "GMObject"
             }
         },
         {
