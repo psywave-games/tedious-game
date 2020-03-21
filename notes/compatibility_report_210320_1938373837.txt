@@ -1,0 +1,2 @@
+Added compatibility script 'action/action_draw_sprite.gml'
+Added compatibility script 'action/__init_action.gml'
