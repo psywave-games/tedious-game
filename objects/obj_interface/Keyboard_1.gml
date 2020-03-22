@@ -4,7 +4,6 @@
 /// alias shor
 var _in = game.app.input.key_menu_in
 
-
 #region SELECT LANG
 if game.app.state == fsm_game.lang and abs(_in) begin
 	lang_set(self.select? msg.en: msg.pt)
@@ -81,9 +80,15 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuMain
 				
 		/// Sair do jogo		
 		case 3:
-			game_end()
+			// fechar jogo em desktop
+			if os_browser  == browser_not_a_browser then
+				game_end()
+				
+			// fechar jogo no navegador
+			else 
+				url_open("javascript:window.close()")
+				
 			break
-			
 	end 
 end
 #endregion
