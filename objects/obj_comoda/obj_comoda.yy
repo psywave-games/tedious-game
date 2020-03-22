@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_comoda",
     "eventList": [
-        
+        {
+            "id": "0f113a3f-a293-4cd4-9704-d90f571393bf",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "ce4538ab-11c7-4e78-879a-b611c3ec9480"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
