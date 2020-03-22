@@ -1,4 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Object
 
-self.powered = true
+self.state = fsm_obj.idle
+
+self.name = msg.psy_tv
+

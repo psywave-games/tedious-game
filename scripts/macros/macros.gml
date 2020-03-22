@@ -39,6 +39,14 @@ enum fsm_game {
 }
 
 
+enum fsm_obj {
+	none,									/// STATE: sem interações
+	idle,									/// STATE: desativado
+	running,								/// STATE: interagindo
+	broken									/// STATE: quebrado
+}
+
+
 enum msg {
 	pt,	
 	en,

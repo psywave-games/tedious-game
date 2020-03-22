@@ -86,7 +86,7 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuMain
 				
 			// fechar jogo no navegador
 			else 
-				url_open("javascript:window.close()")
+				url_open_ext("javascript:window.close()", "_self")
 				
 			break
 	end 

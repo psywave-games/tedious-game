@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_janela",
     "eventList": [
-        
+        {
+            "id": "970866d6-531f-4ded-a09a-e390190fb4dc",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "b7a64f69-a4ce-40f4-bdf0-4f0de36b0dae"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

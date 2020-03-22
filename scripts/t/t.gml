@@ -171,7 +171,7 @@ switch argument[0] begin
 	case msg.psy_bed:
 		return"Cama"
 	case msg.psy_tv:
-		return"Televisão"
+		return"Televisao"
 	case msg.psy_freezer:
 		return"Geladeira"
 	case msg.psy_radio:
