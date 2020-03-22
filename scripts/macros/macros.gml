@@ -27,6 +27,7 @@ enum fsm_player{
 
 /// FINITE STATE MACHINE GAME MODE
 enum fsm_game {
+	lang,
 	intro,									/// STATE: Intro do jogo
 	menuMain,								/// STATE: Menu Principal/Pause
 	menuOptions,							/// STATE: Menu de Opçoões

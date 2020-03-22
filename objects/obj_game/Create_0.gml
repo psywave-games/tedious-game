@@ -53,7 +53,7 @@ self.earthquake = 0
 /// @pattern			Finite State Machine
 /// @example			game.app.state 
 /// @return fsm_game	estado comportamental do jogo
-state = fsm_game.intro
+state = fsm_game.lang
 #endregion
 
 #region INIT INPUT

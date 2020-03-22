@@ -1,8 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+#region INTERFACE MENU LANG
+if game.app.state == fsm_game.lang begin
+	draw_menu(0, t(msg.pt), display_get_gui_width()/3, 0, fa_left, fa_middle)
+	draw_menu(1, t(msg.en), display_get_gui_width()/3, -30, fa_right, fa_middle)
+end
+#endregion
+
 #region ANIMATION INTRO
-if game.app.state == fsm_game.intro begin
+else if game.app.state == fsm_game.intro begin
 	
 	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), fnt_title, 5, 1, 0.4)
 	draw_gui(0, 100, fa_center, fa_bottom, t(msg.press_start), fnt_game0, 15, alpha_start)

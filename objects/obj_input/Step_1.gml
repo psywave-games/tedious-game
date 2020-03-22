@@ -34,7 +34,6 @@ if game.app.state == fsm_game.cutscene begin
 	key_menu_open = _keyd_esc
 end
 
-
 if game.app.state == fsm_game.menuMain 
 	or game.app.state == fsm_game.menuOptions
 	or game.app.state == fsm_game.menuGraphic 
@@ -44,6 +43,11 @@ if game.app.state == fsm_game.menuMain
 	key_menu_enter = _keyd_enter
 	key_menu_go = _keyd_down - _keyd_up
 	key_menu_in = _keyd_righ - _keyd_left + _keyd_enter
+end
+
+if game.app.state == fsm_game.lang begin 
+	key_menu_go = _keyd_righ - _keyd_left
+	key_menu_in = _keyd_enter
 end
 
 #endregion
