@@ -10,7 +10,8 @@
 
 
 if place_meeting(x,y, game.app.player) then with game.app.player begin 
-	self.y += word.slop
-	self.vspeed = 0
+	if self.y <= other.y then
+		self.y += word.slop
+
 end
 

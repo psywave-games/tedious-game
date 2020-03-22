@@ -1,11 +1,21 @@
 /// @description Lens flare by Esteban Devia
+/// @arg0 x
+/// @arg1 y
+/// @arg2 radius
+/// @arg3 sizex
+/// @arg4 sizey
+/// @arg5 ringsize
+/// @arg6 transparency
+/// @arg7 glow_opacity
 
 //draw_lensflare(x,y,Radius,SizeX,SizeY,RingSize,Transparency,GlowOpacity)
 
-
+/// Desabilitar shaders pc fraco
+if not game.app.render.light_hd then 
+	exit
 
 //Getting ready to start, Creating variables
-var xx, yy, alpha, LightSize, Size_x, size_y, RingSize, Opacity, LensDir;
+var xx, yy, alpha, LightSize, Size_x, Size_y, RingSize, Opacity, LensDir, GlowOpacity;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 xx = argument0

@@ -13,11 +13,6 @@ game.app.player = self.id
 
 self.state = fsm_player.idle
 
-
 self.escada = 0
-
-
-self.gravity = 1
-
 
 install_speak

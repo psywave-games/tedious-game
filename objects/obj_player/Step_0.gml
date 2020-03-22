@@ -1,8 +1,10 @@
 
 
-if abs(self.axis_x) begin
+if game.app.input.key_jump or game.app.player.state == fsm_player.jump then
+	self.state = fsm_player.jump
+
+else if abs(self.axis_x) then
 	self.state = fsm_player.walk
-end
-else begin
+
+else
 	self.state = fsm_player.idle
-end
