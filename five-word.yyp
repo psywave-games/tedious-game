@@ -927,6 +927,14 @@
             }
         },
         {
+            "Key": "e66d304d-a487-4e0e-ac43-47d7a1fc246e",
+            "Value": {
+                "id": "a61e55a7-6803-4a4e-bbc8-d0a6d1d0801a",
+                "resourcePath": "objects\/obj_baseLamp\/obj_baseLamp.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e6be5a39-5b92-4e8b-8df6-da15c9ae1201",
             "Value": {
                 "id": "cfaf9186-b2c7-4e59-8c08-9ebc39199e36",
