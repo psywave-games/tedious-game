@@ -4,8 +4,16 @@
 /// alias shor
 var _in = game.app.input.key_menu_in
 
+
+#region SELECT LANG
+if game.app.state == fsm_game.lang and abs(_in) begin
+	lang_set(self.select? msg.en: msg.pt)
+	state_reset(game.app, fsm_game.intro)
+end
+#endregion
+
 #region OPEN MENU
-if game.app.input.key_menu_open begin 
+else if game.app.input.key_menu_open begin 
 	state_set (game.app, fsm_game.menuMain)
 	game.app.interface.select = 0
 end 
@@ -21,6 +29,10 @@ end
 #region NAVIAGATE MENU
 else if abs (game.app.input.key_menu_go) begin
 	switch game.app.state begin
+	
+		case fsm_game.lang:
+			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 1)
+			break
 	
 		case fsm_game.menuMain:
 			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 3)
@@ -81,7 +93,7 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuOpti
 	switch game.app.interface.select begin
 		/// Alterar idioma do jogo
 		case 0:
-			game.app.lang = game.app.lang == msg.en? msg.pt: msg.en
+			lang_set(game.app.lang == msg.en? msg.pt: msg.en)
 			break
 			
 		/// Enter menu graphic

@@ -4,17 +4,23 @@
 
 #region PREPARE RESOLUTION
 /// resolução selecionada
-self.mode_resolution = 2
+self.mode_resolution = 5
 self.mode_ratio = 1
 
 /// resoluções pré defefinidas
 self.resolutions = [
 	160,
+	240,
 	360,
 	640,
 	720,
+	768,
+	900,
 	1024,
+	1080,
+	1144,
 	1360,
+	1440,
 	2160
 ]
 
@@ -39,11 +45,11 @@ self.size_ratio = [
 #endregion
 
 #region PREPARE CONFIGS
-self.colorize = true
 self.font_hd = true
 self.font_speed = 3
 self.camera_speed = 2
 self.light_hd = true
 #endregion
 
-init
+
+alarm_set(0,1)
