@@ -1,23 +1,3 @@
-///////
-///
-///	@function macros
-///	@author RodrigoDornelles <rodrigo@dornelles.me>
-///
-///	@version	1.0		(09/12/2019) #7d9f25c chaves graphical improvements
-///	@revison	1.1		(12/12/2019) #7b5387a started design pattern finite state machine
-///
-///////
-///
-/// @see				processado antes de transpilar
-///	@description		constantes e macros do jogo
-///
-///////
-///
-///	@return void		
-///
-///////
-
-
 /// GML MAIS AMIGAVEL
 #macro	game				global			/// @example game.app.players
 
