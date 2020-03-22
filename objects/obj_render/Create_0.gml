@@ -4,12 +4,14 @@
 
 #region PREPARE RESOLUTION
 /// resolução selecionada
-self.mode_resolution = 1
+self.mode_resolution = 2
 self.mode_ratio = 1
 
 /// resoluções pré defefinidas
 self.resolutions = [
+	160,
 	360,
+	640,
 	720,
 	1024,
 	1360,
@@ -22,6 +24,7 @@ self.name_ratio = [
 	"4:3",
 	"16:9",
 	"21:9",
+	"32:9",
 ]
 
 /// para uso de troca de solução
@@ -29,7 +32,9 @@ self.size_ratio = [
 	1.00000000,
 	1.33333333,
 	1.77777778,
-	2.33333333
+	2.33333333,
+	3.55555556,
+	
 ]
 #endregion
 
@@ -40,3 +45,5 @@ self.font_speed = 3
 self.camera_speed = 2
 self.light_hd = true
 #endregion
+
+init

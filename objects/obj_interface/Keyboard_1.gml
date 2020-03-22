@@ -119,8 +119,9 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuGrap
 			
 		/// alterar proporção (ratio)
 		case 1:
+			var last_ratio = array_length_1d(game.app.render.size_ratio) - 1
 			var ratio = game.app.render.mode_ratio + _in
-			var mode = clamp(ratio, 0, 3)
+			var mode = clamp(ratio, 0, last_ratio)
 			resolution_set (game.app.render.mode_resolution, mode)
 			break
 			
