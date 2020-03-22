@@ -8,7 +8,7 @@ var _keyd_up = keyboard_check_pressed(vk_up)
 var _keyd_left = keyboard_check_pressed(vk_left)
 var _keyd_down = keyboard_check_pressed(vk_down)
 var _keyd_righ = keyboard_check_pressed(vk_right)
-var _keyd_space = keyboard_check(vk_space)
+var _keyd_space = keyboard_check_pressed(vk_space)
 
 var _key_up = keyboard_check(vk_up)
 var _key_left = keyboard_check(vk_left)

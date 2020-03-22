@@ -27,7 +27,6 @@
 
 
 enum word {
-	gravity	= 2,
 	slop = -1,
 	limit_left = 10,
 	limit_right = 502
@@ -38,10 +37,10 @@ enum word {
 enum fsm_player{
 	none,									/// Quando não ativado
 	died,									/// Jogador está morto
+	jump,									/// Jogador está pulando
 	fall,									/// Jogador está caido
 	idle,									/// Jogador está parado
-	walk,									/// Jogador está andando
-	atck,									/// Jogador está atacando
+	walk									/// Jogador está andando
 }
 
 
