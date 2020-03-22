@@ -8,16 +8,18 @@ switch self.state begin
 		break
 		
 	case fsm_player.jump:
+		self.escada = 0
+	
 		/// Pular
-		if game.app.input.key_jump begin 
+		if game.app.input.key_jump and p_foot() begin 
 			self.y -= 2
 			vspeed -= 5
 		end
 		
 		/// Cair no chão
-		else if place_meeting(x, y + 1, obj_baseWall) then
+		else if p_foot() then
 			self.state = fsm_player.idle
-			
+		
 		break
 		
 	case fsm_player.walk:
@@ -34,7 +36,7 @@ switch self.state begin
 			hspeed -= sign(self.axis_x) * 0.1
 
 		/// velocidade da animação
-		image_speed = hspeed/5
+		image_speed = hspeed/5 * sign(hspeed)
 		 
 		break
 		
@@ -48,9 +50,9 @@ if sign(hspeed) != 0 then
 #endregion
 
 #region GRAVITY 
-var ignore = self.escada != 0 and position_meeting(x,y+17, obj_wall2)
+var ignore = self.escada != 0 and position_meeting(x,y+16, obj_wall2)
 
-if position_meeting(x, y + 16, obj_baseWall) and not ignore then
+if p_foot() and not ignore then
 	vspeed = 0	
 
 else 

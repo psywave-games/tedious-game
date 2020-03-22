@@ -5,7 +5,7 @@
     "name": "obj_wall2",
     "eventList": [
         {
-            "id": "d85d95b8-d111-44dd-b2d8-04600acd2e07",
+            "id": "b4e75f3e-43ee-404c-8fa4-0c91cbb239c1",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

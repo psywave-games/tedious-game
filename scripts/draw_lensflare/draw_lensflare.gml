@@ -11,8 +11,7 @@
 //draw_lensflare(x,y,Radius,SizeX,SizeY,RingSize,Transparency,GlowOpacity)
 
 /// Desabilitar shaders pc fraco
-if not game.app.render.light_hd then 
-	exit
+if game.app.render.light_hd begin 
 
 //Getting ready to start, Creating variables
 var xx, yy, alpha, LightSize, Size_x, Size_y, RingSize, Opacity, LensDir, GlowOpacity;
@@ -98,3 +97,5 @@ GlowOpacity = argument7
         
         //Blendingmode to Normal again...
         draw_set_blend_mode(bm_normal)
+
+end
