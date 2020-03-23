@@ -80,10 +80,10 @@ end
 
 #region INTERFACE MENU AUDIO
 else if game.app.state == fsm_game.menuAudio begin
-	draw_menu(0, "Volume Geral:")
-	draw_menu(1, "Volume Musica:")
-	draw_menu(2, "Volume FX:")
-	draw_menu(3, "Voltar", 10, 60)
+	draw_menu(0, t(msg.menu_audio_geral))
+	draw_menu(1, t(msg.menu_audio_music))
+	draw_menu(2, t(msg.menu_audio_geral))
+	draw_menu(3, t(msg.back), 10, 60)
 	
 	
 	draw_bars(0, game.app.audio.volume, 200)
