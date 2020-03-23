@@ -1,11 +1,40 @@
-/// @description Insert description here
-// You can write your code in this editor
-
 #region INTERFACE MENU LANG
 if game.app.state == fsm_game.lang begin
 	draw_menu(0, t(msg.pt), display_get_gui_width()/3, 0, fa_left, fa_middle)
 	draw_menu(1, t(msg.en), display_get_gui_width()/3, -30, fa_right, fa_middle)
 end
+#endregion
+
+#region INTERFACE WARNING
+else if game.app.state == fsm_game.warn begin
+	var xx = display_get_gui_width()/2
+	var yy = display_get_gui_height()/2
+	
+	self.step += 1 
+	draw_set_font(fnt_game1)
+	
+	/// PROSEGUIR
+	if self.step > room_speed * 10 then
+		state_reset(game.app, fsm_game.intro)
+		
+	/// AVISO
+	else if self.step > room_speed * 1.5 begin
+		draw_set_halign(fa_center)
+		draw_set_valign(fa_top)
+		
+		draw_text_transformed_color(xx, -64, t(msg.warn_title), 8, 8, 0, c_red, c_red, c_red, c_red, 1)		
+		draw_text_ext_transformed_color(xx, 160, t(msg.warn_text), 32, xx - 16, 2, 2, 0, c_white, c_white, c_white, c_white, 1)
+	end
+	
+	/// FAXETARIA
+	else begin
+		draw_sprite_ext(spr_esrb, 0, xx, yy, 1.2, 1.2, 0, c_white, 1)
+		draw_set_halign(fa_left)
+		draw_set_valign(fa_middle)
+		draw_set_font(fnt_game1)
+		draw_text_ext_transformed_color(xx - (xx/8), yy -40, t(msg.esrb), 16, yy, 2.4, 2.4, 0, c_black, c_black, c_black, c_black, 1)
+	end
+end	
 #endregion
 
 #region ANIMATION INTRO

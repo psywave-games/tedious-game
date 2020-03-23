@@ -33,6 +33,12 @@ if game.app.lang == msg.en begin
 			return "Colorize:"
 		case msg.video_full:
 			return "FullScreen:"
+		case msg.warn_title: 
+			return "W A R N I N G"
+		case msg.warn_text:
+			return "This game contains sensitive content which some people may find offensive or disturbing. The production is not a proposal for encourage suicide, but an opportunity to value life. If you need help call to the Brazilian Hot Line of Life Valorize Center at +55 188, or International Hot Line at NUMBER +1 514 333 8823."	
+		case msg.esrb:
+			return "Implied Violence\nUse Alcohol\nUse Drugs\nBlack humor\nSuicide"
 		case msg.beta:
 			return "WARNING: This game is a low demo,\nthe game is not finished because the programmer drank too much.\n THKX!"
 		case msg.menu_exit:
@@ -48,7 +54,7 @@ if game.app.lang == msg.en begin
 		case msg.menu_config:
 		   return "options"
 		case msg.game_name:
-		   return"Tedious Simulator"
+		   return lite()? "Tedious Simulator [Lite]": "Tedious Simulator"
 		case msg.video_lighthd:
 		   return "HD Lights"
 		case msg.psy_light:
@@ -160,6 +166,12 @@ switch argument[0] begin
 		return "Colorizar:"
 	case msg.video_full:
 		return "Tela cheia:"
+	case msg.warn_title:
+		return "A V I S O"
+	case msg.warn_text:
+		return "Este jogo contem conteudo sensivel que algumas pessoas podem achar ofensivo ou perturbador. A producao nao e uma proposta de incentivo ao suicidio, mas uma oportunidade de valorizar a vida. Se precisar de ajuda, procure por atendimento ligando para o Centro de Valorizacao da Vida no Brasil no numero +55 188, ou utilize a linha internacional para Valorizacao da Vida +1 514 333 8823."
+	case msg.esrb:
+		return "Violencia Implicita\nUso de Alcool\nUso de Drogas\nHumor Negro\nSuicidio"
 	case msg.beta:
 		return "ATENCAO: este jogo e uma demo muito inicial,\n o jogo nao esta concluido porque o programador bebeu demais.\n obrigado!"
 	case msg.menu_exit:
@@ -175,7 +187,7 @@ switch argument[0] begin
 	case msg.menu_config:
 		return "Configuracoes"
 	case msg.game_name:
-		return"Simulador de Tedio"
+		return lite()? "Simulador de Tedio [Lite]": "Simulador de Tedio"
 	case msg.video_lighthd:
 		return "Luzes em HD"
 	case msg.psy_light:

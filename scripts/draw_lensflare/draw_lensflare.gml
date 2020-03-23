@@ -11,7 +11,7 @@
 //draw_lensflare(x,y,Radius,SizeX,SizeY,RingSize,Transparency,GlowOpacity)
 
 /// Desabilitar shaders pc fraco
-if not game.app.render.light_hd then 
+if not game.app.render.light_hd or lite() then 
 	exit
 
 //Getting ready to start, Creating variables

@@ -50,9 +50,8 @@ if sign(hspeed) != 0 then
 #endregion
 
 #region GRAVITY 
-var ignore = self.escada != 0 and position_meeting(x,y+16, obj_wall2)
 
-if p_foot() and not ignore then
+if p_foot() then
 	vspeed = 0	
 
 else 

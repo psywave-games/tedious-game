@@ -3,6 +3,11 @@
 
 var _keyd_enter = keyboard_check_pressed(vk_enter)
 var _keyd_esc = keyboard_check_pressed(vk_escape)
+var _keyd_del = keyboard_check_pressed(vk_backspace)
+
+var _keyd_ord_f = keyboard_check_pressed(ord("F"))
+var _keyd_ord_q = keyboard_check_pressed(ord("Q"))
+var _keyd_ord_e = keyboard_check_pressed(ord("E"))
 
 var _keyd_up = keyboard_check_pressed(vk_up)
 var _keyd_left = keyboard_check_pressed(vk_left)
@@ -26,15 +31,15 @@ if game.app.state == fsm_game.intro begin
 	key_menu_open = _keyd_enter
 end 
 
-if game.app.state == fsm_game.play begin
+else if game.app.state == fsm_game.play begin
 	key_menu_open = _keyd_esc
 end
 
-if game.app.state == fsm_game.cutscene begin
+else if game.app.state == fsm_game.cutscene begin
 	key_menu_open = _keyd_esc
 end
 
-if game.app.state == fsm_game.menuMain 
+else if game.app.state == fsm_game.menuMain 
 	or game.app.state == fsm_game.menuOptions
 	or game.app.state == fsm_game.menuGraphic 
 	or game.app.state == fsm_game.menuAudio begin 
@@ -45,10 +50,13 @@ if game.app.state == fsm_game.menuMain
 	key_menu_in = _keyd_righ - _keyd_left + _keyd_enter
 end
 
-if game.app.state == fsm_game.lang begin 
+else if game.app.state == fsm_game.lang begin 
 	key_menu_go = _keyd_righ - _keyd_left
 	key_menu_in = _keyd_enter
 end
+
+else if game.app.state == fsm_game.warn then
+	key_menu_go = _keyd_del
 
 #endregion
 
@@ -60,9 +68,11 @@ key_axis_y = 0
 if game.app.state = fsm_game.play begin
 	key_axis_x = _key_righ - _key_left
 	key_axis_y = _key_down - _key_up
+	key_axis_switch = _keyd_ord_e - _keyd_ord_q
 
 	key_run = _key_shift 
 	key_jump = _keyd_space
+	key_interact = _keyd_enter or _keyd_ord_f
 end
 
 

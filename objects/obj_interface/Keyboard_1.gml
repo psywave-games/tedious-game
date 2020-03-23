@@ -7,8 +7,14 @@ var _in = game.app.input.key_menu_in
 #region SELECT LANG
 if game.app.state == fsm_game.lang and abs(_in) begin
 	lang_set(self.select? msg.en: msg.pt)
-	state_reset(game.app, fsm_game.intro)
+	state_reset(game.app, fsm_game.warn)
 end
+#endregion
+
+#region WARNING SKIP
+else if game.app.state == fsm_game.warn and game.app.input.key_menu_go then
+	state_reset( game.app, fsm_game.intro)
+
 #endregion
 
 #region OPEN MENU
