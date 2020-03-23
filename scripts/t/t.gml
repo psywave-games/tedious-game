@@ -5,52 +5,36 @@ if game.app.lang == msg.en begin
 	
 		case msg.press_start:
 			return "press enter to start"
-			
 		case msg.menu_start:
 			return game.app.started? "Continue": "New Game"
-			
 		case msg.pt:
 			return "Portuguese"
-	
 		case msg.en:
 			return  "English"
-	
 		case msg.menu_lang:
 			return "Language:"
-	
 		case msg.menu_video:
 			return "Graphics"
-		
 		case msg.menu_audio:
 			return "Sound"
-
 		case msg.back:
 			return "return"
-		
 		case msg.video_palete:
 			return "Pallete:"
-	
 		case msg.video_ratio:
 			 return "Ratio:"
-	
 		case msg.video_size:
 			return "Resolution:"
-			
 		case msg.video_digto:
 			return "Text Speed:"
-	
 		case msg.video_fnthd:
 			return "Fonts HD:"
-	
 		case msg.video_color:
 			return "Colorize:"
-	
 		case msg.video_full:
 			return "FullScreen:"
-			
 		case msg.beta:
 			return "WARNING: This game is a low demo,\nthe game is not finished because the programmer drank too much.\n THKX!"
-		
 		case msg.menu_exit:
 		   return "exit"
 		case msg.scorebord:
@@ -93,10 +77,54 @@ if game.app.lang == msg.en begin
 		   return"Outlet"
 		case msg.psy_switch:
 		   return"Switch"
-		case msg.suicide_power:
+		case msg.interact_suicide_power:
 		   return "Sticks a fork in the outlet"
 		case msg.video_camspeed:
 		   return "Cam Speed"
+		case msg.menu_audio_geral:
+		    return "Master Volume"
+		case msg.menu_audio_music:
+		    return "Music Volume"
+		case msg.menu_audio_sfx:
+		    return "SFX Volume" 
+		case msg.interact_music_sandstorm:
+		    return "play sandstorm music"
+		case msg.interact_sleep_down:
+		    return "sleep in bed"
+		case msg.interact_open:
+		    return "open"
+		case msg.interact_close:
+		    return "close"
+		case msg.interact_videogame:
+		    return "play a game"
+		case msg.interact_music_despacitos:
+		    return "play despacito music"
+		case msg.interact_sit_down:
+		    return "sit on the"  
+		case msg.interact_sit_up:
+		    return "get up"
+		case msg.interact_shit_down:
+		    return "pooping in the toilet"
+		case msg.interact_shit_up:
+		    return "clean yourself"
+		case msg.interact_urine_down:
+		    return "piss in toilet"
+		case msg.interact_urine_up:
+		    return "close zipper"
+		case msg.interact_clog_papper:
+		    return "clog toilet"
+		case msg.interact_cooler_glasses:
+		    return "put sunglasses"
+		case msg.interact_music_turn_it:
+		    return "play turn down for what music"
+		case msg.interact_drink_water:
+		    return "drink water"
+		case msg.interact_furnace_gas:
+		    return "turn on gas"
+		case msg.interact_furnace_fire:
+		    return "turn on stove" 
+		case msg.interact_furnace_off:
+		    return "turn off stove"
 	
 	end
 end
@@ -104,52 +132,36 @@ switch argument[0] begin
 
 	case msg.press_start:
 		return "precione enter para jogar"
-		
 	case msg.menu_start:
-			return game.app.started? "Continuar": "Novo Jogo"
-	
+		return game.app.started? "Continuar": "Novo Jogo"
 	case msg.pt:
 		return "Portugues"
-	
 	case msg.en:
 		return  "English"
-	
 	case msg.menu_lang:
 		return "Idioma:"
-		
 	case msg.menu_video:
 		return "Graficos"
-		
 	case msg.menu_audio:
 		return "Audios"
-			
 	case msg.back:
 		return "voltar"
-	
 	case msg.video_palete:
 		return "Paleta:"
-	
 	case msg.video_ratio:
 		 return "Janela:"
-	
 	case msg.video_size:
 		return "Resolucao:"
-		
 	case msg.video_digto:
 		return "Digitacao:"
-	
 	case msg.video_fnthd:
 		return "Letras HD:"
-	
 	case msg.video_color:
 		return "Colorizar:"
-	
 	case msg.video_full:
 		return "Tela cheia:"
-		
 	case msg.beta:
 		return "ATENCAO: este jogo e uma demo muito inicial,\n o jogo nao esta concluido porque o programador bebeu demais.\n obrigado!"
-
 	case msg.menu_exit:
 		return "Sair"
 	case msg.scorebord:
@@ -192,17 +204,54 @@ switch argument[0] begin
 		return"Tomada"
 	case msg.psy_switch:
 		return"Interruptor"
-	case msg.suicide_power:
+	case msg.interact_suicide_power:
 		return "Enfiar o garfo na tomada"
 	case msg.video_camspeed:
 		return "Cam Speed"
-
+	case msg.menu_audio_geral:
+	    return "volume geral"
+	case msg.menu_audio_music:
+	    return "volume da musica"
+	case msg.menu_audio_sfx:
+	    return "volume SFX" 
+	case msg.interact_music_sandstorm:
+	    return "tocar musica sandstorm"
+	case msg.interact_sleep_down:
+	    return "dormir na cama"
+	case msg.interact_open:
+	    return "abrir"
+	case msg.interact_close:
+	    return "fechar"
+	case msg.interact_videogame:
+	    return "jogar um jogo"
+	case msg.interact_music_despacitos:
+	    return " tocar musica despacito"
+	case msg.interact_sit_down:
+	    return "sentar em " 
+	case msg.interact_sit_up:
+	    return "levantar"
+	case msg.interact_shit_down:
+	    return "cagar no vaso"
+	case msg.interact_shit_up:
+	    return "se limpar"
+	case msg.interact_urine_down:
+	    return "mijar no vaso"
+	case msg.interact_urine_up:
+	    return "fechar ziper"
+	case msg.interact_clog_papper:
+	    return "clog toilet"
+	case msg.interact_cooler_glasses:
+	    return "colocar oculos escuros"
+	case msg.interact_music_turn_it:
+	    return "tocar música turn down for what"
+	case msg.interact_drink_water:
+	    return "beber agua"
+	case msg.interact_furnace_gas:
+	    return "ligar o gas"
+	case msg.interact_furnace_fire:
+	    return "acender o fogao" 
+	case msg.interact_furnace_off:
+	    return "apagar o fogao"
 end
-
-
-
-
-
-
 
 return "#Error 18"

@@ -24,15 +24,29 @@ view_visible[0] = true
 view_enabled = true
 
 
+#region AJUST GUI SIZE
+var gui_width = resolution_width
+var gui_height = resolution_height 
+
+if gui_width <= 640 then
+	gui_width = 720
+
+if gui_height <= 640 then
+	gui_height = 720
+
+display_set_gui_size(gui_width, gui_height)
+
+#endregion
 
 #region AJUST RESOLUTION
-view_set_wport(0, camera_width)
-view_set_hport(0, 64)
+/// Não sei
+view_set_wport(0, resolution_width)
+view_set_hport(0, resolution_height)
 
-// não utilizado:
+/// Camera
 camera_set_view_size(view_camera[0], camera_width, 64)
 
-display_set_gui_size(resolution_width, resolution_height)
+/// Janela
 window_set_size(resolution_width, resolution_height)
 #endregion
 

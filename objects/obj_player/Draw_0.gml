@@ -29,15 +29,13 @@ switch self.state begin
 		break
 
 	case fsm_player.jump:
-		var _image_index = abs(hspeed) > 2
-		
 		/// Subindo
 		if vspeed > 0 begin
-			draw_sprite_ext(spr_playerJump0, _image_index, x, y, image_xscale, image_yscale, 0, c_white, 1.0)
+			draw_sprite_ext(spr_playerJump0, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1.0)
 		end
 		/// Descendo
 		else begin
-			draw_sprite_ext(spr_playerFall0, _image_index, x, y, image_xscale, image_yscale, 0, c_white, 1.0)
+			draw_sprite_ext(spr_playerFall0, image_index, x, y, image_xscale, image_yscale, 0, c_white, 1.0)
 		end
 		break
 	

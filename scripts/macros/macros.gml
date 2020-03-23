@@ -86,8 +86,30 @@ enum msg {
 	psy_instagram,
 	psy_power,
 	psy_switch,
-	suicide_power,
-	video_camspeed
+	interact_suicide_power,
+	video_camspeed,
+	menu_audio_geral,
+	menu_audio_music,
+	menu_audio_sfx,
+	interact_music_sandstorm,
+	interact_sleep_down,
+	interact_open,
+	interact_close,
+	interact_videogame,
+	interact_music_despacitos,
+	interact_sit_down,
+	interact_sit_up,
+	interact_shit_down,
+	interact_shit_up,
+	interact_urine_down,
+	interact_urine_up,
+	interact_clog_papper,
+	interact_cooler_glasses,
+	interact_music_turn_it,
+	interact_drink_water,
+	interact_furnace_gas,
+	interact_furnace_fire,
+	interact_furnace_off
 }
 
 #macro	install_speak					self.speak_finish=0;self.speak_init=0;self.speak_mode=0;self.speak_text="";self.speak_step=0
