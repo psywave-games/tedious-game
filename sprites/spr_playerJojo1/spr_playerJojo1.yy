@@ -2,7 +2,7 @@
     "id": "3b1ac195-fbbf-49c7-8c6e-aa2f3ad136d3",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_playerJojo",
+    "name": "spr_playerJojo1",
     "For3D": false,
     "HTile": false,
     "VTile": false,

@@ -290,7 +290,7 @@
             "Key": "3b1ac195-fbbf-49c7-8c6e-aa2f3ad136d3",
             "Value": {
                 "id": "362697f3-d1b6-4fe2-97af-d9d74b4255a2",
-                "resourcePath": "sprites\/spr_playerJojo\/spr_playerJojo.yy",
+                "resourcePath": "sprites\/spr_playerJojo1\/spr_playerJojo1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -383,6 +383,14 @@
             }
         },
         {
+            "Key": "4fb54443-5db8-476a-88fa-83d092363a7b",
+            "Value": {
+                "id": "92fc97fd-a44d-41f1-8332-4b113db5ed7b",
+                "resourcePath": "scripts\/p_looking\/p_looking.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "500b37eb-1205-4e71-b18d-ed40bc70e3c4",
             "Value": {
                 "id": "f94b71ed-aedb-418d-a6de-3ddef2da2df0",
@@ -459,6 +467,14 @@
             "Value": {
                 "id": "ad05ff03-2583-4bc8-8a64-2b30bbf9e423",
                 "resourcePath": "sprites\/spr_agiota\/spr_agiota.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6735fdce-521b-418b-93d1-80b6673fc91b",
+            "Value": {
+                "id": "03e24e99-ff18-46bf-a832-9d8bff1ab3c8",
+                "resourcePath": "sprites\/spr_esrb\/spr_esrb.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -679,6 +695,14 @@
             }
         },
         {
+            "Key": "94a07a12-9973-4d20-b2ff-43edf55843e0",
+            "Value": {
+                "id": "cb3c9c1c-e724-4741-ba84-10a42dba6131",
+                "resourcePath": "scripts\/lite\/lite.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "989b6b7f-1cf3-4d59-8618-3b51d5b73ea0",
             "Value": {
                 "id": "10a13849-8998-4e5e-86ab-37d2ac2d8cb9",
@@ -731,6 +755,14 @@
             "Value": {
                 "id": "6ef69029-3e6f-4838-89fb-d9f1589c0003",
                 "resourcePath": "views\/a8a3c0a6-1806-4402-9583-164ad1899528.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ab15a2ec-402c-4ff6-91c8-b9d3886ae608",
+            "Value": {
+                "id": "1e389fd0-fe9b-4c60-a60d-f9c835da7b74",
+                "resourcePath": "views\/ab15a2ec-402c-4ff6-91c8-b9d3886ae608.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -1289,6 +1321,7 @@
     ],
     "script_order": [
         "ff4dd657-0019-4939-8362-fd39f2b10ccb",
+        "94a07a12-9973-4d20-b2ff-43edf55843e0",
         "c006cc6e-9eea-4c29-9d6a-9c5163927ba5",
         "0df2cb81-f4e8-44d6-92ae-49514a91c0ab",
         "c6edc788-9f1c-4799-abc7-6eb0b047d64b",
@@ -1305,6 +1338,7 @@
         "f41c094f-ef34-4bdd-a84d-cfe76816ae87",
         "989b6b7f-1cf3-4d59-8618-3b51d5b73ea0",
         "ef16f6f6-26a3-4e7f-ac67-eade280df748",
+        "4fb54443-5db8-476a-88fa-83d092363a7b",
         "cb880162-bfc4-4c07-a5aa-55659d5e02b0",
         "22accf10-0699-4a92-8827-7e57239c6665",
         "bca9024e-14fb-48b7-9352-1981a290bbd4",

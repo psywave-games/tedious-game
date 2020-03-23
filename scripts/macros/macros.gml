@@ -5,6 +5,12 @@
 #macro	init				event_user(0)	/// @example with game.app.interface init
 #macro	start				event_user(15)	/// @example with game.app start
 
+#macro	ev_init				0
+#macro	ev_interact_down	1	//Iniciar Interação
+#macro	ev_interact_up		2	//Desfazer Interação
+#macro	ev_interact_switch	3	//Alterar Interação
+#macro	ev_interact_message	4	//Menssagem Interação
+#macro	ev_game_start		15
 
 enum word {
 	slop = -1,
@@ -18,7 +24,6 @@ enum fsm_player{
 	none,									/// Quando não ativado
 	died,									/// Jogador está morto
 	jump,									/// Jogador está pulando
-	fall,									/// Jogador está caido
 	idle,									/// Jogador está parado
 	walk									/// Jogador está andando
 }
@@ -27,7 +32,8 @@ enum fsm_player{
 
 /// FINITE STATE MACHINE GAME MODE
 enum fsm_game {
-	lang,
+	lang,									/// STATE: Selecione Idioma
+	warn,									/// STATE: Aviso
 	intro,									/// STATE: Intro do jogo
 	menuMain,								/// STATE: Menu Principal/Pause
 	menuOptions,							/// STATE: Menu de Opçoões
@@ -56,6 +62,9 @@ enum msg {
 	menu_video,
 	menu_audio,
 	back,
+	warn_title,
+	warn_text,
+	esrb,
 	video_palete,
 	video_ratio,
 	video_size,

@@ -1,7 +1,8 @@
-/// @description slop
+if game.app.player.escada == 0 then
+	exit
 
-if place_meeting(x,y, game.app.player) then with game.app.player begin 
-	if self.escada != 0 begin
+with game.app.player begin
+	if position_meeting(self.x, self.y + 15, other) begin 
 		/// subindo escad correndo
 		if game.app.player.hspeed > 2 then
 			self.y += word.slop * 3
@@ -9,7 +10,7 @@ if place_meeting(x,y, game.app.player) then with game.app.player begin
 		/// subindo caminhando/parado
 		else
 			self.y += word.slop
-		
+			
+		self.vspeed = 0
 	end
 end
-
