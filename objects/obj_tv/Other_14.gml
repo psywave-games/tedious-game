@@ -1,7 +1,7 @@
 /// @description Menssage Interagir
 
 
-if self.state == fsm_obj.running then
+if self.state == fsm_mob.running then
 	self.message = t(msg.interact_off)
 
 else switch self.select begin

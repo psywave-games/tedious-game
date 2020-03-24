@@ -1,15 +1,13 @@
 /// GML MAIS AMIGAVEL
 #macro	game				global			/// @example game.app.players
 
-/// USER EVENTS MAIS AMIGAVEIS
-#macro	init				event_user(0)	/// @example with game.app.interface init
-#macro	start				event_user(15)	/// @example with game.app start
-
 #macro	ev_init				0
 #macro	ev_interact_down	1	//Iniciar Interação
 #macro	ev_interact_up		2	//Desfazer Interação
 #macro	ev_interact_switch	3	//Alterar Interação
 #macro	ev_interact_message	4	//Menssagem Interação
+#macro	ev_interact_broken	5
+#macro	ev_lite_step		6
 #macro	ev_game_start		15
 
 enum word {
@@ -45,7 +43,7 @@ enum fsm_game {
 }
 
 
-enum fsm_obj {
+enum fsm_mob {
 	none,									/// STATE: sem interações
 	idle,									/// STATE: desativado
 	running,								/// STATE: interagindo
@@ -118,7 +116,37 @@ enum msg {
 	interact_drink_water,
 	interact_furnace_gas,
 	interact_furnace_fire,
-	interact_furnace_off
+	interact_furnace_off,
+	interact_book,
+	interact_book0,
+	interact_book1,
+	interact_book2,
+	interact_book3,
+	interact_book4,
+	interact_book5,
+	interact_book6,
+	interact_book7,
+	interact_book8,
+	interact_book9,
+	interact_book10,
+	interact_book11,
+	interact_book12,
+	psy_chest,
+	psy_drawer,
+	interact_loot,
+	interact_shower,
+	primary_f,
+	primary_m,
+	secondary_f,
+	secondary_m,
+	interact_google,
+	interact_furnace_hurt,
+	interact_coffe_freezer_gap,
+	interact_coffe_microwave_put,
+	interact_coffe_microwave_gap,
+	interact_coffe_freezer_put,
+	interact_microwave_down,
+	interact_music_2009,
+	psy_door,
 }
 
-#macro	install_speak					self.speak_finish=0;self.speak_init=0;self.speak_mode=0;self.speak_text="";self.speak_step=0

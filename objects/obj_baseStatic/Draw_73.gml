@@ -1,4 +1,4 @@
-if self.state == fsm_obj.broken or self.state == fsm_obj.none then
+if self.state == fsm_mob.broken or self.state == fsm_mob.none or game.app.state != fsm_game.play then
 	exit
 	
 if self.can_interact begin 

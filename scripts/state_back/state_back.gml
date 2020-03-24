@@ -11,6 +11,6 @@ with argument0 begin
 	
 	ds_list_delete(self.memento, last)
 
-	init
+	event_user(ev_init)
 
 end

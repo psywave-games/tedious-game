@@ -1,18 +1,22 @@
-if self.state == fsm_obj.none or self.state == fsm_obj.broken then
+if self.state == fsm_mob.none or self.state == fsm_mob.broken or game.app.state != fsm_game.play then
 	exit
 	
-//var looking = p_looking() * 14
+self.step += 1	
+	
+var looking = p_looking() * -20
 
-if position_meeting(x, y, obj_player) begin
+if place_meeting(x, y + looking, obj_player) begin
 	/// Interagir
-	if game.app.input.key_interact and self.state == fsm_obj.idle then
+	if game.app.input.key_interact and self.state == fsm_mob.idle then
 		event_user(ev_interact_down)
 	
 	/// Desinteragir
-	else if game.app.input.key_interact and self.state == fsm_obj.running then
+	else if game.app.input.key_interact and self.state == fsm_mob.running then
 		event_user(ev_interact_up)
-	
-	
+		
+	/// Trocar interação
+	else if abs(game.app.input.key_axis_switch) then
+		event_user(ev_interact_switch)
 	
 	/// Mostrar menssagem
 	event_user(ev_interact_message)
@@ -21,3 +25,10 @@ end
 
 else
 	self.can_interact = false
+	
+#region STEP LITE
+if step % 10 then
+	event_user(ev_lite_step)
+	
+#endregion
+	

@@ -1,8 +1,6 @@
-
 /// @see			EN
 if game.app.lang == msg.en begin
 	switch argument[0] begin
-	
 		case msg.press_start:
 			return "press enter to start"
 		case msg.menu_start:
@@ -131,11 +129,45 @@ if game.app.lang == msg.en begin
 		    return "turn on stove" 
 		case msg.interact_furnace_off:
 		    return "turn off stove"
-	
+		case msg.interact_book:
+		    return "read the book"
+		case msg.psy_chest:
+		    return "chest"
+		case msg.psy_drawer:
+		    return "drawer"
+		case msg.interact_loot:
+		    return "loot"
+		case msg.interact_shower:
+		    return "take a shower"
+		case msg.primary_f:
+		    return "first"
+		case msg.primary_m:
+		    return "first"
+		case msg.secondary_f:
+		    return "second"
+		case msg.secondary_m:
+		    return "second"
+		case msg.interact_google:
+		    return "search cool agriculture machine"
+		case msg.interact_furnace_hurt:
+		    return "stick your hand on stove"
+		case msg.interact_coffe_freezer_gap:
+		    return "grab a coffee cup"
+		case msg.interact_coffe_microwave_put:
+		    return "put coffee cup in the  microwave"
+		case msg.interact_coffe_microwave_gap:
+		    return "grab  coffee from microwave"
+		case msg.interact_coffe_freezer_put:
+		    return "put coffee in the fridge"
+		case msg.interact_microwave_down:
+		    return "turn on microwave"
+		case msg.interact_music_2009:
+		    return " play teclado lindinho 2009 music"
+		case msg.psy_door:
+		    return "door"
 	end
 end
 switch argument[0] begin
-
 	case msg.press_start:
 		return "precione enter para jogar"
 	case msg.menu_start:
@@ -264,6 +296,68 @@ switch argument[0] begin
 	    return "acender o fogao" 
 	case msg.interact_furnace_off:
 	    return "apagar o fogao"
+	case msg.interact_book0:
+	    return "como dizia o filosofo piton, que teve como discipulo nada mais nada menos do que karl marx."
+	case msg.interact_book1:
+	    return "tudo na vida depende do quanto voce quer comer alguem."
+	case msg.interact_book2:
+	    return "voce trabalha pra comer alguem, voce estuda pra comer alguem, voce usa droga pra comer alguem,"
+	case msg.interact_book3:
+	    return "voce malha, toma veneno, faz a desgraca toda pra comer alguem, "
+	case msg.interact_book4:
+	    return "voce vai num show com a intencao de sair de la pra comer alguem,"
+	case msg.interact_book5:
+	    return "voce faz doacao, voce faz caridade, posta foto da caridade que voce fez no instagram, no face,"
+	case msg.interact_book6:
+	    return "pras mina olhar: o... ele e caridoso, ele tem pensamento social, ah vou dar pra ele, pra comer alguem desgraca,"
+	case msg.interact_book7:
+	    return "tudo na vida tem a intencao de comer alguem, a quantidade de vontade que voce quer esfolar uma buceta desgraca,"
+	case msg.interact_book8:
+	    return "entao nao venha com essa de que a... eu sou, eu sou beneficente, eu sou amigo da comunidade, voce nao e amigo de desgraca nenhuma,"
+	case msg.interact_book9:
+	    return "voce quer comer alguem rapaz, voce quer fuder pra comer alguem,"
+	case msg.interact_book10:
+	    return "voce nao estuda, pra ter um emprego bom pra juntar dinheiro pra falar: a... nao sei o que, eu sou bem sucedido."
+	case msg.interact_book11:
+	    return "voce estuda pra chegar a desgraca, eu tenho dinheiro, eu vou fuder puta, eu vou comer todo mundo desgraca."
+	case msg.interact_book12:
+	    return "entao a ideia e essa, facam tudo, facam tudo na intencao de esfolar uma buceta desgraaca."
+	case msg.interact_book:
+	    return "ler o livro"
+	case msg.psy_chest:
+	    return "bau"
+	case msg.psy_drawer:
+	    return "gaveta"
+	case msg.interact_loot:
+	    return "saquear"
+	case msg.interact_shower:
+	    return "tomar banho"
+	case msg.primary_f:
+	    return "primeiro"
+	case msg.primary_m:
+	    return "primeiro"
+	case msg.secondary_f:
+	    return "segundo"
+	case msg.secondary_m:
+	    return "segundo"
+	case msg.interact_google:
+	    return "procurar maquinas agricolas maneiras"
+	case msg.interact_furnace_hurt:
+	    return " enfiar a mao no fogao"
+	case msg.interact_coffe_freezer_gap:
+	    return " pegar um copo de cafe"
+	case msg.interact_coffe_microwave_put:
+	    return " colocar copo de cafe no microondas"
+	case msg.interact_coffe_microwave_gap:
+	    return "  pegar o copo de cafe do microondas"
+	case msg.interact_coffe_freezer_put:
+	    return "colocar o copo de cafe na geladeira"
+	case msg.interact_microwave_down:
+	    return "ligar o microondas"
+	case msg.interact_music_2009:
+	    return " tocar musica teclado lindinho 2009"
+	case msg.psy_door:
+	    return "porta"
 end
 
 return "#Error 18"

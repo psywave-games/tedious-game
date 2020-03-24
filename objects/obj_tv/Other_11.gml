@@ -1,4 +1,4 @@
 /// @description Interagir
 
-self.state = fsm_obj.running
+self.state = fsm_mob.running
 

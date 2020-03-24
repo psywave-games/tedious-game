@@ -15,4 +15,4 @@ self.state = fsm_player.idle
 
 self.escada = 0
 
-install_speak
+speak_install()
