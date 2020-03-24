@@ -82,4 +82,3 @@ else begin
 	draw_text_transformed_color(_xx,_yy, _text, _size, _size, 0, _color, _color, _color, _color, _alpha)
 end
 #endregion
-

@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+var _msed_left = mouse_check_button_pressed(mb_left)
+var _msed_right = mouse_check_button_pressed(mb_right)
 
 var _keyd_enter = keyboard_check_pressed(vk_enter)
 var _keyd_esc = keyboard_check_pressed(vk_escape)
@@ -47,16 +49,16 @@ else if game.app.state == fsm_game.menuMain
 	key_menu_esc = _keyd_esc
 	key_menu_enter = _keyd_enter
 	key_menu_go = _keyd_down - _keyd_up
-	key_menu_in = _keyd_righ - _keyd_left + _keyd_enter
+	key_menu_in = _keyd_righ - _keyd_left + _keyd_enter - _msed_left + _msed_right
 end
 
 else if game.app.state == fsm_game.lang begin 
-	key_menu_go = _keyd_righ - _keyd_left
-	key_menu_in = _keyd_enter
+	key_menu_go = _keyd_righ - _keyd_left 
+	key_menu_in = _keyd_enter + _msed_left - _msed_right
 end
 
 else if game.app.state == fsm_game.warn then
-	key_menu_go = _keyd_del
+	key_menu_in = _keyd_del
 
 #endregion
 

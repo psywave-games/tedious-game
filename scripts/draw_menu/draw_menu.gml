@@ -28,6 +28,31 @@ end
 
 _yy += 30 * argument[0]
 
+#region MOUSE HOVER
+/// posicao do mouse
+var _mouse_x = window_mouse_get_x() + window_get_x()
+var _mouse_y = window_mouse_get_y() + window_get_y()
+
+/// centro da tela
+var _w = display_get_gui_width()/2 
+var _h = display_get_gui_height()/2
+
+/// SELECAO IDIOMAS
+if game.app.state == fsm_game.lang begin
+	if point_distance(_mouse_x, _mouse_y, _w, _h) <= (_w+_h)/5 then 
+		game.app.interface.select = _w <= _mouse_x
+end 
+/// MENUS
+else begin 
+	/// get menu y
+	var _menu_xx = _w + _xx
+	var _menu_yy = _h + _yy
+	
+	if abs( _menu_yy - _mouse_y + 5) <= 16 and _mouse_x <= _menu_xx then
+		game.app.interface.select = argument[0]
+end
+#endregion
+
 var _alpha = game.app.interface.select == argument[0]? 1: 0.5
 
 draw_gui(_xx, _yy, _horizontal, _vertical, argument[1], fnt_game0, 15, _alpha)
