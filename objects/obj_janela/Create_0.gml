@@ -1,3 +1,2 @@
-self.state = fsm_obj.idle
-
-self.name = msg.psy_ruindows
+/// @description
+mob_install(fsm_mob.idle)

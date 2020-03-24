@@ -5,4 +5,4 @@ room_goto(rm_level0)
 game.app.started = true
 
 
-init
+event_user(ev_init)

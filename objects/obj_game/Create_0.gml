@@ -104,6 +104,4 @@ interface = instance_create_layer(x,y, "Instances", obj_interface)
 memento = ds_list_create()
 #endregion
 
-install_speak
-
-init
+event_user(ev_init)

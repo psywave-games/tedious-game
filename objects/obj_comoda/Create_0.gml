@@ -1,3 +1,2 @@
-self.state = fsm_obj.none
-
-self.name = msg.psy_microwave
+/// @description mob
+mob_install(fsm_mob.none)

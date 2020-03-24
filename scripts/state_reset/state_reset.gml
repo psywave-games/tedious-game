@@ -6,5 +6,5 @@ with argument0 begin
 	ds_list_add(self.memento, self.state)
 	self.state = argument1
 
-	init
+	event_user(ev_init)
 end

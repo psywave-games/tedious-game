@@ -1,3 +1,3 @@
 /// @description Desinteragir
 
-self.state = fsm_obj.idle
+self.state = fsm_mob.idle

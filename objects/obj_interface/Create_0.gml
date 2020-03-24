@@ -18,4 +18,4 @@ self.select = 0
 self.alpha_start = true
 
 
-init
+event_user(ev_init)

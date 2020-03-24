@@ -263,11 +263,27 @@
             }
         },
         {
+            "Key": "2f24eef4-21fb-4d2a-ab91-f73a38d783a5",
+            "Value": {
+                "id": "bbd9a60b-016a-4e02-840c-7a09fffb7240",
+                "resourcePath": "scripts\/speak_install\/speak_install.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "30fed892-1072-4169-b688-03d62a891f50",
             "Value": {
                 "id": "df398f7c-ab3f-4837-854c-fcc411bd5fe2",
                 "resourcePath": "scripts\/draw_menu\/draw_menu.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "330175ba-4528-4f44-bf89-ede2119cc0bc",
+            "Value": {
+                "id": "5e0df3fd-12c5-4a85-a3fa-78aaa87c7759",
+                "resourcePath": "objects\/obj_computer\/obj_computer.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -308,6 +324,14 @@
                 "id": "a46ac767-5730-452c-84a8-6f5f36614b06",
                 "resourcePath": "views\/3ceb6148-7dd4-4b25-acb5-33e827d6ef42.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3e853e6f-789b-4c2c-a3da-3ebae8a6bfb7",
+            "Value": {
+                "id": "e0dea0b0-3152-47df-b7e9-7718e7686e21",
+                "resourcePath": "scripts\/p_book_read\/p_book_read.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -671,6 +695,14 @@
             }
         },
         {
+            "Key": "8fe92957-e991-4cae-957b-eff7f121dd63",
+            "Value": {
+                "id": "f2a7a9dd-9795-4db4-aeb4-327c94a255a0",
+                "resourcePath": "views\/8fe92957-e991-4cae-957b-eff7f121dd63.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "91c67d8b-de2f-4a0a-80b0-422d3991c8b5",
             "Value": {
                 "id": "b29bb815-8dbc-489c-a9e1-b0740c4f234f",
@@ -804,6 +836,14 @@
                 "id": "98dcf19a-916b-419e-a0dc-e19f65e1a642",
                 "resourcePath": "sprites\/spr_tv2\/spr_tv2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b0f21a98-f4b8-4874-9fb3-1a677ece9e16",
+            "Value": {
+                "id": "d0f98307-57e4-4c3b-85cd-54c7d36418b9",
+                "resourcePath": "scripts\/speak_break\/speak_break.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1279,6 +1319,14 @@
             }
         },
         {
+            "Key": "fb2df7eb-7ada-464b-b23f-5838a0be209b",
+            "Value": {
+                "id": "feb372d2-47f9-4a06-af79-58ba8ef9d7e6",
+                "resourcePath": "scripts\/mob_install\/mob_install.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fb789149-b6f4-4cba-a103-7daa1722d2c2",
             "Value": {
                 "id": "88f32da6-f5e1-4539-9890-9ad38efa40eb",
@@ -1335,11 +1383,13 @@
         "52528d71-51ab-4359-b41d-51a4cfcabb10",
         "cd599c42-e702-4c21-ac4d-e39487fbcfa1",
         "8e2fdf19-bb3a-463a-ab0d-8fe1526d66e2",
+        "b0f21a98-f4b8-4874-9fb3-1a677ece9e16",
         "f41c094f-ef34-4bdd-a84d-cfe76816ae87",
         "989b6b7f-1cf3-4d59-8618-3b51d5b73ea0",
         "ef16f6f6-26a3-4e7f-ac67-eade280df748",
         "4fb54443-5db8-476a-88fa-83d092363a7b",
         "cb880162-bfc4-4c07-a5aa-55659d5e02b0",
+        "3e853e6f-789b-4c2c-a3da-3ebae8a6bfb7",
         "22accf10-0699-4a92-8827-7e57239c6665",
         "bca9024e-14fb-48b7-9352-1981a290bbd4",
         "ed12b41d-549c-4f98-96a0-190016418320",
@@ -1351,7 +1401,9 @@
         "06d7528f-7639-4047-9858-d8aa95627c4f",
         "6c9b7438-71a3-4cda-8ffc-c368860c2ef7",
         "47891b85-a68c-471a-a00a-03e46c6f9aae",
-        "09663c49-4f3a-4aed-b969-c49e1711afdf"
+        "09663c49-4f3a-4aed-b969-c49e1711afdf",
+        "fb2df7eb-7ada-464b-b23f-5838a0be209b",
+        "2f24eef4-21fb-4d2a-ab91-f73a38d783a5"
     ],
     "tutorial": ""
 }

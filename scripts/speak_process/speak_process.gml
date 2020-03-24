@@ -48,13 +48,13 @@ if self.speak_init <= self.speak_step and self.speak_step < self.speak_finish be
 				var _yy = self.y - 16
 				
 				/// dimencionar texto
-				var _size = 0.3
+				var _size = 0.1
 				
 				/// colorir texto
-				var _color = 0xFF00FF
+				draw_set_color(0xFFFFFF)
 				
 				/// renderizar
-				draw_text_transformed_color(_xx, _yy, _text, _size, _size, 0, _color, _color, _color, _color, 1)	
+				draw_text_ext_transformed(_xx, _yy, _text, 16, 256, _size, _size, 0)	
 				break
 			#endregion
 		end
