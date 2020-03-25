@@ -9,7 +9,8 @@
         "028a5c78-f2cd-4144-bfe2-19e227344076",
         "fe53928b-b172-47df-9f24-ae3a037a8aa4",
         "fa96b81a-9f12-4eae-9145-7dfb8b2b8dfe",
-        "d3de394c-79c0-4c01-a27b-cbd4adbed761"
+        "d3de394c-79c0-4c01-a27b-cbd4adbed761",
+        "7fdf4ac9-b066-4fce-9255-4f62b5788121"
     ],
     "filterType": "GMScript",
     "folderName": "Outline Shader",
