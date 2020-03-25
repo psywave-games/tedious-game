@@ -17,6 +17,15 @@ enum word {
 }
 
 
+enum system {
+	windows_phone,
+	windows,
+	android,
+	macosx,
+	unix,
+	ios
+}
+
 /// FINITE STATE MACHINE PLAYER MODE
 enum fsm_player{
 	none,									/// Quando não ativado

@@ -1,0 +1,1 @@
+draw(spr_computer, c_maroon)
