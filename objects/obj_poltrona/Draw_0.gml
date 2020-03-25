@@ -1,0 +1,1 @@
+draw(spr_poltrona, c_blue)

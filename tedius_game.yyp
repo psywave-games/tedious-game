@@ -455,6 +455,14 @@
             }
         },
         {
+            "Key": "58506415-3e75-463d-80cd-deddeb59c253",
+            "Value": {
+                "id": "6bb0e354-76a7-4c14-a123-a069144f04b8",
+                "resourcePath": "objects\/obj_poltrona\/obj_poltrona.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "58d79194-8c18-4ca6-9968-2e31cc4b0149",
             "Value": {
                 "id": "c0d69e14-1e18-45f8-8b20-41e1d2ecc277",
@@ -631,6 +639,14 @@
             }
         },
         {
+            "Key": "79a18f80-8577-4001-acb2-2908498c5870",
+            "Value": {
+                "id": "9f5c7542-c871-4f35-aa27-da9f012fdf20",
+                "resourcePath": "objects\/obj_teclado\/obj_teclado.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7cfab4b9-2559-418c-836d-b318833db557",
             "Value": {
                 "id": "840b1740-53eb-42fd-9db0-7a46feb55555",
@@ -644,6 +660,14 @@
                 "id": "243a3d59-10d7-4a62-8b53-6e6152e752b0",
                 "resourcePath": "sprites\/spr_tv1\/spr_tv1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7fdf4ac9-b066-4fce-9255-4f62b5788121",
+            "Value": {
+                "id": "0701ba58-90d5-4e9f-9d5e-627de4156d04",
+                "resourcePath": "scripts\/outline_begin\/outline_begin.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1399,6 +1423,14 @@
             }
         },
         {
+            "Key": "f90b31a2-5be2-49e7-b30f-f5eb6efeeb8d",
+            "Value": {
+                "id": "fcb96b80-a82b-457b-b90e-8671bad81f47",
+                "resourcePath": "objects\/obj_bau\/obj_bau.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fa96b81a-9f12-4eae-9145-7dfb8b2b8dfe",
             "Value": {
                 "id": "3f33052d-1d2c-4f52-bd52-f8720186f647",
@@ -1506,7 +1538,8 @@
         "028a5c78-f2cd-4144-bfe2-19e227344076",
         "fe53928b-b172-47df-9f24-ae3a037a8aa4",
         "fa96b81a-9f12-4eae-9145-7dfb8b2b8dfe",
-        "d3de394c-79c0-4c01-a27b-cbd4adbed761"
+        "d3de394c-79c0-4c01-a27b-cbd4adbed761",
+        "7fdf4ac9-b066-4fce-9255-4f62b5788121"
     ],
     "tutorial": ""
 }

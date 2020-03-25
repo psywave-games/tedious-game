@@ -1,28 +1,28 @@
 {
-    "id": "b7a64f69-a4ce-40f4-bdf0-4f0de36b0dae",
+    "id": "58506415-3e75-463d-80cd-deddeb59c253",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_janela",
+    "name": "obj_poltrona",
     "eventList": [
         {
-            "id": "970866d6-531f-4ded-a09a-e390190fb4dc",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "b7a64f69-a4ce-40f4-bdf0-4f0de36b0dae"
-        },
-        {
-            "id": "077107aa-00b1-4dcb-a26e-94e1d4337206",
+            "id": "9ebb45c3-50f1-4a4f-add9-f9ca5f5dce67",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 8,
-            "m_owner": "b7a64f69-a4ce-40f4-bdf0-4f0de36b0dae"
+            "m_owner": "58506415-3e75-463d-80cd-deddeb59c253"
+        },
+        {
+            "id": "9964d53e-7622-4cda-bd8f-d84f119f5c9a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "58506415-3e75-463d-80cd-deddeb59c253"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -43,6 +43,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "5ca247a6-e708-4627-b583-545b178f9fe7",
+    "spriteId": "b112f2c0-f5f7-475c-8615-2b6e784127f6",
     "visible": true
 }
