@@ -146,7 +146,7 @@
             "Key": "12f6f453-138a-4e17-a54a-ceae3f7371bb",
             "Value": {
                 "id": "c6d57995-857f-40ba-9146-8dbaf6c030f9",
-                "resourcePath": "sprites\/spr_cama\/spr_cama.yy",
+                "resourcePath": "sprites\/spr_cama0\/spr_cama0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -172,6 +172,14 @@
                 "id": "e4d8796a-9504-430e-83fb-efa3cd3c16e6",
                 "resourcePath": "views\/166bc599-ccb7-4889-a3ee-897d1fd624bc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "187a1820-06ad-419b-98ec-d48f68d757a8",
+            "Value": {
+                "id": "6623f0e1-cc58-4c86-9fe4-974294cfaeab",
+                "resourcePath": "objects\/obj_porta\/obj_porta.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -263,6 +271,14 @@
             }
         },
         {
+            "Key": "29570aea-38a2-4433-a475-ec6ba9f46776",
+            "Value": {
+                "id": "6335d82f-ed07-451e-af35-b92ba747aadb",
+                "resourcePath": "sprites\/spr_cama1\/spr_cama1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2d62430a-44e4-42fa-8a69-c5c75b7b738b",
             "Value": {
                 "id": "066613d9-5009-4e29-9537-f2d214366e81",
@@ -308,6 +324,14 @@
                 "id": "458826f8-b10c-4eb9-b6d8-7c062693b89d",
                 "resourcePath": "objects\/obj_tv\/obj_tv.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "37d907ef-796a-4bda-bc6a-d678d9aa9332",
+            "Value": {
+                "id": "7889b146-c939-4202-ae67-5f9a74a08cff",
+                "resourcePath": "scripts\/p_door\/p_door.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -698,7 +722,7 @@
             "Key": "8b0082cd-cb19-42da-9a3c-950598c62252",
             "Value": {
                 "id": "3163b2cc-aadb-413f-81d0-9d5fc2c8b549",
-                "resourcePath": "sprites\/spr_porta_b\/spr_porta_b.yy",
+                "resourcePath": "sprites\/spr_door1\/spr_door1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1039,6 +1063,14 @@
             }
         },
         {
+            "Key": "c6996b1f-9e64-4481-a99c-989962085709",
+            "Value": {
+                "id": "b8207e63-dfa5-4842-9822-db82b5c92773",
+                "resourcePath": "sprites\/spr_cama2\/spr_cama2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c6de093f-691e-4276-b2b5-e30d229ce6ca",
             "Value": {
                 "id": "649f0e97-24ba-417b-91d7-3a731997a3b9",
@@ -1159,14 +1191,6 @@
             }
         },
         {
-            "Key": "d123f4eb-d9a7-4f16-a7e3-454dc826872b",
-            "Value": {
-                "id": "d4cf6282-c272-4f91-9013-0d7ec24b047c",
-                "resourcePath": "sprites\/spr_porta_a\/spr_porta_a.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "d3de394c-79c0-4c01-a27b-cbd4adbed761",
             "Value": {
                 "id": "d5caade1-9708-427e-a9a7-b8dcea180031",
@@ -1204,6 +1228,14 @@
                 "id": "92ba9577-1b0e-4c7f-b702-2779244b539d",
                 "resourcePath": "objects\/obj_cama\/obj_cama.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d8d472b8-0f09-41fd-8b77-e02602494f84",
+            "Value": {
+                "id": "f0d1a767-fafd-4eb4-8a58-ab61d6ce987b",
+                "resourcePath": "sprites\/spr_door0\/spr_door0.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1518,6 +1550,7 @@
         "4fb54443-5db8-476a-88fa-83d092363a7b",
         "cb880162-bfc4-4c07-a5aa-55659d5e02b0",
         "3e853e6f-789b-4c2c-a3da-3ebae8a6bfb7",
+        "37d907ef-796a-4bda-bc6a-d678d9aa9332",
         "22accf10-0699-4a92-8827-7e57239c6665",
         "bca9024e-14fb-48b7-9352-1981a290bbd4",
         "ed12b41d-549c-4f98-96a0-190016418320",
