@@ -10,3 +10,5 @@ self.can_interact = false
 self.message = ""
 
 self.step = 0
+
+outline_init()
