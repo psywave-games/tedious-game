@@ -22,6 +22,7 @@ var _key_left = keyboard_check(vk_left)
 var _key_down = keyboard_check(vk_down)
 var _key_righ = keyboard_check(vk_right)
 var _key_shift = keyboard_check(vk_shift)
+var _key_ord_m = keyboard_check(ord("M"))
 
 #region MENUS
 key_menu_open = false
@@ -44,7 +45,8 @@ end
 else if game.app.state == fsm_game.menuMain 
 	or game.app.state == fsm_game.menuOptions
 	or game.app.state == fsm_game.menuGraphic 
-	or game.app.state == fsm_game.menuAudio begin 
+	or game.app.state == fsm_game.menuAudio
+	or game.app.state == fsm_game.menuWindow begin 
 	
 	key_menu_esc = _keyd_esc
 	key_menu_enter = _keyd_enter
@@ -74,6 +76,7 @@ if game.app.state = fsm_game.play begin
 
 	key_run = _key_shift 
 	key_jump = _keyd_space
+	key_moonwalk = _key_ord_m
 	key_interact = _keyd_enter or _keyd_ord_f
 end
 

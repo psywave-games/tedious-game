@@ -1,9 +1,16 @@
-draw_self()
+draw(
+	spr_espelho1, c_white,
+	spr_espelho2, c_navy
+)
 
-if (playercollision) { 
+
+if lite() or not game.app.render.reflex then 
+	exit
+
+if (playercollision) begin 
 
 	var surface_player = surface_create(sprite_width, sprite_height)
-	if (surface_exists(surface_player)) {
+	if (surface_exists(surface_player)) begin
 		var _xx = 6 - (game.app.player.x - self.x)
 		var _yy = 8 + (game.app.player.y - self.y)/4
 		var _sign = sign(game.app.player.x - self.x)
@@ -24,7 +31,7 @@ if (playercollision) {
 		draw_surface(surface_player,x-8,y-8)
 	
 		surface_free(surface_player)
-	}
+	end
 
-}
+end
 	

@@ -104,5 +104,6 @@ interface = instance_create_layer(x,y, "Instances", obj_interface)
 memento = ds_list_create()
 #endregion
 
+global.fullscreen_web = false
 
 event_user(ev_init)

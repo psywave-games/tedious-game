@@ -45,8 +45,8 @@ enum fsm_game {
 	menuMain,								/// STATE: Menu Principal/Pause
 	menuOptions,							/// STATE: Menu de Opçoões
 	menuGraphic,							/// STATE: Menu de graficos
+	menuWindow,								/// STATE: Menu de Janela
 	menuAudio,								/// STATE: Menu de Audio
-	menuPallete,							/// STATE: Não utilizado
 	cutscene,								/// STATE: Cenas de Jogo 
 	play									/// STATE: Gameplay
 }
@@ -66,6 +66,7 @@ enum msg {
 	press_start,
 	menu_start,
 	menu_lang,
+	menu_window,
 	menu_video,
 	menu_audio,
 	back,
@@ -79,6 +80,8 @@ enum msg {
 	video_fnthd,
 	video_color,
 	video_full,
+	video_outline,
+	video_reflex,
 	beta,
 	menu_exit,
 	scorebord,

@@ -49,6 +49,7 @@ self.font_speed = 3
 self.camera_speed = 2
 self.light_hd = true
 self.outline = true
+self.reflex = true
 #endregion
 
 
