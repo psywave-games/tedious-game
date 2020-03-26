@@ -52,11 +52,20 @@ window_set_size(resolution_width, resolution_height)
 
 #region CENTER BROWSER WINDOW
 if os_browser != browser_not_a_browser begin
+	/// ajustar fullscreen
+	if global.fullscreen_web begin
+		window_set_size(browser_width, browser_height)
+		window_set_position(0,0)
+	end
+	
+	/// ajustar bordas
+	else begin
+		var min_x = (browser_width - resolution_width) / 2
+		var min_y = (browser_height - resolution_height) / 2
 
-	var min_x = (browser_width - resolution_width) / 2
-	var min_y = (browser_height - resolution_height) / 2
-
-	window_set_position(min_x, min_y)
-	window_set_colour(c_black)
+		window_set_position(min_x, min_y)
+		window_set_colour(c_black)
+	end
 end
 #endregion
+

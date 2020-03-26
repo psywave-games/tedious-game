@@ -11,6 +11,8 @@ if game.app.lang == msg.en begin
 			return  "English"
 		case msg.menu_lang:
 			return "Language:"
+		case msg.menu_window:
+			return "Display"
 		case msg.menu_video:
 			return "Graphics"
 		case msg.menu_audio:
@@ -31,6 +33,10 @@ if game.app.lang == msg.en begin
 			return "Colorize:"
 		case msg.video_full:
 			return "FullScreen:"
+		case msg.video_outline:
+			return "Outline:"
+		case msg.video_reflex:
+			return "Reflections:"
 		case msg.warn_title: 
 			return "W A R N I N G"
 		case msg.warn_text:
@@ -178,6 +184,8 @@ switch argument[0] begin
 		return  "English"
 	case msg.menu_lang:
 		return "Idioma:"
+	case msg.menu_window:
+		return "Exibicao"
 	case msg.menu_video:
 		return "Graficos"
 	case msg.menu_audio:
@@ -198,6 +206,10 @@ switch argument[0] begin
 		return "Colorizar:"
 	case msg.video_full:
 		return "Tela cheia:"
+	case msg.video_outline:
+		return "Contorno:"
+	case msg.video_reflex:
+		return "Reflexos:"	
 	case msg.warn_title:
 		return "A V I S O"
 	case msg.warn_text:

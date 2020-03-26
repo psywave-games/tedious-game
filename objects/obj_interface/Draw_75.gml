@@ -66,44 +66,62 @@ end
 else if game.app.state == fsm_game.menuOptions begin
 	
 
-	draw_menu(0, t(msg.menu_lang))	
-	draw_menu(1, t(msg.menu_video))
-	draw_menu(2, t(msg.menu_audio))
-	draw_menu(3, t(msg.back), 10, 60)
+	draw_menu(0, t(msg.menu_lang))
+	draw_menu(1, t(msg.menu_window))
+	draw_menu(2, t(msg.menu_video))
+	draw_menu(3, t(msg.menu_audio))
+	draw_menu(4, t(msg.back), 10, 60)
 	
 	draw_item(0, t(game.app.lang), 200)
+end
+#endregion
+
+#region INTERFACE MENU DISPLAY
+else if game.app.state == fsm_game.menuWindow begin
+
+	var menu_resolution = string(display_get_gui_width()) + "x" + string(display_get_gui_height())
+	var menu_proportion = game.app.render.name_ratio[game.app.render.mode_ratio]
+	var menu_fullscreen = fullscreen_get()
+	var menu_font_speed = game.app.render.font_speed
+	var menu_cam_speed = game.app.render.camera_speed
+	
+	
+	draw_menu(0, t(msg.video_size))
+	draw_menu(1, t(msg.video_ratio))
+	draw_menu(2, t(msg.video_camspeed))
+	draw_menu(3, t(msg.video_digto))
+	draw_menu(4, t(msg.video_full))
+
+	draw_menu(5, t(msg.back), 10, 60)
+	
+	draw_item(0, menu_resolution, 200)
+	draw_item(1, menu_proportion, 200)
+	draw_bars(2, menu_cam_speed, 200)
+	draw_bars(3, menu_font_speed, 200)
+	draw_chck(4, menu_fullscreen, 200)
 end
 #endregion
 
 #region INTERFACE MENU GRAPHIC
 else if game.app.state == fsm_game.menuGraphic begin
 
-	var menu_resolution = string(display_get_gui_width()) + "x" + string(display_get_gui_height())
-	var menu_proportion = game.app.render.name_ratio[game.app.render.mode_ratio]
-	var menu_fullscreen = window_get_fullscreen()
-	var menu_font_speed = game.app.render.font_speed
-	var menu_cam_speed = game.app.render.camera_speed
+	var menu_reflex = game.app.render.reflex
+	var menu_outline = game.app.render.outline
 	var menu_hd_font = game.app.render.font_hd
 	var menu_hd_light = game.app.render.light_hd
 
+	draw_menu(0, t(msg.video_fnthd))
+	draw_menu(1, t(msg.video_lighthd))
+	draw_menu(2, t(msg.video_outline))
+	draw_menu(3, t(msg.video_reflex))
 	
-	draw_menu(0, t(msg.video_size))
-	draw_menu(1, t(msg.video_ratio))
-	draw_menu(2, t(msg.video_fnthd))
-	draw_menu(3, t(msg.video_lighthd))
-	draw_menu(4, t(msg.video_digto))
-	draw_menu(5, t(msg.video_camspeed))
-	draw_menu(6, t(msg.video_full))
-	draw_menu(7, t(msg.back), 10, 60)
+	draw_menu(4, t(msg.back), 10, 60)
 	
 	
-	draw_item(0, menu_resolution, 200)
-	draw_item(1, menu_proportion, 200)
-	draw_chck(2, menu_hd_font, 200)
-	draw_chck(3, menu_hd_light, 200)
-	draw_bars(4, menu_font_speed, 200)
-	draw_bars(5, menu_cam_speed, 200)
-	draw_chck(6, menu_fullscreen, 200)
+	draw_chck(0, menu_hd_font, 200)
+	draw_chck(1, menu_hd_light, 200)
+	draw_chck(2, menu_outline, 200)
+	draw_chck(3, menu_reflex, 200)
 end
 #endregion
 

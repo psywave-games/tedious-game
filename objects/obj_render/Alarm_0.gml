@@ -33,4 +33,5 @@ end
 
 #endregion
 
+global.fullscreen_web = true
 resolution_set(resolution, ratio)
