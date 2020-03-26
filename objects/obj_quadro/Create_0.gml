@@ -1,0 +1,1 @@
+self.can_interact = false
