@@ -2,7 +2,7 @@
     "id": "e66d304d-a487-4e0e-ac43-47d7a1fc246e",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_baseLamp",
+    "name": "obj_baseFlare",
     "eventList": [
         {
             "id": "096a099d-5aca-4b8f-9cc8-e0dd63cc10dd",

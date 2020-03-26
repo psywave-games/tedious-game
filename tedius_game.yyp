@@ -759,6 +759,14 @@
             }
         },
         {
+            "Key": "8936c2b3-5c95-449e-b7f5-ff82f01528b9",
+            "Value": {
+                "id": "da6798b0-d6cf-43d8-979e-c7d8c0b9ba10",
+                "resourcePath": "scripts\/color\/color.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8b0082cd-cb19-42da-9a3c-950598c62252",
             "Value": {
                 "id": "3163b2cc-aadb-413f-81d0-9d5fc2c8b549",
@@ -1103,6 +1111,14 @@
             }
         },
         {
+            "Key": "c0540dab-80f9-4490-9b1c-1f83028e7fe3",
+            "Value": {
+                "id": "694b30a7-f0de-4ab5-a824-6e07e92737e6",
+                "resourcePath": "scripts\/sad\/sad.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c36f7172-1b55-469a-876e-e1f52d3182b2",
             "Value": {
                 "id": "025d0786-e5b7-4834-a3fe-118ebd360256",
@@ -1386,7 +1402,7 @@
             "Key": "e66d304d-a487-4e0e-ac43-47d7a1fc246e",
             "Value": {
                 "id": "a61e55a7-6803-4a4e-bbc8-d0a6d1d0801a",
-                "resourcePath": "objects\/obj_baseLamp\/obj_baseLamp.yy",
+                "resourcePath": "objects\/obj_baseFlare\/obj_baseFlare.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1657,6 +1673,8 @@
         "87568870-2f36-4da6-95d2-a5035a31fb69",
         "ee0ee7a4-8ccb-4f69-b1ff-a70070b5c95c",
         "9aee0d22-932d-472a-bd96-c92e10769e09",
+        "8936c2b3-5c95-449e-b7f5-ff82f01528b9",
+        "c0540dab-80f9-4490-9b1c-1f83028e7fe3",
         "befe9efb-cebb-4c0d-b275-ae590b5ed3c4",
         "b545f798-3391-409f-bf1a-819032e8aa95",
         "028a5c78-f2cd-4144-bfe2-19e227344076",
