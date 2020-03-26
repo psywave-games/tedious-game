@@ -1,5 +1,7 @@
+#region IGNORE MOB
 if self.state == fsm_mob.none or self.state == fsm_mob.broken or game.app.state != fsm_game.play then
 	exit
+#endregion
 	
 self.step += 1	
 	

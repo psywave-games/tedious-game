@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "348614ce-0520-4c9c-b269-93d68bb32267",
+            "Value": {
+                "id": "0d4145ae-d375-412d-a450-656b1652b0ec",
+                "resourcePath": "objects\/obj_banheiro_espelho\/obj_banheiro_espelho.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3668e469-effb-4155-ad42-4c0ca6696887",
             "Value": {
                 "id": "458826f8-b10c-4eb9-b6d8-7c062693b89d",
@@ -380,6 +388,14 @@
                 "id": "0665249f-75f3-4db1-8562-fc92f5e6c9ce",
                 "resourcePath": "views\/3f796cb2-db2d-4551-8435-10304cfd1e45.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "413c498a-50c8-4df7-937b-957f72e96881",
+            "Value": {
+                "id": "49bfa663-0303-4549-8ae2-fed717a2865a",
+                "resourcePath": "objects\/obj_banheiro_chuveiro\/obj_banheiro_chuveiro.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1351,6 +1367,14 @@
             }
         },
         {
+            "Key": "e6f196db-6873-40a4-b49a-e08716e4fc58",
+            "Value": {
+                "id": "081a60a2-14e5-4b7c-af42-aca755baec37",
+                "resourcePath": "objects\/obj_banheiro_pia\/obj_banheiro_pia.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e71e6956-3bce-41d1-ac22-6bbdc6dd4e48",
             "Value": {
                 "id": "ec072c5f-fd43-41e1-9da4-ef1cd12ac2e0",
@@ -1468,6 +1492,14 @@
                 "id": "1b8cb45d-4d11-45ed-8758-dba7d377082c",
                 "resourcePath": "views\/f67a8c34-bb42-472c-b799-414cfadde246.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f7495b6e-0dbf-4deb-a42d-8d95625d942f",
+            "Value": {
+                "id": "693871e8-7ecb-470f-8fc0-8e14efd9e096",
+                "resourcePath": "objects\/obj_banheiro_toilet\/obj_banheiro_toilet.yy",
+                "resourceType": "GMObject"
             }
         },
         {
