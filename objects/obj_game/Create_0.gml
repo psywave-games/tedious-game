@@ -45,6 +45,14 @@ self.lang = msg.pt
 /// @return	float		força do terremoto
 self.earthquake = 0
 
+
+/// @see				Nivel de felicidade do jogador
+/// @example			game.app.happy
+/// @return	int			valor de felcidade
+self.happy = 100
+
+global.fullscreen_web = false
+
 #endregion
 
 #region INIT FINITE SATE MACHINE
@@ -103,7 +111,5 @@ interface = instance_create_layer(x,y, "Instances", obj_interface)
 /// @return array		estados anteriores de game.app.state
 memento = ds_list_create()
 #endregion
-
-global.fullscreen_web = false
 
 event_user(ev_init)
