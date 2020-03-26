@@ -169,7 +169,7 @@ if game.app.lang == msg.en begin
 end
 switch argument[0] begin
 	case msg.press_start:
-		return "precione enter para jogar"
+		return "pressione enter para jogar"
 	case msg.menu_start:
 		return game.app.started? "Continuar": "Novo Jogo"
 	case msg.pt:
