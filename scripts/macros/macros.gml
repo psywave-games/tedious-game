@@ -13,7 +13,7 @@
 enum word {
 	slop = -1,
 	limit_left = 10,
-	limit_right = 502
+	limit_right = 374
 }
 
 
