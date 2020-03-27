@@ -9,7 +9,7 @@ if lite() or not game.app.render.reflex then
 
 if (playercollision) begin 
 
-	var surface_player = surface_create(sprite_width, sprite_height)
+	var surface_player = surface_create(10, 13)
 	if (surface_exists(surface_player)) begin
 		var _xx = 8 - (game.app.player.x - self.x)/1.4
 		var _yy = 8 + (game.app.player.y - self.y)/4
@@ -20,15 +20,11 @@ if (playercollision) begin
 		draw_clear_alpha(c_black, 0);
 		
 		
-		p_draw(_xx, _yy, 0.8 * _sign, 0.8, 0.75)
+		p_draw(_xx, _yy, 0.8 * _sign, 0.8, 0.64)
 	
-		gpu_set_blendmode(bm_subtract) // draw_set_blend_mode() in GM 1.4
-		draw_sprite(spr_espelho0,1,0,0) // this has the image we want to blank out
-		gpu_set_blendmode(bm_normal)
-
 		surface_reset_target()
 	
-		draw_surface(surface_player,x-8,y-8)
+		draw_surface(surface_player,x-5,y-6)
 	
 		surface_free(surface_player)
 	end
