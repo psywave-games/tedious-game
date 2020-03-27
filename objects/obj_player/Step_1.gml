@@ -16,7 +16,6 @@ repeat 2 begin
 end
 #endregion
 
-
-
+lite_step()
 
 

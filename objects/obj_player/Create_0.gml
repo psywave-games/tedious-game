@@ -15,4 +15,6 @@ self.state = fsm_player.idle
 
 self.escada = 0
 
+self.book_read = 0
+
 speak_install()

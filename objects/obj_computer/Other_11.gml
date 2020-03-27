@@ -8,10 +8,10 @@ switch self.select begin
 
 	/// ler um livro
 	case 2:
-		if ++book_page > 13 or not book_read then
+		if ++book_page > 13 or not game.app.player.book_read then
 			book_page = 1
 
 		speak(game.app.player, t(msg.interact_book + book_page))
-		book_read = true
+		game.app.player.book_read = true
 		break
 end

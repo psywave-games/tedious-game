@@ -1,9 +1,11 @@
 #region IGNORE MOB
-if self.state == fsm_mob.none or self.state == fsm_mob.broken or game.app.state != fsm_game.play then
-	exit
+if self.state == fsm_mob.none
+	or self.state == fsm_mob.broken
+	or game.app.state != fsm_game.play 
+	or p_book_read() then
+		exit
 #endregion
 	
-self.step += 1	
 	
 var looking = p_looking() * -20
 
@@ -34,9 +36,4 @@ end else
 	self.can_interact = false
 #endregion
 	
-#region STEP LITE
-if step % 10 then
-	event_user(ev_lite_step)
-	
-#endregion
-	
+lite_step()

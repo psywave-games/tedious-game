@@ -8,7 +8,7 @@ if game.app.lang == msg.en begin
 		case msg.pt:
 			return "Portuguese"
 		case msg.en:
-			return  "English"
+			return "English"
 		case msg.menu_lang:
 			return "Language:"
 		case msg.menu_window:
@@ -370,6 +370,34 @@ switch argument[0] begin
 	    return " tocar musica teclado lindinho 2009"
 	case msg.psy_door:
 	    return "porta"
+	case msg.interact_bible:
+		return "ler um poema"
+	case msg.interact_bible0:
+	    return "fiz uma promessa pra mim mesmo nunca mais comer torresmo"
+	case msg.interact_bible1:
+	    return "alguém me disse, outro dia, que para sentir satisfação e alegria é necessário ser caridoso"
+	case msg.interact_bible2:
+	    return "me dá um real, me da um real aí joão camainha mainha mania monai"
+	case msg.interact_bible3:
+	    return "o que fazer se não fazer e aceitar o tédio enfadonho"
+	case msg.interact_bible4:
+	    return "entao acho a receita de caminhar na caminhada"
+	case msg.interact_bible5:
+	    return "e subindo o morro, penso na sensação agradável de vir mais rápido na descida pois estou numa bike"
+	case msg.interact_bible6:
+	    return "corro o risco de tropeçar em mim mesmo e cair quebrando o pescoço"
+	case msg.interact_bible7:
+	    return "o que o gato disse para o leite antes de bebe-lo? miaaau!"
+	case msg.interact_bible8:
+	    return "não procure saber onde vou meu caminho é toda manhã"
+	case msg.interact_bible9:
+	    return "você gosta de maçã? eu também, mas não tem!"
+	case msg.interact_bible10: 
+	    return "aleluia, aleluia, aleluia!"
+	case msg.interact_bible11:
+	    return "reze uma ave maria um pai nosso e um graio pai e assim você deverá ser feliz, ser feliz"
+	case msg.interact_bible12:
+	    return "a felicidade não esta no pico da montanha, está enquanto você escala esta montanha!"
 end
 
 return "#Error 18"

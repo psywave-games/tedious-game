@@ -26,6 +26,7 @@ self.player = -1
 ///	@example			game.app.step
 /// @return	integer		numero de ticks passados desde de a criação do game
 self.step = 0
+self.step_play = 0
 
 
 /// @see				verifica se o jogo foi iniciado
@@ -50,6 +51,11 @@ self.earthquake = 0
 /// @example			game.app.happy
 /// @return	int			valor de felcidade
 self.happy = 100
+
+
+/// @see				Cronometrar tempo de jogo
+self.time_speedrun_init = current_time
+self.time_cron_step	= 0
 
 global.fullscreen_web = false
 

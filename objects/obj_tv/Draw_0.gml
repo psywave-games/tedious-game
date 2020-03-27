@@ -1,6 +1,6 @@
 outline_begin()
 
-draw_sprite_ext(spr_tv0, 0, x, y, image_xscale, image_yscale, 0, c_maroon, 1)
+draw_sprite_ext(spr_tv0, 0, x, y, image_xscale, image_yscale, 0, color(0xFFDC143C, sad()), 1)
 
 #region TELA
 
@@ -15,7 +15,7 @@ else
 
 #endregion
 
-draw_sprite_ext(spr_tv2, 0, x, y, image_xscale, image_yscale, 0, c_purple, 1)
+draw_sprite_ext(spr_tv2, 0, x, y, image_xscale, image_yscale, 0, color(c_white, sad()), 1)
 
 
 outline_end()

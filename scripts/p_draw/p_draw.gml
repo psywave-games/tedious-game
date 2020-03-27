@@ -18,7 +18,7 @@ with game.app.player begin
 	switch self.state begin
 		case fsm_player.idle:
 			draw_sprite_ext(spr_playerIdle1, image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
-			draw_sprite_ext(spr_playerIdle2, image_index, _xx, _yy, _xscale, _yscale, p_head_angle(), c_white, _alpha)
+			draw_sprite_ext(spr_playerIdle2, image_index, _xx, _yy, _xscale, _yscale, p_head_angle(_xscale), c_white, _alpha)
 			break
 
 		case fsm_player.jump:
@@ -26,12 +26,12 @@ with game.app.player begin
 			/// Correndo
 			if abs(hspeed) > 2 begin
 				draw_sprite_ext(spr_playerRun1, image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
-				draw_sprite_ext(spr_playerRun2, image_index, _xx, _yy, _xscale, _yscale, p_head_angle(), c_white, _alpha)
+				draw_sprite_ext(spr_playerRun2, image_index, _xx, _yy, _xscale, _yscale, p_head_angle(_xscale), c_white, _alpha)
 			end
 			/// Caminhando
 			else begin
 				draw_sprite_ext(spr_playerWalk1, image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
-				draw_sprite_ext(spr_playerWalk2, image_index, _xx, _yy, _xscale, _yscale, p_head_angle(), c_white, _alpha)
+				draw_sprite_ext(spr_playerWalk2, image_index, _xx, _yy, _xscale, _yscale, p_head_angle(_xscale), c_white, _alpha)
 			end
 			break
 		

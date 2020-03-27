@@ -40,7 +40,11 @@
         "8b0082cd-cb19-42da-9a3c-950598c62252",
         "99abda29-1d0b-4797-bfbe-7d8c386acca7",
         "1df3045b-376d-4651-8e4d-9cfa872cc7e4",
-        "95a73ab5-badf-456b-8665-030beb16dfc4"
+        "0719e4cb-5f43-4fb7-a756-4b0357a726ba",
+        "95a73ab5-badf-456b-8665-030beb16dfc4",
+        "8918e0ee-0b7e-4081-9573-c7462d9358f7",
+        "b62b6d4a-809c-4487-9cb1-6b60010d0272",
+        "6fc2ccd2-8193-4fc2-84a0-8f3e6d3878c8"
     ],
     "filterType": "GMSprite",
     "folderName": "moveis",

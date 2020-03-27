@@ -53,4 +53,6 @@ self.reflex = true
 #endregion
 
 
+self.background = -1
+
 alarm_set(0,1)
