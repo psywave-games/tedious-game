@@ -398,6 +398,16 @@ switch argument[0] begin
 	    return "reze uma ave maria um pai nosso e um graio pai e assim você deverá ser feliz, ser feliz"
 	case msg.interact_bible12:
 	    return "a felicidade não esta no pico da montanha, está enquanto você escala esta montanha!"
+	case msg.gameover_title:
+		return "Fim de Jogo!"
+	case msg.gameover_text:
+		return "sinto muito! voce cumpriu sua jornada infelizmente ela acabou por aqui, como devemos lembrar de voce?"
+	case msg.credits:
+		return "Idealizador do Jogo:\nRodrigo Dornelles\n\n\nArtes e Animações:\nBernas Veroli\n\n\nMúsica:\nFelipe Matheus\n\n\nProgramador Geral e UX:\nRodrigo Dornelles\n\nProgramador Auxiliar e Tradutor:\nRodrigo Oliveira\n\n\nTestes de Jogabilidade:\nRodrigo Oliveira\n\n\nDiretor de Conteudo:\nGabriel Philipe Martins\n\n\nAgradecimento a todos que testaram e verificaram o game:\nJulia Peron\nRobson Lima\nIgor Galindo\nLucas Coelho\nUbiratan Silva\nAdrian Klitzke\nJunio Teixeira\nHenrique Marciano\n\n\nPublicade do Projeto:\nLucas Leite\n\n\nSons e Sonoplastia:\nThiago Reis"
+
+	case msg.memorial:
+		var _datetime = date_current_datetime()
+		return "Em Memória de:\n" + game.app.nickname + "\n" +  string(date_get_day(_datetime)) + "/" + string(date_get_month(_datetime)) + "/" + string(date_get_year(_datetime))
 end
 
 return "#Error 18"

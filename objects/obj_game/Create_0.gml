@@ -53,7 +53,14 @@ self.earthquake = 0
 self.happy = 100
 
 
+/// @see				Nome do jogador
+/// @example			game.app.nickname
+/// @return	string		Apelido do jogador
+self.nickname =	""
+
+
 /// @see				Cronometrar tempo de jogo
+self.time_speedrun_end = current_time
 self.time_speedrun_init = current_time
 self.time_cron_step	= 0
 
@@ -76,11 +83,6 @@ state = fsm_game.lang
 /// @example			game.app.input.menu[key_enter]
 /// @return object		instancia do obj_input
 self.input = instance_create_layer(x,y, "Instances", obj_input)
-
-keyboard_set_map(ord("W"), vk_up)
-keyboard_set_map(ord("A"), vk_left)
-keyboard_set_map(ord("S"), vk_down)
-keyboard_set_map(ord("D"), vk_right)
 #endregion 
 
 #region INIT AUDIO

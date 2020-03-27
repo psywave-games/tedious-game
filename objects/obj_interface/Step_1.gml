@@ -249,3 +249,22 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuAudi
 end
 #endregion
 
+#region GAMEOVER WRITE NICKNAME
+else if game.app.state == fsm_game.over begin
+	var _len = string_length(game.app.nickname)
+	var _text = game.app.input.key_input_text
+
+	/// deletar texto
+	if game.app.input.key_menu_delete and _len > 0 then
+		game.app.nickname = string_delete(game.app.nickname, _len, 1)
+
+	/// escrever texto
+	else if string_length(_text) <= 1 and _len < max_nickname then
+		game.app.nickname = game.app.nickname + _text
+		
+	else if game.app.input.key_menu_enter begin
+		state_reset(game.app, fsm_game.credits)
+		self.step = 0
+	end
+end
+#endregion
