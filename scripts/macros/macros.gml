@@ -1,5 +1,6 @@
 /// GML MAIS AMIGAVEL
 #macro	game				global			/// @example game.app.players
+#macro	max_nickname		16
 
 #macro	ev_init				0
 #macro	ev_interact_down	1	//Iniciar Interação
@@ -32,7 +33,8 @@ enum fsm_player{
 	died,									/// Jogador está morto
 	jump,									/// Jogador está pulando
 	idle,									/// Jogador está parado
-	walk									/// Jogador está andando
+	walk,									/// Jogador está andando
+	dying									/// Jogador está se matando	
 }
 
 
@@ -48,7 +50,9 @@ enum fsm_game {
 	menuWindow,								/// STATE: Menu de Janela
 	menuAudio,								/// STATE: Menu de Audio
 	cutscene,								/// STATE: Cenas de Jogo 
-	play									/// STATE: Gameplay
+	play,									/// STATE: Gameplay
+	over,									/// STATE: Fim de jogo
+	credits									/// STATE: Creditos finais
 }
 
 
@@ -57,6 +61,11 @@ enum fsm_mob {
 	idle,									/// STATE: desativado
 	running,								/// STATE: interagindo
 	broken									/// STATE: quebrado
+}
+
+enum credits_scene {
+	memorial = 3888,
+	final = 4777
 }
 
 
@@ -174,5 +183,9 @@ enum msg {
 	interact_bible10,
 	interact_bible11,
 	interact_bible12,
+	gameover_title,
+	gameover_text,
+	credits,
+	memorial
 }
 

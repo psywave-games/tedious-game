@@ -14,11 +14,11 @@ else if game.app.state == fsm_game.warn begin
 	draw_set_font(fnt_game1)
 	
 	/// PROSEGUIR
-	if self.step > room_speed * 10 then
+	if self.step > room_speed * 19 then
 		state_reset(game.app, fsm_game.intro)
 		
 	/// AVISO
-	else if self.step > room_speed * 1.5 begin
+	else if self.step > room_speed * 3 begin
 		draw_set_halign(fa_center)
 		draw_set_valign(fa_top)
 		
@@ -136,5 +136,50 @@ else if game.app.state == fsm_game.menuAudio begin
 	draw_bars(0, game.app.audio.volume, 200)
 	draw_bars(1, game.app.audio.mixer[0], 200)
 	draw_bars(2, game.app.audio.mixer[1], 200)
+end
+#endregion
+
+#region GAMEOVER 
+else if game.app.state == fsm_game.over begin
+	var xx = display_get_gui_width()/2
+	var yy = display_get_gui_height()/2
+	
+	draw_set_font(fnt_game1)
+	draw_set_halign(fa_center)
+	draw_set_valign(fa_top)
+		
+	draw_text_transformed_color(xx, -64, t(msg.gameover_title), 8, 8, 0, c_red, c_red, c_red, c_red, 1)		
+	draw_text_ext_transformed_color(xx, 192, t(msg.gameover_text), 32, xx - 16, 2, 2, 0, c_white, c_white, c_white, c_white, 1)
+	
+	draw_input(game.app.nickname, max_nickname)
+end
+#endregion
+
+#region CREDITS
+else if game.app.state == fsm_game.credits begin
+	var xx = display_get_gui_width()/2
+	
+	step += game.app.input.key_menu_enter? 4: 1
+	
+	draw_set_font(fnt_game1)
+	draw_set_halign(fa_center)
+	draw_set_valign(fa_top)
+
+	/// Reiniciar jogo
+	if step > credits_scene.final then
+		game_restart()
+
+	/// Em memoria de:
+	else if step > credits_scene.memorial  begin
+		var yy = display_get_gui_height() - self.step + credits_scene.memorial
+		draw_text_ext_transformed_color(xx, yy, t(msg.memorial), 32, display_get_gui_width() - 16, 2, 2, 0, c_white, c_white, c_white, c_white, 1)
+	end
+	
+	/// Agredicimentos
+	else begin
+		var yy = display_get_gui_height() - self.step
+		draw_text_ext_transformed_color(xx, yy, t(msg.credits), 32, display_get_gui_width() - 16, 2, 2, 0, c_white, c_white, c_white, c_white, 1)
+	end
+	
 end
 #endregion
