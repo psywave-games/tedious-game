@@ -29,11 +29,11 @@ switch self.state begin
 			
 		/// aumentar velocidade	
 		if abs(hspeed) <= p_max_speed() then
-			hspeed += sign(self.axis_x) * 0.1
+			hspeed += sign(self.axis_x) * p_speed()
 			
 		/// diminuir velocidade
 		else
-			hspeed -= sign(self.axis_x) * 0.1
+			hspeed -= sign(self.axis_x) * p_speed()
 
 		/// velocidade da animação
 		image_speed = hspeed/5 * sign(hspeed)
