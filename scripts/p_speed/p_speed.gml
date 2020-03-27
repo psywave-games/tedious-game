@@ -1,0 +1,1 @@
+return clamp(game.app.happy * 0.1, 0.02, 0.1)
