@@ -1,7 +1,14 @@
-if self.state == fsm_mob.broken or self.state == fsm_mob.none or game.app.state != fsm_game.play then
+#region IGNORE MOB
+if self.state == fsm_mob.none
+	or self.state == fsm_mob.broken
+	or game.app.state != fsm_game.play then
+		exit
+#endregion
+	
+if os_browser != browser_not_a_browser and not lite() then
 	exit
 	
-if self.can_interact and os_browser == browser_not_a_browser or lite() begin 
+if self.can_interact begin 
 	draw_set_font(fnt_game1)
 	draw_set_halign(self.message_halign)
 	draw_set_valign(self.message_valign)

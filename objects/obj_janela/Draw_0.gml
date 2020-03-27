@@ -6,5 +6,5 @@ if image_index < 1 and state == fsm_mob.idle then
 	
 
 draw(
-	spr_janela0, c_green
+	spr_janela1, c_green
 )
