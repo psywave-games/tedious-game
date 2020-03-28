@@ -179,13 +179,13 @@ switch argument[0] begin
 	case msg.menu_start:
 		return game.app.started? "Continuar": "Novo Jogo"
 	case msg.pt:
-		return "Portugues"
+		return "Português"
 	case msg.en:
 		return  "English"
 	case msg.menu_lang:
 		return "Idioma:"
 	case msg.menu_window:
-		return "Exibicao"
+		return "Exibição"
 	case msg.menu_video:
 		return "Graficos"
 	case msg.menu_audio:
@@ -197,7 +197,7 @@ switch argument[0] begin
 	case msg.video_ratio:
 		 return "Janela:"
 	case msg.video_size:
-		return "Resolucao:"
+		return "Resolução:"
 	case msg.video_digto:
 		return "Digitacao:"
 	case msg.video_fnthd:
@@ -221,7 +221,7 @@ switch argument[0] begin
 	case msg.menu_exit:
 		return "Sair"
 	case msg.scorebord:
-		return "Placar dos Lideres"
+		return "Placar dos Líderes"
 	case msg.interact_on:
 		return "Ligar"
 	case msg.interact_off:
@@ -229,7 +229,7 @@ switch argument[0] begin
 	case msg.interact_gap:
 		return "Pegar" 
 	case msg.menu_config:
-		return "Configuracoes"
+		return "Configurações"
 	case msg.game_name:
 		return lite()? "Simulador de Tedio [Lite]": "Simulador de Tedio"
 	case msg.video_lighthd:

@@ -18,7 +18,7 @@ var _font = argument[5]
 var _alpha = argument[7]
 var _color = 0xFFFFFF//game.app.color[argument[6]]
 var _padding = 10
-var _size = argument_count > 8? argument[8]: 0.2
+var _size = argument_count > 8? argument[8]: 1
 #endregion
 
 #region Config Gui

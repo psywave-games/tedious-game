@@ -40,7 +40,7 @@ end
 #region ANIMATION INTRO
 else if game.app.state == fsm_game.intro begin
 	
-	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), fnt_title, 5, 1, 0.4)
+	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), fnt_title, 5, 1, 0.8)
 	draw_gui(0, 100, fa_center, fa_bottom, t(msg.press_start), fnt_game0, 15, alpha_start)
 	
 	if game.app.step % room_speed == false then 
@@ -52,8 +52,7 @@ end
 #region INTERFACE MENU MAIN
 else if game.app.state == fsm_game.menuMain begin
 	
-	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), fnt_title, 5, 1, 0.4)
-	
+	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), fnt_title, 5, 1, 0.8)
 	
 	draw_menu(0, t(msg.menu_start))
 	draw_menu(1, t(msg.menu_config))
@@ -161,7 +160,7 @@ else if game.app.state == fsm_game.credits begin
 	
 	step += game.app.input.key_menu_enter? 4: 1
 	
-	draw_set_font(fnt_game1)
+	draw_set_font(fnt_game0)
 	draw_set_halign(fa_center)
 	draw_set_valign(fa_top)
 
