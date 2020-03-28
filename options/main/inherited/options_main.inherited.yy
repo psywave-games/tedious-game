@@ -13,10 +13,10 @@
             {
                 "Key": 1,
                 "Value": {
-                    "id": "1d8c8ead-8e9b-4b43-9a86-bc1de81596ee",
+                    "id": "486f0733-62c7-4ca0-9cbf-932fc53aa8d6",
                     "modelName": "GMTextureGroup",
                     "mvc": "1.0",
-                    "groupName": "fnt_pack0",
+                    "groupName": "txt_player",
                     "targets": 461609314234257646,
                     "autocrop": true,
                     "border": 2,
@@ -28,10 +28,55 @@
             {
                 "Key": 2,
                 "Value": {
-                    "id": "cc32aae4-273f-46a9-b6bb-3576e399176d",
+                    "id": "9ef9713e-53bb-4dc8-bbaf-21f1174658bb",
                     "modelName": "GMTextureGroup",
                     "mvc": "1.0",
-                    "groupName": "fnt_pack1",
+                    "groupName": "txt_wall",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 0,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 3,
+                "Value": {
+                    "id": "9b863643-63a7-4b89-a70f-3cc40a0685a4",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "txt_mobs",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 4,
+                "Value": {
+                    "id": "5d31c242-0d6b-46b9-8d05-897e07d44e4f",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "txt_fonts",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 5,
+                "Value": {
+                    "id": "a3e320d0-83f2-442d-9f82-b8417e3474ad",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "txt_effect",
                     "targets": 461609314234257646,
                     "autocrop": true,
                     "border": 2,
