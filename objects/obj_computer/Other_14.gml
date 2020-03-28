@@ -9,3 +9,5 @@ switch self.select begin
 		self.message = t(msg.interact_book)
 		break
 end
+
+text_switch(1,2)
