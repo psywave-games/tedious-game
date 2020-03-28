@@ -186,6 +186,7 @@ enum msg {
 	gameover_title,
 	gameover_text,
 	credits,
-	memorial
+	memorial,
+	interact_switch
 }
 

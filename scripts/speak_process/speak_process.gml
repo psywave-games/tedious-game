@@ -31,33 +31,28 @@ if self.speak_init <= self.speak_step and self.speak_step < self.speak_finish be
 
 		
 		
-		switch self.speak_mode begin
+			
+			
+		/// configurar texto
+		draw_set_font(fnt_game1)
+		draw_set_valign(fa_bottom)
+		draw_set_halign(fa_center)
 		
-			
+		var _xx = self.x
+		var _yy = self.y - 16
 		
-			#region TOP HEAD TEXT
-			default:
-			
-				/// configurar texto
-				draw_set_font(fnt_game1)
-				draw_set_valign(fa_bottom)
-				draw_set_halign(fa_center)
-			
-				/// posicionar texto
-				var _xx = self.x
-				var _yy = self.y - 16
-				
-				/// dimencionar texto
-				var _size = 0.1
-				
-				/// colorir texto
-				draw_set_color(0xFFFFFF)
-				
-				/// renderizar
-				draw_text_ext_transformed(_xx, _yy, _text, 16, 256, _size, _size, 0)	
-				break
-			#endregion
+		if not lite_and_pc() begin
+			/// posicionar texto
+			_xx = self.x - game.app.interface.camx + display_get_gui_width()/2
+			_yy = self.y - game.app.interface.camy + display_get_gui_height()/3
 		end
-		
-		
+				
+		/// dimencionar texto
+		var _size = lite_and_pc()? 0.1: 1
+				
+		/// colorir texto
+		draw_set_color(0xFFFFFF)
+				
+		/// renderizar
+		draw_text_ext_transformed(_xx, _yy, _text, 16, 256, _size, _size, 0)	
 end

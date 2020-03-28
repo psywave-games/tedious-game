@@ -171,6 +171,13 @@ if game.app.lang == msg.en begin
 		    return " play teclado lindinho 2009 music"
 		case msg.psy_door:
 		    return "door"
+		case msg.credits:
+			return "GAME IDEALIZER\nRodrigo Dornelles\n\n\nARTS AND ANIMATIONS\nBernes Veroli Baianor\n\n\nMUSIC\nFelipe Matheus\n\n\nUX AND GENERAL PROGRAMMER\nRodrigo Dornelles\n\nTRANSLATOR AND AUXILIARY PROGRAMMER\nRodrigo Oliveira\n\n\nGAMEPLAY TESTS\nRodrigo Oliveira\n\nGAMEDESIGN AND MAPPING\nBernes Veroli Baianor\nRodrigo Dornelles\n\nCONTENT DIRECTOR\nGabriel Philipe Martins\n\n\nTHANKS TO ALL WHO TESTED \"THE GAME\"\nJulia Peron\nRobson Lima\nIgor Galindo\nLucas Coelho\nUbiratan Silva\nAdrian Klitzke\nJunio Teixeira\nCleyson Andrade\nCarlos Raimundo\nHenrique Marciano\n\n\nPUBLICITY\nLucas Leite\n\n\nSOUND AND SONOPLASTY\nThiago Reis"
+		case msg.memorial:
+			var _datetime = date_current_datetime()
+			return "IN MEMORY OF:\n" + game.app.nickname + "\n" +  string(date_get_day(_datetime)) + "/" + string(date_get_month(_datetime)) + "/" + string(date_get_year(_datetime))
+		case msg.interact_switch:
+			return "switch"
 	end
 end
 switch argument[0] begin
@@ -403,11 +410,12 @@ switch argument[0] begin
 	case msg.gameover_text:
 		return "sinto muito! voce cumpriu sua jornada infelizmente ela acabou por aqui, como devemos lembrar de voce?"
 	case msg.credits:
-		return "Idealizador do Jogo:\nRodrigo Dornelles\n\n\nArtes e Animações:\nBernas Veroli\n\n\nMúsica:\nFelipe Matheus\n\n\nProgramador Geral e UX:\nRodrigo Dornelles\n\nProgramador Auxiliar e Tradutor:\nRodrigo Oliveira\n\n\nTestes de Jogabilidade:\nRodrigo Oliveira\n\n\nDiretor de Conteudo:\nGabriel Philipe Martins\n\n\nAgradecimento a todos que testaram e verificaram o game:\nJulia Peron\nRobson Lima\nIgor Galindo\nLucas Coelho\nUbiratan Silva\nAdrian Klitzke\nJunio Teixeira\nHenrique Marciano\n\n\nPublicade do Projeto:\nLucas Leite\n\n\nSons e Sonoplastia:\nThiago Reis"
-
+		return "IDEALIZADOR DO JOGO\nRodrigo Dornelles\n\n\nARTES E ANIMAÇÕES\nBernas Veroli Baianor\n\n\nMÚSICA\nFelipe Matheus\n\n\nPROGRAMADOR GERAL E UX\nRodrigo Dornelles\n\nPROGRAMADOR AUXILIAR E TRADUTOR\nRodrigo Oliveira\n\n\nTESTES DE JOGABILIDADE\nRodrigo Oliveira\n\nGAMEDESIGN E MAPA\nBernas Veroli Baianor\nRodrigo Dornelles\n\nDIRETOR DE CONTEUDO\nGabriel Philipe Martins\n\n\nAGRADECIMENTO A TODOS QUE TESTARAM \"O JOGO\"\nJulia Peron\nRobson Lima\nIgor Galindo\nLucas Coelho\nUbiratan Silva\nAdrian Klitzke\nJunio Teixeira\nCleyson Andrade\nCarlos Raimundo\nHenrique Marciano\n\n\nPUBLICIDADE\nLucas Leite\n\n\nSOM E SONOPLASTIA\nThiago Reis"
 	case msg.memorial:
 		var _datetime = date_current_datetime()
 		return "Em Memória de:\n" + game.app.nickname + "\n" +  string(date_get_day(_datetime)) + "/" + string(date_get_month(_datetime)) + "/" + string(date_get_year(_datetime))
+	case msg.interact_switch:
+		return "alternar"
 end
 
 return "#Error 18"
