@@ -232,14 +232,16 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuAudi
 			
 		/// Musica volume do jogo
 		case 1:
-			var volume = game.app.audio.mixer[0] + _in
-			game.app.audio.mixer[0] = clamp(volume, 0, 10)
+			var volume = clamp(game.app.audio.mixer[0] + _in, 0, 10)
+			game.app.audio.mixer[0] = volume
+			audio_mixer(volume, channels_for_music)
 			break
 			
 		/// Efeitos volume do jogo
 		case 2:
-			var volume = game.app.audio.mixer[1] + _in
-			game.app.audio.mixer[1] = clamp(volume, 0, 10)
+			var volume = clamp(game.app.audio.mixer[1] + _in, 0, 10)
+			game.app.audio.mixer[1] = volume
+			audio_mixer(volume, channels_for_sfx)
 			break
 			
 		/// voltar para o menu

@@ -1,6 +1,8 @@
 /// GML MAIS AMIGAVEL
 #macro	game				global			/// @example game.app.players
 #macro	max_nickname		16
+#macro	channels_for_music	0,1,2
+#macro	channels_for_sfx	3,4,5,6,7,8,9,10,11,12,13,14,15
 
 #macro	ev_init				0
 #macro	ev_interact_down	1	//Iniciar Interação
@@ -34,7 +36,8 @@ enum fsm_player{
 	jump,									/// Jogador está pulando
 	idle,									/// Jogador está parado
 	walk,									/// Jogador está andando
-	dying									/// Jogador está se matando	
+	dying,									/// Jogador está se matando	
+	drink
 }
 
 

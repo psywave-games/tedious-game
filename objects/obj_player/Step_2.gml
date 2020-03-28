@@ -2,6 +2,10 @@
 #region MOVIMENTACAO
 switch self.state begin
 
+	case fsm_player.drink:
+		image_speed = 1
+		break
+		
 	case fsm_player.dying:
 	case fsm_player.died:
 	case fsm_player.idle:

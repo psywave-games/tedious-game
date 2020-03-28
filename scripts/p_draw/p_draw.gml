@@ -17,6 +17,7 @@ with game.app.player begin
 	#region TORSO DRAW
 	switch self.state begin
 	
+		case fsm_player.drink:
 		case fsm_player.dying:
 			draw_sprite_ext(spr_playerUse1, image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
 			draw_sprite_ext(spr_playerIdle2, image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
@@ -46,7 +47,8 @@ with game.app.player begin
 
 	#region LEGS DRAW
 	switch self.state begin
-	
+		
+		case fsm_player.drink:
 		case fsm_player.dying:
 			draw_sprite_ext(spr_playerIdle0, 0, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
 			break
