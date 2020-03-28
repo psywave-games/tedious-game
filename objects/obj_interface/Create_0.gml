@@ -17,5 +17,8 @@ self.select = 0
 /// @return	boolean				visible or hide
 self.alpha_start = true
 
+/// @see						score in interface
+/// @return	integer				score delay
+self.display_score = 0
 
 event_user(ev_init)

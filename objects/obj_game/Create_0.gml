@@ -65,7 +65,8 @@ self.time_speedrun_init = current_time
 self.time_cron_step	= 0
 
 global.fullscreen_web = false
-
+global.hour = 23
+global.minute = 10
 #endregion
 
 #region INIT FINITE SATE MACHINE

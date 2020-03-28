@@ -1,5 +1,17 @@
+#region INTERFACE GUI GAMEPLAY
+if game.app.state == fsm_game.play begin
+	var _score = string(score)
+	_score =  "SCORE\n" + score_get_string()
+	
+	var _date = msg_time(false) + "\n" + msg_date("-")
+	
+	draw_gui(0,0, fa_left, fa_bottom, _date, fnt_game0, c_white, 1, 1)
+	draw_gui(0,0, fa_right, fa_bottom, _score, fnt_game0, c_white, 1, 1)
+end
+#endregion
+
 #region INTERFACE MENU LANG
-if game.app.state == fsm_game.lang begin
+else if game.app.state == fsm_game.lang begin
 	draw_menu(0, t(msg.pt), display_get_gui_width()/3, 0, fa_left, fa_middle)
 	draw_menu(1, t(msg.en), display_get_gui_width()/3, -30, fa_right, fa_middle)
 end
