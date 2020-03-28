@@ -143,6 +143,14 @@
             }
         },
         {
+            "Key": "11df2180-2f56-46a8-bcd8-ab8bb916b96f",
+            "Value": {
+                "id": "110f8441-e55b-48c0-a3e5-597fad2a1e6a",
+                "resourcePath": "objects\/obj_pia\/obj_pia.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1231db49-1ea3-4baa-9352-28121e4ffa40",
             "Value": {
                 "id": "8f8bdb51-0b92-4036-aca3-59b86b475164",
@@ -284,6 +292,14 @@
                 "id": "22cfc74e-3da4-4a9e-b24a-e902d6f6d08c",
                 "resourcePath": "views\/269f0566-c4ad-4f50-9f92-5abe2aea5fe3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "28909344-d873-4093-9b69-857ce01c9122",
+            "Value": {
+                "id": "a0393781-6811-4cfc-9caa-f5e8858c686d",
+                "resourcePath": "objects\/obj_sugar\/obj_sugar.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -559,11 +575,27 @@
             }
         },
         {
+            "Key": "619219ac-51e5-492b-a003-837c968391db",
+            "Value": {
+                "id": "c4579964-be86-41b5-85cc-f60167cfb7fd",
+                "resourcePath": "objects\/obj_banheiro_banheira\/obj_banheiro_banheira.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "63cde12b-7a28-465d-b035-9625d7503960",
             "Value": {
                 "id": "09f2b21e-239f-4f5c-844f-bea167e57943",
                 "resourcePath": "views\/63cde12b-7a28-465d-b035-9625d7503960.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "63d85c18-a804-4e83-a249-ae23bdf4ed51",
+            "Value": {
+                "id": "850102f4-5e10-4340-badc-f0041cd21a81",
+                "resourcePath": "objects\/obj_armario\/obj_armario.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -660,6 +692,14 @@
                 "id": "7e44d701-5890-439d-ab54-f19641ea3d33",
                 "resourcePath": "scripts\/@__init_global\/__init_global.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6cc22136-7965-43f4-a86b-eb590cee32f2",
+            "Value": {
+                "id": "31e63ce6-fd09-4311-951f-1daa70620f71",
+                "resourcePath": "objects\/obj_furnace\/obj_furnace.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -924,6 +964,14 @@
                 "id": "60c08e6a-cb30-4108-906f-63c4f81940c6",
                 "resourcePath": "scripts\/send_record\/send_record.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "94834600-2ef2-4c7e-8d06-dafec5061407",
+            "Value": {
+                "id": "818dbc24-d383-4ef6-b1da-aeac7d86ac9f",
+                "resourcePath": "objects\/obj_bebedouro\/obj_bebedouro.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1228,6 +1276,14 @@
                 "id": "694b30a7-f0de-4ab5-a824-6e07e92737e6",
                 "resourcePath": "scripts\/sad\/sad.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c2557a3a-c4e3-4816-aa45-abc5cd64e343",
+            "Value": {
+                "id": "1efe08a7-5887-45d5-a1ba-9284d1e33626",
+                "resourcePath": "objects\/obj_frezer\/obj_frezer.yy",
+                "resourceType": "GMObject"
             }
         },
         {
