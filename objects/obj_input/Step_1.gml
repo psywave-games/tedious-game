@@ -11,10 +11,10 @@ var _keyd_ord_f = keyboard_check_pressed(ord("F"))
 var _keyd_ord_q = keyboard_check_pressed(ord("Q"))
 var _keyd_ord_e = keyboard_check_pressed(ord("E"))
 
-var _keyd_up = keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W"))
-var _keyd_left = keyboard_check_pressed(vk_left) or keyboard_check_pressed(ord("A"))
-var _keyd_down = keyboard_check_pressed(vk_down) or keyboard_check_pressed(ord("S"))
-var _keyd_righ = keyboard_check_pressed(vk_right) or keyboard_check_pressed(ord("D"))
+var _keyd_up = keyboard_check_pressed(vk_up) or keyboard_check(ord("W"))
+var _keyd_left = keyboard_check_pressed(vk_left) or keyboard_check(ord("A"))
+var _keyd_down = keyboard_check_pressed(vk_down) or keyboard_check(ord("S"))
+var _keyd_righ = keyboard_check_pressed(vk_right) or keyboard_check(ord("D"))
 var _keyd_space = keyboard_check_pressed(vk_space)
 
 var _key_up = keyboard_check(vk_up)
@@ -25,12 +25,13 @@ var _key_shift = keyboard_check(vk_shift)
 var _key_ord_m = keyboard_check(ord("M"))
 var _key_enter = keyboard_check(vk_enter)
 
-#region MENUS
 key_menu_open = false
 key_menu_esc = false
+key_menu_enter = false
 key_menu_go = 0
 key_menu_in = 0
 
+#region MENUS
 if game.app.state == fsm_game.intro begin 
 	key_menu_open = _keyd_enter
 end 

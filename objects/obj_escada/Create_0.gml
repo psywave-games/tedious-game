@@ -1,6 +1,6 @@
 /// @description corrimao
 
-fundo = layer_create(250)
+fundo = layer_create(350)
 frente = layer_create(150)
 
 corrimao_fundo = layer_sprite_create(fundo, x, y, spr_escada1)

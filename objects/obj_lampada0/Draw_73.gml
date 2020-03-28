@@ -1,0 +1,1 @@
+draw(sprite_index, c_teal)
