@@ -1,12 +1,12 @@
 #region INTERFACE GUI GAMEPLAY
 if game.app.state == fsm_game.play begin
-	var _score = string(score)
-	_score =  "SCORE\n" + score_get_string()
-	
 	var _date = msg_time(false) + "\n" + msg_date("-")
+	var _score =  "SCORE\n" + score_get_string()
+	var _score_color = happy_sign < 0? c_red: c_white
+	
 	
 	draw_gui(0,0, fa_left, fa_bottom, _date, fnt_game0, c_white, 1, 1)
-	draw_gui(0,0, fa_right, fa_bottom, _score, fnt_game0, c_white, 1, 1)
+	draw_gui(0,0, fa_right, fa_bottom, _score, fnt_game0, _score_color, 1, 1)
 end
 #endregion
 
@@ -52,8 +52,8 @@ end
 #region ANIMATION INTRO
 else if game.app.state == fsm_game.intro begin
 	
-	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), lite()? fnt_game0: fnt_title, 5, 1, lite()? 2.6: 0.8)
-	draw_gui(0, 100, fa_center, fa_bottom, t(msg.press_start), fnt_game0, 15, alpha_start)
+	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), lite()? fnt_game0: fnt_title, c_white, 1, lite()? 2.6: 0.8)
+	draw_gui(0, 100, fa_center, fa_bottom, t(msg.press_start), fnt_game0, c_white, alpha_start)
 	
 	if game.app.step % room_speed == false then 
 		alpha_start ^= true
@@ -158,11 +158,15 @@ else if game.app.state == fsm_game.over begin
 	draw_set_font(fnt_game1)
 	draw_set_halign(fa_center)
 	draw_set_valign(fa_top)
-		
-	draw_text_transformed_color(xx, -64, t(msg.gameover_title), 8, 8, 0, c_red, c_red, c_red, c_red, 1)		
-	draw_text_ext_transformed_color(xx, 192, t(msg.gameover_text), 32, xx - 16, 2, 2, 0, c_white, c_white, c_white, c_white, 1)
+	draw_set_color(c_red)
 	
+	draw_text_transformed(xx, -64, t(msg.gameover_title), 8, 8, 0)		
+	
+	draw_set_color(c_white)
+	draw_text_ext_transformed(xx, 192, t(msg.gameover_text), 32, xx - 16, 2, 2, 0)
 	draw_input(game.app.nickname, max_nickname)
+	
+	draw_gui(0, 0, fa_center, fa_bottom,  "SCORE: " + score_get_string(),fnt_game0, c_white, 4)
 end
 #endregion
 

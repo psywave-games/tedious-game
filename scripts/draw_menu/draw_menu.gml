@@ -55,5 +55,5 @@ end
 
 var _alpha = game.app.interface.select == argument[0]? 1: 0.5
 
-draw_gui(_xx, _yy, _horizontal, _vertical, argument[1], fnt_game0, 15, _alpha)
+draw_gui(_xx, _yy, _horizontal, _vertical, argument[1], fnt_game0, c_white, _alpha)
 

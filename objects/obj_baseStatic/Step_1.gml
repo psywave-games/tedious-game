@@ -2,8 +2,10 @@
 if self.state == fsm_mob.none
 	or self.state == fsm_mob.broken
 	or game.app.state != fsm_game.play 
-	or p_book_read() then
+	or p_book_read() begin
+		self.can_interact = false
 		exit
+end
 #endregion
 	
 var looking = p_looking() * -20

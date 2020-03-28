@@ -1,5 +1,7 @@
-if score <= game.app.interface.display_score then
+if score <= game.app.interface.display_score begin
+	game.app.interface.happy_sign = 0
 	return score
+end
 	
 var sum = 1
 var distance = score - game.app.interface.display_score

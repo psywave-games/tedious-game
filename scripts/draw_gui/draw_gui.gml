@@ -15,8 +15,8 @@ var _ah = argument[2]
 var _av = argument[3] 
 var _text = argument[4] 
 var _font = argument[5]
+var _color = argument[6]
 var _alpha = argument[7]
-var _color = 0xFFFFFF//game.app.color[argument[6]]
 var _padding = 10
 var _size = argument_count > 8? argument[8]: 1
 #endregion

@@ -2,5 +2,7 @@
 
 self.state = fsm_mob.running
 
-score_add(100)
-
+if points begin
+	score_add(points)
+	points = 0
+end
