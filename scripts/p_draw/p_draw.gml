@@ -48,6 +48,9 @@ with game.app.player begin
 	switch self.state begin
 	
 		case fsm_player.dying:
+			draw_sprite_ext(spr_playerIdle0, 0, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
+			break
+			
 		case fsm_player.idle:
 			draw_sprite_ext(spr_playerIdle0, image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
 			break
