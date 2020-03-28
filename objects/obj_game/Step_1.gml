@@ -16,3 +16,17 @@ if game.app.player.state == fsm_player.died and game.app.state == fsm_game.play 
 	state_reset(game.app, fsm_game.over)
 end
 #endregion
+
+#region CLOCK
+if not (self.step % (room_speed * 2)) and self.state == fsm_game.play begin
+	global.minute += 1
+
+	if global.minute >= 60 begin
+		global.minute = 0
+		global.hour += 1
+	end
+	
+	if global.hour >= 24 then
+		global.hour = 0
+end
+#endregion

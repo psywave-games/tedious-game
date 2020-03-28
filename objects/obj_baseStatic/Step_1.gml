@@ -6,7 +6,6 @@ if self.state == fsm_mob.none
 		exit
 #endregion
 	
-	
 var looking = p_looking() * -20
 
 #region INTERACTS
