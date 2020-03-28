@@ -175,7 +175,7 @@ if game.app.lang == msg.en begin
 			return "GAME IDEALIZER\nRodrigo Dornelles\n\n\nARTS AND ANIMATIONS\nBernes Veroli Baianor\n\n\nMUSIC\nFelipe Matheus\n\n\nUX AND GENERAL PROGRAMMER\nRodrigo Dornelles\n\nTRANSLATOR AND AUXILIARY PROGRAMMER\nRodrigo Oliveira\n\n\nGAMEPLAY TESTS\nRodrigo Oliveira\n\nGAMEDESIGN AND MAPPING\nBernes Veroli Baianor\nRodrigo Dornelles\n\nCONTENT DIRECTOR\nGabriel Philipe Martins\n\n\nTHANKS TO ALL WHO TESTED \"THE GAME\"\nJulia Peron\nRobson Lima\nIgor Galindo\nLucas Coelho\nUbiratan Silva\nAdrian Klitzke\nJunio Teixeira\nCleyson Andrade\nCarlos Raimundo\nHenrique Marciano\n\n\nPUBLICITY\nLucas Leite\n\n\nSOUND AND SONOPLASTY\nThiago Reis"
 		case msg.memorial:
 			var _datetime = date_current_datetime()
-			return "IN MEMORY OF:\n" + game.app.nickname + "\n" +  string(date_get_day(_datetime)) + "/" + string(date_get_month(_datetime)) + "/" + string(date_get_year(_datetime))
+			return "IN MEMORY OF:\n" + game.app.nickname + "\n" +  string(date_get_month(_datetime)) + "/" + string(date_get_day(_datetime)) + "/" + string(date_get_year(_datetime))
 		case msg.interact_switch:
 			return "switch"
 	end
