@@ -43,8 +43,8 @@ if self.speak_init <= self.speak_step and self.speak_step < self.speak_finish be
 		
 		if not lite_and_pc() begin
 			/// posicionar texto
-			_xx = self.x - game.app.interface.camx + display_get_gui_width()/2
-			_yy = self.y - game.app.interface.camy + display_get_gui_height()/3
+			_xx = (display_get_gui_width()/2) - (game.app.interface.camx - self.x)
+			_yy = (display_get_gui_height()/3) - (game.app.interface.camy - self.y)
 		end
 				
 		/// dimencionar texto

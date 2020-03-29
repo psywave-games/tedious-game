@@ -10,7 +10,8 @@
         "b0f21a98-f4b8-4874-9fb3-1a677ece9e16",
         "f41c094f-ef34-4bdd-a84d-cfe76816ae87",
         "4d2d654b-b8ac-4ec3-87b1-5eefef096337",
-        "5cec5bba-219c-4454-8dd4-7a802916d0d8"
+        "5cec5bba-219c-4454-8dd4-7a802916d0d8",
+        "0a1f4f52-02e1-4223-95bb-753657ab0b67"
     ],
     "filterType": "GMScript",
     "folderName": "message",

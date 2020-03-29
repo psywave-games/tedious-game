@@ -6,6 +6,7 @@ self.state = argument0
 self.select = 1
 
 self.can_interact = false
+self.can_break = false
 
 self.message = ""
 self.message_halign = fa_center
@@ -14,5 +15,7 @@ self.message_x = 0
 self.message_y = -16
 
 self.step = 0
+
+self.switchs = 0
 
 outline_init()

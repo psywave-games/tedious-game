@@ -2,7 +2,7 @@
 if self.state == fsm_mob.none
 	or self.state == fsm_mob.broken
 	or game.app.state != fsm_game.play 
-	or p_book_read() begin
+	or speaking(game.app.player) begin
 		self.can_interact = false
 		exit
 end
@@ -15,8 +15,15 @@ if game.app.player.state == fsm_player.idle begin
 
 	if place_meeting(x, y + looking, obj_player) begin
 		/// Interagir
-		if game.app.input.key_interact and self.state == fsm_mob.idle then
-			event_user(ev_interact_down)
+		if game.app.input.key_interact and self.state == fsm_mob.idle begin
+			if ++self.switchs >= 2 and self.can_break begin
+				event_user(ev_interact_broken)
+				speak(game.app.player, t(msg.interact_broken))
+				self.state = fsm_mob.broken
+			end
+			else
+				event_user(ev_interact_down)
+		end
 	
 		/// Desinteragir
 		else if game.app.input.key_interact and self.state == fsm_mob.running then
@@ -36,5 +43,8 @@ if game.app.player.state == fsm_player.idle begin
 end else
 	self.can_interact = false
 #endregion
+
+if not (game.app.step % room_speed) then
+	self.switchs = 0
 	
 lite_step()
