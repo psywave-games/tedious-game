@@ -135,6 +135,32 @@ if game.app.lang == msg.en begin
 		    return "turn on stove" 
 		case msg.interact_furnace_off:
 		    return "turn off stove"
+		case msg.interact_book0:
+		    return "I do feel some sympathy for people who use Windows"
+		case msg.interact_book1:
+		    return "especially those who've been using it for a long time."
+		case msg.interact_book2:
+		    return "There were a lot of bugs in Windows 3.x"
+		case msg.interact_book3:
+		    return "Windows 95"
+		case msg.interact_book4:
+		    return "Windows 98"
+		case msg.interact_book5:
+		    return "Windows 98SE"
+		case msg.interact_book6:
+		    return "Windows 2000"
+		case msg.interact_book7:
+		    return "Windows ME"
+		case msg.interact_book8:
+		    return "Windows XP"
+		case msg.interact_book9:
+		    return "Windows Vista"
+		case msg.interact_book10:
+		    return "and even in Windows 7, Windows 8 and Windows 8.1"
+		case msg.interact_book11:
+		    return "That's why we're going all-out with Windows 10,"
+		case msg.interact_book12:
+		    return "to get rid of those bugs and replace them with all-new ones."
 		case msg.interact_book:
 		    return "read the book"
 		case msg.psy_chest:
@@ -171,6 +197,34 @@ if game.app.lang == msg.en begin
 		    return " play teclado lindinho 2009 music"
 		case msg.psy_door:
 		    return "door"
+		case msg.interact_bible:
+			return "read a verse"
+		case msg.interact_bible0:
+		    return "The big secret is there were five JeJe clones,"
+		case msg.interact_bible1:
+		    return "and at different points we all said different things."
+		case msg.interact_bible2:
+		    return "That's why the bible contradicts itself all the time,"
+		case msg.interact_bible3:
+		    return "because us JeJe clones did"
+		case msg.interact_bible4:
+		    return "If I am 'the way, truth and life'"
+		case msg.interact_bible5:
+		    return "then why do all these TV preachers spend all their time peddling their books"
+		case msg.interact_bible6:
+		    return "instead of preaching from mine?"
+		case msg.interact_bible7:
+		    return "What the fuck?"
+		case msg.interact_bible8:
+		    return "Stone gays?"
+		case msg.interact_bible9:
+		    return "Don't eat shellfish?"
+		case msg.interact_bible10: 
+		    return "What fucking retard wrote this shit?"
+		case msg.interact_bible11:
+		    return "Maybe it was that asshole Judas."
+		case msg.interact_bible12:
+		    return "Dammit, this shit is crazy."
 		case msg.gameover_title:
 			return "Game Over!"
 		case msg.gameover_text:
