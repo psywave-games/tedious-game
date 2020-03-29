@@ -182,7 +182,7 @@ else if game.app.state == fsm_game.credits begin
 
 	/// Reiniciar jogo
 	if step > credits_scene.final then
-		game_restart()
+		with game.app event_user(ev_mygame_restart)
 
 	/// Em memoria de:
 	else if step > credits_scene.memorial  begin

@@ -1,7 +1,4 @@
-///	@see				verifica se o player já foi criado
-/// @description		seta posição do jogador e se auto-destroi se nescessario, para não duplicar jogadores
-/// @return				void
-if instance_exists(game.app.player) and game.app.player begin
+if game.app.player != -1 begin
 	game.app.player.x = self.x
 	game.app.player.y = self.y
 
@@ -11,10 +8,12 @@ end
 
 game.app.player = self.id
 
-self.state = fsm_player.idle
+self.state = fsm_player.none
 
 self.escada = 0
 
 self.book_read = 0
 
 speak_install()
+
+event_user(ev_mygame_start)

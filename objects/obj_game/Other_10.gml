@@ -1,5 +1,5 @@
-/// @description init
-// You can write your code in this editor
+/// @description ev_init
 
-with game.app.interface event_user(ev_init)
-
+if game.app.state == fsm_game.intro and room != rm_intro begin
+	room_goto(rm_intro)
+end

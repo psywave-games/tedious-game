@@ -6,6 +6,7 @@ switch self.state begin
 		image_speed = 1
 		break
 		
+	case fsm_player.sit:
 	case fsm_player.dying:
 	case fsm_player.died:
 	case fsm_player.idle:

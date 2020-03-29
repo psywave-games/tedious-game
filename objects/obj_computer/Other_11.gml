@@ -1,10 +1,12 @@
 /// @description ev_interact
 
 switch self.select begin
-	/// maquinas agricolas
+	
+	/// Ligar computador
 	case 1:
-		url_open_ext("https://www.google.com/search?tbm=isch&q=maquinas+agricolas+tunadas", "_blank")
+		state = fsm_mob.running
 		break
+
 
 	/// ler um livro
 	case 2:
@@ -13,5 +15,10 @@ switch self.select begin
 
 		speak(game.app.player, t(msg.interact_book + book_page))
 		game.app.player.book_read = true
+		break
+		
+	/// maquinas agricolas
+	case 3:
+		url_open_ext("https://www.google.com/search?tbm=isch&q=maquinas+agricolas+tunadas", "_blank")
 		break
 end

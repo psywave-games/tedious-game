@@ -4,7 +4,7 @@
 /// @arg3 y
 
 var menu = argument[0]
-var text = argument[1]? "{X}": "{   }"
+var text = argument[1]? "[X]": "[  ]"
 
 switch argument_count begin
 	case 2: 

@@ -23,6 +23,7 @@ with game.app.player begin
 			draw_sprite_ext(spr_playerIdle2, image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
 			break
 	
+		case fsm_player.sit:
 		case fsm_player.idle:
 			draw_sprite_ext(spr_playerIdle1, image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
 			draw_sprite_ext(spr_playerIdle2, image_index, _xx, _yy, _xscale, _yscale, p_head_angle(_xscale), c_white, _alpha)
@@ -47,6 +48,10 @@ with game.app.player begin
 
 	#region LEGS DRAW
 	switch self.state begin
+		
+		case fsm_player.sit:
+			draw_sprite_ext(spr_playerSit0, 0, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
+			break
 		
 		case fsm_player.drink:
 		case fsm_player.dying:
