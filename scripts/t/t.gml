@@ -181,6 +181,12 @@ if game.app.lang == msg.en begin
 			return "IN MEMORIAM BY\n" + game.app.nickname + "\n" + msg_date("/")
 		case msg.interact_switch:
 			return "switch"
+		case msg.interact_picture_down:
+			return "watching painting"
+		case msg.interact_picture_rate:
+			return "hm... beautiful painting... or an awful painting? That is a question... "
+		case msg.interact_broken:
+			return choose("damn! broke it...", "fuck... chineses...", "shit... it's broken. amazon solves it", "third time this week. i will buy another later...")
 	end
 end
 switch argument[0] begin
@@ -418,6 +424,12 @@ switch argument[0] begin
 		return "IN MEMORIAM DE\n" + game.app.nickname + "\n" + msg_date("/")
 	case msg.interact_switch:
 		return "alternar"
+	case msg.interact_picture_down:
+		return "observar a pintura"
+	case msg.interact_picture_rate:
+		return "hm... pintura bonita, pintura formosa, pintura bem feita..."
+	case msg.interact_broken:
+		return choose("ops... quebrado", "hm... vou ligar para a garantia...", "grr... descartável.", "o quê?! eu comprei isso tem 3 semanas")
 end
 
 return "#Error 18"

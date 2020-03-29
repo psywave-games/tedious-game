@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "0a1f4f52-02e1-4223-95bb-753657ab0b67",
+            "Value": {
+                "id": "c0ce6b56-15ea-497f-9eb8-d6fc964c8eef",
+                "resourcePath": "scripts\/speaking\/speaking.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0ab66d68-45d7-463f-b964-56c73cfd4221",
             "Value": {
                 "id": "3d1a43c3-9ecb-4adf-8729-b3ef923e8dee",
@@ -1972,6 +1980,7 @@
         "f41c094f-ef34-4bdd-a84d-cfe76816ae87",
         "4d2d654b-b8ac-4ec3-87b1-5eefef096337",
         "5cec5bba-219c-4454-8dd4-7a802916d0d8",
+        "0a1f4f52-02e1-4223-95bb-753657ab0b67",
         "989b6b7f-1cf3-4d59-8618-3b51d5b73ea0",
         "77c4a30e-70bd-437d-b3e0-30d6dc663517",
         "ef16f6f6-26a3-4e7f-ac67-eade280df748",

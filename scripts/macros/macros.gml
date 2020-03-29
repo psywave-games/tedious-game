@@ -37,7 +37,8 @@ enum fsm_player{
 	idle,									/// Jogador está parado
 	walk,									/// Jogador está andando
 	dying,									/// Jogador está se matando	
-	drink
+	drink,									/// Jogador está bebendo
+	sit										/// Jogador está sentado
 }
 
 
@@ -190,6 +191,9 @@ enum msg {
 	gameover_text,
 	credits,
 	memorial,
-	interact_switch
+	interact_switch,
+	interact_picture_down,
+	interact_picture_rate,
+	interact_broken
 }
 

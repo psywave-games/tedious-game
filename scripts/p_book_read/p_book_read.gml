@@ -1,6 +1,6 @@
 with game.app.player begin
 	if self.book_read then
-		if self.speak_init <= self.speak_step and self.speak_step < self.speak_finish then
+		if speaking(self) then
 			return true 
 end
 

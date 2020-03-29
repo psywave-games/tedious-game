@@ -14,17 +14,3 @@ if points >= 0 begin
 	points -= 10
 end
 #endregion
-
-#region BROKEN
-/// detectar switch quebrado
-if ++switchs > 3 begin
-
-	self.state = fsm_mob.broken
-	score_add(-100)
-	
-	with instance_nearest(x, y - 16, obj_baseLamp) begin
-		self.state = fsm_mob.broken
-	end
-end
-#endregion
-
