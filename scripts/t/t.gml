@@ -241,6 +241,11 @@ if game.app.lang == msg.en begin
 			return "hm... beautiful painting... or an awful painting? That is a question... "
 		case msg.interact_broken:
 			return choose("damn! broke it...", "fuck... chineses...", "shit... it's broken. amazon solves it", "third time this week. i will buy another later...")
+		case msg.interact_furnace_down:
+			return "analyze situation"
+		case msg.interact_furnace_rate:
+			return "this is fine"
+	
 	end
 end
 switch argument[0] begin
@@ -484,6 +489,10 @@ switch argument[0] begin
 		return "hm... pintura bonita, pintura formosa, pintura bem feita..."
 	case msg.interact_broken:
 		return choose("ops... quebrado", "hm... vou ligar para a garantia...", "grr... descartável.", "o quê?! eu comprei isso tem 3 semanas")
+	case msg.interact_furnace_down:
+		return "observar o fogao"
+	case msg.interact_furnace_rate:
+		return "ta pegando fogo bixo!"
 end
 
-return "#Error 18"
+return "#Error 18_" + string(argument0)

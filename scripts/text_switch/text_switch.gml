@@ -5,12 +5,12 @@
 var _text = "\n"
 
 /// verificar alternar esquerda
-if argument0 >= self.select 
-	_text = _text + "[E] "
+if argument0 < self.select 
+	_text = _text + "[Q] "
 
 /// verificar alternar direita
-if argument1 <= self.select 
-	_text = _text + "[Q] "
+if argument1 > self.select 
+	_text = _text + "[E] "
 
 /// concatenar texto
 self.message = self.message + _text + t(msg.interact_switch)

@@ -2,12 +2,20 @@
 switch self.select begin
 
 	case 1:
-		self.message = t(msg.interact_google)
+		if self.state == fsm_mob.idle then
+			self.message = t(msg.interact_on) + t(msg.psy_radio)
+
+		else 
+			self.message = t(msg.interact_off) + t(msg.psy_radio)
 		break
 
 	case 2:
 		self.message = t(msg.interact_book)
 		break
+		
+	case 3:
+		self.message = t(msg.interact_google)
+		break
 end
 
-text_switch(1,2)
+text_switch(1,3)

@@ -69,7 +69,7 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuMain
 		case 0:
 			/// Começar Novo jogo
 			if not game.app.started begin
-				with game.app event_user(ev_game_start)
+				with game.app event_user(ev_mygame_start)
 			end
 			/// retomar jogo
 			else begin

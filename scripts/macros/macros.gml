@@ -11,7 +11,8 @@
 #macro	ev_interact_message	4	//Menssagem Interação
 #macro	ev_interact_broken	5
 #macro	ev_lite_step		6
-#macro	ev_game_start		15
+#macro	ev_mygame_restart	14
+#macro	ev_mygame_start		15
 
 enum word {
 	slop = -1,
@@ -194,6 +195,8 @@ enum msg {
 	interact_switch,
 	interact_picture_down,
 	interact_picture_rate,
-	interact_broken
+	interact_broken,
+	interact_furnace_down,
+	interact_furnace_rate
 }
 

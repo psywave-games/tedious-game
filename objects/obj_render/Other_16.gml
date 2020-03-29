@@ -1,5 +1,4 @@
 /// @description ev_lite_step
-
 if background != -1 then
 	layer_background_blend(background, color(make_color_rgb(47,79,79), sad()))
 	

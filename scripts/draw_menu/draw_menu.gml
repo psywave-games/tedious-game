@@ -29,6 +29,7 @@ end
 _yy += 30 * argument[0]
 
 #region MOUSE HOVER
+/*
 /// posicao do mouse
 var _mouse_x = window_mouse_get_x() + window_get_x()
 var _mouse_y = window_mouse_get_y() + window_get_y()
@@ -51,6 +52,7 @@ else begin
 	if abs( _menu_yy - _mouse_y + 5) <= 16 and _mouse_x <= _menu_xx then
 		game.app.interface.select = argument[0]
 end
+*/
 #endregion
 
 var _alpha = game.app.interface.select == argument[0]? 1: 0.5
