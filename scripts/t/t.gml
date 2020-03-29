@@ -483,7 +483,7 @@ switch argument[0] begin
 	case msg.interact_picture_rate:
 		return "hm... pintura bonita, pintura formosa, pintura bem feita..."
 	case msg.interact_broken:
-		return choose("ops... quebrado", "hm... vou ligar para a garantia...", "grr... descartável.", "o quê?! eu comprei isso tem 3 semanas")
+		return choose("ops... quebrado", "hm... vou ligar para a garantia...", "grr... descartável.", "o quê?! eu comprei isso tem 3 semanas", "em todos esses anos nessa industria vital, é a primeira vez que isso me acontece")
 end
 
 return "#Error 18"
