@@ -304,9 +304,9 @@ switch argument[0] begin
 	case msg.scorebord:
 		return "Placar dos Líderes"
 	case msg.interact_on:
-		return "Ligar"
+		return "ligar"
 	case msg.interact_off:
-		return "Desligar"
+		return "desligar"
 	case msg.interact_gap:
 		return "Pegar" 
 	case msg.menu_config:
