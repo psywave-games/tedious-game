@@ -1,0 +1,1 @@
+draw(spr_bebedouro, color_cinza_a)

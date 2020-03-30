@@ -14,6 +14,8 @@ self.escada = 0
 
 self.book_read = 0
 
+self.requirements = array_create(2, 100)
+
 speak_install()
 
 event_user(ev_mygame_start)

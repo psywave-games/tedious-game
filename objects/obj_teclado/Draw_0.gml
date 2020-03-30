@@ -1,3 +1,3 @@
 draw(
-	spr_keyboard, c_gray
+	spr_keyboard, color_cinza_c
 )

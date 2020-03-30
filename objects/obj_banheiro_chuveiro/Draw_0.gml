@@ -1,3 +1,3 @@
 draw(
-	spr_chuveiro, c_navy
+	spr_chuveiro, color_azul_a
 )

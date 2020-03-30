@@ -1,3 +1,3 @@
 draw(
-	spr_geladeira, c_fuchsia
+	spr_geladeira, color_azul_b
 )

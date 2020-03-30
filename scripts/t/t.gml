@@ -245,6 +245,12 @@ if game.app.lang == msg.en begin
 			return "analyze situation"
 		case msg.interact_furnace_rate:
 			return "this is fine"
+		case msg.psy_computer:
+			return "computer"
+		case msg.interact_water_full:
+			return "i don't want to drink more water"
+		case msg.interact_food_full:
+			return "I'm full"
 	
 	end
 end
@@ -493,6 +499,12 @@ switch argument[0] begin
 		return "observar o fogao"
 	case msg.interact_furnace_rate:
 		return "ta pegando fogo bixo!"
+	case msg.psy_computer:
+		return "computador"
+	case msg.interact_water_full:
+		return "eu não quero mais beber água"
+	case msg.interact_food_full:
+		return "estou satisfeito"
 end
 
 return "#Error 18_" + string(argument0)

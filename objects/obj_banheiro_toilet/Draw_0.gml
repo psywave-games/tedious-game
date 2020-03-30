@@ -1,3 +1,3 @@
 draw(
-	spr_toilet, c_navy
+	spr_toilet, color_azul_a
 )

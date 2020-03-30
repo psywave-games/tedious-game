@@ -1,3 +1,3 @@
 draw(
-	spr_sugar, c_dkgray
+	spr_sugar, color_cinza_c
 )

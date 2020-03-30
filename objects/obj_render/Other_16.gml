@@ -1,6 +1,6 @@
 /// @description ev_lite_step
 if background != -1 then
-	layer_background_blend(background, color(make_color_rgb(47,79,79), sad()))
+	layer_background_blend(background, color(color_verde_d, sad()))
 	
 
 else if background == -1 and game.app.state == fsm_game.play begin

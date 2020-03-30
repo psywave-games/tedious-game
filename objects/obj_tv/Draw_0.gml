@@ -1,6 +1,6 @@
 outline_begin()
 
-draw_sprite_ext(spr_tv0, 0, x, y, image_xscale, image_yscale, 0, color(0xFFDC143C, sad()), 1)
+draw_sprite_ext(spr_tv0, 0, x, y, image_xscale, image_yscale, 0, color(color_marrom_a, sad()), 1)
 
 #region TELA
 
@@ -11,11 +11,11 @@ if self.state == fsm_mob.running begin
 end 
 /// desligado
 else 
-	draw_sprite_ext(spr_tv1, 0, x, y, image_xscale, image_yscale, 0, c_black, 1)
+	draw_sprite_ext(spr_tv1, 0, x, y, image_xscale, image_yscale, 0, color_cinza_d, 1)
 
 #endregion
 
-draw_sprite_ext(spr_tv2, 0, x, y, image_xscale, image_yscale, 0, color(c_white, sad()), 1)
+draw_sprite_ext(spr_tv2, 0, x, y, image_xscale, image_yscale, 0, color(color_cinza_c, sad()), 1)
 
 
 outline_end()

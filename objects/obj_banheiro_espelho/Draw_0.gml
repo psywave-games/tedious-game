@@ -1,6 +1,6 @@
 draw(
-	spr_espelho1, c_white,
-	spr_espelho2, c_navy
+	spr_espelho1, color_cinza_c,
+	spr_espelho2, color_azul_a
 )
 
 #region REFLEX

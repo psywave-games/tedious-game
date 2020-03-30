@@ -1,5 +1,5 @@
 draw(
-	spr_cama0, c_red,
-	spr_cama1, c_white,
-	spr_cama2, c_maroon
+	spr_cama0, color_vermelho,
+	spr_cama1, color_branco,
+	spr_cama2, color_marrom_b
 )

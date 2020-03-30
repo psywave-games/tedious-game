@@ -37,5 +37,5 @@ end
 #endregion	
 
 draw(
-	spr_janela, c_green
+	spr_janela, color_verde_b
 )

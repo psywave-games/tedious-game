@@ -1,1 +1,1 @@
-draw(sprite_index, c_teal)
+draw(sprite_index, self.state == fsm_mob.broken? c_white: color_verde_c)

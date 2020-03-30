@@ -1,0 +1,1 @@
+draw(spr_banheira, color_azul_a)

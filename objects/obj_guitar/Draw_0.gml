@@ -1,3 +1,3 @@
 draw(
-	spr_guitar, c_orange
+	spr_guitar, color_cinza_b
 )
