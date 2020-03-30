@@ -14,6 +14,23 @@
 #macro	ev_mygame_restart	14
 #macro	ev_mygame_start		15
 
+#macro  color_verde_a		(0xC4E43A)
+#macro  color_verde_b		(0xC4FD39)
+#macro  color_amarelo_a		(0xC5E7E8)
+#macro  color_marrom_a		(0xA0B3F3)
+#macro  color_marrom_b		(0x6569AD)
+#macro  color_amarelo_b		(0x7CEBFF)
+#macro  color_azul_a		(0xFF9500)
+#macro  color_azul_b		(0xF1FF01)
+#macro  color_vermelho		(0x4358FF)
+#macro  color_verde_c		(0x84FF78)
+#macro  color_cinza_a		(0x9BA25B)
+#macro  color_cinza_b		(0xB6BC89)
+#macro  color_cinza_c		(0xD4D7B9)
+#macro  color_branco		(0xF2F2F2)
+#macro  color_cinza_d		(0xA7A7A7)
+#macro	color_verde_d		(0x4f4f2f)
+
 enum word {
 	slop = -1,
 	limit_left = 10,
@@ -28,6 +45,11 @@ enum system {
 	macosx,
 	unix,
 	ios
+}
+
+enum need {
+	water,
+	food
 }
 
 /// FINITE STATE MACHINE PLAYER MODE
@@ -119,6 +141,7 @@ enum msg {
 	psy_instagram,
 	psy_power,
 	psy_switch,
+	psy_computer,
 	interact_suicide_power,
 	video_camspeed,
 	menu_audio_geral,
@@ -197,6 +220,8 @@ enum msg {
 	interact_picture_rate,
 	interact_broken,
 	interact_furnace_down,
-	interact_furnace_rate
+	interact_furnace_rate,
+	interact_water_full,
+	interact_food_full
 }
 

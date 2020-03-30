@@ -1,3 +1,3 @@
 draw(
-	spr_fogao, c_teal
+	spr_fogao, color_cinza_b
 )

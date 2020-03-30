@@ -16,6 +16,15 @@ repeat 2 begin
 end
 #endregion
 
+#region REQUERIMENTS
+if not (game.app.step % room_speed) begin
+	requirements[need.water] = clamp(requirements[need.water] + 1, 0, 100)
+	requirements[need.food] = clamp(requirements[need.food] + 1, 0, 100)
+end
+#endregion
+
+show_debug_message(requirements[need.water])
+
 lite_step()
 
 

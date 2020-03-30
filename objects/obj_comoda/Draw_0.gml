@@ -1,4 +1,4 @@
 draw(
-	spr_comoda0, c_maroon,
-	spr_comoda2, c_orange	
+	spr_comoda0, color_marrom_b,
+	spr_comoda2, color_vermelho	
 )

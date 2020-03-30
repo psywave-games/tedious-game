@@ -13,6 +13,16 @@
             "enumb": 0,
             "eventtype": 0,
             "m_owner": "619219ac-51e5-492b-a003-837c968391db"
+        },
+        {
+            "id": "67855e31-28e1-4f30-aafc-9366ae3b368e",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "619219ac-51e5-492b-a003-837c968391db"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",

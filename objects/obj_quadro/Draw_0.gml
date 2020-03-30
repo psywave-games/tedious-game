@@ -1,3 +1,3 @@
 draw(
-	spr_quadro, c_purple
+	spr_quadro, c_white
 )

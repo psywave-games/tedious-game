@@ -5,5 +5,5 @@ if image_index < 1 and state == fsm_mob.idle then
 	image_index = 1
 	
 draw(
-	spr_door0, c_maroon
+	spr_door0, color_cinza_a
 )

@@ -1,3 +1,3 @@
 draw(
-	spr_armario, c_maroon
+	spr_armario, color_marrom_b
 )

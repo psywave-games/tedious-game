@@ -1,0 +1,1 @@
+draw(spr_cozinha_pia, color_marrom_b)

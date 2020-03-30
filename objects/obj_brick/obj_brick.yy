@@ -4,7 +4,26 @@
     "mvc": "1.0",
     "name": "obj_brick",
     "eventList": [
-        
+        {
+            "id": "ae6610fd-a880-458a-b345-ca145af8c0e2",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "718f53ed-59ce-4911-a8f9-1778777f378f"
+        },
+        {
+            "id": "b3ff188c-8ecf-4752-87eb-826e9acb275f",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "718f53ed-59ce-4911-a8f9-1778777f378f"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

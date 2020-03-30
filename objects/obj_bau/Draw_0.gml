@@ -1,3 +1,3 @@
 draw(
-	spr_bau, c_maroon
+	spr_bau, color_marrom_a
 )

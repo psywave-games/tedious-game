@@ -1,3 +1,3 @@
 draw(
-	spr_pia_banheiro, c_navy
+	spr_pia_banheiro, color_azul_a
 )

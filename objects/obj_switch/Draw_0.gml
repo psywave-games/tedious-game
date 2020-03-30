@@ -3,4 +3,4 @@ if state == fsm_mob.idle then
 else 
 	image_yscale = -1
 
-draw(spr_switch, c_white)
+draw(spr_switch, color_verde_b)

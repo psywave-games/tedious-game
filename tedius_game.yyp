@@ -303,6 +303,14 @@
             }
         },
         {
+            "Key": "23f8c22d-23a2-476c-96ef-69e68b270c7b",
+            "Value": {
+                "id": "e293c44f-e9f5-4482-b31d-5004ce62d50b",
+                "resourcePath": "objects\/obj_table\/obj_table.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2510024c-73b6-4054-8537-ebd54f4155e9",
             "Value": {
                 "id": "682dab95-ed6e-4e6f-b6e2-514dc19372d7",
@@ -340,6 +348,14 @@
                 "id": "066613d9-5009-4e29-9537-f2d214366e81",
                 "resourcePath": "sprites\/spr_playerWalk2\/spr_playerWalk2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2e2e6360-7563-4e1d-a961-6510fa914202",
+            "Value": {
+                "id": "5a1c1608-fb6b-4229-bc84-49000d5824c4",
+                "resourcePath": "views\/2e2e6360-7563-4e1d-a961-6510fa914202.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -575,6 +591,14 @@
             }
         },
         {
+            "Key": "51c8852d-1c13-4f1b-8dc7-ce5d8fae1bfe",
+            "Value": {
+                "id": "69eec324-636b-4a9c-98db-d3b9d8f3ea5d",
+                "resourcePath": "sprites\/spr_table\/spr_table.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "52528d71-51ab-4359-b41d-51a4cfcabb10",
             "Value": {
                 "id": "1607532a-005c-471f-9501-5f383b9a4293",
@@ -647,6 +671,14 @@
             }
         },
         {
+            "Key": "61246205-8b1b-4ead-9217-a9f4e092ba61",
+            "Value": {
+                "id": "547cbd51-b25e-4b64-854d-78a944a4e779",
+                "resourcePath": "objects\/obj_chair\/obj_chair.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "619219ac-51e5-492b-a003-837c968391db",
             "Value": {
                 "id": "c4579964-be86-41b5-85cc-f60167cfb7fd",
@@ -668,6 +700,14 @@
                 "id": "850102f4-5e10-4340-badc-f0041cd21a81",
                 "resourcePath": "objects\/obj_armario\/obj_armario.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "644abe32-d4c1-43a3-b660-3d9d234feb90",
+            "Value": {
+                "id": "f66d115a-e3e7-4792-8401-c6fcb6d0f4ba",
+                "resourcePath": "views\/644abe32-d4c1-43a3-b660-3d9d234feb90.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -879,6 +919,14 @@
             }
         },
         {
+            "Key": "7bc66e9e-8cfa-44e2-b1e1-ec2f23e5af93",
+            "Value": {
+                "id": "83a5e31b-194b-4522-b6ad-52dcca1cdfd8",
+                "resourcePath": "views\/7bc66e9e-8cfa-44e2-b1e1-ec2f23e5af93.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "7cfab4b9-2559-418c-836d-b318833db557",
             "Value": {
                 "id": "840b1740-53eb-42fd-9db0-7a46feb55555",
@@ -932,6 +980,22 @@
                 "id": "dc8e384b-36d5-4284-a44a-cb2ab860571c",
                 "resourcePath": "views\/8256dda6-c855-4a39-b88b-abcf66614aa2.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "830ffa93-be89-4973-9538-51799955f71e",
+            "Value": {
+                "id": "1e948c0a-5ff2-47f9-af9b-8a3bea956fed",
+                "resourcePath": "views\/830ffa93-be89-4973-9538-51799955f71e.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "84e019b4-bf1c-4339-bd24-a4e3d9ef73e2",
+            "Value": {
+                "id": "6e0e3201-5088-481a-a469-338580f3654f",
+                "resourcePath": "sprites\/spr_cozinha_pia\/spr_cozinha_pia.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1108,6 +1172,14 @@
                 "id": "d860530b-b5eb-4321-8a44-062ffd992b71",
                 "resourcePath": "scripts\/fullscreen_set\/fullscreen_set.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9d364e6e-75df-4e7e-bb74-9004bb905eef",
+            "Value": {
+                "id": "745c1d0d-8bf2-4df7-b203-9d4d7030ccfe",
+                "resourcePath": "sprites\/spr_cozinha_cadeira\/spr_cozinha_cadeira.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
