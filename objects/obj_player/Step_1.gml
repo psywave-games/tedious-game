@@ -23,8 +23,4 @@ if not (game.app.step % room_speed) begin
 end
 #endregion
 
-show_debug_message(requirements[need.water])
-
 lite_step()
-
-

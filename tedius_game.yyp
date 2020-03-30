@@ -615,6 +615,14 @@
             }
         },
         {
+            "Key": "54a96945-3b83-4bbc-9a64-b77cac786864",
+            "Value": {
+                "id": "0113bb8f-44b4-402c-b6a3-7db86efd4c23",
+                "resourcePath": "objects\/obj_room_chair\/obj_room_chair.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "570fc426-8f35-4bc1-8b34-cb3a9eb674bd",
             "Value": {
                 "id": "db1ce785-c278-41e8-a328-26e67c21951c",
@@ -994,7 +1002,7 @@
             "Key": "84e019b4-bf1c-4339-bd24-a4e3d9ef73e2",
             "Value": {
                 "id": "6e0e3201-5088-481a-a469-338580f3654f",
-                "resourcePath": "sprites\/spr_cozinha_pia\/spr_cozinha_pia.yy",
+                "resourcePath": "sprites\/spr_cozinha_pia0\/spr_cozinha_pia0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1151,6 +1159,14 @@
             }
         },
         {
+            "Key": "98be4682-aac6-4db3-96ec-6eabd841e702",
+            "Value": {
+                "id": "74a47ab8-0be9-4cd1-9731-185c3c710f81",
+                "resourcePath": "objects\/obj_baseChair\/obj_baseChair.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "99abda29-1d0b-4797-bfbe-7d8c386acca7",
             "Value": {
                 "id": "fa7f9dab-3f4d-45f5-a4c1-8bc633f06f51",
@@ -1204,6 +1220,14 @@
                 "id": "c460167e-906b-4231-82b8-b01be84f777a",
                 "resourcePath": "views\/a3e168ca-e6eb-4f0b-9ddb-8ae14f6dbc8b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a592bfce-b78b-4c10-af7e-e0bb2c2af8ff",
+            "Value": {
+                "id": "7da4c7bb-415e-4eea-b33c-7430135ebf49",
+                "resourcePath": "sprites\/spr_cozinha_pia1\/spr_cozinha_pia1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

@@ -2,7 +2,7 @@
     "id": "84e019b4-bf1c-4339-bd24-a4e3d9ef73e2",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_cozinha_pia",
+    "name": "spr_cozinha_pia0",
     "For3D": false,
     "HTile": false,
     "VTile": false,
