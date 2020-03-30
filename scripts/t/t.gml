@@ -251,7 +251,11 @@ if game.app.lang == msg.en begin
 			return "i don't want to drink more water"
 		case msg.interact_food_full:
 			return "I'm full"
-	
+		case msg.interact_soon_down:
+			return "coming soon..."
+		case msg.interact_soon_rate:
+			return "it does nothing :/"
+
 	end
 end
 switch argument[0] begin
@@ -505,6 +509,10 @@ switch argument[0] begin
 		return "eu não quero mais beber água"
 	case msg.interact_food_full:
 		return "estou satisfeito"
+	case msg.interact_soon_down:
+			return "em breve..."
+	case msg.interact_soon_rate:
+		return "isso nao funciona ainda :/"
 end
 
 return "#Error 18_" + string(argument0)

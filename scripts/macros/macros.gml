@@ -222,6 +222,8 @@ enum msg {
 	interact_furnace_down,
 	interact_furnace_rate,
 	interact_water_full,
-	interact_food_full
+	interact_food_full,
+	interact_soon_down,
+	interact_soon_rate
 }
 
