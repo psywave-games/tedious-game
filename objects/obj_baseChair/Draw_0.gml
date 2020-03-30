@@ -1,2 +1,2 @@
 if game.app.player.state != fsm_player.sit then
-	draw(spr_poltrona, color_vermelho)
+	draw(sprite_index, image_blend)

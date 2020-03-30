@@ -1,28 +1,18 @@
 {
-    "id": "58506415-3e75-463d-80cd-deddeb59c253",
+    "id": "54a96945-3b83-4bbc-9a64-b77cac786864",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_poltrona",
+    "name": "obj_room_chair",
     "eventList": [
         {
-            "id": "beaf31f3-69b6-4267-ba91-1ad5b6eb6628",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "58506415-3e75-463d-80cd-deddeb59c253"
-        },
-        {
-            "id": "663752ad-3148-4a14-baa5-b76a8abde21f",
+            "id": "97d36659-9d54-41f2-9939-262234396675",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "58506415-3e75-463d-80cd-deddeb59c253"
+            "m_owner": "54a96945-3b83-4bbc-9a64-b77cac786864"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -43,6 +33,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "b112f2c0-f5f7-475c-8615-2b6e784127f6",
+    "spriteId": "99abda29-1d0b-4797-bfbe-7d8c386acca7",
     "visible": true
 }
