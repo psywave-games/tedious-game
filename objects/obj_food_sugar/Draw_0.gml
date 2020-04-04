@@ -1,3 +1,3 @@
 draw(
-	spr_sugar, color_cinza_c
+	sprite_index, color_cinza_c
 )

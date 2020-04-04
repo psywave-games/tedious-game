@@ -1,3 +1,3 @@
 draw(
-	spr_chuveiro, color_azul_a
+	image_index, color_azul_a
 )
