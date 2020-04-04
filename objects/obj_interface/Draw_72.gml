@@ -8,7 +8,7 @@ if instance_exists(game.app.player) and game.app.state = fsm_game.play begin
 	var vh = camera_get_view_height(view_camera[0]);
 	
 	var px = game.app.player.x
-	var py = game.app.player.y - 8
+	var py = game.app.player.y - 16
 
 	self.camx += (px - (vw/2) - self.camx) * (game.app.render.camera_speed*0.1)
 	self.camy += (py - (vh/2) - self.camy) * (game.app.render.camera_speed*0.1)

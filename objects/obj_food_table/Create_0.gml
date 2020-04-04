@@ -1,1 +1,1 @@
-mob_install(fsm_mob.idle)
+mob_install(fsm_mob.none)

@@ -33,6 +33,7 @@
 
 enum word {
 	slop = -1,
+	height = 72,
 	limit_left = 10,
 	limit_right = 374,
 	depth_player = 200,

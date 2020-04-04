@@ -1,3 +1,3 @@
 /// @description ev_lite_step
-
-playercollision = place_meeting(x, y + 4, game.app.player)
+if visible then
+	playercollision = place_meeting(x, y + 8, game.app.player)

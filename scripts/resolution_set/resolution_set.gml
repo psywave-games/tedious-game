@@ -9,7 +9,7 @@ game.app.render.mode_ratio = _mode_ratio
 
 var resolution_height= game.app.render.resolutions[_mode_resolution]
 var resolution_width = round(game.app.render.size_ratio[_mode_ratio] * resolution_height)
-var camera_width = game.app.render.size_ratio[_mode_ratio] * 64
+var camera_width = game.app.render.size_ratio[_mode_ratio] * word.height
 
 /// ajustar resolução para ser divisvel por 8
 while resolution_width % 8 begin 
@@ -44,7 +44,7 @@ view_set_wport(0, resolution_width)
 view_set_hport(0, resolution_height)
 
 /// Camera
-camera_set_view_size(view_camera[0], camera_width, 64)
+camera_set_view_size(view_camera[0], camera_width, word.height)
 
 /// Janela
 window_set_size(resolution_width, resolution_height)
