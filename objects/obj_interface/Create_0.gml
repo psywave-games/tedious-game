@@ -22,4 +22,5 @@ self.alpha_start = true
 self.display_score = 0
 self.happy_sign = 0
 
+
 event_user(ev_init)

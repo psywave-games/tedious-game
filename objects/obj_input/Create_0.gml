@@ -1,7 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-
 key_axis_x = 0
 key_axis_y = 0
 key_axis_switch = 0
@@ -18,3 +14,5 @@ key_jump = false
 key_interact = false
 
 key_input_text = "NONE"
+
+suport_gamepad = gamepad_is_supported()
