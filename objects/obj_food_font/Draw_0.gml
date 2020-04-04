@@ -1,1 +1,1 @@
-draw(spr_bebedouro, color_cinza_a)
+draw(sprite_index, color_cinza_a)

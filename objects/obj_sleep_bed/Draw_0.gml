@@ -1,5 +1,5 @@
 draw(
-	spr_cama0, color_vermelho,
-	spr_cama1, color_branco,
-	spr_cama2, color_marrom_b
+	spr_sleep_bed0, color_vermelho,
+	spr_sleep_bed1, color_branco,
+	spr_sleep_bed2, color_marrom_b
 )

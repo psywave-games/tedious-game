@@ -1,3 +1,3 @@
 draw(
-	spr_armario, color_marrom_b
+	image_index, color_marrom_b
 )

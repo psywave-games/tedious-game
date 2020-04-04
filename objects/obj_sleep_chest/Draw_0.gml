@@ -1,4 +1,4 @@
 draw(
-	spr_comoda0, color_marrom_b,
-	spr_comoda2, color_vermelho	
+	spr_sleep_chest0, color_marrom_b,
+	spr_sleep_chest1, color_vermelho	
 )

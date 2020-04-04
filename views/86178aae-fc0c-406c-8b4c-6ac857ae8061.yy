@@ -12,9 +12,11 @@
         "e05e5d4d-f43a-46b4-8a82-f9d19289d6bf",
         "36bc2f9d-c3e9-419d-8ea3-9f2350f66255",
         "73c59095-9ee9-4bf9-81a2-037d1bd2de9c",
-        "c972e834-e846-456c-8d00-01419ddaa4f6",
         "4816c82b-89e9-423f-a66b-f63569f2a3af",
-        "e87ce540-542b-4d5a-9857-54dc2f3d30de"
+        "e87ce540-542b-4d5a-9857-54dc2f3d30de",
+        "44bf6ee0-4c94-456f-8653-dcc5e32d1c4e",
+        "5d060e38-688f-4dc9-be41-ee73053a6ffe",
+        "b0fcadbf-ad06-4403-9d7f-b71d17f2daf7"
     ],
     "filterType": "GMSprite",
     "folderName": "commons",
