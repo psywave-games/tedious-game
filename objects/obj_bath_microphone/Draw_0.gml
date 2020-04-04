@@ -1,3 +1,3 @@
 draw(
-	image_index, color_azul_a
+	sprite_index, color_azul_a
 )

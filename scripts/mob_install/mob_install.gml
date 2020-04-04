@@ -18,4 +18,6 @@ self.step = 0
 
 self.switchs = 0
 
+self.visible = false
+
 outline_init()
