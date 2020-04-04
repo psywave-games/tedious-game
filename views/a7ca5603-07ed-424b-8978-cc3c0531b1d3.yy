@@ -13,7 +13,7 @@
         "7fdf4ac9-b066-4fce-9255-4f62b5788121"
     ],
     "filterType": "GMScript",
-    "folderName": "Outline Shader",
+    "folderName": "outline",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

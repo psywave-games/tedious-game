@@ -1,28 +1,28 @@
 {
-    "id": "b359b404-9285-4981-ac71-e7b03c7342b0",
+    "id": "79a18f80-8577-4001-acb2-2908498c5870",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_guitar",
+    "name": "obj_keyboard",
     "eventList": [
         {
-            "id": "d516bcc4-5d00-4831-828b-eaeb31216c6c",
+            "id": "7fd50ccd-edde-4f83-b89f-5be22f3fc9cc",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "b359b404-9285-4981-ac71-e7b03c7342b0"
+            "m_owner": "79a18f80-8577-4001-acb2-2908498c5870"
         },
         {
-            "id": "fd50896a-4a1c-432d-ae5d-03b2dee31ef1",
+            "id": "b8253594-a130-48b9-98a7-48405db4e7a0",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 8,
-            "m_owner": "b359b404-9285-4981-ac71-e7b03c7342b0"
+            "m_owner": "79a18f80-8577-4001-acb2-2908498c5870"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -43,6 +43,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "e87ce540-542b-4d5a-9857-54dc2f3d30de",
+    "spriteId": "4816c82b-89e9-423f-a66b-f63569f2a3af",
     "visible": true
 }

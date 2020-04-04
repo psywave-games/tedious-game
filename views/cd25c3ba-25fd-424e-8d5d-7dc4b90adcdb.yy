@@ -8,7 +8,7 @@
         "3668e469-effb-4155-ad42-4c0ca6696887"
     ],
     "filterType": "GMObject",
-    "folderName": "sala",
+    "folderName": "tvroom",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
