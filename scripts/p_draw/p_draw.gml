@@ -29,7 +29,6 @@ with game.app.player begin
 			draw_sprite_ext(spr_playerIdle2, image_index, _xx, _yy, _xscale, _yscale, p_head_angle(_xscale), c_white, _alpha)
 			break
 
-		case fsm_player.jump:
 		case fsm_player.walk:
 			/// Correndo
 			if abs(hspeed) > 2 begin
@@ -60,17 +59,6 @@ with game.app.player begin
 			
 		case fsm_player.idle:
 			draw_sprite_ext(spr_playerIdle0, image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
-			break
-
-		case fsm_player.jump:
-			/// Subindo
-			if vspeed > 0 begin
-				draw_sprite_ext(spr_playerJump0, image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
-			end
-			/// Descendo
-			else begin
-				draw_sprite_ext(spr_playerFall0, image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
-			end
 			break
 	
 		case fsm_player.walk:

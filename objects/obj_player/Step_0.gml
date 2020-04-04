@@ -30,9 +30,6 @@ else  if state == fsm_player.drink then
 #endregion
 
 #region MOVE
-else if game.app.input.key_jump or state == fsm_player.jump then
-	self.state = fsm_player.jump
-
 else if abs(self.axis_x) then
 	self.state = fsm_player.walk
 

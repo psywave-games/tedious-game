@@ -8,7 +8,7 @@ if self.state == fsm_mob.none
 end
 #endregion
 	
-var looking = p_looking() * -20
+var looking = game.app.player.axis_looking * -20
 
 #region INTERACTS
 if game.app.player.state == fsm_player.idle begin

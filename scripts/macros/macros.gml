@@ -34,7 +34,9 @@
 enum word {
 	slop = -1,
 	limit_left = 10,
-	limit_right = 374
+	limit_right = 374,
+	depth_player = 200,
+	depth_stair = 350
 }
 
 
@@ -56,7 +58,6 @@ enum need {
 enum fsm_player{
 	none,									/// Quando não ativado
 	died,									/// Jogador está morto
-	jump,									/// Jogador está pulando
 	idle,									/// Jogador está parado
 	walk,									/// Jogador está andando
 	dying,									/// Jogador está se matando	
