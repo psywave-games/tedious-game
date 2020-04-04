@@ -14,21 +14,6 @@ switch self.state begin
 		speed = 0
 		break
 		
-	case fsm_player.jump:
-		self.escada = 0
-	
-		/// Pular
-		if game.app.input.key_jump and p_foot() begin 
-			self.y -= 2
-			vspeed -= 5
-		end
-		
-		/// Cair no chão
-		else if p_foot() then
-			self.state = fsm_player.idle
-		
-		break
-		
 	case fsm_player.walk:
 		/// se for movimentar para o lado contrario parar
 		if sign(hspeed) != sign(self.axis_x) then
@@ -50,9 +35,34 @@ switch self.state begin
 end
 #endregion
 
-#region ANIMACAO
+#region LOOKING HORIZONTAL
 if sign(hspeed) != 0 then
 	image_xscale = sign (hspeed)
+
+#endregion
+
+#region LOOKING VERTICAL
+if game.app.input.key_moonwalk then
+	axis_looking = 1
+
+else if p_book_read() then
+	axis_looking = 1
+
+else if speaking(self) then
+	axis_looking = -1
+
+else if in_stair != 0 then 
+	axis_looking = in_stair
+
+else if game.app.input.key_axis_y != 0 then 
+	axis_looking = game.app.input.key_axis_y 
+
+else 
+	axis_looking = 0
+#endregion
+
+#region DEPTH
+depth = self.in_stair != 0? word.depth_stair: word.depth_player
 
 #endregion
 
