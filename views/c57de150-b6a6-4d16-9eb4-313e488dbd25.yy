@@ -11,7 +11,7 @@
         "619219ac-51e5-492b-a003-837c968391db"
     ],
     "filterType": "GMObject",
-    "folderName": "banheiro",
+    "folderName": "bathroom",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

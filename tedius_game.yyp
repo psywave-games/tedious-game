@@ -186,7 +186,7 @@
             "Key": "11df2180-2f56-46a8-bcd8-ab8bb916b96f",
             "Value": {
                 "id": "110f8441-e55b-48c0-a3e5-597fad2a1e6a",
-                "resourcePath": "objects\/obj_pia\/obj_pia.yy",
+                "resourcePath": "objects\/obj_food_cleaner\/obj_food_cleaner.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -226,7 +226,7 @@
             "Key": "187a1820-06ad-419b-98ec-d48f68d757a8",
             "Value": {
                 "id": "6623f0e1-cc58-4c86-9fe4-974294cfaeab",
-                "resourcePath": "objects\/obj_porta\/obj_porta.yy",
+                "resourcePath": "objects\/obj_door0\/obj_door0.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -290,7 +290,7 @@
             "Key": "23f8c22d-23a2-476c-96ef-69e68b270c7b",
             "Value": {
                 "id": "e293c44f-e9f5-4482-b31d-5004ce62d50b",
-                "resourcePath": "objects\/obj_table\/obj_table.yy",
+                "resourcePath": "objects\/obj_food_table\/obj_food_table.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -322,7 +322,7 @@
             "Key": "28909344-d873-4093-9b69-857ce01c9122",
             "Value": {
                 "id": "a0393781-6811-4cfc-9caa-f5e8858c686d",
-                "resourcePath": "objects\/obj_sugar\/obj_sugar.yy",
+                "resourcePath": "objects\/obj_food_sugar\/obj_food_sugar.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -332,6 +332,14 @@
                 "id": "066613d9-5009-4e29-9537-f2d214366e81",
                 "resourcePath": "sprites\/spr_playerWalk2\/spr_playerWalk2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2dfb3210-9dbd-40ca-9d8b-85a8cdf11927",
+            "Value": {
+                "id": "922ff301-5f5d-4cb4-86b2-dc145932c197",
+                "resourcePath": "views\/2dfb3210-9dbd-40ca-9d8b-85a8cdf11927.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -386,7 +394,7 @@
             "Key": "330175ba-4528-4f44-bf89-ede2119cc0bc",
             "Value": {
                 "id": "5e0df3fd-12c5-4a85-a3fa-78aaa87c7759",
-                "resourcePath": "objects\/obj_computer\/obj_computer.yy",
+                "resourcePath": "objects\/obj_sleep_table\/obj_sleep_table.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -394,7 +402,7 @@
             "Key": "348614ce-0520-4c9c-b269-93d68bb32267",
             "Value": {
                 "id": "0d4145ae-d375-412d-a450-656b1652b0ec",
-                "resourcePath": "objects\/obj_banheiro_espelho\/obj_banheiro_espelho.yy",
+                "resourcePath": "objects\/obj_bath_mirror\/obj_bath_mirror.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -402,7 +410,7 @@
             "Key": "3668e469-effb-4155-ad42-4c0ca6696887",
             "Value": {
                 "id": "458826f8-b10c-4eb9-b6d8-7c062693b89d",
-                "resourcePath": "objects\/obj_tv\/obj_tv.yy",
+                "resourcePath": "objects\/obj_tv_table\/obj_tv_table.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -474,7 +482,7 @@
             "Key": "413c498a-50c8-4df7-937b-957f72e96881",
             "Value": {
                 "id": "49bfa663-0303-4549-8ae2-fed717a2865a",
-                "resourcePath": "objects\/obj_banheiro_chuveiro\/obj_banheiro_chuveiro.yy",
+                "resourcePath": "objects\/obj_bath_microphone\/obj_bath_microphone.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -610,7 +618,7 @@
             "Key": "54a96945-3b83-4bbc-9a64-b77cac786864",
             "Value": {
                 "id": "0113bb8f-44b4-402c-b6a3-7db86efd4c23",
-                "resourcePath": "objects\/obj_room_chair\/obj_room_chair.yy",
+                "resourcePath": "objects\/obj_chair0\/obj_chair0.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -634,7 +642,7 @@
             "Key": "58506415-3e75-463d-80cd-deddeb59c253",
             "Value": {
                 "id": "6bb0e354-76a7-4c14-a123-a069144f04b8",
-                "resourcePath": "objects\/obj_poltrona\/obj_poltrona.yy",
+                "resourcePath": "objects\/obj_tv_chair\/obj_tv_chair.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -666,7 +674,7 @@
             "Key": "61246205-8b1b-4ead-9217-a9f4e092ba61",
             "Value": {
                 "id": "547cbd51-b25e-4b64-854d-78a944a4e779",
-                "resourcePath": "objects\/obj_chair\/obj_chair.yy",
+                "resourcePath": "objects\/obj_chair1\/obj_chair1.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -674,7 +682,7 @@
             "Key": "619219ac-51e5-492b-a003-837c968391db",
             "Value": {
                 "id": "c4579964-be86-41b5-85cc-f60167cfb7fd",
-                "resourcePath": "objects\/obj_banheiro_banheira\/obj_banheiro_banheira.yy",
+                "resourcePath": "objects\/obj_bath_bed\/obj_bath_bed.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -690,7 +698,7 @@
             "Key": "63d85c18-a804-4e83-a249-ae23bdf4ed51",
             "Value": {
                 "id": "850102f4-5e10-4340-badc-f0041cd21a81",
-                "resourcePath": "objects\/obj_armario\/obj_armario.yy",
+                "resourcePath": "objects\/obj_food_chest\/obj_food_chest.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -762,7 +770,7 @@
             "Key": "69a455d9-6726-4295-8e15-c2e1b0e0cd34",
             "Value": {
                 "id": "c5e85d20-aaf5-4ce9-bb92-e1ee35d7d0b8",
-                "resourcePath": "objects\/obj_escada\/obj_escada.yy",
+                "resourcePath": "objects\/obj_stair\/obj_stair.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -794,7 +802,7 @@
             "Key": "6cc22136-7965-43f4-a86b-eb590cee32f2",
             "Value": {
                 "id": "31e63ce6-fd09-4311-951f-1daa70620f71",
-                "resourcePath": "objects\/obj_furnace\/obj_furnace.yy",
+                "resourcePath": "objects\/obj_food_furnace\/obj_food_furnace.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -882,7 +890,7 @@
             "Key": "79a18f80-8577-4001-acb2-2908498c5870",
             "Value": {
                 "id": "9f5c7542-c871-4f35-aa27-da9f012fdf20",
-                "resourcePath": "objects\/obj_teclado\/obj_teclado.yy",
+                "resourcePath": "objects\/obj_keyboard\/obj_keyboard.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1034,7 +1042,7 @@
             "Key": "94834600-2ef2-4c7e-8d06-dafec5061407",
             "Value": {
                 "id": "818dbc24-d383-4ef6-b1da-aeac7d86ac9f",
-                "resourcePath": "objects\/obj_bebedouro\/obj_bebedouro.yy",
+                "resourcePath": "objects\/obj_food_font\/obj_food_font.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1050,7 +1058,7 @@
             "Key": "981768a6-d127-4187-8ea5-a0648cb8f944",
             "Value": {
                 "id": "1880090f-e91f-4b55-9a1e-5fa69a7fbf2c",
-                "resourcePath": "objects\/obj_lampada0\/obj_lampada0.yy",
+                "resourcePath": "objects\/obj_lamp0\/obj_lamp0.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1106,7 +1114,7 @@
             "Key": "a39821cc-b985-4d0b-a70d-ac008e4cbf7d",
             "Value": {
                 "id": "c32e8da9-1fc2-4c6f-80d8-d6573cf07bcc",
-                "resourcePath": "sprites\/spr_escada1\/spr_escada1.yy",
+                "resourcePath": "sprites\/spr_stair1\/spr_stair1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1186,7 +1194,7 @@
             "Key": "ac75026c-b118-4710-ad06-a500965abccc",
             "Value": {
                 "id": "e8d29783-cc5e-449e-a478-7eec6a9d6f24",
-                "resourcePath": "sprites\/spr_escada0\/spr_escada0.yy",
+                "resourcePath": "sprites\/spr_stair0\/spr_stair0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1362,7 +1370,7 @@
             "Key": "c2557a3a-c4e3-4816-aa45-abc5cd64e343",
             "Value": {
                 "id": "1efe08a7-5887-45d5-a1ba-9284d1e33626",
-                "resourcePath": "objects\/obj_frezer\/obj_frezer.yy",
+                "resourcePath": "objects\/obj_food_freezer\/obj_food_freezer.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1490,7 +1498,7 @@
             "Key": "ce4538ab-11c7-4e78-879a-b611c3ec9480",
             "Value": {
                 "id": "9b081b28-5283-4b10-813e-762771e14c01",
-                "resourcePath": "objects\/obj_comoda\/obj_comoda.yy",
+                "resourcePath": "objects\/obj_sleep_chest\/obj_sleep_chest.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1570,7 +1578,7 @@
             "Key": "d879cc5d-e806-44d3-85ce-e3c526fd9086",
             "Value": {
                 "id": "92ba9577-1b0e-4c7f-b702-2779244b539d",
-                "resourcePath": "objects\/obj_cama\/obj_cama.yy",
+                "resourcePath": "objects\/obj_sleep_bed\/obj_sleep_bed.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1711,14 +1719,6 @@
             }
         },
         {
-            "Key": "e66d304d-a487-4e0e-ac43-47d7a1fc246e",
-            "Value": {
-                "id": "a61e55a7-6803-4a4e-bbc8-d0a6d1d0801a",
-                "resourcePath": "objects\/obj_baseFlare\/obj_baseFlare.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "e6be5a39-5b92-4e8b-8df6-da15c9ae1201",
             "Value": {
                 "id": "cfaf9186-b2c7-4e59-8c08-9ebc39199e36",
@@ -1730,7 +1730,7 @@
             "Key": "e6f196db-6873-40a4-b49a-e08716e4fc58",
             "Value": {
                 "id": "081a60a2-14e5-4b7c-af42-aca755baec37",
-                "resourcePath": "objects\/obj_banheiro_pia\/obj_banheiro_pia.yy",
+                "resourcePath": "objects\/obj_bath_cleaner\/obj_bath_cleaner.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1874,7 +1874,7 @@
             "Key": "f7495b6e-0dbf-4deb-a42d-8d95625d942f",
             "Value": {
                 "id": "693871e8-7ecb-470f-8fc0-8e14efd9e096",
-                "resourcePath": "objects\/obj_banheiro_toilet\/obj_banheiro_toilet.yy",
+                "resourcePath": "objects\/obj_bath_chair\/obj_bath_chair.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1946,7 +1946,7 @@
             "Key": "fefe273f-d9c9-41d1-ba5d-a5d749a31f53",
             "Value": {
                 "id": "3fde45d5-40dd-4f46-a25b-9938eea0ffbb",
-                "resourcePath": "objects\/obj_porta_saida\/obj_porta_saida.yy",
+                "resourcePath": "objects\/obj_door1\/obj_door1.yy",
                 "resourceType": "GMObject"
             }
         },

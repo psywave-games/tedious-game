@@ -1,68 +1,78 @@
 {
-    "id": "6fee7bb8-fcb3-467e-9ff1-62b3780b839e",
+    "id": "3668e469-effb-4155-ad42-4c0ca6696887",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_switch",
+    "name": "obj_tv_table",
     "eventList": [
         {
-            "id": "321a0dcd-524b-4f9b-8cb1-ec98fccc1584",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "6fee7bb8-fcb3-467e-9ff1-62b3780b839e"
-        },
-        {
-            "id": "030f2b73-04e6-4ca5-8255-8f557cc7d43a",
+            "id": "a05aa90b-c524-49ff-8d0d-ed0342b5f9b4",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 8,
-            "m_owner": "6fee7bb8-fcb3-467e-9ff1-62b3780b839e"
+            "m_owner": "3668e469-effb-4155-ad42-4c0ca6696887"
         },
         {
-            "id": "ae761ee7-e4ca-404a-9fa2-edcefb8cdd8e",
+            "id": "a129495f-73aa-4278-864d-ff8a552d9200",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 14,
-            "eventtype": 7,
-            "m_owner": "6fee7bb8-fcb3-467e-9ff1-62b3780b839e"
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "3668e469-effb-4155-ad42-4c0ca6696887"
         },
         {
-            "id": "b5bab74a-f373-464a-a4c2-b0666fc8fae1",
+            "id": "152a666c-e71f-41d4-82fb-302a8b4747c0",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 11,
             "eventtype": 7,
-            "m_owner": "6fee7bb8-fcb3-467e-9ff1-62b3780b839e"
+            "m_owner": "3668e469-effb-4155-ad42-4c0ca6696887"
         },
         {
-            "id": "b78aab39-b731-40a6-bfc5-79ba3204303e",
+            "id": "08a67381-0e98-42b9-8ffe-23f5630ec352",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 12,
             "eventtype": 7,
-            "m_owner": "6fee7bb8-fcb3-467e-9ff1-62b3780b839e"
+            "m_owner": "3668e469-effb-4155-ad42-4c0ca6696887"
         },
         {
-            "id": "b24289ca-ba6d-4f94-8e1f-65f6ec3c83c6",
+            "id": "ddd09560-794b-451b-bba0-44677bd87927",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 13,
+            "eventtype": 7,
+            "m_owner": "3668e469-effb-4155-ad42-4c0ca6696887"
+        },
+        {
+            "id": "3c305d30-e5c8-4754-bd11-81ea1985a9d8",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 14,
+            "eventtype": 7,
+            "m_owner": "3668e469-effb-4155-ad42-4c0ca6696887"
+        },
+        {
+            "id": "13307087-172b-4693-ab67-d2b2d1f9b2cb",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 15,
             "eventtype": 7,
-            "m_owner": "6fee7bb8-fcb3-467e-9ff1-62b3780b839e"
+            "m_owner": "3668e469-effb-4155-ad42-4c0ca6696887"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -83,6 +93,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "f6f49c65-45e8-4fb9-9ec3-5c225d8fb050",
+    "spriteId": "d87ae1b3-47c6-4e49-90e4-4294ee33d243",
     "visible": true
 }

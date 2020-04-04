@@ -1,3 +1,3 @@
 draw(
-	spr_quadro, c_white
+	sprite_index, c_white
 )
