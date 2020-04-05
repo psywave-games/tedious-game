@@ -61,6 +61,26 @@ else
 	axis_looking = 0
 #endregion
 
+#region USING MOB
+/// a cada um segundo que estiver sentado
+if self.state == fsm_player.sit and not (game.app.step % room_speed) begin
+	switch self.in_mob begin
+	
+		case obj_tv_chair:
+			if obj_tv_table.state == fsm_mob.running then
+				mob_score_add(self.in_mob.id, "points", 20)
+				
+			break
+			
+		case obj_sleep_chair:
+			if obj_sleep_table.state == fsm_mob.running then
+				mob_score_add(self.in_mob.id, "points", 20)
+				
+			break
+	end
+end
+#endregion
+
 #region DEPTH
 depth = self.in_stair != 0? word.depth_stair: word.depth_player
 
