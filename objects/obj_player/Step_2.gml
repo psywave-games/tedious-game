@@ -62,20 +62,32 @@ else
 #endregion
 
 #region USING MOB
-/// a cada um segundo que estiver sentado
-if self.state == fsm_player.sit and not (game.app.step % room_speed) begin
-	switch self.in_mob begin
+/// quando estiver usando mob
+if self.state == fsm_player.sit
+	or self.state == fsm_player.sleep begin
+	
+	/// menssagem do mob
+	with self.in_mob begin
+		event_user(ev_interact_message)
+		game.app.interface.message = self.message
+		game.app.interface.can_interact = true
+	end
+	
+	/// a cada 1 segundo
+	if not (game.app.step % room_speed) then switch self.in_mob begin
 	
 		case obj_tv_chair:
 			if obj_tv_table.state == fsm_mob.running then
 				mob_score_add(self.in_mob.id, "points", 20)
-				
 			break
 			
 		case obj_sleep_chair:
 			if obj_sleep_table.state == fsm_mob.running then
-				mob_score_add(self.in_mob.id, "points", 20)
-				
+				mob_score_add(self.in_mob.id, "points", 20)		
+			break
+			
+		case obj_sleep_bed:
+			score_add(-5)
 			break
 	end
 end

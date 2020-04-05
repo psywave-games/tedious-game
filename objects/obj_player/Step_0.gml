@@ -18,6 +18,8 @@ end
 else if self.state == fsm_player.sit and not game.app.input.key_interact then
 	exit
 
+else if self.state == fsm_player.sleep and not game.app.input.key_interact then
+	exit
 #endregion
 
 #region DRINK

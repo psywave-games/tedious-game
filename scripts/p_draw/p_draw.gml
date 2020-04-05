@@ -22,6 +22,11 @@ with game.app.player begin
 			draw_sprite_ext(spr_playerUse1, image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
 			draw_sprite_ext(spr_playerIdle2, image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
 			break
+			
+		case fsm_player.sleep:
+			draw_sprite_ext(spr_playerIdle1, 0, _xx, _yy, _xscale, _yscale, 90, c_white, _alpha)
+			draw_sprite_ext(spr_playerIdle2, 0, _xx, _yy, _xscale, _yscale, 90, c_white, _alpha)
+			break
 	
 		case fsm_player.sit:
 		case fsm_player.idle:
@@ -50,6 +55,10 @@ with game.app.player begin
 		
 		case fsm_player.sit:
 			draw_sprite_ext(spr_playerSit0, 0, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
+			break
+		
+		case fsm_player.sleep:
+			draw_sprite_ext(spr_playerIdle0, 0, _xx, _yy, _xscale, _yscale, 90, c_white, _alpha)
 			break
 		
 		case fsm_player.drink:
