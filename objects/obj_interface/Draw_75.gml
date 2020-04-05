@@ -140,7 +140,7 @@ end
 else if game.app.state == fsm_game.menuAudio begin
 	draw_menu(0, t(msg.menu_audio_geral))
 	draw_menu(1, t(msg.menu_audio_music))
-	draw_menu(2, t(msg.menu_audio_geral))
+	draw_menu(2, t(msg.menu_audio_sfx))
 	draw_menu(3, t(msg.back), 10, 60)
 	
 	
