@@ -1,4 +1,4 @@
-/// @description ev_interact
+/// @description ev_interact_down
 
 switch self.select begin
 	
@@ -8,13 +8,26 @@ switch self.select begin
 		break
 
 
-	/// ler um livro
+	/// livro
 	case 2:
-		if ++book_page > 13 or not game.app.player.book_read then
+		/// começar a ler livro
+		if not game.app.player.book_read then
 			book_page = 1
 
+		/// ler livro
 		speak(game.app.player, t(msg.interact_book + book_page))
 		game.app.player.book_read = true
+		
+		/// livro terminado
+		if ++book_page > 13 begin
+			score_add(book_points)
+			book_points = 0
+			book_page = 1
+		end
+		
+		/// adicionar pontos
+		if book_points >= 0 then
+			score_add(20)
 		break
 		
 	/// maquinas agricolas

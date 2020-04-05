@@ -14,3 +14,5 @@ if points >= 0 begin
 	points -= 5
 end
 #endregion
+
+sfx_play(x, y, sound_sfx_click)

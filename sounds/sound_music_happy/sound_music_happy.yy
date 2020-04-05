@@ -1,8 +1,8 @@
 {
-    "id": "6a0c8b1b-c3cc-414c-a82b-fc0497d84015",
+    "id": "db92f830-f488-48bc-a973-ac8a1a550fe8",
     "modelName": "GMSound",
     "mvc": "1.0",
-    "name": "sound_menu",
+    "name": "sound_music_happy",
     "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
     "bitDepth": 1,
     "bitRate": 128,
