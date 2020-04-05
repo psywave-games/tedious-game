@@ -166,7 +166,7 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuWind
 			
 		/// Cam Speed
 		case 3:
-			var font_speed = game.app.render.camera_speed + _in
+			var font_speed = game.app.render.font_speed + _in
 			game.app.render.font_speed = clamp(font_speed, 1, 10)
 			break
 		

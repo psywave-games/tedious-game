@@ -53,18 +53,14 @@ end
 else if game.app.state == fsm_game.intro begin
 	
 	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), lite()? fnt_game0: fnt_title, c_white, 1, lite()? 2.6: 0.8)
-	draw_gui(0, 100, fa_center, fa_bottom, t(msg.press_start), fnt_game0, c_white, alpha_start)
-	
-	if game.app.step % room_speed == false then 
-		alpha_start ^= true
-	
+	draw_gui(0, 100, fa_center, fa_bottom, t(msg.press_start), fnt_game0, c_white, current_second%2)
 end
 #endregion
 
 #region INTERFACE MENU MAIN
 else if game.app.state == fsm_game.menuMain begin
 	
-	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), lite()? fnt_game0: fnt_title, 5, 1, lite()? 2.6: 0.8)
+	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), lite()? fnt_game0: fnt_title, c_white, 1, lite()? 2.6: 0.8)
 	
 	draw_menu(0, t(msg.menu_start))
 	draw_menu(1, t(msg.menu_config))
@@ -90,7 +86,7 @@ end
 #region INTERFACE MENU DISPLAY
 else if game.app.state == fsm_game.menuWindow begin
 
-	var menu_resolution = string(display_get_gui_width()) + "x" + string(display_get_gui_height())
+	var menu_resolution = string(view_wport[0]) + "x" + string(view_hport[0])
 	var menu_proportion = game.app.render.name_ratio[game.app.render.mode_ratio]
 	var menu_fullscreen = fullscreen_get()
 	var menu_font_speed = game.app.render.font_speed
@@ -128,11 +124,12 @@ else if game.app.state == fsm_game.menuGraphic begin
 	
 	draw_menu(4, t(msg.back), 10, 60)
 	
-	
-	draw_chck(0, menu_hd_font, 200)
-	draw_chck(1, menu_hd_light, 200)
-	draw_chck(2, menu_outline, 200)
-	draw_chck(3, menu_reflex, 200)
+	if not lite() begin
+		draw_chck(0, menu_hd_font, 200)
+		draw_chck(1, menu_hd_light, 200)
+		draw_chck(2, menu_outline, 200)
+		draw_chck(3, menu_reflex, 200)
+	end
 end
 #endregion
 
