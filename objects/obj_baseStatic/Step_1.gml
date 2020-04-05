@@ -36,7 +36,12 @@ if game.app.player.state == fsm_player.idle begin
 		/// Mostrar menssagem
 		event_user(ev_interact_message)
 		self.can_interact = true
-	
+		
+		/// Update interface
+		with game.app.interface begin
+			self.message = other.message
+			self.can_interact |= true
+		end
 	end else 
 		self.can_interact = false
 		

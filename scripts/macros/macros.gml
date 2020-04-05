@@ -54,7 +54,8 @@ enum fsm_player{
 	walk,									/// Jogador está andando
 	dying,									/// Jogador está se matando	
 	drink,									/// Jogador está bebendo
-	sit										/// Jogador está sentado
+	sleep,									/// Jogador está dormindo
+	sit										/// Jogador está sentado	
 }
 
 

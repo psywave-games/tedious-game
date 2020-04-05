@@ -1,4 +1,4 @@
-var _score = argument0
+var _score = round(argument0)
 
 #region SUM SCORE/HAPPY
 	game.app.interface.happy_sign = sign(_score)

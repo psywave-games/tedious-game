@@ -1,12 +1,18 @@
 #region INTERFACE GUI GAMEPLAY
 if game.app.state == fsm_game.play begin
+	var _build = string(round(GM_build_date)) + "\n v " + GM_version  
 	var _date = msg_time(false) + "\n" + msg_date("-")
 	var _score =  "SCORE\n" + score_get_string()
 	var _score_color = happy_sign < 0? c_red: c_white
 	
 	
+	draw_gui(0,0, fa_right, fa_bottom, _build, fnt_game0, c_white, 1, 1)
 	draw_gui(0,0, fa_left, fa_bottom, _date, fnt_game0, c_white, 1, 1)
-	draw_gui(0,0, fa_right, fa_bottom, _score, fnt_game0, _score_color, 1, 1)
+	draw_gui(0,0, fa_right, fa_top, _score, fnt_game0, _score_color, 1, 1)
+	
+
+	if self.can_interact then 
+		draw_gui(0, 0, fa_left, fa_top, "[F] " + self.message, fnt_game0, c_white, 1.0, 1.4)
 end
 #endregion
 

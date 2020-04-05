@@ -1,8 +1,10 @@
-
+#region DETECT INPUTS
 if not keyboard_check(vk_anykey) and not mouse_check_button(mb_any) then
 	exit
 
 var _in = game.app.input.key_menu_in
+self.can_interact = false
+#endregion
 
 #region SELECT LANG
 if game.app.state == fsm_game.lang and abs(_in) begin

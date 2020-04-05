@@ -18,5 +18,6 @@ self.select = 0
 self.display_score = 0
 self.happy_sign = 0
 
+self.message = ""
 
 event_user(ev_init)
