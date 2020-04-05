@@ -113,16 +113,19 @@ else if game.app.state == fsm_game.menuMain
 	key_menu_esc = _keyd_esc
 	key_menu_enter = _keyd_enter
 	key_menu_go = _keyd_down - _keyd_up
-	key_menu_in = _keyd_righ - _keyd_left + _keyd_enter - _msed_left + _msed_right
+	key_menu_in = _keyd_righ - _keyd_left + _keyd_enter
 end
 
 else if game.app.state == fsm_game.lang begin 
 	key_menu_go = _keyd_righ - _keyd_left 
-	key_menu_in = _keyd_enter + _msed_left - _msed_right
+	key_menu_in = _keyd_enter
 end
 
 else if game.app.state == fsm_game.warn then
 	key_menu_in = _keyd_del
+	
+else if game.app.state == fsm_game.waitFocus then
+	key_menu_in = _msed_left or _msed_right
 
 #endregion
 
@@ -137,7 +140,6 @@ if game.app.state = fsm_game.play begin
 	key_axis_switch = _keyd_ord_e - _keyd_ord_q
 
 	key_run = _key_shift 
-	key_jump = _keyd_space 
 	key_moonwalk = _key_ord_m
 	key_interact = _keyd_enter or _keyd_ord_f
 	
@@ -146,7 +148,7 @@ if game.app.state = fsm_game.play begin
 		key_axis_y += _gamepad_axis_y
 		key_axis_switch += _gamepaded_blue - _gamepaded_yellow
 		
-		key_interact |=  _gamepaded_red or _gamepaded_green
+		key_interact |= _gamepaded_green
 	end
 end
 

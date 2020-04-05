@@ -41,15 +41,6 @@ enum word {
 }
 
 
-enum system {
-	windows_phone,
-	windows,
-	android,
-	macosx,
-	unix,
-	ios
-}
-
 enum need {
 	water,
 	food
@@ -81,7 +72,8 @@ enum fsm_game {
 	cutscene,								/// STATE: Cenas de Jogo 
 	play,									/// STATE: Gameplay
 	over,									/// STATE: Fim de jogo
-	credits									/// STATE: Creditos finais
+	credits,								/// STATE: Creditos finais
+	waitFocus								/// STATE: Wait Focus
 }
 
 
