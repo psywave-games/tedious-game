@@ -27,11 +27,13 @@ switch self.select begin
 		
 		/// adicionar pontos
 		if book_points >= 0 then
-			score_add(20)
+			score_add(10)
 		break
 		
 	/// maquinas agricolas
 	case 3:
 		url_open_ext("https://www.google.com/search?tbm=isch&q=maquinas+agricolas+tunadas", "_blank")
+		score_add(troll_points)
+		troll_points = 0
 		break
 end

@@ -9,9 +9,9 @@ end
 #endregion
 
 #region ADD POINTS
-if points >= 0 begin
-	score_add(points)
-	points -= 5
+if global.points_switch > 0 begin
+	score_add(1)
+	global.points_switch -= 1
 end
 #endregion
 
