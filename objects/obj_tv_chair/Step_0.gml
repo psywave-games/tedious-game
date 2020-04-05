@@ -16,5 +16,5 @@ if obj_tv_table.state != fsm_mob.running then
 if points <= 0 then 
 	exit 
 	
-points -= 10
-score_add(10)
+points -= 20
+score_add(20)
