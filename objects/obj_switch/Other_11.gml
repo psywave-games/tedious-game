@@ -11,6 +11,6 @@ end
 #region ADD POINTS
 if points >= 0 begin
 	score_add(points)
-	points -= 10
+	points -= 5
 end
 #endregion

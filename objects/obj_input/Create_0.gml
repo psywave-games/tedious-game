@@ -10,7 +10,6 @@ key_menu_go = 0
 key_menu_in = 0
 
 key_run = false
-key_jump = false
 key_interact = false
 
 key_input_text = "NONE"

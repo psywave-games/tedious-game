@@ -270,3 +270,9 @@ else if game.app.state == fsm_game.over begin
 	end
 end
 #endregion
+
+#region WAIT FOCUS
+else if game.app.state == fsm_game.waitFocus and game.app.input.key_menu_in then
+	state_reset(game.app, fsm_game.lang)
+	
+#endregion
