@@ -2,7 +2,7 @@
     "id": "7557c149-e67f-4bf2-8cfc-21ee7cd1c009",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_quadro",
+    "name": "obj_paint",
     "eventList": [
         {
             "id": "42132c83-9fc5-41dc-ba13-2e6c236a5553",
