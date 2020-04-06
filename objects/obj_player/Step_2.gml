@@ -42,7 +42,12 @@ if sign(hspeed) != 0 then
 #endregion
 
 #region LOOKING VERTICAL
-if game.app.input.key_moonwalk then
+if self.state == fsm_player.dying and image_index <= 2 then
+	axis_looking = 0
+else if self.state == fsm_player.dying then
+	axis_looking = 1
+
+else if game.app.input.key_moonwalk then
 	axis_looking = 1
 
 else if p_book_read() then

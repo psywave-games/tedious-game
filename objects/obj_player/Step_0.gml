@@ -2,7 +2,7 @@
 if state == fsm_player.died then
 	exit
 
-else if state == fsm_player.dying and image_index > 4 then 
+else if state == fsm_player.dying and image_index > 3 then 
 	self.state = fsm_player.died
 	
 else if state == fsm_player.dying then

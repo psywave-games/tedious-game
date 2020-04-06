@@ -18,9 +18,6 @@ switch self.select begin
 			book_page = 1
 			points = 0
 		end
-		
-		/// adicionar pontos
-		if points >= 0 then
-			score_add(10)
+		else score_add(points? 5: -5)
 		break
 end

@@ -6,7 +6,7 @@ var _score = round(argument0)
 	score += abs(_score)
 	
 	if _score > 0 then
-		game.app.happy += _score/5
+		game.app.happy += _score/6
 	
 	else 
 		game.app.happy += _score/10
