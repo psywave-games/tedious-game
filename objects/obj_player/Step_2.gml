@@ -42,7 +42,7 @@ if sign(hspeed) != 0 then
 #endregion
 
 #region LOOKING VERTICAL
-if self.state == fsm_player.dying and image_index <= 2 then
+if self.state == fsm_player.dying and image_index > 2 then
 	axis_looking = 0
 else if self.state == fsm_player.dying then
 	axis_looking = 1
