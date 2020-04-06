@@ -1,6 +1,6 @@
 /// @description xscale
 
-var _olhar = p_looking() * 14 
+var _olhar = game.app.player.axis_looking * 14 
 var _lado = sign(argument0)
 
 if sad() >= 0.8 and _olhar < 0 then

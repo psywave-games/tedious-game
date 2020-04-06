@@ -1,4 +1,4 @@
-if game.app.player.escada != 0 then
+if game.app.player.in_stair != 0 then
 	exit
 
 with game.app.player begin

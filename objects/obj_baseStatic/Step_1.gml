@@ -8,7 +8,7 @@ if self.state == fsm_mob.none
 end
 #endregion
 	
-var looking = p_looking() * -20
+var looking = game.app.player.axis_looking * -20
 
 #region INTERACTS
 if game.app.player.state == fsm_player.idle begin
@@ -36,7 +36,12 @@ if game.app.player.state == fsm_player.idle begin
 		/// Mostrar menssagem
 		event_user(ev_interact_message)
 		self.can_interact = true
-	
+		
+		/// Update interface
+		with game.app.interface begin
+			self.message = other.message
+			self.can_interact |= true
+		end
 	end else 
 		self.can_interact = false
 		

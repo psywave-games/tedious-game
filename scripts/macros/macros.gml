@@ -33,19 +33,13 @@
 
 enum word {
 	slop = -1,
+	height = 72,
 	limit_left = 10,
-	limit_right = 374
+	limit_right = 374,
+	depth_player = 200,
+	depth_stair = 350
 }
 
-
-enum system {
-	windows_phone,
-	windows,
-	android,
-	macosx,
-	unix,
-	ios
-}
 
 enum need {
 	water,
@@ -56,12 +50,12 @@ enum need {
 enum fsm_player{
 	none,									/// Quando não ativado
 	died,									/// Jogador está morto
-	jump,									/// Jogador está pulando
 	idle,									/// Jogador está parado
 	walk,									/// Jogador está andando
 	dying,									/// Jogador está se matando	
 	drink,									/// Jogador está bebendo
-	sit										/// Jogador está sentado
+	sleep,									/// Jogador está dormindo
+	sit										/// Jogador está sentado	
 }
 
 
@@ -79,7 +73,8 @@ enum fsm_game {
 	cutscene,								/// STATE: Cenas de Jogo 
 	play,									/// STATE: Gameplay
 	over,									/// STATE: Fim de jogo
-	credits									/// STATE: Creditos finais
+	credits,								/// STATE: Creditos finais
+	waitFocus								/// STATE: Wait Focus
 }
 
 

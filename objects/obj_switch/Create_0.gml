@@ -1,4 +1,4 @@
 mob_install(fsm_mob.idle)
 can_break = true
 
-points = 30
+global.points_switch = 10

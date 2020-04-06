@@ -1,8 +1,10 @@
-
+#region DETECT INPUTS
 if not keyboard_check(vk_anykey) and not mouse_check_button(mb_any) then
 	exit
 
 var _in = game.app.input.key_menu_in
+self.can_interact = false
+#endregion
 
 #region SELECT LANG
 if game.app.state == fsm_game.lang and abs(_in) begin
@@ -166,7 +168,7 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuWind
 			
 		/// Cam Speed
 		case 3:
-			var font_speed = game.app.render.camera_speed + _in
+			var font_speed = game.app.render.font_speed + _in
 			game.app.render.font_speed = clamp(font_speed, 1, 10)
 			break
 		
@@ -269,4 +271,10 @@ else if game.app.state == fsm_game.over begin
 		self.step = 0
 	end
 end
+#endregion
+
+#region WAIT FOCUS
+else if game.app.state == fsm_game.waitFocus and game.app.input.key_menu_in then
+	state_reset(game.app, fsm_game.lang)
+	
 #endregion

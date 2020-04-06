@@ -255,6 +255,8 @@ if game.app.lang == msg.en begin
 			return "coming soon..."
 		case msg.interact_soon_rate:
 			return "it does nothing :/"
+		case msg.psy_sofa:
+			return "sofa"
 
 	end
 end
@@ -460,29 +462,29 @@ switch argument[0] begin
 	case msg.interact_bible0:
 	    return "fiz uma promessa pra mim mesmo nunca mais comer torresmo"
 	case msg.interact_bible1:
-	    return "alguém me disse, outro dia, que para sentir satisfação e alegria é necessário ser caridoso"
+	    return "alguem me disse, outro dia, que para sentir satisfacao e alegria e necessario ser caridoso"
 	case msg.interact_bible2:
-	    return "me dá um real, me da um real aí joão camainha mainha mania monai"
+	    return "me da um real, me da um real ai joao camainha mainha mania monai"
 	case msg.interact_bible3:
-	    return "o que fazer se não fazer e aceitar o tédio enfadonho"
+	    return "o que fazer se nao fazer e aceitar o tedio enfadonho"
 	case msg.interact_bible4:
 	    return "entao acho a receita de caminhar na caminhada"
 	case msg.interact_bible5:
-	    return "e subindo o morro, penso na sensação agradável de vir mais rápido na descida pois estou numa bike"
+	    return "e subindo o morro, penso na sensacao agradavel de vir mais rapido na descida pois estou numa bike"
 	case msg.interact_bible6:
-	    return "corro o risco de tropeçar em mim mesmo e cair quebrando o pescoço"
+	    return "corro o risco de tropecar em mim mesmo e cair quebrando o pescoco"
 	case msg.interact_bible7:
 	    return "o que o gato disse para o leite antes de bebe-lo? miaaau!"
 	case msg.interact_bible8:
-	    return "não procure saber onde vou meu caminho é toda manhã"
+	    return "nao procure saber onde vou meu caminho e toda manha"
 	case msg.interact_bible9:
-	    return "você gosta de maçã? eu também, mas não tem!"
+	    return "voce gosta de maca? eu tambem, mas nao tem!"
 	case msg.interact_bible10: 
 	    return "aleluia, aleluia, aleluia!"
 	case msg.interact_bible11:
-	    return "reze uma ave maria um pai nosso e um graio pai e assim você deverá ser feliz, ser feliz"
+	    return "reze uma ave maria um pai nosso e um graio pai e assim voce devera ser feliz, ser feliz"
 	case msg.interact_bible12:
-	    return "a felicidade não esta no pico da montanha, está enquanto você escala esta montanha!"
+	    return "a felicidade nao esta no pico da montanha, esta enquanto voce escala esta montanha!"
 	case msg.gameover_title:
 		return "Fim de Jogo!"
 	case msg.gameover_text:
@@ -506,13 +508,15 @@ switch argument[0] begin
 	case msg.psy_computer:
 		return "computador"
 	case msg.interact_water_full:
-		return "eu não quero mais beber água"
+		return "eu nao quero mais beber agua"
 	case msg.interact_food_full:
 		return "estou satisfeito"
 	case msg.interact_soon_down:
 			return "em breve..."
 	case msg.interact_soon_rate:
 		return "isso nao funciona ainda :/"
+	case msg.psy_sofa:
+		return "poltrona"
 end
 
 return "#Error 18_" + string(argument0)

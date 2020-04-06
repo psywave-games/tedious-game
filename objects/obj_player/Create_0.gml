@@ -10,7 +10,10 @@ game.app.player = self.id
 
 self.state = fsm_player.none
 
-self.escada = 0
+self.in_stair = 0
+self.in_mob = 0
+
+self.axis_looking = 0
 
 self.book_read = 0
 

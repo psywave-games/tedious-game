@@ -1,4 +1,4 @@
-with instance_nearest(game.app.player.x, game.app.player.y, obj_porta) begin
+with instance_nearest(game.app.player.x, game.app.player.y, obj_door0) begin
 	if self.image_index > 1 then
 		return false
 

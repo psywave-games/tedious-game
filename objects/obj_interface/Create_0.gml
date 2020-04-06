@@ -13,13 +13,11 @@ self.camy = 0
 /// @return	integer				index sobre o menu
 self.select = 0
 
-/// @see						blink start button
-/// @return	boolean				visible or hide
-self.alpha_start = true
-
 /// @see						score in interface
 /// @return	integer				score delay
 self.display_score = 0
 self.happy_sign = 0
+
+self.message = ""
 
 event_user(ev_init)

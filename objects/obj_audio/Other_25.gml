@@ -1,3 +1,3 @@
 /// @description ev_game_start
 
-music_play(0, sound_music0)
+music_play(0, sound_music_happy)

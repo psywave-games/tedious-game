@@ -1,5 +1,5 @@
 {
-    "id": "a3860017-6888-4050-a1ca-f5f0ebb79220",
+    "id": "e87ce540-542b-4d5a-9857-54dc2f3d30de",
     "modelName": "GMSprite",
     "mvc": "1.12",
     "name": "spr_guitar",
@@ -16,24 +16,24 @@
     "edgeFiltering": false,
     "frames": [
         {
-            "id": "01a4a3bf-9e0e-49c6-96a5-9340f465853a",
+            "id": "216307f0-156a-46ef-9202-69a3ea1c1742",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
-            "SpriteId": "a3860017-6888-4050-a1ca-f5f0ebb79220",
+            "SpriteId": "e87ce540-542b-4d5a-9857-54dc2f3d30de",
             "compositeImage": {
-                "id": "42a2122d-0536-4dea-8eae-73e5a8a78c69",
+                "id": "085dfb4c-23e8-4baf-8d2b-22e4d7903d75",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "01a4a3bf-9e0e-49c6-96a5-9340f465853a",
+                "FrameId": "216307f0-156a-46ef-9202-69a3ea1c1742",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "740d2086-fa89-43d7-93e6-6914bb82da9e",
+                    "id": "69c06512-99f6-4d13-bf51-0d98333ebd28",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "01a4a3bf-9e0e-49c6-96a5-9340f465853a",
-                    "LayerId": "67ac322d-5da7-4db4-bd99-7bacd9f959c3"
+                    "FrameId": "216307f0-156a-46ef-9202-69a3ea1c1742",
+                    "LayerId": "b588674e-b474-4ede-b09e-ae6293605bb5"
                 }
             ]
         }
@@ -43,10 +43,10 @@
     "height": 24,
     "layers": [
         {
-            "id": "67ac322d-5da7-4db4-bd99-7bacd9f959c3",
+            "id": "b588674e-b474-4ede-b09e-ae6293605bb5",
             "modelName": "GMImageLayer",
             "mvc": "1.0",
-            "SpriteId": "a3860017-6888-4050-a1ca-f5f0ebb79220",
+            "SpriteId": "e87ce540-542b-4d5a-9857-54dc2f3d30de",
             "blendMode": 0,
             "isLocked": false,
             "name": "default",
@@ -62,7 +62,7 @@
     "sepmasks": false,
     "swatchColours": null,
     "swfPrecision": 2.525,
-    "textureGroupId": "9b863643-63a7-4b89-a70f-3cc40a0685a4",
+    "textureGroupId": "5e3ee7bf-28fd-46e7-9e32-67392002e4e0",
     "type": 0,
     "width": 24,
     "xorig": 12,

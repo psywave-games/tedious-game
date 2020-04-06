@@ -9,8 +9,10 @@ end
 #endregion
 
 #region ADD POINTS
-if points >= 0 begin
-	score_add(points)
-	points -= 10
+if global.points_switch > 0 begin
+	score_add(1)
+	global.points_switch -= 1
 end
 #endregion
+
+sfx_play(x, y, sound_sfx_click)

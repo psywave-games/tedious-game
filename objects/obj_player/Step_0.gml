@@ -2,7 +2,7 @@
 if state == fsm_player.died then
 	exit
 
-else if state == fsm_player.dying and image_index > 4 then 
+else if state == fsm_player.dying and image_index > 3 then 
 	self.state = fsm_player.died
 	
 else if state == fsm_player.dying then
@@ -18,6 +18,8 @@ end
 else if self.state == fsm_player.sit and not game.app.input.key_interact then
 	exit
 
+else if self.state == fsm_player.sleep and not game.app.input.key_interact then
+	exit
 #endregion
 
 #region DRINK
@@ -30,9 +32,6 @@ else  if state == fsm_player.drink then
 #endregion
 
 #region MOVE
-else if game.app.input.key_jump or state == fsm_player.jump then
-	self.state = fsm_player.jump
-
 else if abs(self.axis_x) then
 	self.state = fsm_player.walk
 

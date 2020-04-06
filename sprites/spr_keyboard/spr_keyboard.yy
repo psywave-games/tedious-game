@@ -1,5 +1,5 @@
 {
-    "id": "8f5e8df5-98cf-477b-8265-d455ffa1d816",
+    "id": "4816c82b-89e9-423f-a66b-f63569f2a3af",
     "modelName": "GMSprite",
     "mvc": "1.12",
     "name": "spr_keyboard",
@@ -16,24 +16,24 @@
     "edgeFiltering": false,
     "frames": [
         {
-            "id": "b3099bbb-2b3b-4c05-8890-b410045492d0",
+            "id": "c9010575-4742-4d24-bbce-08a2f1ab4515",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
-            "SpriteId": "8f5e8df5-98cf-477b-8265-d455ffa1d816",
+            "SpriteId": "4816c82b-89e9-423f-a66b-f63569f2a3af",
             "compositeImage": {
-                "id": "6637866d-fe67-419f-93a2-fbbc995fbda4",
+                "id": "5fc80f76-5ace-446a-987b-85c8c9dc5f75",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "b3099bbb-2b3b-4c05-8890-b410045492d0",
+                "FrameId": "c9010575-4742-4d24-bbce-08a2f1ab4515",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "ff4c3461-8a2c-43e2-baa3-2909fcaf63df",
+                    "id": "558390a9-699d-4209-b873-5a421fd366f6",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "b3099bbb-2b3b-4c05-8890-b410045492d0",
-                    "LayerId": "96a4ea6b-ea42-4786-a329-fe3ce5b02dad"
+                    "FrameId": "c9010575-4742-4d24-bbce-08a2f1ab4515",
+                    "LayerId": "1cd4c69b-97c9-440b-ae41-4d15929462cc"
                 }
             ]
         }
@@ -43,10 +43,10 @@
     "height": 24,
     "layers": [
         {
-            "id": "96a4ea6b-ea42-4786-a329-fe3ce5b02dad",
+            "id": "1cd4c69b-97c9-440b-ae41-4d15929462cc",
             "modelName": "GMImageLayer",
             "mvc": "1.0",
-            "SpriteId": "8f5e8df5-98cf-477b-8265-d455ffa1d816",
+            "SpriteId": "4816c82b-89e9-423f-a66b-f63569f2a3af",
             "blendMode": 0,
             "isLocked": false,
             "name": "default",
@@ -62,7 +62,7 @@
     "sepmasks": false,
     "swatchColours": null,
     "swfPrecision": 2.525,
-    "textureGroupId": "9b863643-63a7-4b89-a70f-3cc40a0685a4",
+    "textureGroupId": "5e3ee7bf-28fd-46e7-9e32-67392002e4e0",
     "type": 0,
     "width": 24,
     "xorig": 12,

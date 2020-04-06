@@ -14,7 +14,7 @@
         "11df2180-2f56-46a8-bcd8-ab8bb916b96f"
     ],
     "filterType": "GMObject",
-    "folderName": "cozinha",
+    "folderName": "foodroom",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

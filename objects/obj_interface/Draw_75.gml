@@ -1,12 +1,18 @@
 #region INTERFACE GUI GAMEPLAY
 if game.app.state == fsm_game.play begin
+	var _build = string(round(GM_build_date)) + "\n v " + GM_version  
 	var _date = msg_time(false) + "\n" + msg_date("-")
 	var _score =  "SCORE\n" + score_get_string()
 	var _score_color = happy_sign < 0? c_red: c_white
 	
 	
+	draw_gui(0,0, fa_right, fa_bottom, _build, fnt_game0, c_white, 1, 1)
 	draw_gui(0,0, fa_left, fa_bottom, _date, fnt_game0, c_white, 1, 1)
-	draw_gui(0,0, fa_right, fa_bottom, _score, fnt_game0, _score_color, 1, 1)
+	draw_gui(0,0, fa_right, fa_top, _score, fnt_game0, _score_color, 1, 1)
+	
+
+	if self.can_interact then 
+		draw_gui(0, 0, fa_left, fa_top, "[F] " + self.message, fnt_game0, c_white, 1.0, 1.4)
 end
 #endregion
 
@@ -53,18 +59,14 @@ end
 else if game.app.state == fsm_game.intro begin
 	
 	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), lite()? fnt_game0: fnt_title, c_white, 1, lite()? 2.6: 0.8)
-	draw_gui(0, 100, fa_center, fa_bottom, t(msg.press_start), fnt_game0, c_white, alpha_start)
-	
-	if game.app.step % room_speed == false then 
-		alpha_start ^= true
-	
+	draw_gui(0, 100, fa_center, fa_bottom, t(msg.press_start), fnt_game0, c_white, current_second%2)
 end
 #endregion
 
 #region INTERFACE MENU MAIN
 else if game.app.state == fsm_game.menuMain begin
 	
-	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), lite()? fnt_game0: fnt_title, 5, 1, lite()? 2.6: 0.8)
+	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), lite()? fnt_game0: fnt_title, c_white, 1, lite()? 2.6: 0.8)
 	
 	draw_menu(0, t(msg.menu_start))
 	draw_menu(1, t(msg.menu_config))
@@ -90,7 +92,7 @@ end
 #region INTERFACE MENU DISPLAY
 else if game.app.state == fsm_game.menuWindow begin
 
-	var menu_resolution = string(display_get_gui_width()) + "x" + string(display_get_gui_height())
+	var menu_resolution = string(view_wport[0]) + "x" + string(view_hport[0])
 	var menu_proportion = game.app.render.name_ratio[game.app.render.mode_ratio]
 	var menu_fullscreen = fullscreen_get()
 	var menu_font_speed = game.app.render.font_speed
@@ -128,11 +130,12 @@ else if game.app.state == fsm_game.menuGraphic begin
 	
 	draw_menu(4, t(msg.back), 10, 60)
 	
-	
-	draw_chck(0, menu_hd_font, 200)
-	draw_chck(1, menu_hd_light, 200)
-	draw_chck(2, menu_outline, 200)
-	draw_chck(3, menu_reflex, 200)
+	if not lite() begin
+		draw_chck(0, menu_hd_font, 200)
+		draw_chck(1, menu_hd_light, 200)
+		draw_chck(2, menu_outline, 200)
+		draw_chck(3, menu_reflex, 200)
+	end
 end
 #endregion
 
@@ -140,7 +143,7 @@ end
 else if game.app.state == fsm_game.menuAudio begin
 	draw_menu(0, t(msg.menu_audio_geral))
 	draw_menu(1, t(msg.menu_audio_music))
-	draw_menu(2, t(msg.menu_audio_geral))
+	draw_menu(2, t(msg.menu_audio_sfx))
 	draw_menu(3, t(msg.back), 10, 60)
 	
 	
@@ -196,5 +199,12 @@ else if game.app.state == fsm_game.credits begin
 		draw_text_ext_transformed_color(xx, yy, t(msg.credits), 32, display_get_gui_width() - 16, 2, 2, 0, c_white, c_white, c_white, c_white, 1)
 	end
 	
+end
+#endregion
+
+#region WAIT FOCUS
+else if game.app.state == fsm_game.waitFocus begin
+	draw_sprite(spr_jolt, 0, display_get_gui_width()/2, display_get_gui_height()/2)
+	draw_gui(0, display_get_gui_height()/4, fa_center, fa_bottom, "mouse click to focus game", fnt_game1, c_white, current_second%2)
 end
 #endregion

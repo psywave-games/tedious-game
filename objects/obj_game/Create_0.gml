@@ -75,7 +75,7 @@ global.minute = 10
 /// @pattern			Finite State Machine
 /// @example			game.app.state 
 /// @return fsm_game	estado comportamental do jogo
-state = fsm_game.lang
+state = os_browser == browser_not_a_browser? fsm_game.lang: fsm_game.waitFocus
 #endregion
 
 #region INIT INPUT
