@@ -4,4 +4,4 @@ mob_install(fsm_mob.idle)
 self.book_page = 0
 
 self.book_points = 500
-self.troll_points = 1000
+self.troll_points = 100

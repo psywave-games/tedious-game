@@ -13,6 +13,8 @@ end
 #region GAME OVER
 if game.app.player.state == fsm_player.died and game.app.state == fsm_game.play begin
 	time_speedrun_end = current_time
+	music_play(0, sound_music_menu)
+	sfx_play(0,0, sound_sfx_shoot)
 	state_reset(game.app, fsm_game.over)
 end
 #endregion

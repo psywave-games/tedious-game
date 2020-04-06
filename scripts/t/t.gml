@@ -508,7 +508,7 @@ switch argument[0] begin
 	case msg.psy_computer:
 		return "computador"
 	case msg.interact_water_full:
-		return "eu não quero mais beber água"
+		return "eu nao quero mais beber agua"
 	case msg.interact_food_full:
 		return "estou satisfeito"
 	case msg.interact_soon_down:

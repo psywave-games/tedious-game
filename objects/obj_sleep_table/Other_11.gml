@@ -23,11 +23,7 @@ switch self.select begin
 			score_add(book_points)
 			book_points = 0
 			book_page = 1
-		end
-		
-		/// adicionar pontos
-		if book_points >= 0 then
-			score_add(10)
+		end else score_add(book_points? 5: -5)
 		break
 		
 	/// maquinas agricolas
