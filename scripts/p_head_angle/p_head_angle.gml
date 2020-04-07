@@ -3,7 +3,13 @@
 var _olhar = game.app.player.axis_looking * 14 
 var _lado = sign(argument0)
 
-if sad() >= 0.8 and _olhar < 0 then
+if self.state == fsm_player.dying and image_index < 2 then
+	_olhar = 0
+	
+else if self.state == fsm_player.dying then
+	_olhar = 14
+	
+else if sad() >= 0.8 and _olhar < 0 then
 	_olhar = 0
 
 else if sad() >= 0.4 then
@@ -14,4 +20,5 @@ if _lado then
 	
 else
 	return clamp(_olhar, -14, 14) 
+	
 	

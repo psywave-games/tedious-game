@@ -6,8 +6,4 @@ var _next = self.select + _sign
 if _next <= 0 or _next >= 4 then
 	exit
 	
-	
 self.select = _next
-
-
-
