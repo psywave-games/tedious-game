@@ -39,7 +39,7 @@ if game.app.player.state == fsm_player.idle begin
 		
 		/// Update interface
 		with game.app.interface begin
-			self.message = other.message
+			self.message = self.message + other.message
 			self.can_interact |= true
 		end
 	end else 

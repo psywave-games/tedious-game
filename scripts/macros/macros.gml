@@ -219,6 +219,8 @@ enum msg {
 	interact_water_full,
 	interact_food_full,
 	interact_soon_down,
-	interact_soon_rate
+	interact_soon_rate,
+	interact_stair_down,
+	interact_stair_up
 }
 

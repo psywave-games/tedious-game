@@ -2,6 +2,6 @@
 switch self.select begin
 
 	case 1:
-		self.message = t(msg.interact_bible)
+		self.message = text_interact(t(msg.interact_bible))
 		break
 end

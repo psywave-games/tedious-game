@@ -2,7 +2,7 @@
 /// @arg0 min
 /// @arg1 max
 
-var _text = "\n"
+var _text = ""
 
 /// verificar alternar esquerda
 if argument0 < self.select 
@@ -12,4 +12,4 @@ if argument0 < self.select
 if argument1 > self.select 
 	_text = _text + "[E] "
 
-return  _text + t(msg.interact_switch)
+return  _text + t(msg.interact_switch) + "\n"

@@ -4,7 +4,7 @@ if game.app.lang == msg.en begin
 		case msg.press_start:
 			return "press enter to start"
 		case msg.menu_start:
-			return game.app.started? "Continue": "New Game"
+			return game.app.started?"Continue":"New Game"
 		case msg.pt:
 			return "Portuguese"
 		case msg.en:
@@ -18,7 +18,7 @@ if game.app.lang == msg.en begin
 		case msg.menu_audio:
 			return "Sound"
 		case msg.back:
-			return "return"
+			return "return "
 		case msg.video_palete:
 			return "Pallete:"
 		case msg.video_ratio:
@@ -50,43 +50,43 @@ if game.app.lang == msg.en begin
 		case msg.scorebord:
 		   return "scoreleaders"
 		case msg.interact_on:
-		   return "turn on"
+		   return "turn on "
 		case msg.interact_off:
-		   return "turn off "
+		   return "turn off"
 		case msg.interact_gap:
 		   return "grab" 
 		case msg.menu_config:
 		   return "options"
 		case msg.game_name:
-		   return lite()? "Tedious Simulator [Lite]": "Tedious Simulator"
+		   return lite()?"Tedious Simulator [Lite]":"Tedious Simulator"
 		case msg.video_lighthd:
 		   return "HD Lights"
 		case msg.psy_light:
-		   return"Light"
+		   return "Light"
 		case msg.psy_bed:
-		   return"Bed"
+		   return "Bed"
 		case msg.psy_tv:
-		   return"Television"
+		   return "Television "
 		case msg.psy_freezer:
-		   return"Refrigerator"
+		   return "Refrigerator"
 		case msg.psy_radio:
-		   return"Radio"
+		   return "Radio"
 		case msg.psy_furnace:
-		   return"Stove"
+		   return "Stove"
 		case msg.psy_microwave:
-		   return"Microwave"
+		   return "Microwave"
 		case msg.psy_chair:
-		   return"Chair"
+		   return "Chair"
 		case msg.psy_laterna:
-		   return"Flashlight"
+		   return "Flashlight"
 		case msg.psy_ruindows:
-		   return"Window"
+		   return "Window"
 		case msg.psy_instagram:
-		   return"Toilet"
+		   return "Toilet"
 		case msg.psy_power:
-		   return"Outlet"
+		   return "Outlet"
 		case msg.psy_switch:
-		   return"Switch"
+		   return "Switch"
 		case msg.interact_suicide_power:
 		   return "Sticks a fork in the outlet"
 		case msg.video_camspeed:
@@ -102,7 +102,7 @@ if game.app.lang == msg.en begin
 		case msg.interact_sleep_down:
 		    return "sleep in bed"
 		case msg.interact_open:
-		    return "open"
+		    return "open "
 		case msg.interact_close:
 		    return "close"
 		case msg.interact_videogame:
@@ -194,7 +194,7 @@ if game.app.lang == msg.en begin
 		case msg.interact_microwave_down:
 		    return "turn on microwave"
 		case msg.interact_music_2009:
-		    return " play teclado lindinho 2009 music"
+		    return "play teclado lindinho 2009 music"
 		case msg.psy_door:
 		    return "door"
 		case msg.interact_bible:
@@ -232,17 +232,17 @@ if game.app.lang == msg.en begin
 		case msg.credits:
 			return "GAME IDEALIZER\nRodrigo Dornelles\n\n\nARTS AND ANIMATIONS\nBernes Veroli Baianor\n\n\nMUSIC\nFelipe Matheus\n\n\nUX AND GENERAL PROGRAMMER\nRodrigo Dornelles\n\nTRANSLATOR AND AUXILIARY PROGRAMMER\nRodrigo Oliveira\n\n\nGAMEPLAY TESTS\nRodrigo Oliveira\n\nGAMEDESIGN AND MAPPING\nBernes Veroli Baianor\nRodrigo Dornelles\n\nCONTENT DIRECTOR\nGabriel Philippe Martins\n\n\nGAMEJAM COORDINATOR\nAndré Young\n\nTHANKS TO ALL WHO TESTED \"THE GAME\"\nJulia Peron\nRobson Lima\nIgor Galindo\nLucas Coelho\nUbiratan Silva\nAdrian Klitzke\nJunio Teixeira\nCleyson Andrade\nCarlos Raimundo\nHenrique Marciano\n\n\nPUBLICITY\nLucas Leite\n\n\nSOUND AND SONOPLASTY\nThiago Reis"
 		case msg.memorial:
-			return "IN MEMORIAM BY\n" + game.app.nickname + "\n" + text_date("/")
+			return "IN MEMORIAM BY\n "+ game.app.nickname +"\n "+ text_date("/")
 		case msg.interact_switch:
 			return "switch"
 		case msg.interact_picture_down:
 			return "watching painting"
 		case msg.interact_picture_rate:
-			return "hm... beautiful painting... or an awful painting? That is a question... "
+			return "hm... beautiful painting... or an awful painting? That is a question..."
 		case msg.interact_broken:
-			return choose("damn! broke it...", "fuck... chineses...", "shit... it's broken. amazon solves it", "third time this week. i will buy another later...")
+			return choose("damn! broke it...","fuck... chineses...","shit... it's broken. amazon solves it","third time this week. i will buy another later...")
 		case msg.interact_furnace_down:
-			return "analyze situation"
+			return "analyze situation "
 		case msg.interact_furnace_rate:
 			return "this is fine"
 		case msg.psy_computer:
@@ -257,18 +257,21 @@ if game.app.lang == msg.en begin
 			return "it does nothing :/"
 		case msg.psy_sofa:
 			return "sofa"
-
+		case msg.interact_stair_down:
+			return "descer escada"
+		case msg.interact_stair_up:
+			return "subir escada"
 	end
 end
 switch argument[0] begin
 	case msg.press_start:
 		return "pressione enter para jogar"
 	case msg.menu_start:
-		return game.app.started? "Continuar": "Novo Jogo"
+		return game.app.started?"Continuar":"Novo Jogo"
 	case msg.pt:
 		return "Português"
 	case msg.en:
-		return  "English"
+		return "English"
 	case msg.menu_lang:
 		return "Idioma:"
 	case msg.menu_window:
@@ -318,35 +321,35 @@ switch argument[0] begin
 	case msg.menu_config:
 		return "Configurações"
 	case msg.game_name:
-		return lite()? "Simulador de Tedio [Lite]": "Simulador de Tedio"
+		return lite()?"Simulador de Tedio [Lite]":"Simulador de Tedio"
 	case msg.video_lighthd:
 		return "Luzes em HD"
 	case msg.psy_light:
-		return"Luzes"
+		return "Luzes"
 	case msg.psy_bed:
-		return"Cama"
+		return "Cama"
 	case msg.psy_tv:
-		return"Televisao"
+		return "Televisao"
 	case msg.psy_freezer:
-		return"Geladeira"
+		return "Geladeira"
 	case msg.psy_radio:
-		return"Radio"
+		return "Radio"
 	case msg.psy_furnace:
-		return"Fogão"
+		return "Fogão"
 	case msg.psy_microwave:
-		return"Microondas"
+		return "Microondas"
 	case msg.psy_chair:
-		return"Cadeira"
+		return "Cadeira"
 	case msg.psy_laterna:
-		return"Laterna"
+		return "Laterna"
 	case msg.psy_ruindows:
-		return"Janela"
+		return "Janela"
 	case msg.psy_instagram:
-		return"Toilet"
+		return "Toilet"
 	case msg.psy_power:
-		return"Tomada"
+		return "Tomada"
 	case msg.psy_switch:
-		return"Interruptor"
+		return "Interruptor"
 	case msg.interact_suicide_power:
 		return "Enfiar o garfo na tomada"
 	case msg.video_camspeed:
@@ -368,9 +371,9 @@ switch argument[0] begin
 	case msg.interact_videogame:
 	    return "jogar um jogo"
 	case msg.interact_music_despacitos:
-	    return " tocar musica despacito"
+	    return "tocar musica despacito"
 	case msg.interact_sit_down:
-	    return "sentar em " 
+	    return "sentar em" 
 	case msg.interact_sit_up:
 	    return "levantar"
 	case msg.interact_shit_down:
@@ -402,7 +405,7 @@ switch argument[0] begin
 	case msg.interact_book2:
 	    return "voce trabalha pra comer alguem, voce estuda pra comer alguem, voce usa droga pra comer alguem,"
 	case msg.interact_book3:
-	    return "voce malha, toma veneno, faz a desgraca toda pra comer alguem, "
+	    return "voce malha, toma veneno, faz a desgraca toda pra comer alguem,"
 	case msg.interact_book4:
 	    return "voce vai num show com a intencao de sair de la pra comer alguem,"
 	case msg.interact_book5:
@@ -442,19 +445,19 @@ switch argument[0] begin
 	case msg.interact_google:
 	    return "procurar maquinas agricolas maneiras"
 	case msg.interact_furnace_hurt:
-	    return " enfiar a mao no fogao"
+	    return "enfiar a mao no fogao"
 	case msg.interact_coffe_freezer_gap:
-	    return " pegar um copo de cafe"
+	    return "pegar um copo de cafe"
 	case msg.interact_coffe_microwave_put:
-	    return " colocar copo de cafe no microondas"
+	    return "colocar copo de cafe no microondas"
 	case msg.interact_coffe_microwave_gap:
-	    return "  pegar o copo de cafe do microondas"
+	    return "pegar o copo de cafe do microondas"
 	case msg.interact_coffe_freezer_put:
 	    return "colocar o copo de cafe na geladeira"
 	case msg.interact_microwave_down:
 	    return "ligar o microondas"
 	case msg.interact_music_2009:
-	    return " tocar musica teclado lindinho 2009"
+	    return "tocar musica teclado lindinho 2009"
 	case msg.psy_door:
 	    return "porta"
 	case msg.interact_bible:
@@ -492,7 +495,7 @@ switch argument[0] begin
 	case msg.credits:
 		return "IDEALIZADOR DO JOGO\nRodrigo Dornelles\n\n\nARTES E ANIMAÇÕES\nBernas Veroli Baianor\n\n\nMÚSICA\nFelipe Matheus\n\n\nPROGRAMADOR GERAL E UX\nRodrigo Dornelles\n\nPROGRAMADOR AUXILIAR E TRADUTOR\nRodrigo Oliveira\n\n\nTESTES DE JOGABILIDADE\nRodrigo Oliveira\n\nGAMEDESIGN E MAPA\nBernas Veroli Baianor\nRodrigo Dornelles\n\nDIRETOR DE CONTEUDO\nGabriel Philippe Martins\n\nORGANIZADOR DA GAMEJAM\nAndré Young\n\n\nAGRADECIMENTO A TODOS QUE TESTARAM \"O JOGO\"\nJulia Peron\nRobson Lima\nIgor Galindo\nLucas Coelho\nUbiratan Silva\nAdrian Klitzke\nJunio Teixeira\nCleyson Andrade\nCarlos Raimundo\nHenrique Marciano\n\n\nPUBLICIDADE\nLucas Leite\n\n\nSOM E SONOPLASTIA\nThiago Reis"
 	case msg.memorial:
-		return "IN MEMORIAM DE\n" + game.app.nickname + "\n" + text_date("/")
+		return "IN MEMORIAM DE\n "+ game.app.nickname +"\n "+ text_date("/")
 	case msg.interact_switch:
 		return "alternar"
 	case msg.interact_picture_down:
@@ -500,7 +503,7 @@ switch argument[0] begin
 	case msg.interact_picture_rate:
 		return "hm... pintura bonita, pintura formosa, pintura bem feita..."
 	case msg.interact_broken:
-		return choose("ops... quebrado", "hm... vou ligar para a garantia...", "grr... descartável.", "o quê?! eu comprei isso tem 3 semanas", "em todos esses anos nessa industria vital, é a primeira vez que isso me acontece")
+		return choose("ops... quebrado","hm... vou ligar para a garantia...","grr... descartável.","o quê?! eu comprei isso tem 3 semanas","em todos esses anos nessa industria vital, é a primeira vez que isso me acontece")
 	case msg.interact_furnace_down:
 		return "observar o fogao"
 	case msg.interact_furnace_rate:
@@ -517,6 +520,10 @@ switch argument[0] begin
 		return "isso nao funciona ainda :/"
 	case msg.psy_sofa:
 		return "poltrona"
+	case msg.interact_stair_down:
+		return "descer escada"
+	case msg.interact_stair_up:
+		return "subir escada"
 end
 
 return "#Error 18_" + string(argument0)

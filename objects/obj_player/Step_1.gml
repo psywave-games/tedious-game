@@ -1,7 +1,10 @@
-#region INPUTS
+#region MOVIMENT INPUTS
 axis_x = game.app.input.key_axis_x
-#endregion
 
+if abs(self.in_stair) then
+	axis_x -= game.app.input.key_axis_y
+
+#endregion
 
 #region COLISON HORIZOTAL
 var next_x = self.x + (16 * axis_x)

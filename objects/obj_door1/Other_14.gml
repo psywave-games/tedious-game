@@ -1,10 +1,10 @@
 /// @description ev_interact_message
 
 if self.state == fsm_mob.idle then
-	self.message = t(msg.interact_open) + " " + t(msg.psy_door)
+	self.message = text_interact(t(msg.interact_open), t(msg.psy_door))
 
 else 
-	self.message = t(msg.interact_close) + " " + t(msg.psy_door)
+	self.message = text_interact(t(msg.interact_close), t(msg.psy_door))
 
 #region LADO DO TEXTO
 if game.app.player.x > self.x begin
