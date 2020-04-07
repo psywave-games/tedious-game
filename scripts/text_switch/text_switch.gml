@@ -12,7 +12,4 @@ if argument0 < self.select
 if argument1 > self.select 
 	_text = _text + "[E] "
 
-/// concatenar texto
-self.message = self.message + _text + t(msg.interact_switch)
-
-return _text
+return  _text + t(msg.interact_switch)

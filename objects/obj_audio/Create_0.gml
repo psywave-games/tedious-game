@@ -1,6 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
-
+/// @description config audio
 
 /// Volume Principal do jogo
 volume = 10
@@ -12,3 +10,4 @@ mixer = array_create(2, 5)
 sound = array_create(16, 0)
 
 audio_group_load_progress(audiogroup_default)
+audio_channel_num(16)

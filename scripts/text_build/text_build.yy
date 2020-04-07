@@ -1,8 +1,8 @@
 {
-    "id": "5cec5bba-219c-4454-8dd4-7a802916d0d8",
+    "id": "f884ba51-ded9-49a6-a178-453f8569341b",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "msg_time",
+    "name": "text_build",
     "IsCompatibility": false,
     "IsDnD": false
 }
