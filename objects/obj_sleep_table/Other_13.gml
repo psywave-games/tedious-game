@@ -8,3 +8,6 @@ if _next <= 0 or _next > _last then
 	exit
 	
 self.select = _next
+
+if self.state == fsm_mob.running then
+	sfx_play(x,y, sfx_pc_switch)

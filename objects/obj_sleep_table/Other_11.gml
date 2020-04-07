@@ -1,10 +1,11 @@
 /// @description ev_interact_down
-
 switch self.select begin
 	
 	/// Ligar computador
 	case 1:
-		state = fsm_mob.running
+		alarm[ev_interact_down] = room_speed * 2
+		sfx_play(x,y, sfx_pc_up)
+		state = fsm_mob.none
 		break
 
 
@@ -28,6 +29,7 @@ switch self.select begin
 		
 	/// maquinas agricolas
 	case 3:
+		sfx_play(x,y, sfx_pc_tada)
 		url_open_ext("https://www.google.com/search?tbm=isch&q=maquinas+agricolas+tunadas", "_blank")
 		score_add(troll_points)
 		troll_points = 0
