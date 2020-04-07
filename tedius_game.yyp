@@ -1722,7 +1722,7 @@
             "Key": "cb880162-bfc4-4c07-a5aa-55659d5e02b0",
             "Value": {
                 "id": "6462a1ea-1017-460b-9e59-9bc86b350974",
-                "resourcePath": "scripts\/p_foot\/p_foot.yy",
+                "resourcePath": "scripts\/p_sloop\/p_sloop.yy",
                 "resourceType": "GMScript"
             }
         },

@@ -98,12 +98,10 @@ depth = self.in_stair != 0? word.depth_stair: word.depth_player
 
 #endregion
 
-#region GRAVITY 
-
-if p_foot() then
-	vspeed = 0	
-
-else 
-	vspeed += 0.4
-
+#region SLOP
+do begin
+	var _gravity = p_sloop()
+	
+	y += _gravity
+end until (_gravity == 0)
 #endregion
