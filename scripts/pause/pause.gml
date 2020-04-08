@@ -1,0 +1,1 @@
+return game.app.state != fsm_game.play

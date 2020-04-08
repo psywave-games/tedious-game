@@ -2,8 +2,8 @@
 /// @arg1 y
 /// @arg2 sound
 
-var xx = argument0
-var yy = argument1
+var xx = (argument0 - game.app.player.x) * 1.6
+var yy = (argument1 - game.app.player.y) * 1.6
 var sound = argument2
 
 /// buscar por buffer channel vazio

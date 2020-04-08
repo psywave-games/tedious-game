@@ -18,6 +18,10 @@ switch argument_count begin
 	case 4:
 		draw_menu(menu, text, argument[2], argument[3])
 		break
+		
+	case 5:
+		draw_menu(menu, text, argument[2], argument[3], argument[4])
+		break
 end
 
 

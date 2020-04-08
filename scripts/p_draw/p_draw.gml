@@ -15,6 +15,16 @@ var _image_index = round(image_index)
 
 with game.app.player begin
 
+	#region ATTACH PRE-DRAW
+	switch self.state begin
+	
+		case fsm_player.dying:
+			p_draw_attach(x, y, spr_item_pistol1, 0xBABACA)
+			break
+	
+	end
+	#endregion
+
 	#region TORSO DRAW
 	switch self.state begin
 	
@@ -79,20 +89,16 @@ with game.app.player begin
 	end
 	#endregion
 
-	#region ATTACH DRAW
+	#region ATTACH POST-DRAW
 	switch self.state begin
 		case fsm_player.drink:
 			p_draw_attach(x, y, spr_item_tea, color(color_amarelo_a, sad()))
 			break
 	
-		case fsm_player.dying:
-			p_draw_attach(x, y, spr_item_pistol, 0xBABABA)
-			break
-	
 	end
 	#endregion
 	
-	#region HEAD DRAW
+	#region HEAD POST-DRAW
 	switch self.state begin
 		case fsm_player.drink:
 			draw_sprite_ext(spr_playerIdle2, _image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
@@ -101,10 +107,14 @@ with game.app.player begin
 		case fsm_player.sleep:
 			draw_sprite_ext(spr_playerIdle2, 0, _xx, _yy, _xscale, _yscale, 90, c_white, _alpha)
 			break
+			
+		case fsm_player.dying:
+			draw_sprite_ext(spr_playerIdle2, 0, _xx, _yy, _xscale, _yscale, p_head_angle(_xscale), c_white, _alpha)
+			break
+
 	
 		case fsm_player.sit:
 		case fsm_player.idle:
-		case fsm_player.dying:
 			draw_sprite_ext(spr_playerIdle2, _image_index, _xx, _yy, _xscale, _yscale, p_head_angle(_xscale), c_white, _alpha)
 			break
 

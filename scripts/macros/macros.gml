@@ -66,7 +66,8 @@ enum fsm_game {
 	warn,									/// STATE: Aviso
 	intro,									/// STATE: Intro do jogo
 	menuMain,								/// STATE: Menu Principal/Pause
-	menuOptions,							/// STATE: Menu de Opçoões
+	menuTutorial,							/// STATE: Menu tutorial
+	menuOptions,							/// STATE: Menu de Opções
 	menuGraphic,							/// STATE: Menu de graficos
 	menuWindow,								/// STATE: Menu de Janela
 	menuAudio,								/// STATE: Menu de Audio
@@ -221,6 +222,9 @@ enum msg {
 	interact_soon_down,
 	interact_soon_rate,
 	interact_stair_down,
-	interact_stair_up
+	interact_stair_up,
+	menu_tutorial,
+	menu_gamepad,
+	psy_joystick
 }
 

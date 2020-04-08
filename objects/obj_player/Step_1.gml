@@ -1,9 +1,10 @@
 #region MOVIMENT INPUTS
-axis_x = game.app.input.key_axis_x
+axis_x = game.app.input.key_axis_x * 2
 
 if abs(self.in_stair) then
 	axis_x -= game.app.input.key_axis_y
 
+axis_x = sign(axis_x)
 #endregion
 
 #region COLISON HORIZOTAL
@@ -19,7 +20,7 @@ repeat 2 begin
 end
 #endregion
 
-#region REQUERIMENTS
+#region REQUERIMENTS/DEATH
 if not (game.app.step % room_speed) begin
 	requirements[need.water] = clamp(requirements[need.water] + 1, 0, 100)
 	requirements[need.food] = clamp(requirements[need.food] + 1, 0, 100)

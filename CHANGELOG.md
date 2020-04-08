@@ -1,5 +1,26 @@
 # CHANGELOG #
 
+## 0.8.1.3 - 2020-04-08 ##
+
+### Added ###
+ 
+ * PC Boot 
+ * joysticks select slot
+ * 3D SFX Audios _(work in progress)_
+ * gamepad improvements in gameplay _(work in progress)_
+ * menu screen: tutorial _(work in progress)_
+
+### Changed ###
+ 
+ * death anim fixed
+ * attach anim fixed 
+ * multiples messages in gameplay
+ * slop technique completely reworked
+
+### Removed ###
+
+ * gravity
+
 ## 0.8.1 - 2020-04-05 ##
 
 ### Added ###

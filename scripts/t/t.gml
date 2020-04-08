@@ -258,9 +258,15 @@ if game.app.lang == msg.en begin
 		case msg.psy_sofa:
 			return "sofa"
 		case msg.interact_stair_down:
-			return "descer escada"
+			return "up the stair"
 		case msg.interact_stair_up:
-			return "subir escada"
+			return "down the stair"
+		case msg.menu_tutorial:
+			return "How To Play"
+		case msg.menu_gamepad:
+			return "Gamepad:"
+		case msg.psy_joystick:
+			return "Joystick"
 	end
 end
 switch argument[0] begin
@@ -503,7 +509,7 @@ switch argument[0] begin
 	case msg.interact_picture_rate:
 		return "hm... pintura bonita, pintura formosa, pintura bem feita..."
 	case msg.interact_broken:
-		return choose("ops... quebrado","hm... vou ligar para a garantia...","grr... descartável.","o quê?! eu comprei isso tem 3 semanas","em todos esses anos nessa industria vital, é a primeira vez que isso me acontece")
+		return choose("ops... quebrado","hm... vou ligar para a garantia...","grr... descartavel.","o que?! eu comprei isso tem 3 semanas","em todos esses anos nessa industria vital, e a primeira vez que isso me acontece")
 	case msg.interact_furnace_down:
 		return "observar o fogao"
 	case msg.interact_furnace_rate:
@@ -524,6 +530,12 @@ switch argument[0] begin
 		return "descer escada"
 	case msg.interact_stair_up:
 		return "subir escada"
+	case msg.menu_tutorial:
+		return "Como Jogar?"
+	case msg.menu_gamepad:
+		return "Manete:"
+	case msg.psy_joystick:
+		return "Controle"
 end
 
 return "#Error 18_" + string(argument0)

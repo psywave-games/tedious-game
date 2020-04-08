@@ -1,15 +1,22 @@
-
-#region MOVIMENTACAO
+#region OUTPUT
 switch self.state begin
 
 	case fsm_player.drink:
 		image_speed = 1
+		if state == fsm_player.drink and image_index >= 9 then 
+			self.state = fsm_player.idle
 		break
 		
-	case fsm_player.sit:
-	case fsm_player.dying:
-	case fsm_player.died:
+	case fsm_player.dying:	
+		speed = 0
+		if image_index >= 4 begin 
+			self.state = fsm_player.died
+			sfx_play(x, y, sfx_shoot)
+		end
+		break
+	
 	case fsm_player.idle:
+	case fsm_player.sit:
 		image_speed = 0.1
 		speed = 0
 		break
@@ -31,7 +38,6 @@ switch self.state begin
 		image_speed = hspeed/5 * sign(hspeed)
 		 
 		break
-		
 end
 #endregion
 
@@ -104,4 +110,14 @@ do begin
 	
 	y += _gravity
 end until (_gravity == 0)
+#endregion
+
+#region DEATH
+if not game.app.happy 
+	and self.state != fsm_player.dying 
+	and self.state != fsm_player.died begin 
+	
+	self.state = fsm_player.dying
+	image_index = 0
+end
 #endregion

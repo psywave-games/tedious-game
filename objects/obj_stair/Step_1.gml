@@ -1,3 +1,6 @@
+if pause() then 
+	exit
+
 with game.app.player begin
 	if position_meeting(self.x, self.y + 15, obj_zoneStair) begin
 	

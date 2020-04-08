@@ -46,7 +46,7 @@ else if abs (game.app.input.key_menu_go) begin
 			break
 			
 		case fsm_game.menuOptions:
-			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 4)
+			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 5)
 			break
 		
 		case fsm_game.menuWindow:
@@ -85,9 +85,11 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuMain
 			game.app.interface.select = 0
 			break
 			
-		/// Abrir placar dos lideres
+		/// How to play
 		case 2:
-			url_open_ext("https://tediusgame.com/scoreboard", "_blank")
+			state_set( game.app, fsm_game.menuTutorial)
+			game.app.interface.select = 0
+			//url_open_ext("https://tediusgame.com/scoreboard", "_blank")
 			break
 				
 		/// Sair do jogo		
@@ -113,26 +115,32 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuOpti
 			lang_set(game.app.lang == msg.en? msg.pt: msg.en)
 			break
 			
+		/// Cam Speed
+		case 1:
+			var _gamepad = game.app.input.gamepad + _in
+			game.app.input.gamepad = clamp(_gamepad, 0, 3)
+			break	
+			
 		/// Enter menu window
-		case 1: 
+		case 2: 
 			state_set( game.app, fsm_game.menuWindow)
 			game.app.interface.select = 0
 			break
 			
 		/// Enter menu graphic
-		case 2: 
+		case 3: 
 			state_set( game.app, fsm_game.menuGraphic)
 			game.app.interface.select = 0
 			break
 			
 		/// Enter menu graphic
-		case 3: 
+		case 4: 
 			state_set( game.app, fsm_game.menuAudio)
 			game.app.interface.select = 0
 			break
 			
 		/// Voltar para menu anterior
-		case 4:
+		case 5:
 			state_back( game.app )
 			self.select = 0
 			break

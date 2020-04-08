@@ -10,15 +10,16 @@ if game.app.state == fsm_game.play begin
 	draw_gui(0,0, fa_left, fa_bottom, _date, fnt_game0, c_white, 1, 1)
 	draw_gui(0,0, fa_right, fa_top, text_score(), fnt_game0, _score_color, 1, 1.4)
 	
-
 	self.message = ""
 end
 #endregion
 
 #region INTERFACE MENU LANG
 else if game.app.state == fsm_game.lang begin
-	draw_menu(0, t(msg.pt), display_get_gui_width()/3, 0, fa_left, fa_middle)
-	draw_menu(1, t(msg.en), display_get_gui_width()/3, -30, fa_right, fa_middle)
+	var _xx = display_get_gui_width()/3
+	
+	draw_gui(_xx, 0, fa_left, fa_middle, t(msg.pt), fnt_game0, c_white, select? 0.5: 1)
+	draw_gui(_xx, 0, fa_right, fa_middle, t(msg.en), fnt_game0, c_white, select? 1: 0.5)
 end
 #endregion
 
@@ -31,7 +32,7 @@ else if game.app.state == fsm_game.warn begin
 	draw_set_font(fnt_game1)
 	
 	/// PROSEGUIR
-	if self.step > room_speed * 19 then
+	if self.step > room_speed * 9 then
 		state_reset(game.app, fsm_game.intro)
 		
 	/// AVISO
@@ -40,7 +41,7 @@ else if game.app.state == fsm_game.warn begin
 		draw_set_valign(fa_top)
 		
 		draw_text_transformed_color(xx, -64, t(msg.warn_title), 8, 8, 0, c_red, c_red, c_red, c_red, 1)		
-		draw_text_ext_transformed_color(xx, 160, t(msg.warn_text), 32, xx - 16, 2, 2, 0, c_white, c_white, c_white, c_white, 1)
+		draw_text_ext_transformed_color(xx, 160, t(msg.warn_text), 32, xx - 32, 2, 2, 0, c_white, c_white, c_white, c_white, 1)
 	end
 	
 	/// FAXETARIA
@@ -69,22 +70,25 @@ else if game.app.state == fsm_game.menuMain begin
 	
 	draw_menu(0, t(msg.menu_start))
 	draw_menu(1, t(msg.menu_config))
-	draw_menu(2, t(msg.scorebord))
+	draw_menu(2, t(msg.menu_tutorial))
 	draw_menu(3, t(msg.menu_exit), 10, 50)
 end
 #endregion
 
 #region INTERFACE MENU OPTION
 else if game.app.state == fsm_game.menuOptions begin
-	
+	var _gamepad = t(msg.psy_joystick) + " " + string(game.app.input.gamepad + 1)
+	var _color_gamepad = gamepad_is_connected(game.app.input.gamepad)? c_white: c_red
 
 	draw_menu(0, t(msg.menu_lang))
-	draw_menu(1, t(msg.menu_window))
-	draw_menu(2, t(msg.menu_video))
-	draw_menu(3, t(msg.menu_audio))
-	draw_menu(4, t(msg.back), 10, 60)
+	draw_menu(1, t(msg.menu_gamepad))
+	draw_menu(2, t(msg.menu_window))
+	draw_menu(3, t(msg.menu_video))
+	draw_menu(4, t(msg.menu_audio))
+	draw_menu(5, t(msg.back), 10, 60)
 	
 	draw_item(0, t(game.app.lang), 200)
+	draw_item(1, _gamepad, 200, 30, _color_gamepad)
 end
 #endregion
 
@@ -117,6 +121,8 @@ end
 #region INTERFACE MENU GRAPHIC
 else if game.app.state == fsm_game.menuGraphic begin
 
+	var _color = lite()? c_red: c_white
+
 	var menu_reflex = game.app.render.reflex
 	var menu_outline = game.app.render.outline
 	var menu_hd_font = game.app.render.font_hd
@@ -129,12 +135,10 @@ else if game.app.state == fsm_game.menuGraphic begin
 	
 	draw_menu(4, t(msg.back), 10, 60)
 	
-	if not lite() begin
-		draw_chck(0, menu_hd_font, 200)
-		draw_chck(1, menu_hd_light, 200)
-		draw_chck(2, menu_outline, 200)
-		draw_chck(3, menu_reflex, 200)
-	end
+	draw_chck(0, menu_hd_font, 200, 30, _color)
+	draw_chck(1, menu_hd_light, 200, 30, _color)
+	draw_chck(2, menu_outline, 200, 30, _color)
+	draw_chck(3, menu_reflex, 200, 30, _color)
 end
 #endregion
 
@@ -149,6 +153,27 @@ else if game.app.state == fsm_game.menuAudio begin
 	draw_bars(0, game.app.audio.volume, 200)
 	draw_bars(1, game.app.audio.mixer[0], 200)
 	draw_bars(2, game.app.audio.mixer[1], 200)
+end
+#endregion
+
+#region INTERFACE MENU TUTORIAL
+else if game.app.state == fsm_game.menuTutorial begin	
+
+	if not game.app.started then
+		draw_pic(spr_tuto_keyboard, 0, 256, 30, fa_right, fa_middle, 0x101010, 1, 3)
+	
+	
+	draw_gui( 0, 30, fa_left, fa_middle, "Interact", fnt_game0, c_yellow, 1)
+	draw_gui( 0, 60, fa_left, fa_middle, "Switch", fnt_game0, c_green, 1)
+	draw_gui( 0, 90, fa_left, fa_middle, "Move", fnt_game0, c_red, 1)
+	draw_gui( 0, 120, fa_left, fa_middle, "Run", fnt_game0, c_blue, 1)
+	
+	draw_pic(spr_tuto_keyboard, 1, 256, 30, fa_right, fa_middle, c_red, 1, 3)
+	draw_pic(spr_tuto_keyboard, 2, 256, 30, fa_right, fa_middle, c_green, 1, 3)
+	draw_pic(spr_tuto_keyboard, 3, 256, 30, fa_right, fa_middle, c_blue, 1, 3)
+	draw_pic(spr_tuto_keyboard, 4, 256, 30, fa_right, fa_middle, c_yellow, 1, 3)
+	
+	draw_menu(0, t(msg.back), 0, 150)
 end
 #endregion
 

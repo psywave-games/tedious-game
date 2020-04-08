@@ -1,10 +1,10 @@
 /// @description config audio
 
 /// Volume Principal do jogo
-volume = 6
+volume = 3
 
 /// Mixer de volume do jogo
-mixer = array_create(2, 5)
+mixer = array_create(2, 3)
 
 /// Canais de Som do jogo
 sound = array_create(16, 0)
