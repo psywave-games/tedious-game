@@ -4,8 +4,7 @@
     "mvc": "1.0",
     "IsDnDProject": false,
     "configs": [
-        "default",
-        "default;lite"
+        "default"
     ],
     "option_ecma": false,
     "parentProject": {
@@ -1010,9 +1009,6 @@
         {
             "Key": "75ac291e-7061-4bcb-8e8a-3b3545332d41",
             "Value": {
-                "configDeltas": [
-                    "lite"
-                ],
                 "id": "7bf839a7-5c20-4c86-9b75-e37ab8a1b7a5",
                 "resourcePath": "options\/html5\/options_html5.yy",
                 "resourceType": "GMHtml5Options"
