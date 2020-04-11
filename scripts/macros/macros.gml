@@ -31,11 +31,11 @@
 #macro  color_cinza_d		(0xA7A7A7)
 #macro	color_verde_d		(0x4f4f2f)
 
+#macro	padding				10
+
 enum word {
-	slop = -1,
+	limit = 10,
 	height = 72,
-	limit_left = 10,
-	limit_right = 374,
 	depth_player = 200,
 	depth_stair = 350
 }

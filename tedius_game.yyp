@@ -1015,6 +1015,14 @@
             }
         },
         {
+            "Key": "77746428-c807-4b2b-8c12-f0a576dd451c",
+            "Value": {
+                "id": "7ed69575-6646-491d-8abc-2ef4b3115a45",
+                "resourcePath": "scripts\/gui_get_x_align\/gui_get_x_align.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "77c4a30e-70bd-437d-b3e0-30d6dc663517",
             "Value": {
                 "id": "450ba533-23b9-4cc8-81fe-11ba9bb676df",
@@ -1330,7 +1338,7 @@
             "Key": "9c001332-e518-4984-b520-73bae9196c5f",
             "Value": {
                 "id": "815c46a9-a84d-44d2-b225-b6a4e2fb61ea",
-                "resourcePath": "scripts\/draw_pic\/draw_pic.yy",
+                "resourcePath": "scripts\/draw_sprite_align\/draw_sprite_align.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1959,6 +1967,14 @@
             }
         },
         {
+            "Key": "db8e2f03-6c20-4762-8253-9d7b24115e59",
+            "Value": {
+                "id": "c4b01d39-9d38-44dd-80fd-97012af1e304",
+                "resourcePath": "scripts\/gui_get_y_align\/gui_get_y_align.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "db92f830-f488-48bc-a973-ac8a1a550fe8",
             "Value": {
                 "id": "6ce0641a-ec55-4665-b6ff-486b05a0e858",
@@ -2439,6 +2455,8 @@
         "c6de093f-691e-4276-b2b5-e30d229ce6ca",
         "ab398c71-def6-441c-b892-f0eb02003fd3",
         "9c001332-e518-4984-b520-73bae9196c5f",
+        "77746428-c807-4b2b-8c12-f0a576dd451c",
+        "db8e2f03-6c20-4762-8253-9d7b24115e59",
         "befe9efb-cebb-4c0d-b275-ae590b5ed3c4",
         "b545f798-3391-409f-bf1a-819032e8aa95",
         "028a5c78-f2cd-4144-bfe2-19e227344076",

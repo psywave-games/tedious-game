@@ -11,7 +11,7 @@ axis_x = sign(axis_x)
 var next_x = self.x + (16 * axis_x)
 
 repeat 2 begin
-	if next_x < word.limit_left or next_x > word.limit_right or p_door() begin
+	if next_x < word.limit or next_x > (room_width - word.limit) or p_door() begin
 		axis_x = 0
 		hspeed = 0
 	end

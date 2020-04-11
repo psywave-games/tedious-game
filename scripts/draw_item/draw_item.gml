@@ -2,7 +2,7 @@
 /// @arg1 text
 /// @arg2 x
 /// @arg3 y
-/// @arg4 color
+/// @arg4 OPTIONAL_color
 
 var menu = argument[0]
 var text = "< " + argument[1] + " >"

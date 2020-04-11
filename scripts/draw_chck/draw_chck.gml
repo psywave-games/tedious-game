@@ -2,6 +2,7 @@
 /// @arg1 checked
 /// @arg2 x
 /// @arg3 y
+/// @arg4 OPTIONAL_color
 
 var menu = argument[0]
 var text = argument[1]? "[X]": "[  ]"
