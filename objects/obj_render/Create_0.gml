@@ -50,7 +50,7 @@ self.camera_speed = 2
 self.light_hd = true
 self.outline = true
 self.reflex = true
-self.debug = true
+self.debug = false
 #endregion
 
 

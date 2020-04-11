@@ -10,7 +10,7 @@ with game.app.player begin
 	self.in_mob = _mob.object_index
 
 	self.x = _mob.x
-	self.y = _mob.y 
+	self.y = _mob.y -2.0 
 	self.image_xscale = _mob.image_xscale * -1
 end
 

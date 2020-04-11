@@ -1,3 +1,6 @@
+if not game.app.render.debug then
+	exit
+
 var _color = c_white
 
 if variable_instance_exists(self, "can_break") then

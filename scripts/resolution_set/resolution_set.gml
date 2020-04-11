@@ -38,10 +38,6 @@ display_set_gui_size(gui_width, gui_height)
 #endregion
 
 #region AJUST RESOLUTION
-/// Não sei
-view_set_wport(0, resolution_width)
-view_set_hport(0, resolution_height)
-
 /// Camera
 camera_set_view_size(view_camera[0], camera_width, word.height)
 
