@@ -182,11 +182,7 @@ else if game.app.state == fsm_game.over begin
 	var xx = display_get_gui_width()/2
 	var yy = display_get_gui_height()/2
 	
-	draw_set_font(fnt_game1)
-	draw_set_halign(fa_center)
-	draw_set_valign(fa_top)
-	draw_set_color(c_red)
-	
+	draw_set_text_config(fnt_game1, c_red, 1.0, fa_center, fa_top)	
 	draw_text_transformed(xx, -64, t(msg.gameover_title), 8, 8, 0)		
 	
 	draw_set_color(c_white)

@@ -8,3 +8,7 @@ for (var index = 1; index < argument_count; index += 2) begin
 end
 
 outline_end()
+
+
+if game.app.render.debug then
+	draw_debug_colison()

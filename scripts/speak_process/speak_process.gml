@@ -38,13 +38,15 @@ if self.speak_init <= self.speak_step and self.speak_step < self.speak_finish be
 		draw_set_valign(fa_bottom)
 		draw_set_halign(fa_center)
 		
+		draw_set_text_config(fnt_game1, c_white, 1.0, fa_center, fa_bottom)
+		
 		var _xx = self.x
 		var _yy = self.y - 16
 		
 		if not lite_and_pc() begin
 			/// posicionar texto
-			_xx = (display_get_gui_width()/2) - (game.app.interface.camx - self.x)
-			_yy = (display_get_gui_height()/3) - (game.app.interface.camy - self.y)
+			_xx = (self.x - game.app.interface.camx) * ratio_get()
+			_yy = game.app.interface.camy - self.y
 		end
 				
 		/// dimencionar texto

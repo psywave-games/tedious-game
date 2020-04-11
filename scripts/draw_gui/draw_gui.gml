@@ -18,24 +18,8 @@ var _color = argument[6]
 var _alpha = argument[7]
 var _size = argument_count > 8? argument[8]: 1
 
-/// Config Font
-draw_set_font(_font)
-draw_set_color(_color)
-draw_set_alpha(_alpha)
-draw_set_valign(_av)
-draw_set_halign(_ah)
-
-/// Posicionar
 _xx = gui_get_x_align(_xx, _ah)
 _yy = gui_get_y_align(_yy, _av)
 
-#region DRAW GUI
-if game.app.render.font_hd begin
-	gpu_set_texfilter(true)
-	draw_text_transformed(_xx, _yy, _text, _size, _size, 0)
-	gpu_set_texfilter(false)
-end
-else begin 
-	draw_text_transformed(_xx, _yy, _text, _size, _size, 0)
-end
-#endregion
+draw_set_text_config( _font, _color, _alpha, _ah, _av)
+draw_text_hd(_xx, _yy, _text, _size)

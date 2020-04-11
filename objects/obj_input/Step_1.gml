@@ -86,6 +86,12 @@ var _key_down = keyboard_check(vk_down) or _key_ord_s
 var _key_righ = keyboard_check(vk_right) or _key_ord_d
 var _key_shift = keyboard_check(vk_shift)
 var _key_enter = keyboard_check(vk_enter)
+
+var _mouse_axis = 0
+
+if self.hover then
+	_mouse_axis = _msed_left - _msed_right
+	
 #endregion
 
 key_menu_open = false
@@ -96,7 +102,7 @@ key_menu_in = 0
 
 #region MENUS
 if game.app.state == fsm_game.intro begin 
-	key_menu_open = _keyd_enter
+	key_menu_open = _keyd_enter + _mouse_axis
 end 
 
 else if game.app.state == fsm_game.play begin
@@ -125,12 +131,12 @@ else if game.app.state == fsm_game.menuMain
 	key_menu_esc = _keyd_esc
 	key_menu_enter = _keyd_enter
 	key_menu_go = _keyd_down - _keyd_up
-	key_menu_in = _keyd_righ - _keyd_left + _keyd_enter + _gamepaded_cross
+	key_menu_in = _keyd_righ - _keyd_left + _keyd_enter + _mouse_axis
 end
 
 else if game.app.state == fsm_game.lang begin 
 	key_menu_go = _keyd_righ - _keyd_left 
-	key_menu_in = _keyd_enter
+	key_menu_in = _keyd_enter + _mouse_axis
 end
 
 else if game.app.state == fsm_game.warn then

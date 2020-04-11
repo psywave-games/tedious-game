@@ -2,12 +2,12 @@
 /// @arg1 Text
 /// @arg2 OPTIONAL_x
 /// @arg3 OPTIONAL_y
-/// @arg6 OPTIONAL_color
+/// @arg4 OPTIONAL_color
 
 var _xx = 10
-var _yy = 30 
-var _horizontal = fa_left
-var _vertical = fa_middle
+var _yy = 30
+var _id = argument[0]
+var _text = argument[1]
 var _color = c_white
 
 #region PERSONALIZADO
@@ -22,9 +22,21 @@ if argument_count > 4 begin
 end
 #endregion	
 
-_yy += 30 * argument[0]
+_yy += 30 * _id
 
-var _alpha = game.app.interface.select == argument[0]? 1: 0.5
+var _alpha = game.app.interface.select == _id? 1: 0.5
 
-draw_gui(_xx, _yy, _horizontal, _vertical, argument[1], fnt_game0, _color, _alpha)
 
+_xx = gui_get_x_align(_xx, fa_left)
+_yy = gui_get_y_align(_yy, fa_middle)
+
+draw_set_text_config( fnt_game0, _color, _alpha, fa_left, fa_middle)
+draw_text_hd(_xx, _yy, _text, 1.0)
+
+if game.app.render.debug then
+	draw_debug_text(_xx, _yy, _text)
+	
+if mouse_hover( _xx, _yy, _text) begin
+	game.app.interface.select = _id
+	game.app.input.hover |= true
+end

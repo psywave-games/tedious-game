@@ -1,0 +1,1 @@
+return game.app.render.size_ratio[game.app.render.mode_ratio]

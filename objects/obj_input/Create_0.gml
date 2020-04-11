@@ -16,6 +16,7 @@ key_input_text = "NONE"
 
 gamepad = 0
 
+hover = false
+
 suport_gamepad = gamepad_is_supported()
 
-debug = "NONE GAMEPAD"
