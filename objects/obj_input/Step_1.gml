@@ -99,6 +99,7 @@ key_menu_esc = false
 key_menu_enter = false
 key_menu_go = 0
 key_menu_in = 0
+hover = game.app.interface.hover
 
 #region MENUS
 if game.app.state == fsm_game.intro begin 

@@ -12,6 +12,7 @@ self.camy = 0
 /// @example					game.app.interface.select
 /// @return	integer				index sobre o menu
 self.select = 0
+self.hover = false
 
 /// @see						score in interface
 /// @return	integer				score delay
