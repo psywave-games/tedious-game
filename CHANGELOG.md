@@ -1,5 +1,16 @@
 # CHANGELOG #
 
+## 0.8.2.2 - 2020-04-14 ##
+
+### Added ###
+ 
+ * menu screens support mouse
+
+### Changed ###
+ 
+ * speak messages fixed
+ * data flow and performance improvements
+
 ## 0.8.1.3 - 2020-04-08 ##
 
 ### Added ###
