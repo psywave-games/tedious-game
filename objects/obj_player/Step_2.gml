@@ -1,22 +1,17 @@
-#region OUTPUT
+#region SPEED MANIPULATION
 switch self.state begin
 
 	case fsm_player.drink:
 		image_speed = 1
-		if state == fsm_player.drink and image_index >= 9 then 
-			self.state = fsm_player.idle
 		break
 		
 	case fsm_player.dying:	
 		speed = 0
-		if image_index >= 4 begin 
-			self.state = fsm_player.died
-			sfx_play(x, y, sfx_shoot)
-		end
 		break
 	
-	case fsm_player.idle:
 	case fsm_player.sit:
+	case fsm_player.idle:
+	case fsm_player.sleep:
 		image_speed = 0.1
 		speed = 0
 		break
@@ -35,8 +30,30 @@ switch self.state begin
 			hspeed -= sign(self.axis_x) * p_speed()
 
 		/// velocidade da animação
-		image_speed = hspeed/5 * sign(hspeed)
-		 
+		image_speed = hspeed/6 * sign(hspeed)
+		break
+end
+#endregion
+
+#region SPEED MANIPULATION
+switch self.state begin
+
+	case fsm_player.drink:
+		if state == fsm_player.drink and image_index >= 9 then 
+			self.state = fsm_player.idle
+		break
+		
+	case fsm_player.dying:	
+		if image_index >= 4 begin 
+			self.state = fsm_player.died
+			sfx_play(x, y, sfx_shoot)
+		end
+		break
+	
+	case fsm_player.sit:
+	case fsm_player.sleep:
+		if game.app.input.key_interact and image_index != -1 then
+			self.state = fsm_player.idle
 		break
 end
 #endregion
@@ -79,23 +96,10 @@ if self.state == fsm_player.sit
 		game.app.interface.can_interact = true
 	end
 	
-	/// a cada 1 segundo
-	if not (game.app.step % room_speed) then switch self.in_mob begin
-	
-		case obj_tv_chair:
-			if obj_tv_table.state == fsm_mob.running then
-				mob_score_add(self.in_mob.id, "points", 20)
-			break
-			
-		case obj_sleep_chair:
-			if obj_sleep_table.state == fsm_mob.running then
-				mob_score_add(self.in_mob.id, "points", 20)		
-			break
-			
-		case obj_sleep_bed:
-			score_add(-5)
-			break
-	end
+	/// utilizando mob
+	if not (game.app.step % room_speed) then with self.in_mob
+		event_user(ev_interact_using)
+
 end
 #endregion
 

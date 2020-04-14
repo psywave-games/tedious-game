@@ -1,6 +1,6 @@
 /// caso o jogo esteja fora do estado que exiba menssagens
 /// não sera computado como texto exibido
-if game.app.state != fsm_game.play and game.app.state != fsm_game.cutscene then 
+if not show_interface() and game.app.state != fsm_game.cutscene then 
 	exit 
 	
 /// computar frame de textos

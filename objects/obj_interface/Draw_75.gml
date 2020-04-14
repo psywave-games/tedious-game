@@ -17,9 +17,15 @@ end
 #region INTERFACE MENU LANG
 else if game.app.state == fsm_game.lang begin
 	var _xx = display_get_gui_width()/3
+	var _yy = display_get_gui_height()/2
+	var _pt = t(msg.pt)
+	var _en = t(msg.en)
 	
-	draw_gui(_xx, 0, fa_left, fa_middle, t(msg.pt), fnt_game0, c_white, select? 0.5: 1)
-	draw_gui(_xx, 0, fa_right, fa_middle, t(msg.en), fnt_game0, c_white, select? 1: 0.5)
+	mouse_select(gui_get_x_align(_xx, fa_left), _yy, _pt, 0)
+	draw_gui(_xx, 0, fa_left, fa_middle, _pt, fnt_game0, c_white, select? 0.5: 1)
+	
+	mouse_select(gui_get_x_align(_xx, fa_right) - string_width(_en), _yy, _en, 1)
+	draw_gui(_xx, 0, fa_right, fa_middle, _en, fnt_game0, c_white, select? 1: 0.5)
 end
 #endregion
 

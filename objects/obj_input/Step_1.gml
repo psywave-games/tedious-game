@@ -102,7 +102,7 @@ key_menu_in = 0
 
 #region MENUS
 if game.app.state == fsm_game.intro begin 
-	key_menu_open = _keyd_enter + _mouse_axis
+	key_menu_open = _keyd_enter + _msed_left
 end 
 
 else if game.app.state == fsm_game.play begin

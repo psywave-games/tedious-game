@@ -10,6 +10,7 @@
 #macro	ev_interact_switch	3	//Alterar Interação
 #macro	ev_interact_message	4	//Menssagem Interação
 #macro	ev_interact_broken	5
+#macro	ev_interact_using	7
 #macro	ev_lite_step		6
 #macro	ev_mygame_restart	14
 #macro	ev_mygame_start		15

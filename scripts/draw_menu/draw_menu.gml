@@ -32,11 +32,4 @@ _yy = gui_get_y_align(_yy, fa_middle)
 
 draw_set_text_config( fnt_game0, _color, _alpha, fa_left, fa_middle)
 draw_text_hd(_xx, _yy, _text, 1.0)
-
-if game.app.render.debug then
-	draw_debug_text(_xx, _yy, _text)
-	
-if mouse_hover( _xx, _yy, _text) begin
-	game.app.interface.select = _id
-	game.app.input.hover |= true
-end
+mouse_select(_xx, _yy, _text, _id)
