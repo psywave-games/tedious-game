@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "0fe7a4c1-7d99-4a23-b881-c2868a0d0aed",
+            "Value": {
+                "id": "a1052de3-cbc1-48b2-aa2b-e05d1256c14a",
+                "resourcePath": "scripts\/item_install\/item_install.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1016e405-9291-4443-bc38-53bf747e31d2",
             "Value": {
                 "id": "8dd7de13-eae6-4779-9309-e5c3e12b5627",
@@ -403,6 +411,14 @@
             "Value": {
                 "id": "13980180-8261-42b6-8a4b-db5cfab5f0fa",
                 "resourcePath": "sprites\/spr_item_tea\/spr_item_tea.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2cd9bd7b-aec7-452f-add8-d87ab63368e1",
+            "Value": {
+                "id": "188aff9a-342a-45f6-beec-80ee23ba067f",
+                "resourcePath": "sprites\/spr_food_sugar1\/spr_food_sugar1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -639,6 +655,14 @@
             }
         },
         {
+            "Key": "4cfcbe72-96b4-42a2-a3af-0041c21fcf8e",
+            "Value": {
+                "id": "096909c5-3387-48f2-8316-2b08afbf7939",
+                "resourcePath": "sprites\/spr_food_furnace2\/spr_food_furnace2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4d2d654b-b8ac-4ec3-87b1-5eefef096337",
             "Value": {
                 "id": "89f7f68a-640b-4e1c-ba78-8f96bafe112b",
@@ -716,6 +740,14 @@
                 "id": "0113bb8f-44b4-402c-b6a3-7db86efd4c23",
                 "resourcePath": "objects\/obj_sleep_chair\/obj_sleep_chair.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "560d5b2a-7168-430b-aff8-4f9f907e4ac5",
+            "Value": {
+                "id": "cc6bddaf-fdb2-4b6e-a584-20b3fa51a28f",
+                "resourcePath": "sprites\/spr_food_furnace1\/spr_food_furnace1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1546,7 +1578,7 @@
             "Key": "afff8de8-7d64-49e4-8cc6-2b4e9ba6a8a7",
             "Value": {
                 "id": "b8c83198-9153-44ff-bd4a-8fc3e6e73f25",
-                "resourcePath": "sprites\/spr_food_furnace\/spr_food_furnace.yy",
+                "resourcePath": "sprites\/spr_food_furnace0\/spr_food_furnace0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1586,7 +1618,7 @@
             "Key": "b252c974-1908-4004-9dcd-08b8415e3573",
             "Value": {
                 "id": "1700eb84-0186-43fd-a4c5-518cb6d25870",
-                "resourcePath": "sprites\/spr_food_sugar\/spr_food_sugar.yy",
+                "resourcePath": "sprites\/spr_food_sugar0\/spr_food_sugar0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1595,6 +1627,14 @@
             "Value": {
                 "id": "2187c06e-feec-4ccf-a992-01afb07b30c0",
                 "resourcePath": "objects\/obj_guitar\/obj_guitar.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b3ce9ae1-c599-43be-889e-6bd95e28afbd",
+            "Value": {
+                "id": "5f5b1a4c-ad73-4d57-9dfd-54123f8aa5fa",
+                "resourcePath": "objects\/obj_inventory\/obj_inventory.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1668,6 +1708,14 @@
                 "id": "9112137d-2151-4fad-8af5-7c53e6ddb20c",
                 "resourcePath": "scripts\/@__background_set_internal\/__background_set_internal.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "be28bf2c-6cb0-40cf-a74d-b5d96ed6d6e3",
+            "Value": {
+                "id": "45d89dbd-3221-4dbe-8530-b694823a2665",
+                "resourcePath": "sprites\/spr_food_furnace3\/spr_food_furnace3.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2553,6 +2601,7 @@
         "a2019d6d-abec-4a37-9532-c8c21f0e9393",
         "fb2df7eb-7ada-464b-b23f-5838a0be209b",
         "2f24eef4-21fb-4d2a-ab91-f73a38d783a5",
+        "0fe7a4c1-7d99-4a23-b881-c2868a0d0aed",
         "9e253f25-08bd-45a9-8ee4-a0443c116751",
         "a65276c9-7aba-4cd5-8acb-371172faa255",
         "52528d71-51ab-4359-b41d-51a4cfcabb10",

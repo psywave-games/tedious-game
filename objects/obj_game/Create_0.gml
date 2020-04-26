@@ -121,4 +121,9 @@ interface = instance_create_layer(x,y, "Instances", obj_interface)
 memento = ds_list_create()
 #endregion
 
+#region INIT INVENTORY
+global.inventory = instance_create_layer(x,y, "Instances", obj_inventory)
+
+#endregion
+
 event_user(ev_init)

@@ -5,13 +5,13 @@ if gas begin
 	if state == fsm_mob.idle then
 		gas_size += 0.005
 		
-	else if gas_size > 4.0 then
-		gas_size = 4
+	else if gas_size > 5.0 then
+		gas_size = 5
 		
-	else if gas_size > 1.1 then
+	else if gas_size > 0.3 then
 		gas_size -= 0.05
 
 end
 
-part_type_life(part_fire, room_speed, room_speed * clamp(gas_size, 1.1, 4))
+part_type_life(part_fire, room_speed * 0.1, room_speed * clamp(gas_size, 0.3, 4))
 

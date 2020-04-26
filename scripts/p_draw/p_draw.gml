@@ -92,7 +92,7 @@ with game.app.player begin
 	#region ATTACH POST-DRAW
 	switch self.state begin
 		case fsm_player.drink:
-			p_draw_attach(x, y, spr_item_tea, color(color_amarelo_a, sad()))
+			p_draw_attach(x, y, spr_item_tea, color(color_amarelo_a))
 			break
 	
 	end

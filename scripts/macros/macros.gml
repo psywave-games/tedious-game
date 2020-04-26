@@ -87,6 +87,12 @@ enum fsm_mob {
 	broken									/// STATE: quebrado
 }
 
+
+enum fsm_item {
+	raw,									/// STATE: PARA PREPARAR
+	ready									/// STATE: PREPARADO
+}
+
 enum credits_scene {
 	memorial = 3888,
 	final = 4777

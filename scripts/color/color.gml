@@ -1,14 +1,13 @@
 /// @description aplica matriz/filtro cinza ou nagativo na cor
 /// @arg0 c
-/// @arg1 gray_scale
 
 
 #region get arguments 
     var color_r = color_get_red(argument0)
     var color_g = color_get_green(argument0)
     var color_b = color_get_blue(argument0)
-    var gray_scale = argument1
-	var dark = argument1 > 1? 0: 10
+    var gray_scale = sad()
+	var dark = gray_scale > 1? 0: 10
 #endregion
 
 #region apply gray
