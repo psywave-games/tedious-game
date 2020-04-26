@@ -169,10 +169,10 @@ else if game.app.state == fsm_game.menuTutorial begin
 	//	draw_pic(spr_tuto_keyboard, 0, 256, 30, fa_right, fa_middle, 0x101010, 1, 3)
 	
 	
-	draw_gui( 0, 30, fa_left, fa_middle, "Interact", fnt_game0, c_yellow, 1)
-	draw_gui( 0, 60, fa_left, fa_middle, "Switch", fnt_game0, c_green, 1)
-	draw_gui( 0, 90, fa_left, fa_middle, "Move", fnt_game0, c_red, 1)
-	draw_gui( 0, 120, fa_left, fa_middle, "Run", fnt_game0, c_blue, 1)
+	//draw_gui( 0, 30, fa_left, fa_middle, "Interact", fnt_game0, c_yellow, 1)
+	//draw_gui( 0, 60, fa_left, fa_middle, "Switch", fnt_game0, c_green, 1)
+	//draw_gui( 0, 90, fa_left, fa_middle, "Move", fnt_game0, c_red, 1)
+	//draw_gui( 0, 120, fa_left, fa_middle, "Run", fnt_game0, c_blue, 1)
 	
 	//draw_pic(spr_tuto_keyboard, 1, 256, 30, fa_right, fa_middle, c_red, 1, 3)
 	//draw_pic(spr_tuto_keyboard, 2, 256, 30, fa_right, fa_middle, c_green, 1, 3)

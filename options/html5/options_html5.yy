@@ -24,7 +24,7 @@
     "option_html5_outputname": "index.html",
     "option_html5_scale": 1,
     "option_html5_splash_png": "${options_dir}\/html5\/splash.png",
-    "option_html5_texture_page": "512x512",
+    "option_html5_texture_page": "1024x1024",
     "option_html5_use_facebook": false,
     "option_html5_usebuiltinfont": true,
     "option_html5_usebuiltinparticles": true,
