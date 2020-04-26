@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "06255721-29a1-4c4c-96bf-bb41837cd4f7",
+            "Value": {
+                "id": "679b032b-a826-4562-8ae4-5c24a197a94e",
+                "resourcePath": "scripts\/draw_mob_bar\/draw_mob_bar.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "064103ea-7d9a-43b3-84eb-11bed7e17381",
             "Value": {
                 "id": "5220bc1b-6c75-432b-81ad-c93d16323afa",
@@ -2599,6 +2607,7 @@
         "c0540dab-80f9-4490-9b1c-1f83028e7fe3",
         "8936c2b3-5c95-449e-b7f5-ff82f01528b9",
         "a2019d6d-abec-4a37-9532-c8c21f0e9393",
+        "06255721-29a1-4c4c-96bf-bb41837cd4f7",
         "fb2df7eb-7ada-464b-b23f-5838a0be209b",
         "2f24eef4-21fb-4d2a-ab91-f73a38d783a5",
         "0fe7a4c1-7d99-4a23-b881-c2868a0d0aed",

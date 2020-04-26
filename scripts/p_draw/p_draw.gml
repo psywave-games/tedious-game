@@ -92,9 +92,12 @@ with game.app.player begin
 	#region ATTACH POST-DRAW
 	switch self.state begin
 		case fsm_player.drink:
-			p_draw_attach(x, y, spr_item_tea, color(color_amarelo_a))
+			if self.in_mob == spr_item_tea then
+				p_draw_attach(x, y, spr_item_tea, color(color_amarelo_a))
+			
+			if self.in_mob == spr_item_monster then
+				p_draw_attach(x, y, spr_item_monster, color(color_verde_c))
 			break
-	
 	end
 	#endregion
 	

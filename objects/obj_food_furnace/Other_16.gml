@@ -1,5 +1,6 @@
 /// @description ev_lite_step
 
+#region GAS EFFECT
 if gas begin
 
 	if state == fsm_mob.idle then
@@ -14,4 +15,4 @@ if gas begin
 end
 
 part_type_life(part_fire, room_speed * 0.1, room_speed * clamp(gas_size, 0.3, 4))
-
+#endregion

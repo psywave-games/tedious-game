@@ -7,7 +7,8 @@
         "a8b62c1b-99b3-4e1d-8288-a7937a2147e4",
         "c0540dab-80f9-4490-9b1c-1f83028e7fe3",
         "8936c2b3-5c95-449e-b7f5-ff82f01528b9",
-        "a2019d6d-abec-4a37-9532-c8c21f0e9393"
+        "a2019d6d-abec-4a37-9532-c8c21f0e9393",
+        "06255721-29a1-4c4c-96bf-bb41837cd4f7"
     ],
     "filterType": "GMScript",
     "folderName": "engine",

@@ -87,12 +87,6 @@ enum fsm_mob {
 	broken									/// STATE: quebrado
 }
 
-
-enum fsm_item {
-	raw,									/// STATE: PARA PREPARAR
-	ready									/// STATE: PREPARADO
-}
-
 enum credits_scene {
 	memorial = 3888,
 	final = 4777
@@ -166,9 +160,12 @@ enum msg {
 	interact_cooler_glasses,
 	interact_music_turn_it,
 	interact_drink_water,
+	interact_drink_energy,
 	interact_furnace_gas,
 	interact_furnace_fire,
 	interact_furnace_off,
+	interact_freezer_list,
+	interact_freezer_emputy,
 	interact_book,
 	interact_book0,
 	interact_book1,
@@ -193,10 +190,16 @@ enum msg {
 	secondary_m,
 	interact_google,
 	interact_furnace_hurt,
+	interact_pan_furnace_put,
+	interact_soap_freezer_gap,
+	interact_soap_freezer_put,
+	interact_soap_furnace_gap,
 	interact_coffe_freezer_gap,
-	interact_coffe_microwave_put,
-	interact_coffe_microwave_gap,
 	interact_coffe_freezer_put,
+	interact_coffe_furnace_gap,
+	interact_coffe_furnace_put,
+	interact_ramen_furnace_gap,
+	interact_ramen_furnace_put,
 	interact_microwave_down,
 	interact_music_2009,
 	psy_door,
@@ -232,6 +235,10 @@ enum msg {
 	interact_stair_up,
 	menu_tutorial,
 	menu_gamepad,
-	psy_joystick
+	psy_energy,
+	psy_joystick,
+	psy_coffe,
+	psy_soap,
+	psy_ramen,
 }
 

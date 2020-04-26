@@ -185,9 +185,9 @@ if game.app.lang == msg.en begin
 		    return "stick your hand on stove"
 		case msg.interact_coffe_freezer_gap:
 		    return "grab a coffee cup"
-		case msg.interact_coffe_microwave_put:
+		case msg.interact_coffe_furnace_put:
 		    return "put coffee cup in the  microwave"
-		case msg.interact_coffe_microwave_gap:
+		case msg.interact_coffe_furnace_gap:
 		    return "grab  coffee from microwave"
 		case msg.interact_coffe_freezer_put:
 		    return "put coffee in the fridge"
@@ -454,9 +454,9 @@ switch argument[0] begin
 	    return "enfiar a mao no fogao"
 	case msg.interact_coffe_freezer_gap:
 	    return "pegar um copo de cafe"
-	case msg.interact_coffe_microwave_put:
+	case msg.interact_coffe_furnace_put:
 	    return "colocar copo de cafe no microondas"
-	case msg.interact_coffe_microwave_gap:
+	case msg.interact_coffe_furnace_gap:
 	    return "pegar o copo de cafe do microondas"
 	case msg.interact_coffe_freezer_put:
 	    return "colocar o copo de cafe na geladeira"
@@ -538,4 +538,4 @@ switch argument[0] begin
 		return "Controle"
 end
 
-return "#Error 18_" + string(argument0)
+return "#Error T_18_" + string(argument0)
