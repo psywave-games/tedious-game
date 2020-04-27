@@ -230,6 +230,7 @@ end
 
 #region WAIT FOCUS
 else if game.app.state == fsm_game.waitFocus begin
+	draw_set_alpha(true)
 	draw_sprite(spr_jolt, 0, display_get_gui_width()/2, display_get_gui_height()/2)
 	draw_gui(0, display_get_gui_height()/4, fa_center, fa_bottom, "mouse click to focus game", fnt_game1, c_white, current_second%2)
 end

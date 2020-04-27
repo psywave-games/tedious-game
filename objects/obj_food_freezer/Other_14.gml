@@ -8,8 +8,19 @@ var player_item_a = game.inventory.item_local_soap == obj_player
 var player_item_b = game.inventory.item_local_coffe == obj_player
 #endregion
 
+#region _first/_last switch
 var _first = energy_drinks? 1: 2
-var _last = 1 + sign(energy_drinks) + (freezer_item_a or player_item_a) + (freezer_item_b or player_item_b)
+var _last = 1
+
+if energy_drinks then
+	_last = 4
+	
+else if freezer_item_b or player_item_b then
+	_last = 3
+	
+else if freezer_item_a or player_item_a then
+	_last = 2
+#endregion
 
 if not energy_drinks
 	and not freezer_item_a
