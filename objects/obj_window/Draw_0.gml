@@ -6,7 +6,8 @@ if image_index < 1 and state == fsm_mob.idle then
 
 #region REFLEX
 if not lite() and game.app.render.reflex begin 
-	if (playercollision) begin 
+	if (reflex) begin 
+	
 		var surface_player = surface_create(22, 22)
 		if (surface_exists(surface_player)) begin
 			var _xx = 11 + game.app.player.x - self.x

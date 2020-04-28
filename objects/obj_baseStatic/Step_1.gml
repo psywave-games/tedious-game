@@ -61,7 +61,21 @@ end else
 	self.can_interact = false
 #endregion
 
-if not (game.app.step % room_speed) then
+if not (game.app.step % room_speed) begin
 	self.switchs = 0
+end
+
+#region RELFEX
+if can_reflex and not (game.app.step % room_speed/4)  begin
+	reflex = point_in_rectangle(
+		game.app.player.x,
+		game.app.player.y,
+		bbox_left - 32,
+		y - (word.height/2),
+		bbox_right + 32,
+		y + (word.height/2),
+	)
+end
+#endregion
 
 lite_step()

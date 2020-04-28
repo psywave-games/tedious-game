@@ -23,6 +23,46 @@
             "enumb": 0,
             "eventtype": 8,
             "m_owner": "32126efb-ad80-4cf8-b059-6e2bcdc8121c"
+        },
+        {
+            "id": "95592e66-7042-485f-8f1b-151e3196fcd8",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 11,
+            "eventtype": 7,
+            "m_owner": "32126efb-ad80-4cf8-b059-6e2bcdc8121c"
+        },
+        {
+            "id": "8b1531bf-902e-4684-ba37-c7a7603a11c8",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 12,
+            "eventtype": 7,
+            "m_owner": "32126efb-ad80-4cf8-b059-6e2bcdc8121c"
+        },
+        {
+            "id": "75843384-4cdc-49de-bcaf-90bdc29131d7",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 14,
+            "eventtype": 7,
+            "m_owner": "32126efb-ad80-4cf8-b059-6e2bcdc8121c"
+        },
+        {
+            "id": "35085089-1c95-4594-b564-51815082525d",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 15,
+            "eventtype": 7,
+            "m_owner": "32126efb-ad80-4cf8-b059-6e2bcdc8121c"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -42,7 +82,20 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": [
-        
+        {
+            "id": "5d4e12f9-87aa-4286-b2f9-598afdab4d61",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "channel",
+            "varType": 1
+        }
     ],
     "solid": false,
     "spriteId": "00000000-0000-0000-0000-000000000000",

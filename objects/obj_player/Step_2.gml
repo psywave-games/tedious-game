@@ -10,8 +10,10 @@ switch self.state begin
 		break
 	
 	case fsm_player.sit:
-	case fsm_player.idle:
 	case fsm_player.sleep:
+		y = yprevious
+	
+	case fsm_player.idle:
 		image_speed = 0.1
 		speed = 0
 		break
@@ -101,6 +103,7 @@ do begin
 	
 	var _gravity = p_sloop()
 	
+	vspeed = 0
 	y += _gravity
 end until (_gravity == 0)
 #endregion

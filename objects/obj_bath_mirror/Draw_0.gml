@@ -7,7 +7,7 @@ draw(
 if lite() or not game.app.render.reflex then 
 	exit
 
-if (playercollision) begin 
+if (reflex) begin 
 
 	var surface_player = surface_create(10, 13)
 	if (surface_exists(surface_player)) begin

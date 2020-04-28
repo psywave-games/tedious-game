@@ -1831,6 +1831,14 @@
             }
         },
         {
+            "Key": "c900833d-854d-4d49-aa8d-f27d802e4190",
+            "Value": {
+                "id": "130be406-da6a-4119-b5c0-acc941c5b96c",
+                "resourcePath": "sprites\/missingno\/missingno.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c972e834-e846-456c-8d00-01419ddaa4f6",
             "Value": {
                 "id": "d42bc0c7-c326-473d-b759-f6fbebfe9cda",

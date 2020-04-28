@@ -6,11 +6,13 @@ self.state = argument0
 self.select = 1
 
 self.can_interact = false
+self.can_reflex = false
 self.can_break = false
 self.persistent_draw = false
 
 self.switchs = 0
 
 self.visible = false
+self.reflex = false
 
 outline_init()

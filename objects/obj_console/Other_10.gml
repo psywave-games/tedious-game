@@ -71,7 +71,7 @@ if (text_part[0] == commands[command_1.create]) {
 							with (object_to_try_and_edit) { // many things might have this 
 								var getting_this_instance = variable_instance_get(id, string(other.text_part[2]))
 										
-								if (string_length(string_digits(other.text_part[3])) == string_length(other.text_part[3])) { // is int
+								if (string_length(string_digits(other.text_part[3])) == string_length(string_replace("-", "", other.text_part[3]))) { // is int
 									if (is_array(getting_this_instance)) { // ARRAY OF INTS
 										if (parse_parts==5) { // it has a decimal point
 											var new_array = array_create(array_length_1d(getting_this_instance),real(other.text_part[3]+"."+other.text_part[4]))

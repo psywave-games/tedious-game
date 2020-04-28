@@ -15,6 +15,7 @@ self.in_mob = 0
 self.ylooking = y
 self.yfoot = y
 self.yhead = y
+self.gravity = 1
 
 self.book_read = 0
 self.requirements = array_create(2, 100)
