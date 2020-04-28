@@ -1,3 +1,3 @@
 /// @description stream out
-
-self.visible = false
+if not persistent_draw then
+	self.visible = false

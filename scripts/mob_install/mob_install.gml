@@ -7,14 +7,7 @@ self.select = 1
 
 self.can_interact = false
 self.can_break = false
-
-self.message = ""
-self.message_halign = fa_center
-self.message_valign = fa_bottom
-self.message_x = 0
-self.message_y = -16
-
-self.step = 0
+self.persistent_draw = false
 
 self.switchs = 0
 

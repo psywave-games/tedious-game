@@ -343,6 +343,14 @@
             }
         },
         {
+            "Key": "221888a0-10fb-4804-96e0-0735633eb18b",
+            "Value": {
+                "id": "8ce291f0-8ce5-4ffb-9fae-363f3ceea5da",
+                "resourcePath": "scripts\/draw_lensflare_surface\/draw_lensflare_surface.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "226d5716-8f45-4682-b0b3-4c17ab4bb25a",
             "Value": {
                 "id": "3c2bedc7-35fa-412c-94f1-9ff8c59cd39b",
@@ -2607,6 +2615,7 @@
         "d3de394c-79c0-4c01-a27b-cbd4adbed761",
         "7fdf4ac9-b066-4fce-9255-4f62b5788121",
         "dc6fb587-a18a-48e0-8f30-43ade3e2e43f",
+        "221888a0-10fb-4804-96e0-0735633eb18b",
         "cd599c42-e702-4c21-ac4d-e39487fbcfa1",
         "8e2fdf19-bb3a-463a-ab0d-8fe1526d66e2",
         "b0f21a98-f4b8-4874-9fb3-1a677ece9e16",
