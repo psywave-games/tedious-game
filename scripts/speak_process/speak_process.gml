@@ -25,19 +25,13 @@ if self.speak_init <= self.speak_step and self.speak_step < self.speak_finish be
 		_text = self.speak_text
 	end
 
-	var _size = lite_and_pc()? 0.1: 1
 	draw_set_text_config(fnt_game1, c_white, 1.0, fa_center, fa_bottom)
 		
-	var _xx = self.x
-	var _yy = self.y - 16
-		
-	if not lite_and_pc() begin
-		/// posicionar texto
-		_xx = (_xx - game.app.interface.camx) * (display_get_gui_width()/camera_get_view_width(view_camera[0]))
-		_yy = (_yy - game.app.interface.camy) * (display_get_gui_height()/camera_get_view_height(view_camera[0])) 
-	end
-				
+	/// posicionar texto
+	var _xx = (self.x - game.app.interface.camx) * (display_get_gui_width()/camera_get_view_width(view_camera[0]))
+	var _yy = (self.yhead - abs(8 * self.image_yscale) - game.app.interface.camy) * (display_get_gui_height()/camera_get_view_height(view_camera[0])) 
+	
 				
 	/// renderizar
-	draw_text_ext_transformed(_xx, _yy, _text, 16, 256, _size, _size, 0)	
+	draw_text_ext_transformed(_xx, _yy, _text, 16, 256, 1.0, 1.0, 0)	
 end

@@ -14,6 +14,9 @@ self.in_stair = 0
 self.in_mob = 0
 
 self.axis_looking = 0
+self.ylooking = y
+self.yfoot = y
+self.yhead = y
 
 self.book_read = 0
 

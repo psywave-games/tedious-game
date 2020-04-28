@@ -52,16 +52,18 @@ switch self.state begin
 	
 	case fsm_player.sit:
 	case fsm_player.sleep:
-		if game.app.input.key_interact and image_index != -1 then
+		if game.app.input.key_interact and image_index != -1 begin
+			self.image_yscale = abs(self.image_yscale)
 			self.state = fsm_player.idle
+		end
 		break
 end
 #endregion
 
 #region LOOKING HORIZONTAL
-if sign(hspeed) != 0 then
-	image_xscale = sign (hspeed)
-
+if sign(hspeed) != 0 begin
+	image_xscale = abs(image_xscale) * sign(hspeed)
+end
 #endregion
 
 #region LOOKING VERTICAL
@@ -82,6 +84,8 @@ else if game.app.input.key_axis_y != 0 then
 
 else 
 	axis_looking = 0
+	
+ylooking = yhead + (game.app.input.key_axis_y * abs(y - yhead) * 2)
 #endregion
 
 #region USING MOB
@@ -110,6 +114,9 @@ depth = self.in_stair != 0? word.depth_stair: word.depth_player
 
 #region SLOP
 do begin
+	yfoot = y + abs(image_yscale * 16)
+	yhead = y - abs(image_yscale * (16 - abs(bbox_top - y)))
+	
 	var _gravity = p_sloop()
 	
 	y += _gravity

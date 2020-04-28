@@ -8,12 +8,23 @@ if self.state == fsm_mob.none
 end
 #endregion
 	
-var looking = game.app.player.axis_looking * -20
+#region DETECT LOOKING COLISION
+var looking = rectangle_in_rectangle(
+	bbox_left,
+	bbox_top,
+	bbox_right,
+	bbox_bottom, 
+	game.app.player.bbox_left,
+	game.app.player.ylooking,
+	game.app.player.bbox_right, 
+	game.app.player.ylooking
+)
+#endregion
 
 #region INTERACTS
 if game.app.player.state == fsm_player.idle begin
 
-	if place_meeting(x, y + looking, obj_player) begin
+	if looking begin
 		/// Interagir
 		if game.app.input.key_interact and self.state == fsm_mob.idle begin
 			if ++self.switchs >= 2 and self.can_break begin

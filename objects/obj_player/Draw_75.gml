@@ -1,3 +1,2 @@
-/// @description todo remove sit message
-if not lite_and_pc() then
-	speak_process()
+/// @description speak_process
+speak_process()

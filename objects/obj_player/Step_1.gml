@@ -8,15 +8,10 @@ axis_x = sign(axis_x)
 #endregion
 
 #region COLISON HORIZOTAL
-var next_x = self.x + (16 * axis_x)
-
-repeat 2 begin
-	if next_x < word.limit or next_x > (room_width - word.limit) or p_door() begin
-		axis_x = 0
-		hspeed = 0
-	end
-	
-	next_x = self.x + self.hspeed
+var next_x = self.x + (axis_x * abs(image_xscale * 8))
+if next_x < word.limit or next_x > (room_width - word.limit) or p_door() begin
+	axis_x = 0
+	hspeed = 0
 end
 #endregion
 
