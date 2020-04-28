@@ -67,24 +67,6 @@ end
 #endregion
 
 #region LOOKING VERTICAL
-if game.app.input.key_moonwalk then
-	axis_looking = 1
-
-else if p_book_read() then
-	axis_looking = 1
-
-else if speaking(self) then
-	axis_looking = -1
-
-else if in_stair != 0 then 
-	axis_looking = in_stair
-
-else if game.app.input.key_axis_y != 0 then 
-	axis_looking = game.app.input.key_axis_y 
-
-else 
-	axis_looking = 0
-	
 ylooking = yhead + (game.app.input.key_axis_y * abs(y - yhead) * 2)
 #endregion
 
@@ -115,7 +97,7 @@ depth = self.in_stair != 0? word.depth_stair: word.depth_player
 #region SLOP
 do begin
 	yfoot = y + abs(image_yscale * 16)
-	yhead = y - abs(image_yscale * (16 - abs(bbox_top - y)))
+	yhead = y - abs(image_yscale * (abs(y - bbox_top) - 16))
 	
 	var _gravity = p_sloop()
 	

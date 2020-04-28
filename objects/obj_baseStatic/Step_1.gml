@@ -2,6 +2,7 @@
 if self.state == fsm_mob.none
 	or self.state == fsm_mob.broken
 	or game.app.state != fsm_game.play 
+	or not visible 
 	or speaking(game.app.player) begin
 		self.can_interact = false
 		exit
@@ -29,7 +30,7 @@ if game.app.player.state == fsm_player.idle begin
 		if game.app.input.key_interact and self.state == fsm_mob.idle begin
 			if ++self.switchs >= 2 and self.can_break begin
 				event_user(ev_interact_broken)
-				speak(game.app.player, t(msg.interact_broken))
+				speak(game.app.player, t(msg.interact_broken), p_head_direction(bbox_bottom, bbox_top))
 				self.state = fsm_mob.broken
 			end
 			else
@@ -62,5 +63,5 @@ end else
 
 if not (game.app.step % room_speed) then
 	self.switchs = 0
-	
+
 lite_step()

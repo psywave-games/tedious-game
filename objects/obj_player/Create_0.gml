@@ -5,7 +5,6 @@ if game.app.player != -1 begin
 	instance_destroy(self.id)
 end
 
-
 game.app.player = self.id
 
 self.state = fsm_player.none
@@ -13,13 +12,11 @@ self.state = fsm_player.none
 self.in_stair = 0
 self.in_mob = 0
 
-self.axis_looking = 0
 self.ylooking = y
 self.yfoot = y
 self.yhead = y
 
 self.book_read = 0
-
 self.requirements = array_create(2, 100)
 
 speak_install()
