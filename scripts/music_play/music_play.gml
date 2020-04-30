@@ -2,11 +2,12 @@
 /// @arg1 index
 
 var channel = argument0 
+var a = argument1
 
-if audio_is_playing(game.app.audio.sound[channel]) then
-	audio_stop_sound(game.app.audio.sound[channel])
+//if audio_is_playing(game.app.audio.sound[channel]) then
+//	audio_stop_sound(game.app.audio.sound[channel])
 
-game.app.audio.sound[channel] = audio_play_sound(argument1, 0, true)
-audio_mixer(game.app.audio.mixer[channel > 2], channel)
+//game.app.audio.sound[channel] = audio_play_sound(argument1, 0, true)
+//audio_mixer(game.app.audio.mixer[channel > 2], channel)
 
-return game.app.audio.sound[channel]
+//return game.app.audio.sound[channel]

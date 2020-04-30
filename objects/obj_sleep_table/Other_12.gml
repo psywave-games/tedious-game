@@ -2,7 +2,7 @@
 
 if select == 1 begin
 	alarm[ev_interact_up] = room_speed * 2
-	sfx_play(x,y, sfx_pc_down)
+	audio_play(x,y, snd_pc_down, false)
 	state = fsm_mob.none
 end
 else 

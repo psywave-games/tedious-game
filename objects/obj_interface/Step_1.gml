@@ -235,23 +235,17 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuAudi
 	switch game.app.interface.select begin
 		/// Master volume do jogo
 		case 0:
-			var volume = game.app.audio.volume + _in
-			game.app.audio.volume = clamp(volume, 0, 10)
-			audio_master_gain( volume * 0.1 )
+			volume_set(volume_master, clamp(volume_get(volume_master) + _in, 0, 10))
 			break
 			
 		/// Musica volume do jogo
 		case 1:
-			var volume = clamp(game.app.audio.mixer[0] + _in, 0, 10)
-			game.app.audio.mixer[0] = volume
-			audio_mixer(volume, channels_for_music)
+			volume_set(volume_music, clamp(volume_get(volume_music) + _in, 0, 10))
 			break
 			
 		/// Efeitos volume do jogo
 		case 2:
-			var volume = clamp(game.app.audio.mixer[1] + _in, 0, 10)
-			game.app.audio.mixer[1] = volume
-			audio_mixer(volume, channels_for_sfx)
+			volume_set(volume_fx, clamp(volume_get(volume_fx) + _in, 0, 10))
 			break
 			
 		/// voltar para o menu

@@ -10,4 +10,4 @@ if _next <= 0 or _next > _last then
 self.select = _next
 
 if self.state == fsm_mob.running then
-	sfx_play(x,y, sfx_pc_switch)
+	audio_play(x,y, snd_pc_switch, false)

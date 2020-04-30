@@ -14,4 +14,4 @@ if global.points_switch > 0 begin
 end
 #endregion
 
-sfx_play(x, y, sound_sfx_click)
+audio_play(x, y, snd_click, false)

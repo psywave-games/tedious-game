@@ -4,9 +4,11 @@
     "mvc": "1.1",
     "name": "199bfa65-02a4-4778-a050-1df8c5af8d8e",
     "children": [
-        "541e5a20-2704-4273-84d2-0d42d4d2722e",
         "ae2a75e6-b006-41bc-95a6-0310707d1333",
-        "e99fa136-00b2-4831-affb-df48d64a0999"
+        "cbd18dab-f9ee-4a24-8c63-db4ff27e3cf8",
+        "541e5a20-2704-4273-84d2-0d42d4d2722e",
+        "a3dc2e2f-75db-42fc-9309-5a83a41608f7",
+        "8a2f1882-4d87-4c1f-9e3b-917b8e4cfab0"
     ],
     "filterType": "GMScript",
     "folderName": "sound",

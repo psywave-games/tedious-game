@@ -1,0 +1,1 @@
+audio_listener_position(game.app.player.x, game.app.player.y, 0)
