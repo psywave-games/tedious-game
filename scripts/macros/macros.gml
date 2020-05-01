@@ -1,21 +1,19 @@
 /// GML MAIS AMIGAVEL
 #macro	game				global			/// @example game.app.players
-#macro	max_nickname		16
+#macro	max_nickname		16				/// max characteres for string name
 
-#macro	channels_for_music	0,1,2
-#macro	channels_for_sfx	3,4,5,6,7,8,9,10,11,12,13,14,15
-#macro	volume_master		2
-#macro	volume_music		0
-#macro	volume_fx			1
+#macro	volume_master		2				/// channel master
+#macro	volume_music		0				/// channel mixer 0
+#macro	volume_fx			1				/// channel mixer 1
 
 #macro	ev_init				0
-#macro	ev_interact_down	1	//Iniciar Interação
-#macro	ev_interact_up		2	//Desfazer Interação
-#macro	ev_interact_switch	3	//Alterar Interação
-#macro	ev_interact_message	4	//Menssagem Interação
-#macro	ev_interact_broken	5
-#macro	ev_interact_using	7
-#macro	ev_lite_step		6
+#macro	ev_interact_down	1				/// Iniciar Interação
+#macro	ev_interact_up		2				/// Desfazer Interação
+#macro	ev_interact_switch	3				/// Alterar Interação
+#macro	ev_interact_message	4				/// Menssagem Interação
+#macro	ev_interact_broken	5				/// Quebrado Interação
+#macro	ev_interact_using	7				/// Utilizando Interação
+#macro	ev_lite_step		6				/// Ticket leve (apenas visivel, 3x por segundo)
 #macro	ev_mygame_restart	14
 #macro	ev_mygame_start		15
 
@@ -52,7 +50,7 @@ enum need {
 }
 
 /// FINITE STATE MACHINE PLAYER MODE
-enum fsm_player{
+enum fsm_player {
 	none,									/// Quando não ativado
 	died,									/// Jogador está morto
 	idle,									/// Jogador está parado
@@ -60,7 +58,7 @@ enum fsm_player{
 	dying,									/// Jogador está se matando	
 	drink,									/// Jogador está bebendo
 	sleep,									/// Jogador está dormindo
-	sit										/// Jogador está sentado	
+	sit										/// Jogador está sentado
 }
 
 
@@ -244,5 +242,6 @@ enum msg {
 	psy_coffe,
 	psy_soap,
 	psy_ramen,
+	interact_unmotivated
 }
 

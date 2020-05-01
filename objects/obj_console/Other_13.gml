@@ -17,6 +17,7 @@ switch (command_to_run) {
 		#endregion
     break;
     case command_1.view: 
+	case command_1.get: 
     case command_1.set: 
 		#region graph
 		

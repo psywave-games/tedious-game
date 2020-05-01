@@ -344,7 +344,8 @@ if (view_active_count > 0) {
 					}
 				#endregion
 		    break;
-			case 4:
+			case 4: // unknown
+			case 2: // array
 		    case 1: // str
 				#region str
 					var new_value = variable_instance_get(view_obj[i], view_text[i])

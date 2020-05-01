@@ -19,14 +19,14 @@ end
 
 #region CLOCK
 if not (self.step % (room_speed * 2)) and self.state == fsm_game.play begin
-	global.minute += 1
+	self.clock_minute += 1
 
-	if global.minute >= 60 begin
-		global.minute = 0
-		global.hour += 1
+	if self.clock_minute >= 60 begin
+		self.clock_minute = 0
+		self.clock_hour += 1
 	end
 	
-	if global.hour >= 24 then
-		global.hour = 0
+	if self.clock_hour >= 24 then
+		self.clock_hour = 0
 end
 #endregion

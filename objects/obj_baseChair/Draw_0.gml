@@ -1,2 +1,1 @@
-if game.app.player.state != fsm_player.sit then
-	draw(sprite_index, image_blend)
+draw(self.sprite_index, self.image_blend)

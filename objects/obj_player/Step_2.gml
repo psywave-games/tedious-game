@@ -12,7 +12,7 @@ switch self.state begin
 	case fsm_player.sit:
 	case fsm_player.sleep:
 		y = yprevious
-	
+		
 	case fsm_player.idle:
 		image_speed = 0.1
 		speed = 0
@@ -37,7 +37,7 @@ switch self.state begin
 end
 #endregion
 
-#region SPEED MANIPULATION
+#region STATE MANIPULATION
 switch self.state begin
 
 	case fsm_player.drink:
@@ -77,22 +77,26 @@ ylooking = yhead + (game.app.input.key_axis_y * abs(y - yhead) * 2)
 if self.state == fsm_player.sit
 	or self.state == fsm_player.sleep begin
 	
-	/// menssagem do mob
+	/// calling mob events
 	with self.in_mob begin
 		event_user(ev_interact_message)
+		event_user(ev_interact_using)
 		game.app.interface.message = self.message
 		game.app.interface.can_interact = true
 	end
-	
-	/// utilizando mob
-	if not (game.app.step % room_speed) then with self.in_mob
-		event_user(ev_interact_using)
 
 end
 #endregion
 
 #region DEPTH
-depth = self.in_stair != 0? word.depth_stair: word.depth_player
+if self.state == fsm_player.sit then
+	depth = self.in_mob.depth + self.in_mob.add_depth 
+
+else if self.in_stair != 0 then
+	depth = word.depth_stair
+
+else
+	depth = word.depth_player
 
 #endregion
 

@@ -78,7 +78,7 @@ main_area_height = 40 // the height of the text area
 main_area_inner_padding_sides = 50 // how far away from the left side the text starts on the main area 
 history_line_height = 24
 predict_line_height = 22
-view_bottom_margin = 60
+view_bottom_margin = 460
 view_bottom_padding = 10
 view_left_margin = 10
 view_left_padding = 60 // this is also the space the number data to go 
@@ -241,6 +241,7 @@ view_intro_highlight_frame[0] = view_intro_highlight_frames
 var i = 0
 enum command_1 {
 	create,
+	get,
 	set,
 	destroy,
 	view,
@@ -252,6 +253,7 @@ enum command_1 {
 }
 
 commands[command_1.create]	= "create"
+commands[command_1.get]		= "get"
 commands[command_1.set]		= "set" // edit also works 
 commands[command_1.destroy] = "destroy"
 commands[command_1.view]	= "view"
@@ -278,6 +280,7 @@ commands_focused = array_create(command_1.size,false) // does this command have 
 		do {
 			if (object_exists(i)) {
 				second_level[command_1.create,i] = object_get_name(i)
+				second_level[command_1.get,i] = second_level[command_1.create,i] 
 				second_level[command_1.set,i] = second_level[command_1.create,i] // naughty of me to put this here as it breaks the layout but it is less code 
 				second_level[command_1.destroy,i] = second_level[command_1.create,i] // naughty of me to put this here as it breaks the layout but it is less code 
 				second_level[command_1.view,i] = second_level[command_1.create,i] // naughty of me to put this here as it breaks the layout but it is less code 

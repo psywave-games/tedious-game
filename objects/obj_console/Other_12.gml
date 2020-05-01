@@ -2,6 +2,7 @@
 
 
 switch (command_to_run) {
+	case command_1.get:
 	case command_1.set: 
 	case command_1.view: 
 	case command_1.destroy: 

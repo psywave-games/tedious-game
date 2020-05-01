@@ -18,7 +18,7 @@ self.yhead = y
 self.gravity = 1
 
 self.book_read = 0
-self.requirements = array_create(2, 100)
+self.requirements = array_create(2, 50)
 
 speak_install()
 

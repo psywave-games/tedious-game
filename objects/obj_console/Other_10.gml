@@ -41,7 +41,41 @@ if (text_part[0] == commands[command_1.create]) {
 			}
 		}
 	#endregion
-} else if (text_part[0] == commands[command_1.set] or text_part[0] == "edit") { 
+} else if (text_part[0] == commands[command_1.get]) {
+	#region GET
+	var parse_parts = array_length_1d(text_part)
+	var object_to_try_and_access = asset_get_index(text_part[1])
+		
+	if (parse_parts == 1) { // object doesnt exist 
+		temp_post_message = "We need to know what object for the variable"
+		event_user(1); // post message to the history 
+	} else {
+		if (parse_parts == 2 or text_part[2] == "") { // variable doesnt exist 
+			temp_post_message = "Please provide a variable to watch"
+			event_user(1); // post message to the history 
+		} else {
+			if (!object_exists(object_to_try_and_access)) { // object doesnt exist 
+				temp_post_message = "Unknown object"
+				event_user(1); // post message to the history 
+			} else {
+				if (instance_number(object_to_try_and_access) == 0) { // object doesnt exist 
+					temp_post_message = "Instance doesnt exist"
+					event_user(1); // post message to the history 
+				} else { // DO IT
+					
+					var new_value = variable_instance_get(object_to_try_and_access.id, string(other.text_part[2]))
+					temp_post_message = text_part[1] + "." + text_part[2] + ": "
+					temp_post_message += typeof(new_value) + ": "
+					temp_post_message += string(new_value)
+					event_user(1);
+				
+					command_done = true
+				}
+			}
+		}
+	}
+	#endregion
+}else if (text_part[0] == commands[command_1.set] or text_part[0] == "edit") { 
 	#region set
 
 		var parse_parts = array_length_1d(text_part)

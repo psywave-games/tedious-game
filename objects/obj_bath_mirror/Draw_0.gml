@@ -20,7 +20,7 @@ if (reflex) begin
 		draw_clear_alpha(c_black, 0);
 		
 		
-		p_draw(_xx, _yy, 0.8 * _sign, 0.8, 0.64)
+		p_draw_reflex(_xx, _yy, _sign, 0.64)
 	
 		surface_reset_target()
 	
