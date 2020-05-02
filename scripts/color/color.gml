@@ -3,10 +3,10 @@
 
 
 #region get arguments 
-    var color_r = color_get_red(argument0)
-    var color_g = color_get_green(argument0)
-    var color_b = color_get_blue(argument0)
-    var gray_scale = sad()
+    var color_r = color_get_red(argument[0])
+    var color_g = color_get_green(argument[0])
+    var color_b = color_get_blue(argument[0])
+    var gray_scale = argument_count > 1? argument[1]: sad()
 	var dark = gray_scale > 1? 0: 10
 #endregion
 

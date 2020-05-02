@@ -2,7 +2,7 @@
     "id": "5151a208-6f1c-4c9c-a09b-ae5a669d9728",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_batch_char1",
+    "name": "spr_batch_chair1",
     "For3D": false,
     "HTile": false,
     "VTile": false,

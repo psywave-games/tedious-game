@@ -572,6 +572,14 @@ switch argument[0] begin
 		return "Retirar a panela do fogão"
 	case msg.interact_energy_bordao:
 		return choose("Como refreeesca!", "nana do nana do guarana do ludovico!", "Bom de mais o guarana!")
+	case msg.tutorial_run:
+		return "Correr"
+	case msg.tutorial_move:
+		return "Mover-se"
+	case msg.tutorial_switch:
+		return "Alternar"
+	case msg.tutorial_interact:
+		return "Interagir"
 end
 
 return "#Error T_18_" + string(argument0)

@@ -249,6 +249,10 @@ enum msg {
 	interact_sleep_full,
 	interact_toilet_down,
 	interact_toilet_up,
-	interact_energy_bordao
+	interact_energy_bordao,
+	tutorial_run,
+	tutorial_move,
+	tutorial_switch,
+	tutorial_interact,
 }
 

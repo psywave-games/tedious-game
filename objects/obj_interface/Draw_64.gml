@@ -165,19 +165,21 @@ end
 #region INTERFACE MENU TUTORIAL
 else if game.app.state == fsm_game.menuTutorial begin	
 
-	//if not game.app.started then
-	//	draw_pic(spr_tuto_keyboard, 0, 256, 30, fa_right, fa_middle, 0x101010, 1, 3)
+	var _xx = display_get_gui_width()/3
+	var _yy = display_get_gui_height()/3
 	
+	draw_tutorial(make_color_rgb(129,183,117), t(msg.tutorial_run),  0)
+	draw_tutorial(make_color_rgb(91,106,120), t(msg.tutorial_move), 1)
+	draw_tutorial([make_color_rgb(119,130,188), make_color_rgb(222,185,50)], t(msg.tutorial_switch), 2)
+	draw_tutorial(make_color_rgb(189,91,76), t(msg.tutorial_interact), 3)
+
+	draw_sprite_align(spr_tuto_keyboard, 0, _xx, _yy, fa_left, fa_bottom, make_color_rgb(91,106,120), 1.0, 3)
+	draw_sprite_align(spr_tuto_keyboard, 1, _xx, _yy, fa_left, fa_bottom, make_color_rgb(119,130,188), 1.0, 3)
+	draw_sprite_align(spr_tuto_keyboard, 2, _xx, _yy, fa_left, fa_bottom, make_color_rgb(222,185,50), 1.0, 3)
+	draw_sprite_align(spr_tuto_keyboard, 3, _xx, _yy, fa_left, fa_bottom, make_color_rgb(129,183,117), 1.0, 3)
+	draw_sprite_align(spr_tuto_keyboard, 4, _xx, _yy, fa_left, fa_bottom, make_color_rgb(189,91,76), 1.0, 3)
+	draw_sprite_align(spr_tuto_gamepad, 00, _xx, _yy, fa_right, fa_bottom, c_white, 1.0, 1.2)
 	
-	//draw_gui( 0, 30, fa_left, fa_middle, "Interact", fnt_game0, c_yellow, 1)
-	//draw_gui( 0, 60, fa_left, fa_middle, "Switch", fnt_game0, c_green, 1)
-	//draw_gui( 0, 90, fa_left, fa_middle, "Move", fnt_game0, c_red, 1)
-	//draw_gui( 0, 120, fa_left, fa_middle, "Run", fnt_game0, c_blue, 1)
-	
-	//draw_pic(spr_tuto_keyboard, 1, 256, 30, fa_right, fa_middle, c_red, 1, 3)
-	//draw_pic(spr_tuto_keyboard, 2, 256, 30, fa_right, fa_middle, c_green, 1, 3)
-	//draw_pic(spr_tuto_keyboard, 3, 256, 30, fa_right, fa_middle, c_blue, 1, 3)
-	//draw_pic(spr_tuto_keyboard, 4, 256, 30, fa_right, fa_middle, c_yellow, 1, 3)
 	
 	draw_menu(0, t(msg.back), 0, 150)
 end

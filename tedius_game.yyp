@@ -607,6 +607,14 @@
             }
         },
         {
+            "Key": "428aeabe-e81c-4896-9df8-a93e70c42fa3",
+            "Value": {
+                "id": "cc4713bc-03d9-490c-af23-ca487ec6c882",
+                "resourcePath": "scripts\/draw_tutorial\/draw_tutorial.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "44bf6ee0-4c94-456f-8653-dcc5e32d1c4e",
             "Value": {
                 "id": "bebce433-62c2-4ec2-a935-2fb64ea1b645",
@@ -730,7 +738,7 @@
             "Key": "5151a208-6f1c-4c9c-a09b-ae5a669d9728",
             "Value": {
                 "id": "d08ee291-5727-46ad-932c-a679a3c39b2c",
-                "resourcePath": "sprites\/spr_batch_char1\/spr_batch_char1.yy",
+                "resourcePath": "sprites\/spr_batch_chair1\/spr_batch_chair1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1906,7 +1914,7 @@
             "Key": "cb426223-d289-4058-b204-7cdfc4027c95",
             "Value": {
                 "id": "66abc169-ef26-4eb4-b84b-d0c326d22bed",
-                "resourcePath": "sprites\/spr_batch_char0\/spr_batch_char0.yy",
+                "resourcePath": "sprites\/spr_batch_chair0\/spr_batch_chair0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2455,6 +2463,14 @@
             }
         },
         {
+            "Key": "f47ee109-986c-41a1-b12e-f9c2ff57bc40",
+            "Value": {
+                "id": "bab26322-6cf5-4fa1-a549-8be599a7e6cd",
+                "resourcePath": "sprites\/spr_tuto_gamepad\/spr_tuto_gamepad.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f48d56da-451e-46dc-ab76-770cdf4684a4",
             "Value": {
                 "id": "0a0012c5-c03a-4e1d-8f20-0de7b60cad50",
@@ -2656,6 +2672,7 @@
         "ab55a0e0-b5c7-4fcd-be5f-7922aa693c62",
         "aaa0ee36-b507-4673-ba19-400e485cc6ca",
         "d62ecc0e-32b7-4a95-92d6-0577ef09a6d9",
+        "428aeabe-e81c-4896-9df8-a93e70c42fa3",
         "d7237448-6e1d-4e26-a08c-fa067accacfe",
         "e574965a-1d21-466c-b583-5cfc17f7e877",
         "befe9efb-cebb-4c0d-b275-ae590b5ed3c4",

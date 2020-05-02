@@ -21,6 +21,7 @@ switch _av begin
 		
 	case fa_middle:
 		_yy += display_get_gui_height() / 2
+		break
 end
 #endregion
 

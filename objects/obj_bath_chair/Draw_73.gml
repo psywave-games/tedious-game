@@ -8,5 +8,5 @@ if game.app.player.state == fsm_player.sit
 		
 if game.app.player.state == fsm_player.piss
 	and game.app.player.in_mob == self.id
-	and not self.item_ready_poop then
+	and not self.item_ready_piss then
 		draw_mob_bar(self, self.x, self.y - 32, 5, "piss")
