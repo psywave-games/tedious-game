@@ -18,6 +18,7 @@ mute = false
 
 /// Canais de audio
 sound_fx = array_create(12, 0)
+index_fx = array_create(12, 0)
 sound_music = array_create(3, 0)
 
 /// Emissores de Audio

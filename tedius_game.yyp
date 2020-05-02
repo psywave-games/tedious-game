@@ -575,6 +575,14 @@
             }
         },
         {
+            "Key": "3ee13b87-6b12-42f7-902e-07ed12a87d90",
+            "Value": {
+                "id": "eea39637-7238-47a1-bf95-7ee9cfdb8a81",
+                "resourcePath": "scripts\/audio_stop\/audio_stop.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3f796cb2-db2d-4551-8435-10304cfd1e45",
             "Value": {
                 "id": "0665249f-75f3-4db1-8562-fc92f5e6c9ce",
@@ -1220,6 +1228,14 @@
                 "id": "7bed38bd-eb27-4d24-a0f4-cd1d985e9dd0",
                 "resourcePath": "scripts\/@draw_set_blend_mode\/draw_set_blend_mode.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "818e9160-8f93-4755-9d7d-5c4ceec91590",
+            "Value": {
+                "id": "c726b512-26e3-4523-a9b2-6b3c33606bc0",
+                "resourcePath": "sounds\/snd_music_2009\/snd_music_2009.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -2659,6 +2675,7 @@
         "541e5a20-2704-4273-84d2-0d42d4d2722e",
         "a3dc2e2f-75db-42fc-9309-5a83a41608f7",
         "8a2f1882-4d87-4c1f-9e3b-917b8e4cfab0",
+        "3ee13b87-6b12-42f7-902e-07ed12a87d90",
         "de2f671e-007d-44e7-89ca-c39e9a8a0f06",
         "30fed892-1072-4169-b688-03d62a891f50",
         "570fc426-8f35-4bc1-8b34-cb3a9eb674bd",

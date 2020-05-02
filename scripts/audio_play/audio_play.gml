@@ -23,9 +23,9 @@ for (var channel = 0; channel <= 12; channel++) begin
 		break
 end
 
-
+game.app.audio.index_fx[channel] = sound
 game.app.audio.sound_fx[channel] = audio_play_sound_on(game.app.audio.emitter[channel], sound, loop, channel)
-audio_emitter_position(game.app.audio.emitter[channel], xx, yy, 0)
+audio_emitter_position(game.app.audio.emitter[channel], xx, yy * 3, 0)
 audio_emitter_gain(game.app.audio.emitter[channel], gain_get(volume_fx))
 
 /// retornar id do audio
