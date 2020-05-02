@@ -15,6 +15,9 @@ else if self.state == fsm_player.sleep then
 
 else if self.state == fsm_player.drink then
 	exit
+	
+else if self.state == fsm_player.piss then
+	exit
 
 else if abs(self.axis_x) then
 	self.state = fsm_player.walk

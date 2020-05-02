@@ -2263,6 +2263,14 @@
             }
         },
         {
+            "Key": "e5e957b2-a190-4820-aaba-a9f35bd10fca",
+            "Value": {
+                "id": "6d794d19-a849-498c-a339-56c9d93854b4",
+                "resourcePath": "sprites\/spr_playerPoop0\/spr_playerPoop0.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e6be5a39-5b92-4e8b-8df6-da15c9ae1201",
             "Value": {
                 "id": "cfaf9186-b2c7-4e59-8c08-9ebc39199e36",

@@ -45,6 +45,7 @@ enum word {
 
 
 enum need {
+	sleep,
 	water,
 	food
 }
@@ -58,6 +59,7 @@ enum fsm_player {
 	dying,									/// Jogador está se matando	
 	drink,									/// Jogador está bebendo
 	sleep,									/// Jogador está dormindo
+	piss,									/// Jogador está mijando
 	sit										/// Jogador está sentado
 }
 
@@ -242,6 +244,10 @@ enum msg {
 	psy_coffe,
 	psy_soap,
 	psy_ramen,
-	interact_unmotivated
+	interact_unmotivated,
+	interact_light_rate,
+	interact_sleep_full,
+	interact_toilet_down,
+	interact_toilet_up
 }
 

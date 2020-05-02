@@ -5,7 +5,13 @@ var _look = 0
 with game.app.player begin 
 
 	#region LOOKING
-	if self.state == fsm_player.dying and image_index < 3 then
+	if self.state == fsm_player.sleep and speaking(self) then
+		_look = 14
+	
+	else if self.state == fsm_player.sleep then
+		_look = 0
+	
+	else if self.state == fsm_player.dying and image_index < 3 then
 		_look = 0
 	
 	else if self.state == fsm_player.dying then

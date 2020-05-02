@@ -248,7 +248,7 @@ if game.app.lang == msg.en begin
 		case msg.psy_computer:
 			return "computer"
 		case msg.interact_water_full:
-			return "i don't want to drink more water"
+			return "i don't want to drink more!"
 		case msg.interact_food_full:
 			return "I'm full"
 		case msg.interact_soon_down:
@@ -517,7 +517,7 @@ switch argument[0] begin
 	case msg.psy_computer:
 		return "computador"
 	case msg.interact_water_full:
-		return "eu nao quero mais beber agua"
+		return "eu nao quero mais beber!"
 	case msg.interact_food_full:
 		return "estou satisfeito"
 	case msg.interact_soon_down:

@@ -60,7 +60,12 @@ with game.app.player begin
 	switch self.state begin
 		
 		case fsm_player.sit:
-			draw_sprite_ext(spr_playerSit0, 0, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
+			/// sentado no vazo
+			if self.in_mob.object_index == obj_bath_chair then
+				draw_sprite_ext(spr_playerPoop0, 0, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
+			/// sentado em cadeiras normais	
+			else
+				draw_sprite_ext(spr_playerSit0, 0, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
 			break
 		
 		case fsm_player.sleep:
@@ -108,7 +113,7 @@ with game.app.player begin
 			break
 			
 		case fsm_player.sleep:
-			draw_sprite_ext(spr_playerIdle2, 0, _xx, _yy, _xscale, _yscale, 90, c_white, _alpha)
+			draw_sprite_ext(spr_playerIdle2, 0, _xx, _yy, _xscale, _yscale, p_head_angle(_xscale) + 90, c_white, _alpha)
 			break
 			
 		case fsm_player.dying:

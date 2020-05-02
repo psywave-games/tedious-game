@@ -10,8 +10,14 @@ switch self.state begin
 		break
 	
 	case fsm_player.sit:
-	case fsm_player.sleep:
-		y = yprevious
+	case fsm_player.sleep:	
+		speed = 0
+		image_speed = 0.1
+		self.x = in_mob.x
+		self.y = in_mob.y - abs(self.image_yscale * 2)
+		self.image_yscale = abs(self.image_yscale) * sign(in_mob.image_yscale)
+		self.image_xscale =	abs(self.image_xscale) * -sign(in_mob.image_xscale)
+		break
 		
 	case fsm_player.idle:
 		image_speed = 0.1
