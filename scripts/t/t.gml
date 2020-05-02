@@ -536,6 +536,42 @@ switch argument[0] begin
 		return "Manete:"
 	case msg.psy_joystick:
 		return "Controle"
+	case msg.psy_energy:
+		return "Guaraná Antarctica"
+	case msg.psy_coffe:
+		return "Café"
+	case msg.psy_soap:
+		return not irandom(1000)? "Sopa de Macaco": "Sopa"
+	case msg.psy_ramen:
+		return "Miojão"
+	case msg.interact_unmotivated:
+		return choose("Não estou afim de fazer isso agora!", "Estou cansado para isso!", "Já chega!")
+	case msg.interact_light_rate:
+		return choose("Sai desgraça eu quero dormir, poha!", "A hora que quiser apagar a luz estamos ai né", "Ata, esqueci a luz acesa", "Tenho que desligar essa merda!")
+	case msg.interact_sleep_full:
+		return not irandom(2000)? "Oxe Mainha, seria melhor dormir na rede mesmo!":
+			choose(t(msg.interact_unmotivated), "acabou meu sono!", "tenho que me levantar...", "bora sair dessa vida")
+	case msg.interact_toilet_down:
+		return "Levantar a tampa da privada"
+	case msg.interact_toilet_up:
+		return "Abaixar a tampa da privada"
+    case msg.interact_drink_energy:
+        return "Beber um " + t(msg.psy_energy)
+    case msg.interact_freezer_list:
+        return "Analizar o que tem na geladeira"
+    case msg.interact_freezer_emputy:
+		return not irandom(500)? "Vou transformar essa galadeira em uma caixa de som massa!":
+			(not irandom(10)? choose("Fridge made In venezuela", "Sumiu!! cade tete?"):"Essa geladeira esta vazia")
+	case msg.interact_pan_furnace_put:
+		return "Colocar Panela no fogão"
+	case msg.interact_soap_freezer_gap:
+		return "Retirar a sopa da galadeira"
+	case msg.interact_soap_freezer_put:
+		return "Colocar a sopa na geladeira"
+	case msg.interact_soap_furnace_gap:
+		return "Retirar a panela do fogão"
+	case msg.interact_energy_bordao:
+		return choose("Como refreeesca!", "nana do nana do guarana do ludovico!", "Bom de mais o guarana!")
 end
 
 return "#Error T_18_" + string(argument0)

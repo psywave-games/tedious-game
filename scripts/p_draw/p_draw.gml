@@ -38,6 +38,7 @@ with game.app.player begin
 			break
 	
 		case fsm_player.sit:
+		case fsm_player.piss:
 		case fsm_player.idle:
 			draw_sprite_ext(spr_playerIdle1, _image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
 			break
@@ -75,6 +76,10 @@ with game.app.player begin
 		case fsm_player.drink:
 		case fsm_player.dying:
 			draw_sprite_ext(spr_playerIdle0, 0, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
+			break
+			
+		case fsm_player.piss:
+			draw_sprite_ext(spr_playerPiss0, _image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
 			break
 			
 		case fsm_player.idle:
@@ -116,18 +121,16 @@ with game.app.player begin
 			draw_sprite_ext(spr_playerIdle2, 0, _xx, _yy, _xscale, _yscale, p_head_angle(_xscale) + 90, c_white, _alpha)
 			break
 			
-		case fsm_player.dying:
+		case fsm_player.dying:	
+		case fsm_player.walk:
 			draw_sprite_ext(spr_playerIdle2, 0, _xx, _yy, _xscale, _yscale, p_head_angle(_xscale), c_white, _alpha)
 			break
 
 	
 		case fsm_player.sit:
+		case fsm_player.piss:
 		case fsm_player.idle:
 			draw_sprite_ext(spr_playerIdle2, _image_index, _xx, _yy, _xscale, _yscale, p_head_angle(_xscale), c_white, _alpha)
-			break
-
-		case fsm_player.walk:
-			draw_sprite_ext(spr_playerWalk2, _image_index, _xx, _yy, _xscale, _yscale, p_head_angle(_xscale), c_white, _alpha)
 			break
 	end
 	#endregion

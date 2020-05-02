@@ -1,4 +1,4 @@
-#region SPEED MANIPULATION
+#region POS/SPEED MANIPULATION
 switch self.state begin
 
 	case fsm_player.drink:
@@ -7,6 +7,12 @@ switch self.state begin
 		
 	case fsm_player.dying:	
 		speed = 0
+		break
+	
+	case fsm_player.piss:
+		image_speed = 0
+		self.x = in_mob.x - (sign(image_xscale) * 6)
+		self.y = in_mob.y
 		break
 	
 	case fsm_player.sit:
@@ -47,8 +53,12 @@ end
 switch self.state begin
 
 	case fsm_player.drink:
-		if state == fsm_player.drink and image_index >= 9 then 
+		if state == fsm_player.drink and image_index >= 9 begin 
+			if in_mob == spr_item_monster then
+				speak(self, t(msg.interact_energy_bordao))
+		
 			self.state = fsm_player.idle
+		end
 		break
 		
 	case fsm_player.dying:	
@@ -59,6 +69,7 @@ switch self.state begin
 		break
 	
 	case fsm_player.sit:
+	case fsm_player.piss:
 	case fsm_player.sleep:
 		if game.app.input.key_interact and image_index != -1 begin
 			self.image_yscale = abs(self.image_yscale)

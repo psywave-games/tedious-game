@@ -248,6 +248,7 @@ enum msg {
 	interact_light_rate,
 	interact_sleep_full,
 	interact_toilet_down,
-	interact_toilet_up
+	interact_toilet_up,
+	interact_energy_bordao
 }
 
