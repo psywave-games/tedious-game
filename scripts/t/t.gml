@@ -580,6 +580,10 @@ switch argument[0] begin
 		return "Alternar"
 	case msg.tutorial_interact:
 		return "Interagir"
+	case msg.tutorial_about:
+		return "Após se ver em um lockdown forçado, devido à propagação da COVID-19, um adolescente depressivo se percebe distante do mundo e das pessoas que mais ama, dentre elas a sua namora. Em meio ao caos absoluto, o seu objetivo é ajudá-lo a passar tempo, para que que os níveis de tédio não fiquem muito altos, procurando formas de se entreter durante o confinamento. Com passar das horas, ele se vê cada vez mais infeliz diante da deplorável realidade. Como por fim a toda essa situação?"
+	case msg.tutorial_title:
+		return "Como Jogar?"
 end
 
 return "#Error T_18_" + string(argument0)

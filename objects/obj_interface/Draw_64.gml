@@ -101,7 +101,7 @@ end
 #region INTERFACE MENU DISPLAY
 else if game.app.state == fsm_game.menuWindow begin
 
-	var menu_resolution = string(view_wport[0]) + "x" + string(view_hport[0])
+	var menu_resolution = string(display_get_gui_width()) + "x" + string(display_get_gui_height())
 	var menu_proportion = game.app.render.name_ratio[game.app.render.mode_ratio]
 	var menu_fullscreen = fullscreen_get()
 	var menu_font_speed = game.app.render.font_speed
@@ -165,21 +165,48 @@ end
 #region INTERFACE MENU TUTORIAL
 else if game.app.state == fsm_game.menuTutorial begin	
 
+	draw_set_text_config( fnt_game0, make_color_rgb(62, 70, 80), 1.0, fa_middle, fa_top)
+	
+	/// instances positions
+	var _text = t(msg.tutorial_about)
+	var _middle = display_get_gui_width()/2
 	var _xx = display_get_gui_width()/3
 	var _yy = display_get_gui_height()/3
+	var _bottom = string_height_ext(_text, 32, _xx * 2)
 	
+	/// box text
+	draw_rectangle(
+		_middle - _xx - padding,
+		_yy/2 - padding, 
+		_middle + _xx + padding, 
+		_yy/2 + _bottom + padding, 
+		false
+	)
+	
+	/// draw text description
+	draw_set_alpha(0.8)
+	draw_set_color(c_white)
+	draw_text_ext(_middle, _yy/2, _text, 32, _xx * 2)
+	
+	/// draw text title
+	draw_set_text_config(lite()? fnt_game0: fnt_title, c_white, 1.0, fa_center, fa_top)
+	draw_text_transformed(_middle, padding * 3, t(msg.tutorial_title), 1.4, 1.4, 0)
+	
+	
+	/// boxtutorial
 	draw_tutorial(make_color_rgb(129,183,117), t(msg.tutorial_run),  0)
 	draw_tutorial(make_color_rgb(91,106,120), t(msg.tutorial_move), 1)
 	draw_tutorial([make_color_rgb(119,130,188), make_color_rgb(222,185,50)], t(msg.tutorial_switch), 2)
 	draw_tutorial(make_color_rgb(189,91,76), t(msg.tutorial_interact), 3)
 
+	/// keyboard/gamepad
 	draw_sprite_align(spr_tuto_keyboard, 0, _xx, _yy, fa_left, fa_bottom, make_color_rgb(91,106,120), 1.0, 3)
 	draw_sprite_align(spr_tuto_keyboard, 1, _xx, _yy, fa_left, fa_bottom, make_color_rgb(119,130,188), 1.0, 3)
 	draw_sprite_align(spr_tuto_keyboard, 2, _xx, _yy, fa_left, fa_bottom, make_color_rgb(222,185,50), 1.0, 3)
 	draw_sprite_align(spr_tuto_keyboard, 3, _xx, _yy, fa_left, fa_bottom, make_color_rgb(129,183,117), 1.0, 3)
 	draw_sprite_align(spr_tuto_keyboard, 4, _xx, _yy, fa_left, fa_bottom, make_color_rgb(189,91,76), 1.0, 3)
 	draw_sprite_align(spr_tuto_gamepad, 00, _xx, _yy, fa_right, fa_bottom, c_white, 1.0, 1.2)
-	
+		
 	
 	draw_menu(0, t(msg.back), 0, 150)
 end

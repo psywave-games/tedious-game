@@ -254,5 +254,7 @@ enum msg {
 	tutorial_move,
 	tutorial_switch,
 	tutorial_interact,
+	tutorial_about,
+	tutorial_title
 }
 
