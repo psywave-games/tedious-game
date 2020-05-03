@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description items
 
 item_install("fork", obj_food_cleaner, 1)
 item_install("knife", obj_food_cleaner, 1)
@@ -13,3 +12,4 @@ item_install("coffe", obj_food_freezer, -5)
 item_install("soap", obj_food_freezer, -30)
 item_install("beer", obj_food_freezer, 2)
 
+item_install("guitar", obj_guitar, -60)

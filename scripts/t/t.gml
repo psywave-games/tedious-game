@@ -498,6 +498,8 @@ switch argument[0] begin
 		return "Fim de Jogo!"
 	case msg.gameover_text:
 		return "Sinto muito, voce cumpriu sua jornada que, infelizmente, acaba aqui! Como devemos lembrar de voce?"
+	/// @todo add to credits
+	/// + Jordan Lima
 	case msg.credits:
 		return "IDEALIZADOR DO JOGO\nRodrigo Dornelles\n\n\nARTES E ANIMAÇÕES\nBernas Veroli Baianor\n\n\nMÚSICA\nFelipe Matheus\n\n\nPROGRAMADOR GERAL E UX\nRodrigo Dornelles\n\nPROGRAMADOR AUXILIAR E TRADUTOR\nRodrigo Oliveira\n\n\nTESTES DE JOGABILIDADE\nRodrigo Oliveira\n\nGAMEDESIGN E MAPA\nBernas Veroli Baianor\nRodrigo Dornelles\n\nDIRETOR DE CONTEUDO\nGabriel Philippe Martins\n\nORGANIZADOR DA GAMEJAM\nAndré Young\n\n\nAGRADECIMENTO A TODOS QUE TESTARAM \"O JOGO\"\nJulia Peron\nRobson Lima\nIgor Galindo\nLucas Coelho\nUbiratan Silva\nAdrian Klitzke\nJunio Teixeira\nCleyson Andrade\nCarlos Raimundo\nHenrique Marciano"
 	case msg.memorial:

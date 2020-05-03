@@ -40,9 +40,11 @@ with game.app.player begin
 		case fsm_player.sit:
 		case fsm_player.piss:
 		case fsm_player.idle:
+		case fsm_player.guitar_idle:
 			draw_sprite_ext(spr_playerIdle1, _image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
 			break
 
+		case fsm_player.guitar_walk:
 		case fsm_player.walk:
 			/// Correndo
 			if abs(hspeed) > 2 begin
@@ -82,10 +84,12 @@ with game.app.player begin
 			draw_sprite_ext(spr_playerPiss0, _image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
 			break
 			
+		case fsm_player.guitar_idle:
 		case fsm_player.idle:
 			draw_sprite_ext(spr_playerIdle0, _image_index, _xx, _yy, _xscale, _yscale, 0, c_white, _alpha)
 			break
 	
+		case fsm_player.guitar_walk:
 		case fsm_player.walk:
 			/// Correndo
 			if abs(hspeed) > 2 begin
@@ -108,6 +112,11 @@ with game.app.player begin
 			if self.in_mob == spr_item_monster then
 				p_draw_attach(x, y, spr_item_monster, color(color_verde_c))
 			break
+			
+		case fsm_player.guitar_walk:
+		case fsm_player.guitar_idle:
+			draw_sprite_ext(spr_guitar, 0, x, y, image_xscale, image_yscale, 315, make_color_rgb(irandom(255),irandom(255),irandom(255)), 1.0)	
+			break
 	end
 	#endregion
 	
@@ -123,6 +132,7 @@ with game.app.player begin
 			
 		case fsm_player.dying:	
 		case fsm_player.walk:
+		case fsm_player.guitar_walk:
 			draw_sprite_ext(spr_playerIdle2, 0, _xx, _yy, _xscale, _yscale, p_head_angle(_xscale), c_white, _alpha)
 			break
 
@@ -130,6 +140,7 @@ with game.app.player begin
 		case fsm_player.sit:
 		case fsm_player.piss:
 		case fsm_player.idle:
+		case fsm_player.guitar_idle:
 			draw_sprite_ext(spr_playerIdle2, _image_index, _xx, _yy, _xscale, _yscale, p_head_angle(_xscale), c_white, _alpha)
 			break
 	end

@@ -25,11 +25,13 @@ switch self.state begin
 		self.image_xscale =	abs(self.image_xscale) * -sign(in_mob.image_xscale)
 		break
 		
+	case fsm_player.guitar_idle:
 	case fsm_player.idle:
 		image_speed = 0.1
 		speed = 0
 		break
 		
+	case fsm_player.guitar_walk:
 	case fsm_player.walk:
 		/// se for movimentar para o lado contrario parar
 		if sign(hspeed) != sign(self.axis_x) then
@@ -102,6 +104,17 @@ if self.state == fsm_player.sit
 		game.app.interface.can_interact = true
 	end
 
+end
+else if self.state == fsm_player.guitar_walk 
+	or self.state == fsm_player.guitar_idle begin
+	
+	/// calling mob events
+	with obj_guitar begin
+		event_user(ev_interact_message)
+		event_user(ev_interact_using)
+		game.app.interface.message = self.message
+		game.app.interface.can_interact = true
+	end
 end
 #endregion
 

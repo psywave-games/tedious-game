@@ -60,7 +60,9 @@ enum fsm_player {
 	drink,									/// Jogador está bebendo
 	sleep,									/// Jogador está dormindo
 	piss,									/// Jogador está mijando
-	sit										/// Jogador está sentado
+	sit,									/// Jogador está sentado
+	guitar_idle,							/// Jogador está parado com o violão
+	guitar_walk								/// Jogador está andando o violão
 }
 
 

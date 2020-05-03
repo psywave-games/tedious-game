@@ -5,6 +5,10 @@ if game.app.input.key_moonwalk and state == fsm_player.walk and abs(hspeed) < 2 
 
 p_draw(x, y, image_xscale, image_yscale, 1.0)
 
+//if state == fsm_player.guitar_idle 
+//	or state == fsm_player.guitar_walk then
+//		draw_text(x, yhead - 4, "[G]")
+
 #region PARTICLES
 
 /// Jogador Mijando
