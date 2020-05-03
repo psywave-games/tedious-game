@@ -11,7 +11,8 @@
         "6634e5f4-0f60-446b-a82f-97afd2b37115",
         "7db26877-c6c3-4a81-afde-900e20d3bf60",
         "cb426223-d289-4058-b204-7cdfc4027c95",
-        "5151a208-6f1c-4c9c-a09b-ae5a669d9728"
+        "5151a208-6f1c-4c9c-a09b-ae5a669d9728",
+        "1f8e5f3c-5cf7-4ece-aa3d-fc20e5f99f54"
     ],
     "filterType": "GMSprite",
     "folderName": "bathroom",

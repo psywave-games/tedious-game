@@ -343,6 +343,14 @@
             }
         },
         {
+            "Key": "1f8e5f3c-5cf7-4ece-aa3d-fc20e5f99f54",
+            "Value": {
+                "id": "9c595f7e-38c9-4070-aa73-8411d9aa4fef",
+                "resourcePath": "sprites\/spr_batch_chair2\/spr_batch_chair2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2101cd00-36c7-4c72-996f-094277e46a5b",
             "Value": {
                 "id": "8952665b-cf4d-4bdc-bac9-609fd928d9aa",
@@ -927,6 +935,14 @@
             }
         },
         {
+            "Key": "64c17b75-1fbb-4d65-b39c-28b6a4cc2ed2",
+            "Value": {
+                "id": "283e2d9e-afca-4caf-9f07-17392c510050",
+                "resourcePath": "sprites\/song\/song.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "653643f6-0c08-423a-baef-03293a1a21b4",
             "Value": {
                 "id": "33bced04-ae30-4249-9d31-d2d7622b610e",
@@ -1407,6 +1423,14 @@
             }
         },
         {
+            "Key": "97828e8d-a655-46fb-8d81-3a9c05737cf6",
+            "Value": {
+                "id": "87cc578c-f334-4394-8e41-6fbba1b761c8",
+                "resourcePath": "scripts\/part_song_stream\/part_song_stream.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "981768a6-d127-4187-8ea5-a0648cb8f944",
             "Value": {
                 "id": "1880090f-e91f-4b55-9a1e-5fa69a7fbf2c",
@@ -1583,6 +1607,14 @@
             }
         },
         {
+            "Key": "aa6b3cd8-b367-47a8-b803-75ea5ee63d65",
+            "Value": {
+                "id": "486e2ca2-e3a5-4a21-8f4d-0c3fd3092cd4",
+                "resourcePath": "views\/aa6b3cd8-b367-47a8-b803-75ea5ee63d65.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "aaa0ee36-b507-4673-ba19-400e485cc6ca",
             "Value": {
                 "id": "f7c07ee8-23cf-4443-b16c-46c0d6f99c62",
@@ -1668,6 +1700,14 @@
                 "id": "cf25282b-c593-4ee6-b5e4-169477814300",
                 "resourcePath": "sprites\/spr_bath_mirror1\/spr_bath_mirror1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b0a7147e-0f66-42c0-9c42-66642df9facb",
+            "Value": {
+                "id": "a8e8a651-b9ee-417b-a15e-a8311f3dd8ba",
+                "resourcePath": "scripts\/part_song_install\/part_song_install.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2713,8 +2753,10 @@
         "fb2df7eb-7ada-464b-b23f-5838a0be209b",
         "2f24eef4-21fb-4d2a-ab91-f73a38d783a5",
         "0fe7a4c1-7d99-4a23-b881-c2868a0d0aed",
+        "b0a7147e-0f66-42c0-9c42-66642df9facb",
         "9e253f25-08bd-45a9-8ee4-a0443c116751",
         "a65276c9-7aba-4cd5-8acb-371172faa255",
+        "97828e8d-a655-46fb-8d81-3a9c05737cf6",
         "52528d71-51ab-4359-b41d-51a4cfcabb10",
         "4d2d654b-b8ac-4ec3-87b1-5eefef096337",
         "064103ea-7d9a-43b3-84eb-11bed7e17381",

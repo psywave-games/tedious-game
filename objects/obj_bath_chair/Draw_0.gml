@@ -3,3 +3,5 @@ if state == fsm_mob.running then
 	
 else 
 	draw(spr_batch_chair0, image_blend)
+	
+layer_sprite_blend(front_sprite, color(image_blend))

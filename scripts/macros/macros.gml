@@ -257,6 +257,8 @@ enum msg {
 	tutorial_switch,
 	tutorial_interact,
 	tutorial_about,
-	tutorial_title
+	tutorial_title,
+	interact_rate_refreshed,
+	interact_music_stop
 }
 

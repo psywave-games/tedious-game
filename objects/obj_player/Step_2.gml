@@ -70,7 +70,7 @@ switch self.state begin
 		end
 		break
 	
-	case fsm_player.sit:
+	case fsm_player.sit:		
 	case fsm_player.piss:
 	case fsm_player.sleep:
 		if game.app.input.key_interact and image_index != -1 begin
@@ -96,7 +96,6 @@ ylooking = yhead + (game.app.input.key_axis_y * abs(y - yhead) * 2)
 if self.state == fsm_player.sit
 	or self.state == fsm_player.sleep begin
 	
-	/// calling mob events
 	with self.in_mob begin
 		event_user(ev_interact_message)
 		event_user(ev_interact_using)
@@ -108,8 +107,16 @@ end
 else if self.state == fsm_player.guitar_walk 
 	or self.state == fsm_player.guitar_idle begin
 	
-	/// calling mob events
 	with obj_guitar begin
+		event_user(ev_interact_message)
+		event_user(ev_interact_using)
+		game.app.interface.message = self.message
+		game.app.interface.can_interact = true
+	end
+end
+else if self.state == fsm_player.piss begin
+
+	with obj_bath_chair begin
 		event_user(ev_interact_message)
 		event_user(ev_interact_using)
 		game.app.interface.message = self.message
