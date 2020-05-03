@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "0649b598-512e-415f-8a20-e2503bb210e7",
+            "Value": {
+                "id": "6c4aeb28-5066-463d-9589-3bb8c6d3c85e",
+                "resourcePath": "views\/0649b598-512e-415f-8a20-e2503bb210e7.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "06a6c867-3db3-4a0e-8a1b-a1fc3148419f",
             "Value": {
                 "id": "70dbb28d-ab90-4725-b70c-2ff066c40f50",
@@ -2340,6 +2348,14 @@
                 "id": "6d794d19-a849-498c-a339-56c9d93854b4",
                 "resourcePath": "sprites\/spr_playerPoop0\/spr_playerPoop0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e641a32a-f9a1-434f-bba1-a62a5bcec9a7",
+            "Value": {
+                "id": "25aba7db-11eb-4a3d-bdd3-5d4e83f690d2",
+                "resourcePath": "objects\/obj_game_space_invanders\/obj_game_space_invanders.yy",
+                "resourceType": "GMObject"
             }
         },
         {

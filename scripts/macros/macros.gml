@@ -82,7 +82,8 @@ enum fsm_game {
 	play,									/// STATE: Gameplay
 	over,									/// STATE: Fim de jogo
 	credits,								/// STATE: Creditos finais
-	waitFocus								/// STATE: Wait Focus
+	waitFocus,								/// STATE: Wait Focus
+	minigame
 }
 
 
