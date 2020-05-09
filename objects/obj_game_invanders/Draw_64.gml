@@ -1,7 +1,12 @@
 /// @description game script
 var enemys_death = 0
+var enemy = 0
+var enemy_min_x = 0xFF
+var enemy_min_y = 0xFF
+var enemy_max_x = 0
+var enemy_max_y = 0
 
-#region DRAW SCREEN
+#region SCREEN DRAW
 draw_set_color(c_black)
 draw_rectangle(0,0,480,240,false)
 
@@ -9,7 +14,7 @@ draw_set_color(c_white)
 draw_rectangle(0,0,480,240,true)
 #endregion
 
-#region DRAW MESSAGE
+#region MESSAGE DRAW
 if invaders_direction >= 4 begin
 	var gameover = false
 	
@@ -35,13 +40,31 @@ if invaders_direction >= 4 begin
 end
 #endregion
 
-#region DRAW ENEMYS
-else begin
+#region PLAYER [MOVE&DRAW]
+/// set player pos
+player_pos = clamp(player_pos + game.app.input.key_axis_x * 8, 8, 472)
+
+/// render player
+draw_set_color(c_yellow)
+draw_poly(veh_player, [4,4], player_pos, 230, 1.6, 1.6, 270, true)
+#endregion
+
+#region SHOOT [DRAW]
+if fire_pos_y >=  0 begin
+	draw_set_color(c_yellow)
+	draw_line(
+		fire_pos_x,
+		fire_pos_y - 8,
+		fire_pos_x,
+		fire_pos_y,
+	)
+end
+#endregion
+
+#region ENEMYS [DESTROY&DRAW]
+if invaders_direction < 4 begin
 	draw_set_color(c_green)
-	var enemy = 0
-	var enemy_min_x = 0xFF
-	var enemy_max_x = 0
-	var enemy_max_y = 0
+	
 	for (var xx = 1; xx <= 6; xx++) begin
 		for (var yy = 1; yy <= 3; yy++) begin
 			/// coordinates
@@ -60,65 +83,44 @@ else begin
 	
 			/// render enemy
 			if invaders_live[enemy] begin
-				draw_rectangle(xx0, yy0, xx1, yy1, false)
-			
-				/// first enemy
-				if xx0 <= enemy_min_x then
-					enemy_min_x = xx0 - 1
-		
-				/// lasy enemy
-				if xx1 >= enemy_max_x then
-					enemy_max_x = xx1 + 1
-		
-				/// last enemy
-				if yy1 >= enemy_max_y then
-					enemy_max_y = yy1 + 1
+				/// anim 0
+				if current_second % 2 begin
+					draw_poly(
+						invader0, 
+						[8,8],
+						invaders_x + (xx * 32), 
+						invaders_y + (yy * 32), 
+						1, 
+						1, 
+						0, 
+						true
+					)
+				end
+				/// anim 1
+				else begin
+					draw_poly(
+						invader1, 
+						[8,8],
+						invaders_x + (xx * 32), 
+						invaders_y + (yy * 32), 
+						1, 
+						1, 
+						0, 
+						true
+					)
+				end
+				
+				/// get [min&max] [x&y]
+				enemy_min_x = min(enemy_min_x, xx0)
+				enemy_min_y = min(enemy_min_y, yy0)
+				enemy_max_x = max(enemy_max_x, xx1)
+				enemy_max_y = max(enemy_max_y, yy1)
 				
 			end else 
 				enemys_death += 1
 			
 			enemy += 1
 		end
-	end
-end
-#endregion
-
-#region DRAW PLAYER
-/// set player pos
-player_pos = clamp(player_pos + game.app.input.key_axis_x * 8, 8, 472)
-
-/// render player
-draw_set_color(c_yellow)
-draw_triangle(
-	player_pos - 8,
-	238,
-	player_pos,
-	222,
-	player_pos + 8,
-	238,
-	false
-)
-#endregion
-
-#region DRAW PLAYER FIRE
-if fire_pos_y >= 0 begin
-fire_pos_y -= 8
-draw_set_color(c_yellow)
-draw_rectangle(
-	fire_pos_x,
-	fire_pos_y - 8,
-	fire_pos_x,
-	fire_pos_y,
-	false
-)
-end
-#endregion
-
-#region SHOOT PLAYER FIRE
-if abs(game.app.input.key_axis_y) or game.app.input.key_fire begin
-	if fire_pos_y < 0 begin
-		fire_pos_x = player_pos
-		fire_pos_y = 238
 	end
 end
 #endregion
@@ -133,7 +135,7 @@ switch invaders_direction begin
 	/// esquerda para direita
 	case 0:
 		if enemy_max_x < 480 then
-			invaders_x += round((6+enemys_death+(myscore/90))/5)	
+			invaders_x += round((6+enemys_death+(myscore/18))/5)	
 		else 
 			invaders_direction = 1
 		break
@@ -150,7 +152,7 @@ switch invaders_direction begin
 	/// direita para esquerda
 	case 2:
 		if enemy_min_x > 0 then
-			invaders_x -= round((6+enemys_death+(myscore/90))/5)	
+			invaders_x -= round((6+enemys_death+(myscore/18))/5)	
 		else
 			invaders_direction = 3
 		break
@@ -170,6 +172,23 @@ switch invaders_direction begin
 		break
 	
 end
+#endregion
+
+#region SHOOT MOVE
+/// spawn shoot
+if game.app.input.key_fire begin
+	if fire_pos_y < 0 begin
+		fire_pos_x = player_pos
+		fire_pos_y = 238
+	end
+end
+
+/// shoot move
+fire_pos_y -= 16
+
+/// reset fire after pass enemy
+if fire_pos_y < enemy_min_y + 8 then
+	fire_pos_y = -1 
 #endregion
 
 #region RESET GAME

@@ -130,7 +130,7 @@ end
 
 #region PLAYER DRAW
 draw_set_color(c_yellow)
-draw_poly(veh_player, [3,3], player_x, player_y, 1, 1, player_direction, true)
+draw_poly(veh_player, [4,4], player_x, player_y, 1, 1, player_direction, true)
 #endregion
 
 #region ASTEROID MOVIMENT
