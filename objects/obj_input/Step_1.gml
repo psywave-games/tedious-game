@@ -97,6 +97,8 @@ if self.hover then
 key_menu_open = false
 key_menu_esc = false
 key_menu_enter = false
+key_axis_x = 0
+key_axis_y = 0
 key_menu_go = 0
 key_menu_in = 0
 hover = game.app.interface.hover
@@ -108,6 +110,10 @@ end
 
 else if game.app.state == fsm_game.play begin
 	key_menu_open = _keyd_esc
+end
+
+else if game.app.state == fsm_game.videogamePlay begin
+	key_menu_esc = _keyd_esc
 end
 
 else if game.app.state == fsm_game.cutscene begin
@@ -160,10 +166,7 @@ end
 
 #region GAMEPLAY
 
-key_axis_x = 0
-key_axis_y = 0
-
-if game.app.state = fsm_game.play begin
+if game.app.state == fsm_game.play begin
 	key_axis_x = _key_righ - _key_left
 	key_axis_y = _key_down - _key_up
 	key_axis_switch = _keyd_ord_e - _keyd_ord_q
@@ -185,8 +188,16 @@ if game.app.state = fsm_game.play begin
 		key_moonwalk |= _gamepad_axis_m
 	end
 end
-
 #endregion
+
+#region VIDEOGAME
+if  game.app.state == fsm_game.videogamePlay begin
+	key_axis_x = _key_righ - _key_left
+	key_axis_y = _key_up - _key_down 
+	key_fire = _keyd_ord_f
+end
+#endregion
+
 
 #region INPUTEXT GAMEOVER
 if game.app.state == fsm_game.over begin

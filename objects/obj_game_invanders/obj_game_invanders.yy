@@ -2,7 +2,7 @@
     "id": "e641a32a-f9a1-434f-bba1-a62a5bcec9a7",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_game_space_invanders",
+    "name": "obj_game_invanders",
     "eventList": [
         {
             "id": "ac609aa3-c0a6-44dd-8701-17444eb291b5",
@@ -23,12 +23,22 @@
             "enumb": 64,
             "eventtype": 8,
             "m_owner": "e641a32a-f9a1-434f-bba1-a62a5bcec9a7"
+        },
+        {
+            "id": "f179fb41-78bc-4900-be9c-af832f9056f0",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 24,
+            "eventtype": 7,
+            "m_owner": "e641a32a-f9a1-434f-bba1-a62a5bcec9a7"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
-    "persistent": false,
+    "persistent": true,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
     "physicsFriction": 0.2,
@@ -44,5 +54,5 @@
     "properties": null,
     "solid": false,
     "spriteId": "00000000-0000-0000-0000-000000000000",
-    "visible": true
+    "visible": false
 }

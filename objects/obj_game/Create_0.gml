@@ -131,4 +131,13 @@ global.console = instance_create_layer(x,y, "Instances", obj_console)
 
 #endregion
 
+#region INIT VIDEOGAMES
+self.videogames = [
+	instance_create_layer(x,y, "Instances", obj_game_asteroids),
+	instance_create_layer(x,y, "Instances", obj_game_invanders)
+]
+
+self.select = 0
+#endregion
+
 event_user(ev_init)

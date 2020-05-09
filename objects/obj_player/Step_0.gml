@@ -1,4 +1,7 @@
-if self.state == fsm_player.none then
+if game.app.state != fsm_game.play then
+	exit 
+	
+else if self.state == fsm_player.none then
 	exit
 
 else if self.state == fsm_player.died then

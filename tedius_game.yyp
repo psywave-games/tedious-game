@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "088133a1-3c1c-43c9-b7f3-43805d13b414",
+            "Value": {
+                "id": "46590c7f-ee62-48e9-a6e5-df017d2fc33e",
+                "resourcePath": "objects\/obj_game_asteroids\/obj_game_asteroids.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "09663c49-4f3a-4aed-b969-c49e1711afdf",
             "Value": {
                 "id": "a63c246e-478d-4ecf-89e6-f080cfd84059",
@@ -300,6 +308,14 @@
                 "id": "6623f0e1-cc58-4c86-9fe4-974294cfaeab",
                 "resourcePath": "objects\/obj_door0\/obj_door0.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "19763150-b43f-43cc-ba66-decb0e403942",
+            "Value": {
+                "id": "d872bb9a-02a5-4ba6-af84-26eb5e8f79a3",
+                "resourcePath": "scripts\/draw_poly\/draw_poly.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -2354,7 +2370,7 @@
             "Key": "e641a32a-f9a1-434f-bba1-a62a5bcec9a7",
             "Value": {
                 "id": "25aba7db-11eb-4a3d-bdd3-5d4e83f690d2",
-                "resourcePath": "objects\/obj_game_space_invanders\/obj_game_space_invanders.yy",
+                "resourcePath": "objects\/obj_game_invanders\/obj_game_invanders.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2766,6 +2782,7 @@
         "8936c2b3-5c95-449e-b7f5-ff82f01528b9",
         "a2019d6d-abec-4a37-9532-c8c21f0e9393",
         "06255721-29a1-4c4c-96bf-bb41837cd4f7",
+        "19763150-b43f-43cc-ba66-decb0e403942",
         "fb2df7eb-7ada-464b-b23f-5838a0be209b",
         "2f24eef4-21fb-4d2a-ab91-f73a38d783a5",
         "0fe7a4c1-7d99-4a23-b881-c2868a0d0aed",

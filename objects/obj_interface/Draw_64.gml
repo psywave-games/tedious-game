@@ -274,7 +274,7 @@ else if game.app.state == fsm_game.videogameMain begin
 		_middle + 32,
 		true	
 	)
-	draw_text(_xx3, _middle + 48, t(msg.menu_videogame_game2))
+	draw_text(_xx3, _middle + 48, t(msg.menu_videogame_game3))
 	
 end
 #endregion

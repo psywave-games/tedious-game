@@ -266,9 +266,26 @@ else if game.app.state == fsm_game.videogameMain and game.app.input.key_menu_ent
 		case 0:
 			state_back(game.app)
 			break
+			
+		/// reset atual game
+		case 2:
+			with game.app.videogames[clamp(game.app.select, 0, array_length_1d(game.app.videogames) -1)] begin
+				event_user(ev_mygame_restart)
+			end
+			state_set(game.app, fsm_game.videogamePlay)
+			break
 		
-
-
+		/// play asteroids (game 0)
+		case 3:
+			game.app.select = 0
+			state_set(game.app, fsm_game.videogamePlay)
+			break
+			
+		/// play space invaders (game1)
+		case 4:
+			game.app.select = 1
+			state_set(game.app, fsm_game.videogamePlay)
+			break
 	end
 end
 #endregion

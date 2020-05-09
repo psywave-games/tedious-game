@@ -107,7 +107,7 @@ end
 #endregion
 
 #region SHOOT PLAYER FIRE
-if abs(game.app.input.key_axis_y) or game.app.input.key_interact begin
+if abs(game.app.input.key_axis_y) or game.app.input.key_fire begin
 	if fire_pos_y < 0 begin
 		fire_pos_x = player_pos
 		fire_pos_y = 238
@@ -166,10 +166,7 @@ end
 
 #region RESET GAME
 if invaders_direction > (room_speed * 2) begin
-	invaders_x = 0
-	invaders_y = 0
-	invaders_direction = 0
-	invaders_live = array_create(18, true)
+	event_user(ev_mygame_restart)
 	
 	/// change dificult
 	if not gameover then
