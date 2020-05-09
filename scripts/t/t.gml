@@ -591,7 +591,30 @@ switch argument[0] begin
 			choose("aliviado!", "agora sim!", "nao aguentava mais!", "estou bem melhor agora!", "tranquilao!") 
 	case msg.interact_music_stop:
 		return "parar de tocar musica"
-
+	case msg.menu_videogame_name:
+		return "Obsolete VGN 4"
+	case msg.menu_videogame_option:
+		return "Opções"
+	case msg.menu_videogame_reset:
+		return "Reiniciar"
+	case msg.menu_videogame_game1:
+		return "Asteróides"
+	case msg.menu_videogame_game2:
+		return "Invasores do Espaço"
+	case msg.menu_videogame_game3:
+		return "Torres da Danki"
+	case msg.menu_videogame_game4:
+		return ""
+	case msg.menu_videogame_game5:
+		return ""
+	case msg.menu_videogame_game6:
+		return ""
+	case msg.menu_videogame_game7:
+		return ""
+	case msg.menu_videogame_game8:
+		return ""
+	case msg.menu_videogame_game9:
+		return ""
 end
 
 return "#Error T_18_" + string(argument0)

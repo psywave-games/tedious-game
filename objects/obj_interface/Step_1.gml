@@ -60,6 +60,10 @@ else if abs (game.app.input.key_menu_go) begin
 		case fsm_game.menuAudio:
 			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 3)
 			break
+			
+		case fsm_game.videogameMain:
+			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 5)
+			break
 	end
 end
 #endregion
@@ -251,6 +255,20 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuAudi
 		/// voltar para o menu
 		case 3:
 			state_back( game.app )
+	end
+end
+#endregion
+
+#region SET VIDEOGAME MENU MAIN
+else if game.app.state == fsm_game.videogameMain and game.app.input.key_menu_enter begin
+	switch select begin
+		/// menu voltar
+		case 0:
+			state_back(game.app)
+			break
+		
+
+
 	end
 end
 #endregion

@@ -83,7 +83,9 @@ enum fsm_game {
 	over,									/// STATE: Fim de jogo
 	credits,								/// STATE: Creditos finais
 	waitFocus,								/// STATE: Wait Focus
-	minigame
+	videogameMain,							/// STATE: Menu Principal/Pause VIDEOGAME
+	videogameMenu,							/// STATE: Menu de Opções VIDEOGAME
+	videogamePlay							///	STATE: Gameplay VIDEOGAME
 }
 
 
@@ -260,6 +262,21 @@ enum msg {
 	tutorial_about,
 	tutorial_title,
 	interact_rate_refreshed,
-	interact_music_stop
+	interact_music_stop,
+	menu_videogame_name,
+	menu_videogame_reset,
+	menu_videogame_game1,
+	menu_videogame_game2,
+	menu_videogame_game3,
+	menu_videogame_game4,
+	menu_videogame_game5,
+	menu_videogame_game6,
+	menu_videogame_game7,
+	menu_videogame_game8,
+	menu_videogame_game9,
+	menu_videogame_option,
+	menu_videogame_option_color,
+	menu_videogame_option_outline,
+	menu_videogame_option_volume
 }
 

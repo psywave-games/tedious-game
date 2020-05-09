@@ -127,12 +127,19 @@ else if game.app.state == fsm_game.menuMain
 	or game.app.state == fsm_game.menuOptions
 	or game.app.state == fsm_game.menuGraphic 
 	or game.app.state == fsm_game.menuAudio
-	or game.app.state == fsm_game.menuWindow begin 
+	or game.app.state == fsm_game.menuWindow
+	or game.app.state == fsm_game.videogameMenu begin
 	
 	key_menu_esc = _keyd_esc
 	key_menu_enter = _keyd_enter
 	key_menu_go = _keyd_down - _keyd_up
 	key_menu_in = _keyd_righ - _keyd_left + _keyd_enter + _mouse_axis
+end
+
+else if game.app.state == fsm_game.videogameMain begin
+	key_menu_esc = _keyd_esc
+	key_menu_enter = _keyd_enter + _mouse_axis
+	key_menu_go = _keyd_righ - _keyd_left + (_keyd_down - _keyd_up) * 3
 end
 
 else if game.app.state == fsm_game.lang begin 
@@ -149,7 +156,6 @@ else if game.app.state == fsm_game.waitFocus then
 else if game.app.state == fsm_game.menuTutorial begin
 	key_menu_esc = _keyd_esc or _keyd_enter
 end
-
 #endregion
 
 #region GAMEPLAY

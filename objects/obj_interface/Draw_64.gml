@@ -190,7 +190,7 @@ else if game.app.state == fsm_game.menuTutorial begin
 	
 	/// draw text title
 	draw_set_text_config(lite()? fnt_game0: fnt_title, c_white, 1.0, fa_center, fa_top)
-	draw_text_transformed(_middle, padding * 3, t(msg.tutorial_title), 1.4, 1.4, 0)
+	draw_text_transformed(_middle, padding * 4, t(msg.tutorial_title), 1.4, 1.4, 0)
 	
 	
 	/// boxtutorial
@@ -209,6 +209,73 @@ else if game.app.state == fsm_game.menuTutorial begin
 		
 	
 	draw_menu(0, t(msg.back), 0, 150)
+end
+#endregion
+
+#region INTERFACE VIDEOGAME MENU [MAIN|SELECT]
+else if game.app.state == fsm_game.videogameMain begin
+
+	var _xx =  display_get_gui_width()/8
+	var _xx0 = gui_get_x_align(_xx * -2, fa_center)
+	var _xx3 = gui_get_x_align(_xx * 2, fa_center)
+	var _center = display_get_gui_width()/2
+	var _middle = display_get_gui_height()/2
+	
+	/// title videogame
+	draw_set_text_config(lite()? fnt_game0: fnt_title, c_white, 1.0, fa_center, fa_top)
+	draw_text_transformed(_center, padding * 4, t(msg.menu_videogame_name), 1.4, 1.4, 0)
+	
+	/// Configurar Textos da Interface
+	draw_set_text_config(fnt_game0, c_white, 1.0, fa_center, fa_top)
+	
+	/// Menu voltar
+	draw_set_alpha(select == 0? 1: 0.64)
+	mouse_select(_xx0, _middle -128, t(msg.back), 0)
+	draw_text(_xx0, _middle - 128, t(msg.back))
+	
+	/// Menu Opções
+	draw_set_alpha(select == 1? 1: 0.64)
+	mouse_select(_center, _middle -128, t(msg.menu_videogame_option), 1)
+	draw_text(_center, _middle - 128, t(msg.menu_videogame_option))
+	
+	/// Menu Reiniciar
+	draw_set_alpha(select == 2? 1: 0.64)
+	mouse_select(_xx3, _middle - 128, t(msg.menu_videogame_reset), 2)
+	draw_text(_xx3, _middle - 128, t(msg.menu_videogame_reset))		
+	
+	/// jogo da esquerda (ASTEROIDS)
+	draw_set_alpha(select == 3? 1: 0.64)
+	draw_rectangle(
+		_xx0 - 64,
+		_middle -32,
+		_xx0 + 64,
+		_middle + 32,
+		true	
+	)
+	draw_text(_xx0, _middle + 48, t(msg.menu_videogame_game1))
+	
+	/// jogo do meio (Space Invaders)
+	draw_set_alpha(select == 4? 1: 0.64)
+	draw_rectangle(
+		_center - 64,
+		_middle -32,
+		_center + 64,
+		_middle + 32,
+		true	
+	)
+	draw_text(_center, _middle + 48, t(msg.menu_videogame_game2))
+	
+	/// jogo da esquerda (Danki Towers)
+	draw_set_alpha(select == 5? 1: 0.64)
+	draw_rectangle(
+		_xx3 - 64,
+		_middle -32,
+		_xx3 + 64,
+		_middle + 32,
+		true	
+	)
+	draw_text(_xx3, _middle + 48, t(msg.menu_videogame_game2))
+	
 end
 #endregion
 
