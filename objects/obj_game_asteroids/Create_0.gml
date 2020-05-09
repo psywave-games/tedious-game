@@ -1,3 +1,6 @@
+
+myscore = 0
+
 player_x =    240
 player_y =    120
 player_hspeed = 0

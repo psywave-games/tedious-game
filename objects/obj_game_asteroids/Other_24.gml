@@ -1,6 +1,8 @@
 /// @description ev_mygame_restart
+/// resetar escore
+myscore = 0
 
-/// reiniciar variaveis do player
+/// resetar variaveis do player
 player_x =    240
 player_y =    120
 player_hspeed = 0

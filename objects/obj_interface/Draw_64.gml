@@ -190,7 +190,7 @@ else if game.app.state == fsm_game.menuTutorial begin
 	
 	/// draw text title
 	draw_set_text_config(lite()? fnt_game0: fnt_title, c_white, 1.0, fa_center, fa_top)
-	draw_text_transformed(_middle, padding * 4, t(msg.tutorial_title), 1.4, 1.4, 0)
+	draw_text(_middle, padding * 4, t(msg.tutorial_title))
 	
 	
 	/// boxtutorial
@@ -215,15 +215,25 @@ end
 #region INTERFACE VIDEOGAME MENU [MAIN|SELECT]
 else if game.app.state == fsm_game.videogameMain begin
 
+	draw_set_text_config(lite()? fnt_game0: fnt_title, c_white, 1.0, fa_center, fa_top)
+	
+	var _title = t(msg.menu_videogame_name)
 	var _xx =  display_get_gui_width()/8
 	var _xx0 = gui_get_x_align(_xx * -2, fa_center)
 	var _xx3 = gui_get_x_align(_xx * 2, fa_center)
 	var _center = display_get_gui_width()/2
 	var _middle = display_get_gui_height()/2
+	var _yysubtitle = string_height(_title) + (padding * 4)
+	var _score = 0
 	
+	/// get global score
+	for (var i = 0; i < array_length_1d(game.app.videogames); i++) begin
+		_score += variable_instance_get(game.app.videogames[i], "myscore")
+	end
+		
 	/// title videogame
-	draw_set_text_config(lite()? fnt_game0: fnt_title, c_white, 1.0, fa_center, fa_top)
-	draw_text_transformed(_center, padding * 4, t(msg.menu_videogame_name), 1.4, 1.4, 0)
+	draw_text(_center, padding * 4, _title)
+	draw_text_transformed(_center, _yysubtitle, "score: " + score_get_string(_score), 0.28, 0.28, 0)
 	
 	/// Configurar Textos da Interface
 	draw_set_text_config(fnt_game0, c_white, 1.0, fa_center, fa_top)
@@ -276,6 +286,22 @@ else if game.app.state == fsm_game.videogameMain begin
 	)
 	draw_text(_xx3, _middle + 48, t(msg.menu_videogame_game3))
 	
+end
+#endregion
+
+#region INTERFACE VIDEOGAME PLAY
+else if game.app.state == fsm_game.videogamePlay begin
+
+	draw_set_text_config(lite()? fnt_game0: fnt_title, c_white, 1.0, fa_center, fa_top)
+	
+	var _title = t(msg.menu_videogame_name)
+	var _center = display_get_gui_width()/2
+	var _yysubtitle = string_height(_title) + (padding * 4)
+	var _score =  "score: " + score_get_string(variable_instance_get(game.app.videogames[game.app.select], "myscore"))
+	
+	/// title videogame
+	draw_text(_center, padding * 4, _title)
+	draw_text_transformed(_center, _yysubtitle, _score, 0.28, 0.28, 0)
 end
 #endregion
 

@@ -21,10 +21,17 @@ if invaders_direction >= 4 begin
 	end
 
 	draw_set_text_config(fnt_game1, c_white, 1.0, fa_center, fa_middle)
+	
+	/// show gameover message
 	if gameover then
 		draw_text(240, 120, t(msg.gameover_title))
-	else 
-		draw_text(240, 120, "w")
+		
+	/// show level
+	else begin
+		var _text = "Level: " + string(round(myscore/90) + 1)
+		draw_text(240, 120, _text)
+	end
+		
 end
 #endregion
 
@@ -48,6 +55,7 @@ else begin
 			if point_in_rectangle(fire_pos_x, fire_pos_y - 8, xx0, yy0, xx1, yy1) and invaders_live[enemy] begin
 				invaders_live[enemy] = false /// died enemy
 				fire_pos_y = -1 /// reset shoot
+				myscore += 5
 			end
 	
 			/// render enemy
@@ -125,7 +133,7 @@ switch invaders_direction begin
 	/// esquerda para direita
 	case 0:
 		if enemy_max_x < 480 then
-			invaders_x += round((6+enemys_death+nivel)/5)
+			invaders_x += round((6+enemys_death+(myscore/90))/5)	
 		else 
 			invaders_direction = 1
 		break
@@ -142,7 +150,7 @@ switch invaders_direction begin
 	/// direita para esquerda
 	case 2:
 		if enemy_min_x > 0 then
-			invaders_x -= round((6+enemys_death+nivel)/5)	
+			invaders_x -= round((6+enemys_death+(myscore/90))/5)	
 		else
 			invaders_direction = 3
 		break
@@ -166,12 +174,11 @@ end
 
 #region RESET GAME
 if invaders_direction > (room_speed * 2) begin
+	var old_score = myscore
 	event_user(ev_mygame_restart)
 	
 	/// change dificult
 	if not gameover then
-		nivel += 5
-	else 
-		nivel = 0
+		myscore = old_score
 end
 #endregion

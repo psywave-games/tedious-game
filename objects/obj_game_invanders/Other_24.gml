@@ -1,4 +1,5 @@
 /// @description ev_mygame_restart
+myscore = 0
 invaders_x = 0
 invaders_y = 0
 invaders_direction = 0

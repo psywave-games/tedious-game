@@ -1,6 +1,6 @@
 /// @description initgame
 
-nivel = 0
+myscore = 0
 fire_pos_x = 240
 fire_pos_y = -1
 player_pos = 240

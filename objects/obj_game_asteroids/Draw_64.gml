@@ -204,6 +204,16 @@ for (var i = 0; i < array_length_1d(shoot_x); i++) begin
 	
 		/// jackpoint
 		if point_distance(asteroid_x[j], asteroid_y[j], shoot_x[i], shoot_y[i]) <= asteroid_size[i] begin
+
+			/// adicionar pontos
+			if asteroid_size[j] <= 3 then
+				myscore += 25
+			else if asteroid_size[j] <= 4 then
+				myscore += 10
+			else if asteroid_size[j] <= 9 then
+				myscore += 5
+			else 
+				myscore += 1
 			
 			/// destroy shoot
 			shoot_x[i] = -1
