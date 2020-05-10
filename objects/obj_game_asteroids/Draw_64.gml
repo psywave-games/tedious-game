@@ -1,18 +1,11 @@
 /// @description update
 
-/// @description Insert description here
-// You can write your code in this editor
-
 #region SCREEN BACKGROUND DRAW
 draw_set_color(c_black)
-draw_rectangle(0,0, 480, 240, false)
+draw_rectangle(vgn_x(0), vgn_y(0), vgn_x(480), vgn_y(240), false)
 
-#endregion
-
-#region SCREEN BORDER DRAW
 draw_set_color(c_white)
-draw_rectangle(0,0, 480, 240, true)
-
+draw_rectangle(vgn_x(0), vgn_y(0), vgn_x(480), vgn_y(240), true)
 #endregion
 
 #region PLAYER MOVIMENT
@@ -124,13 +117,25 @@ for (var i = 0; i < array_length_1d(shoot_x); i++) begin
 	if shoot_x[i] < 0 then
 		continue
 	
-	draw_point(shoot_x[i], shoot_y[i])
+	if shoot_y[i] < 0 then
+		continue
+	
+	draw_point(vgn_x(shoot_x[i]), vgn_y(shoot_y[i]))
 end
 #endregion
 
 #region PLAYER DRAW
 draw_set_color(c_yellow)
-draw_poly(veh_player, [4,4], player_x, player_y, 1, 1, player_direction, true)
+draw_poly(
+	veh_player, 
+	[4,4], 
+	vgn_x(player_x),
+	vgn_y(player_y),
+	vgn_size(1),
+	vgn_size(1),
+	player_direction,
+	true
+)
 #endregion
 
 #region ASTEROID MOVIMENT
@@ -172,20 +177,53 @@ for (var i = 0; i < array_length_1d(asteroid_x); i++) begin
 	/// draw
 	switch asteroid_size[i] begin
 		case 11:
-			draw_poly(asteroid_large, [11,11], asteroid_x[i], asteroid_y[i], 1, 1, 0, true)
+			draw_poly(
+				asteroid_large,
+				[11,11], 
+				vgn_x(asteroid_x[i]),
+				vgn_y(asteroid_y[i]),
+				vgn_size(1),
+				vgn_size(1),
+				0,
+				true
+			)
 			break
 			
 		case 9:
-			draw_poly(asteroid_mid, [9,9], asteroid_x[i], asteroid_y[i], 1, 1, 0, true)
-			break
+			draw_poly(
+				asteroid_mid,
+				[9,9], 
+				vgn_x(asteroid_x[i]),
+				vgn_y(asteroid_y[i]),
+				vgn_size(1),
+				vgn_size(1),
+				0,
+				true
+			)break
 			
 		case 4:
-			draw_poly(asteroid_small, [4,4], asteroid_x[i], asteroid_y[i], 1, 1, 0, true)
-			break
+			draw_poly(
+				asteroid_small,
+				[4,4], 
+				vgn_x(asteroid_x[i]),
+				vgn_y(asteroid_y[i]),
+				vgn_size(1),
+				vgn_size(1),
+				0,
+				true
+			)break
 			
 		case 3:
-			draw_poly(asteroid_mini, [3,3], asteroid_x[i], asteroid_y[i], 1, 1, 0, true)
-			break
+			draw_poly(
+				asteroid_mini,
+				[3,3], 
+				vgn_x(asteroid_x[i]),
+				vgn_y(asteroid_y[i]),
+				vgn_size(1),
+				vgn_size(1),
+				0,
+				true
+			)break
 	end
 end
 

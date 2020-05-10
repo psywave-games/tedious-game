@@ -8,10 +8,10 @@ var enemy_max_y = 0
 
 #region SCREEN DRAW
 draw_set_color(c_black)
-draw_rectangle(0,0,480,240,false)
+draw_rectangle(vgn_x(0), vgn_y(0), vgn_x(480), vgn_y(240), false)
 
 draw_set_color(c_white)
-draw_rectangle(0,0,480,240,true)
+draw_rectangle(vgn_x(0), vgn_y(0), vgn_x(480), vgn_y(240), true)
 #endregion
 
 #region MESSAGE DRAW
@@ -29,12 +29,12 @@ if invaders_direction >= 4 begin
 	
 	/// show gameover message
 	if gameover then
-		draw_text(240, 120, t(msg.gameover_title))
+		draw_text(vgn_x(240), vgn_y(120), t(msg.gameover_title))
 		
 	/// show level
 	else begin
 		var _text = "Level: " + string(round(myscore/90) + 1)
-		draw_text(240, 120, _text)
+		draw_text(vgn_x(240), vgn_y(120), _text)
 	end
 		
 end
@@ -46,17 +46,26 @@ player_pos = clamp(player_pos + game.app.input.key_axis_x * 8, 8, 472)
 
 /// render player
 draw_set_color(c_yellow)
-draw_poly(veh_player, [4,4], player_pos, 230, 1.6, 1.6, 270, true)
+draw_poly(
+	veh_player,
+	[4,4], 
+	vgn_x(player_pos),
+	vgn_y(230),
+	vgn_size(1.6), 
+	vgn_size(1.6),
+	270,
+	true
+)
 #endregion
 
 #region SHOOT [DRAW]
 if fire_pos_y >=  0 begin
 	draw_set_color(c_yellow)
 	draw_line(
-		fire_pos_x,
-		fire_pos_y - 8,
-		fire_pos_x,
-		fire_pos_y,
+		vgn_x(fire_pos_x),
+		vgn_y(fire_pos_y - 8),
+		vgn_x(fire_pos_x),
+		vgn_y(fire_pos_y),
 	)
 end
 #endregion
@@ -88,10 +97,10 @@ if invaders_direction < 4 begin
 					draw_poly(
 						invader0, 
 						[8,8],
-						invaders_x + (xx * 32), 
-						invaders_y + (yy * 32), 
-						1, 
-						1, 
+						vgn_x(invaders_x + (xx * 32)), 
+						vgn_y(invaders_y + (yy * 32)), 
+						vgn_size(1), 
+						vgn_size(1), 
 						0, 
 						true
 					)
@@ -101,10 +110,10 @@ if invaders_direction < 4 begin
 					draw_poly(
 						invader1, 
 						[8,8],
-						invaders_x + (xx * 32), 
-						invaders_y + (yy * 32), 
-						1, 
-						1, 
+						vgn_x(invaders_x + (xx * 32)), 
+						vgn_y(invaders_y + (yy * 32)), 
+						vgn_size(1), 
+						vgn_size(1), 
 						0, 
 						true
 					)
