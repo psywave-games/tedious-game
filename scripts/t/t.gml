@@ -592,7 +592,7 @@ switch argument[0] begin
 	case msg.interact_music_stop:
 		return "parar de tocar musica"
 	case msg.menu_videogame_name:
-		return "Obsolete VGN 4"
+		return "VGN Obsolete 4000"
 	case msg.menu_videogame_option:
 		return "Opções"
 	case msg.menu_videogame_reset:

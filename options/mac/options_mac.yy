@@ -28,9 +28,9 @@
     "option_mac_team_id": "",
     "option_mac_texture_page": "512x512",
     "option_mac_version": {
-        "build": 2,
+        "build": 0,
         "major": 0,
-        "minor": 8,
+        "minor": 9,
         "revision": 0
     },
     "option_mac_vsync": true

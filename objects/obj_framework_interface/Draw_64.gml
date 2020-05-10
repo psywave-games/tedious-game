@@ -190,7 +190,7 @@ else if game.app.state == fsm_game.menuTutorial begin
 	
 	/// draw text title
 	draw_set_text_config(lite()? fnt_game0: fnt_title, c_white, 1.0, fa_center, fa_top)
-	draw_text(_middle, padding * 4, t(msg.tutorial_title))
+	draw_text(_middle, padding, t(msg.tutorial_title))
 	
 	
 	/// boxtutorial
@@ -223,7 +223,7 @@ else if game.app.state == fsm_game.videogameMain begin
 	var _xx3 = gui_get_x_align(_xx * 2, fa_center)
 	var _center = display_get_gui_width()/2
 	var _middle = display_get_gui_height()/2
-	var _yysubtitle = string_height(_title) + (padding * 4)
+	var _yysubtitle = string_height(_title) + (padding * 2)
 	var _score = 0
 	
 	/// get global score
@@ -232,8 +232,8 @@ else if game.app.state == fsm_game.videogameMain begin
 	end
 		
 	/// title videogame
-	draw_text(_center, padding * 4, _title)
-	draw_text_transformed(_center, _yysubtitle, "score: " + score_get_string(_score), 0.28, 0.28, 0)
+	draw_text(_center, padding, _title)
+	draw_text_transformed(_center, _yysubtitle, "total score: " + score_get_string(_score), 0.28, 0.28, 0)
 	
 	/// Configurar Textos da Interface
 	draw_set_text_config(fnt_game0, c_white, 1.0, fa_center, fa_top)
@@ -296,11 +296,11 @@ else if game.app.state == fsm_game.videogamePlay begin
 	
 	var _title = t(msg.menu_videogame_name)
 	var _center = display_get_gui_width()/2
-	var _yysubtitle = string_height(_title) + (padding * 4)
+	var _yysubtitle = string_height(_title) + (padding * 2)
 	var _score =  "score: " + score_get_string(variable_instance_get(game.app.videogames[game.app.select], "myscore"))
 	
 	/// title videogame
-	draw_text(_center, padding * 4, _title)
+	draw_text(_center, padding, _title)
 	draw_text_transformed(_center, _yysubtitle, _score, 0.28, 0.28, 0)
 end
 #endregion

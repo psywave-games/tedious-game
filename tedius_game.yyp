@@ -714,7 +714,7 @@
             "Key": "48664881-fdd2-4863-842e-dd2a1512e066",
             "Value": {
                 "id": "4ed667e6-8730-431c-91c5-b2af728599f2",
-                "resourcePath": "objects\/obj_game\/obj_game.yy",
+                "resourcePath": "objects\/obj_framework_game\/obj_framework_game.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -754,7 +754,7 @@
             "Key": "4ecdeee7-b62e-44af-97c1-385e5dea611c",
             "Value": {
                 "id": "6f6a7793-2a0a-4e6c-9102-4c15200435ed",
-                "resourcePath": "objects\/obj_input\/obj_input.yy",
+                "resourcePath": "objects\/obj_framework_input\/obj_framework_input.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1194,7 +1194,7 @@
             "Key": "79988665-c4cb-4608-966f-f3d66b5a76e9",
             "Value": {
                 "id": "c82fa9e9-03c2-476b-bb54-207e9e19dc3e",
-                "resourcePath": "objects\/obj_audio\/obj_audio.yy",
+                "resourcePath": "objects\/obj_framework_audio\/obj_framework_audio.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2002,7 +2002,7 @@
             "Key": "c9e6e8ae-d406-42c5-90a7-571d4346f8b5",
             "Value": {
                 "id": "411398b8-f81c-485f-a9e7-a2fa2a8998d7",
-                "resourcePath": "objects\/obj_render\/obj_render.yy",
+                "resourcePath": "objects\/obj_framework_render\/obj_framework_render.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -2042,7 +2042,7 @@
             "Key": "cba1995d-e235-466d-9013-7b413298819c",
             "Value": {
                 "id": "76c44f00-be2d-472e-84b4-2f326a944fb5",
-                "resourcePath": "objects\/obj_interface\/obj_interface.yy",
+                "resourcePath": "objects\/obj_framework_interface\/obj_framework_interface.yy",
                 "resourceType": "GMObject"
             }
         },

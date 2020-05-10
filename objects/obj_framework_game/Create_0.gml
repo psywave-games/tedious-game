@@ -83,7 +83,7 @@ state = os_browser == browser_not_a_browser? fsm_game.lang: fsm_game.waitFocus
 /// @pattern			singleton
 /// @example			game.app.input.menu[key_enter]
 /// @return object		instancia do obj_input
-self.input = instance_create_layer(x,y, "Instances", obj_input)
+self.input = instance_create_layer(x,y, "Instances", obj_framework_input)
 #endregion 
 
 #region INIT AUDIO
@@ -91,7 +91,7 @@ self.input = instance_create_layer(x,y, "Instances", obj_input)
 /// @pattern			singleton
 /// @example			game.app.audio.volume
 /// @return object		instancia do obj_audio
-audio = instance_create_layer(x,y, "Instances", obj_audio)
+audio = instance_create_layer(x,y, "Instances", obj_framework_audio)
 
 #endregion
 
@@ -100,7 +100,7 @@ audio = instance_create_layer(x,y, "Instances", obj_audio)
 /// @pattern			singleton
 /// @example			game.app.render.light_hd
 /// @return object		instancia do obj_display
-self.render = instance_create_layer(x,y, "Instances", obj_render)
+self.render = instance_create_layer(x,y, "Instances", obj_framework_render)
 #endregion
 
 #region INIT INTERFACE
@@ -109,7 +109,7 @@ self.render = instance_create_layer(x,y, "Instances", obj_render)
 /// @pattern			singleton
 /// @example			game.app.mediator.player.[0].state
 /// @return object		instancia do obj_menu
-interface = instance_create_layer(x,y, "Instances", obj_interface)
+interface = instance_create_layer(x,y, "Instances", obj_framework_interface)
 
 #endregion
 

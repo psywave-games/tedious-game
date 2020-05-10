@@ -47,7 +47,7 @@ player_pos = clamp(player_pos + game.app.input.key_axis_x * 8, 8, 472)
 /// render player
 draw_set_color(c_yellow)
 draw_poly(
-	veh_player,
+	art_veh_player,
 	[4,4], 
 	vgn_x(player_pos),
 	vgn_y(230),
@@ -95,7 +95,7 @@ if invaders_direction < 4 begin
 				/// anim 0
 				if current_second % 2 begin
 					draw_poly(
-						invader0, 
+						art_invader0, 
 						[8,8],
 						vgn_x(invaders_x + (xx * 32)), 
 						vgn_y(invaders_y + (yy * 32)), 
@@ -108,7 +108,7 @@ if invaders_direction < 4 begin
 				/// anim 1
 				else begin
 					draw_poly(
-						invader1, 
+						art_invader1, 
 						[8,8],
 						vgn_x(invaders_x + (xx * 32)), 
 						vgn_y(invaders_y + (yy * 32)), 

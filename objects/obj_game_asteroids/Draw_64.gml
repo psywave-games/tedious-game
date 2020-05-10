@@ -127,7 +127,7 @@ end
 #region PLAYER DRAW
 draw_set_color(c_yellow)
 draw_poly(
-	veh_player, 
+	art_veh_player, 
 	[4,4], 
 	vgn_x(player_x),
 	vgn_y(player_y),
@@ -178,7 +178,7 @@ for (var i = 0; i < array_length_1d(asteroid_x); i++) begin
 	switch asteroid_size[i] begin
 		case 11:
 			draw_poly(
-				asteroid_large,
+				art_asteroid_large,
 				[11,11], 
 				vgn_x(asteroid_x[i]),
 				vgn_y(asteroid_y[i]),
@@ -191,7 +191,7 @@ for (var i = 0; i < array_length_1d(asteroid_x); i++) begin
 			
 		case 9:
 			draw_poly(
-				asteroid_mid,
+				art_asteroid_mid,
 				[9,9], 
 				vgn_x(asteroid_x[i]),
 				vgn_y(asteroid_y[i]),
@@ -203,7 +203,7 @@ for (var i = 0; i < array_length_1d(asteroid_x); i++) begin
 			
 		case 4:
 			draw_poly(
-				asteroid_small,
+				art_asteroid_small,
 				[4,4], 
 				vgn_x(asteroid_x[i]),
 				vgn_y(asteroid_y[i]),
@@ -215,7 +215,7 @@ for (var i = 0; i < array_length_1d(asteroid_x); i++) begin
 			
 		case 3:
 			draw_poly(
-				asteroid_mini,
+				art_asteroid_mini,
 				[3,3], 
 				vgn_x(asteroid_x[i]),
 				vgn_y(asteroid_y[i]),
