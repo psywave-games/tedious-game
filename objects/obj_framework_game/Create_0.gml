@@ -1,5 +1,3 @@
-/// @description construct game.app
-
 #region CREATE INSTANCE SINGLETON MODE
 
 /// @pattern			singleton

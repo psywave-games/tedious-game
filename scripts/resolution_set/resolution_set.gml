@@ -39,11 +39,16 @@ display_set_gui_size(gui_width, gui_height)
 
 #region AJUST RESOLUTION
 /// Camera
-camera_set_view_size(view_camera[0], camera_width, word.height)
+if room == rm_intro then
+	camera_set_view_size(view_camera[0], room_width, room_height)
+
+else 
+	camera_set_view_size(view_camera[0], camera_width, word.height)
 
 /// Janela
 window_set_size(resolution_width, resolution_height)
 #endregion
+
 
 #region CENTER BROWSER WINDOW
 if os_browser != browser_not_a_browser begin
@@ -63,4 +68,3 @@ if os_browser != browser_not_a_browser begin
 	end
 end
 #endregion
-

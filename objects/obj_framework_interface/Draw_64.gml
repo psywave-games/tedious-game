@@ -21,6 +21,8 @@ else if game.app.state == fsm_game.lang begin
 	var _pt = t(msg.pt)
 	var _en = t(msg.en)
 	
+	draw_background(c_black, 1.0)
+	
 	mouse_select(gui_get_x_align(_xx, fa_left), _yy, _pt, 0)
 	draw_gui(_xx, 0, fa_left, fa_middle, _pt, fnt_game0, c_white, select? 0.5: 1)
 	
@@ -36,6 +38,7 @@ else if game.app.state == fsm_game.warn begin
 	
 	self.step += 1 
 	draw_set_font(fnt_game1)
+	draw_background(c_black, 1.0)
 	
 	/// PROSEGUIR
 	if self.step > room_speed * 9 then
@@ -352,7 +355,7 @@ end
 
 #region WAIT FOCUS
 else if game.app.state == fsm_game.waitFocus begin
-	draw_set_alpha(true)
+	draw_background(c_black, 1.0)
 	draw_sprite(spr_jolt, 0, display_get_gui_width()/2, display_get_gui_height()/2)
 	draw_gui(0, display_get_gui_height()/4, fa_center, fa_bottom, "mouse click to focus game", fnt_game1, c_white, current_second%2)
 end

@@ -8,6 +8,4 @@ with game.app.input event_user(ev_mygame_start)
 #endregion
 
 state_reset(game.app, fsm_game.play)
-room_goto(rm_level0)
-
 started = true

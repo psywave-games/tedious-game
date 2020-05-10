@@ -56,4 +56,4 @@ self.debug = false
 
 self.background = -1
 
-alarm_set(0,1)
+alarm_set(ev_init,1)

@@ -22,3 +22,20 @@ else begin
 	end
 end
 #endregion
+
+#region ROOM MANAGER
+switch self.state begin
+	/// house map
+	case fsm_game.play:
+		if room != rm_level0 then
+			room_goto(rm_level0)
+		break
+
+
+	/// intro map
+	case fsm_game.intro:
+		if room != rm_intro then
+			room_goto(rm_intro)
+		break
+end
+#endregion
