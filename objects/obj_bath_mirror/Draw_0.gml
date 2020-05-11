@@ -4,10 +4,7 @@ draw(
 )
 
 #region REFLEX
-if lite() or not game.app.render.reflex then 
-	exit
-
-if (reflex) begin 
+if reflex begin 
 
 	var surface_player = surface_create(10, 13)
 	if (surface_exists(surface_player)) begin

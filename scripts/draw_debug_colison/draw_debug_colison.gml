@@ -1,4 +1,4 @@
-if not game.app.render.debug then
+if not show_debug(0) then
 	exit
 
 var _color = c_white

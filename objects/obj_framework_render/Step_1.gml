@@ -10,8 +10,8 @@ if instance_exists(game.app.player) and game.app.state = fsm_game.play begin
 	var px = game.app.player.x
 	var py = game.app.player.y - 16
 
-	self.camx += (px - (vw/2) - self.camx) * (game.app.render.camera_speed*0.1)
-	self.camy += (py - (vh/2) - self.camy) * (game.app.render.camera_speed*0.1)
+	self.camx += (px - (vw/2) - self.camx) * 0.02///(game.app.render.camera_speed*0.1)
+	self.camy += (py - (vh/2) - self.camy) * 0.02///(game.app.render.camera_speed*0.1)
 	
 
 	self.camx = clamp(self.camx, 0, room_width - vw)

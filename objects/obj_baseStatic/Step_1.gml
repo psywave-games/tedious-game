@@ -66,7 +66,11 @@ if not (game.app.step % room_speed) begin
 end
 
 #region RELFEX
-if can_reflex and not (game.app.step % room_speed/4)  begin
+if can_reflex 
+	and not lite() 
+	and not (game.app.step % room_speed/4)  
+	and game.app.render.mode_reflex begin
+	
 	reflex = point_in_rectangle(
 		game.app.player.x,
 		game.app.player.y,
@@ -75,6 +79,9 @@ if can_reflex and not (game.app.step % room_speed/4)  begin
 		bbox_right + 32,
 		y + (word.height/2),
 	)
+end
+else begin
+	reflex = false
 end
 #endregion
 

@@ -2,11 +2,7 @@
 // You can write your code in this editor
 
 
-#region PREPARE RESOLUTION
-/// resolução selecionada
-self.mode_resolution = 5
-self.mode_ratio = 1
-
+#region RESOLUTIONS
 /// resoluções pré defefinidas
 self.resolutions = [
 	160,
@@ -44,15 +40,22 @@ self.size_ratio = [
 #endregion
 
 #region PREPARE CONFIGS
-self.font_hd = true
+/// resolução selecionada
+self.mode_resolution = 5
+self.mode_ratio = 1
+self.mode_light_hd = true
+self.mode_outline = true
+self.mode_reflex = true
+self.mode_debug = 0
+self.mode_font_hd = true
+self.mode_camera = 0
 self.font_speed = 3
-self.camera_speed = 2
-self.light_hd = true
-self.outline = true
-self.reflex = true
-self.debug = false
 #endregion
 
+/// @see						posicionamento da camera no mapa
+/// @return	float				posição da camera
+self.camx = 0
+self.camy = 0
 
 self.background = -1
 

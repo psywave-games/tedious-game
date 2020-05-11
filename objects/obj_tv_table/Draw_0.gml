@@ -17,7 +17,4 @@ draw_sprite_ext(spr_tv_table2, 0, x, y, image_xscale, image_yscale, 0, color(col
 outline_end()
 #endregion
 
-#region DEBUG
-if game.app.render.debug then
-	draw_debug_colison()
-#endregion
+draw_debug_colison()

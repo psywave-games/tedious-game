@@ -205,23 +205,23 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuGrap
 		/// alternar fontes em HD
 		case 0:
 			gpu_set_texfilter(false)
-			game.app.render.font_hd ^= true
+			game.app.render.mode_font_hd ^= true
 			break
 			
 		/// alternar Luzes em HD
 		case 1:
-			game.app.render.light_hd ^= true
+			game.app.render.mode_light_hd ^= true
 			break
 		
 			
 		/// alternar Outiline
 		case 2:
-			game.app.render.outline ^= true
+			game.app.render.mode_outline ^= true
 			break
 			
 		/// alternar Reflexos
 		case 3:
-			game.app.render.reflex ^= true
+			game.app.render.mode_reflex ^= true
 			break
 			
 		/// voltar para o menu

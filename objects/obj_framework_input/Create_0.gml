@@ -21,4 +21,4 @@ gamepad = 0
 hover = false
 
 suport_gamepad = gamepad_is_supported()
-
+device_mouse_dbclick_enable(false)

@@ -17,5 +17,4 @@ end
 outline_end()
 
 
-if game.app.render.debug then
-	draw_debug_colison()
+draw_debug_colison()

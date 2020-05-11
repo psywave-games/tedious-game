@@ -1135,6 +1135,14 @@
             }
         },
         {
+            "Key": "71c1957f-8cfc-49b0-b0be-1fe3977bd6de",
+            "Value": {
+                "id": "ee27157c-7dd1-4520-9f53-cb0cc832a00d",
+                "resourcePath": "scripts\/show_debug\/show_debug.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "72d622d3-fa3a-429c-b2b1-e576a2f5d863",
             "Value": {
                 "id": "3d203b8e-a76c-409e-a8e5-b1d4b1b01fce",
@@ -1695,6 +1703,14 @@
             }
         },
         {
+            "Key": "ad63384f-4440-4620-a988-cf32d7d4081b",
+            "Value": {
+                "id": "3f881ca2-c93e-47f9-8227-bde5abd87df5",
+                "resourcePath": "views\/ad63384f-4440-4620-a988-cf32d7d4081b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "ae2a75e6-b006-41bc-95a6-0310707d1333",
             "Value": {
                 "id": "e19637b5-d822-42d7-8865-c93962004ab0",
@@ -2148,14 +2164,6 @@
                 "id": "293c7cb9-3e9a-4233-b7cc-a69942022f40",
                 "resourcePath": "views\/d5b272ab-bd00-49f7-a44e-67bacc01c7c2.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "d62ecc0e-32b7-4a95-92d6-0577ef09a6d9",
-            "Value": {
-                "id": "a575e726-2a71-45b8-a24e-f1c0f677f086",
-                "resourcePath": "scripts\/draw_debug_text\/draw_debug_text.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -2823,6 +2831,8 @@
         "0df2cb81-f4e8-44d6-92ae-49514a91c0ab",
         "c6edc788-9f1c-4799-abc7-6eb0b047d64b",
         "d99613ff-8e1b-40a0-8a15-a4a3905d86ee",
+        "ab398c71-def6-441c-b892-f0eb02003fd3",
+        "71c1957f-8cfc-49b0-b0be-1fe3977bd6de",
         "ae2a75e6-b006-41bc-95a6-0310707d1333",
         "cbd18dab-f9ee-4a24-8c63-db4ff27e3cf8",
         "541e5a20-2704-4273-84d2-0d42d4d2722e",
@@ -2831,10 +2841,8 @@
         "3ee13b87-6b12-42f7-902e-07ed12a87d90",
         "de2f671e-007d-44e7-89ca-c39e9a8a0f06",
         "b66e50bf-5441-4ef8-98c9-e91c95174bf3",
-        "ab398c71-def6-441c-b892-f0eb02003fd3",
         "9c001332-e518-4984-b520-73bae9196c5f",
         "ab55a0e0-b5c7-4fcd-be5f-7922aa693c62",
-        "d62ecc0e-32b7-4a95-92d6-0577ef09a6d9",
         "aaa0ee36-b507-4673-ba19-400e485cc6ca",
         "ddc3711f-3237-4602-934e-1acaada9532c",
         "333a532f-0350-4e75-a6b1-d45b51951bfa",

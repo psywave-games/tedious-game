@@ -4,7 +4,7 @@
 /// @arg OPTIONAL_accuracy
 /// @arg OPTIONAL_tolerance
 
-if lite() or not game.app.render.outline then
+if lite() or not game.app.render.mode_outline then
 	exit
 
 var _spr;

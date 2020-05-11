@@ -108,7 +108,7 @@ else if game.app.state == fsm_game.menuWindow begin
 	var menu_proportion = game.app.render.name_ratio[game.app.render.mode_ratio]
 	var menu_fullscreen = fullscreen_get()
 	var menu_font_speed = game.app.render.font_speed
-	var menu_cam_speed = game.app.render.camera_speed
+	var menu_cam_speed = game.app.render.mode_camera
 	
 	
 	draw_menu(0, t(msg.video_size))
@@ -132,10 +132,10 @@ else if game.app.state == fsm_game.menuGraphic begin
 
 	var _color = lite()? c_red: c_white
 
-	var menu_reflex = game.app.render.reflex
-	var menu_outline = game.app.render.outline
-	var menu_hd_font = game.app.render.font_hd
-	var menu_hd_light = game.app.render.light_hd
+	var menu_reflex = game.app.render.mode_reflex
+	var menu_outline = game.app.render.mode_outline
+	var menu_hd_font = game.app.render.mode_font_hd
+	var menu_hd_light = game.app.render.mode_light_hd
 
 	draw_menu(0, t(msg.video_fnthd))
 	draw_menu(1, t(msg.video_lighthd))
@@ -193,7 +193,7 @@ else if game.app.state == fsm_game.menuTutorial begin
 	
 	/// draw text title
 	draw_set_text_config(lite()? fnt_game0: fnt_title, c_white, 1.0, fa_center, fa_top)
-	draw_text(_middle, padding, t(msg.tutorial_title))
+	draw_text_hd(_middle, padding, t(msg.tutorial_title), 1.0)
 	
 	
 	/// boxtutorial
@@ -235,7 +235,7 @@ else if game.app.state == fsm_game.videogameMain begin
 	end
 		
 	/// title videogame
-	draw_text(_center, padding, _title)
+	draw_text_hd(_center, padding, _title, 1.0)
 	draw_text_transformed(_center, _yysubtitle, "total score: " + score_get_string(_score), 0.28, 0.28, 0)
 	
 	/// Configurar Textos da Interface
@@ -303,7 +303,7 @@ else if game.app.state == fsm_game.videogamePlay begin
 	var _score =  "score: " + score_get_string(variable_instance_get(game.app.videogames[game.app.select], "myscore"))
 	
 	/// title videogame
-	draw_text(_center, padding, _title)
+	draw_text_hd(_center, padding, _title, 1.0)
 	draw_text_transformed(_center, _yysubtitle, _score, 0.28, 0.28, 0)
 end
 #endregion
