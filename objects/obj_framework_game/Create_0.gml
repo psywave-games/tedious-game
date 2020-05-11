@@ -18,7 +18,7 @@ global.app = self.id
 /// @see				Jogador
 /// @example			game.app.player.x
 /// @return	object		obj_player
-self.player = -1
+self.player = 0
 
 /// @see				contador de steps do jogo
 ///	@example			game.app.step

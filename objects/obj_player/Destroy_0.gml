@@ -1,0 +1,1 @@
+game.app.player = 0

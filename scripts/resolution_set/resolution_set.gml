@@ -64,7 +64,9 @@ if os_browser != browser_not_a_browser begin
 		var min_y = (browser_height - resolution_height) / 2
 
 		window_set_position(min_x, min_y)
-		window_set_colour(c_black)
 	end
 end
 #endregion
+
+window_set_colour(c_black)
+draw_clear_alpha(c_black, 1.0)

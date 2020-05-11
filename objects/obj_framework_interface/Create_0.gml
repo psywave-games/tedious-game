@@ -21,4 +21,6 @@ self.happy_sign = 0
 
 self.message = ""
 
+depth = -1000000
+
 event_user(ev_init)
