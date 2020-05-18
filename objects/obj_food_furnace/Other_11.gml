@@ -52,11 +52,18 @@ end
 #endregion
 
 #region TURN ON FURNACE 
-else if self.state == fsm_mob.idle and not gas then
+else if self.state == fsm_mob.idle and not gas begin
+	audio_play(x, y, snd_furnace_gas, true)
 	self.gas = true
+end
 
-else if self.state == fsm_mob.idle and gas then
+else if self.state == fsm_mob.idle and gas begin
+	audio_stop(snd_furnace_gas)
+	audio_play(x, y, snd_furnace_on, false)
+	audio_play(x, y, snd_furnace_fire, true)
+	audio_gain(snd_furnace_on, gas_size/5)
 	self.state = fsm_mob.running
+end
 #endregion
 
 #region TURN OFF
@@ -66,39 +73,7 @@ else begin
 end
 #endregion
 
-/*
 
-/// Colocar café no fogão
-if game.inventory.item_local_coffe == obj_player then
-	game.inventory.item_local_coffe = obj_food_furnace
-
-else switch self.select begin
-	case 1:
-		self.state = fsm_mob.idle
-		self.gas = false
-		break
-		
-	case 2:
-		/// Desligar fogão se não tiver ocupado
-		if not fire_a and not fire_c begin
-			self.select = 1 
-			event_user(ev_interact_up)
-		end
-		
-		/// Tirar café do fogão
-		game.inventory.item_local_coffe = obj_player
-		break
-		
-	case 3:
-		if not hurt begin
-			score_add(-300)
-			hurt = true
-		end
-		else 
-			speak(game.app.player, t(msg.interact_furnace_rate))
-		break
+if self.state != fsm_mob.running begin
+	audio_stop(snd_furnace_fire)
 end
-if item then
-	event_user(ev_interact_up)
-	*/
-

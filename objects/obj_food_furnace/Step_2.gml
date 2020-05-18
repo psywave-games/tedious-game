@@ -1,4 +1,6 @@
-/// @description ev_lite_step
+/// @description gas size
+if not game.app.step % 10 then
+	exit
 
 #region GAS EFFECT
 if gas begin
