@@ -174,8 +174,8 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuWind
 	
 		/// Cam Speed
 		case 2:
-			var cam_speed = game.app.render.camera_speed + _in
-			game.app.render.camera_speed = clamp(cam_speed, 1, 10)
+			var cam_speed = game.app.render.mode_camera + _in
+			game.app.render.mode_camera = clamp(cam_speed, 0, 5)
 			break
 			
 		/// Cam Speed

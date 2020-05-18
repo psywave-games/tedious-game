@@ -3,6 +3,10 @@ game.app.player = self.id
 self.state = fsm_player.none
 
 #region USING
+/// @see in_fist está variavel serve para verificar se é
+/// a primeira vez que o jogador está interagindo,
+/// e evitar o bug de entrar e sair de um mob
+self.in_first = false			
 self.in_stair = 0
 self.in_mob = 0
 #endregion

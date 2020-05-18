@@ -73,6 +73,8 @@ switch self.mode_camera begin
 	
 	/// super soft change room
 	case 5:
+		/// se a camera estiver se mechendo na horizontal entrar em modo espera
+		self.camwait = abs(clamp(_xxt, 0, room_width - vw) - self.camx) >= 1 and game.app.player.in_stair == 0
 		self.camx += (_xxt - self.camx) * 0.04
 		self.camy += (_yyt - self.camy) * 0.04
 		break

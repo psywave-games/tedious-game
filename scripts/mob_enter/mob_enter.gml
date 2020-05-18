@@ -8,5 +8,5 @@ with game.app.player begin
 
 	self.state = _state
 	self.in_mob = _mob.id
-	self.image_index = -1
+	self.in_first = true
 end

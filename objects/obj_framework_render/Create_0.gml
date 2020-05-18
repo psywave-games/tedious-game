@@ -56,6 +56,7 @@ self.font_speed = 3
 /// @return	float				posição da camera
 self.camx = 0
 self.camy = 0
+self.camwait = false
 
 self.background = -1
 

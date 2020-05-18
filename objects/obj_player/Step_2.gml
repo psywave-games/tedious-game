@@ -17,6 +17,7 @@ switch self.state begin
 	
 	case fsm_player.sit:
 	case fsm_player.sleep:	
+	case fsm_player.shower:
 		speed = 0
 		image_speed = 0.1
 		self.x = in_mob.x
@@ -73,8 +74,8 @@ switch self.state begin
 	case fsm_player.sit:		
 	case fsm_player.piss:
 	case fsm_player.sleep:
-		if game.app.input.key_interact and image_index != -1 begin
-			self.image_yscale = abs(self.image_yscale)
+	case fsm_player.shower:
+		if game.app.input.key_interact and not self.in_first begin
 			self.state = fsm_player.idle
 		end
 		break
@@ -123,6 +124,18 @@ else if self.state == fsm_player.piss begin
 		game.app.interface.can_interact = true
 	end
 end
+else if self.state == fsm_player.shower begin
+
+	with obj_bath_microphone begin
+		event_user(ev_interact_message)
+		event_user(ev_interact_using)
+		game.app.interface.message = self.message
+		game.app.interface.can_interact = true
+	end
+end
+
+/// não é mais o primeiro interact com o mob
+self.in_first = false
 #endregion
 
 #region DEPTH

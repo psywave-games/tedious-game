@@ -21,7 +21,10 @@ else if self.state == fsm_player.drink then
 	
 else if self.state == fsm_player.piss then
 	exit
-	
+
+else if self.state == fsm_player.shower then
+	exit
+
 else if game.inventory.item_local_guitar == obj_player and abs(self.axis_x) then
 	self.state = fsm_player.guitar_walk
 	

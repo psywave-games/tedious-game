@@ -169,8 +169,10 @@ if game.app.lang == msg.en begin
 		    return "drawer"
 		case msg.interact_loot:
 		    return "loot"
-		case msg.interact_shower:
+		case msg.interact_shower_down:
 		    return "take a shower"
+		case msg.interact_shower_up:
+		    return "exit to shower"
 		case msg.primary_f:
 		    return "first"
 		case msg.primary_m:
@@ -438,8 +440,10 @@ switch argument[0] begin
 	    return "gaveta"
 	case msg.interact_loot:
 	    return "saquear"
-	case msg.interact_shower:
+	case msg.interact_shower_down:
 	    return "tomar banho"
+	case msg.interact_shower_up:
+	    return "finalizar o banho"
 	case msg.primary_f:
 	    return "primeiro"
 	case msg.primary_m:
@@ -615,6 +619,22 @@ switch argument[0] begin
 		return ""
 	case msg.menu_videogame_game9:
 		return ""
+	case msg.menu_video_cameramode:
+		return "Modo de Camera:"
+	case msg.menu_video_cameramode0:
+		return "Suave"
+	case msg.menu_video_cameramode1:
+		return "Olhar Suave"
+	case msg.menu_video_cameramode2:
+		return "Instanena"
+	case msg.menu_video_cameramode3:
+		return "Fixa Instanena"
+	case msg.menu_video_cameramode4:
+		return "Fixa Suave"
+	case msg.menu_video_cameramode5:
+		return "Fixa Super Suave"
+	case msg.psy_shower:
+		return "Chuveiro"
 end
 
 return "#Error T_18_" + string(argument0)

@@ -1,8 +1,11 @@
 #region MOVIMENT INPUTS
-axis_x = game.app.input.key_axis_x * 2
+axis_x = game.app.input.key_axis_x
 
 if abs(self.in_stair) then
-	axis_x -= game.app.input.key_axis_y
+	axis_x -= game.app.input.key_axis_y * 2
+	
+if game.app.render.camwait then
+	axis_x = 0
 
 axis_x = sign(axis_x)
 #endregion

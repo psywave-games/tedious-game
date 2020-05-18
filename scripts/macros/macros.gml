@@ -74,7 +74,8 @@ enum fsm_player {
 	piss,									/// Jogador está mijando
 	sit,									/// Jogador está sentado
 	guitar_idle,							/// Jogador está parado com o violão
-	guitar_walk								/// Jogador está andando o violão
+	guitar_walk,								/// Jogador está andando o violão
+	shower									/// Jogador está tomando banho										
 }
 
 
@@ -204,7 +205,6 @@ enum msg {
 	psy_chest,
 	psy_drawer,
 	interact_loot,
-	interact_shower,
 	primary_f,
 	primary_m,
 	secondary_f,
@@ -289,6 +289,16 @@ enum msg {
 	menu_videogame_option,
 	menu_videogame_option_color,
 	menu_videogame_option_outline,
-	menu_videogame_option_volume
+	menu_videogame_option_volume,
+	menu_video_cameramode,
+	menu_video_cameramode0,
+	menu_video_cameramode1,
+	menu_video_cameramode2,
+	menu_video_cameramode3,
+	menu_video_cameramode4,
+	menu_video_cameramode5,
+	psy_shower,
+	interact_shower_up,
+	interact_shower_down,
 }
 

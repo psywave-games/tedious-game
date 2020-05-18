@@ -108,12 +108,12 @@ else if game.app.state == fsm_game.menuWindow begin
 	var menu_proportion = game.app.render.name_ratio[game.app.render.mode_ratio]
 	var menu_fullscreen = fullscreen_get()
 	var menu_font_speed = game.app.render.font_speed
-	var menu_cam_speed = game.app.render.mode_camera
+	var menu_cam_mode = t(msg.menu_video_cameramode0 + game.app.render.mode_camera)
 	
 	
 	draw_menu(0, t(msg.video_size))
 	draw_menu(1, t(msg.video_ratio))
-	draw_menu(2, t(msg.video_camspeed))
+	draw_menu(2, t(msg.menu_video_cameramode))
 	draw_menu(3, t(msg.video_digto))
 	draw_menu(4, t(msg.video_full))
 
@@ -121,7 +121,7 @@ else if game.app.state == fsm_game.menuWindow begin
 	
 	draw_item(0, menu_resolution, 200)
 	draw_item(1, menu_proportion, 200)
-	draw_bars(2, menu_cam_speed, 200)
+	draw_item(2, menu_cam_mode, 200)
 	draw_bars(3, menu_font_speed, 200)
 	draw_chck(4, menu_fullscreen, 200)
 end

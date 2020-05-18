@@ -9,7 +9,7 @@ switch self.select begin
 			book_page = 1
 
 		/// ler livro
-		speak(game.app.player, t(msg.interact_bible + book_page))
+		speak(game.app.player, t(msg.interact_bible + book_page), p_head_direction(bbox_bottom, bbox_top))
 		game.app.player.book_read = true
 		
 		/// livro terminado
