@@ -1,11 +1,7 @@
 /// @description ev_mygame_start
-
-#region ev_mygame_start
-with game.app.interface event_user(ev_mygame_start)
-with game.app.render event_user(ev_mygame_start)
-with game.app.audio event_user(ev_mygame_start)
-with game.app.input event_user(ev_mygame_start)
-#endregion
+event_all(ev_mygame_start)
 
 state_reset(game.app, fsm_game.play)
 started = true
+
+alarm_set(ev_mygame_start_end, 1)

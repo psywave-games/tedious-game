@@ -564,7 +564,7 @@ if (display_frame > 0) { // I'm open
 					#endregion
 				} else if (keyboard_check(vk_enter)) {
 					#region // commit
-					event_user(0)
+					event_user(4)
 					
 					mouse_selection_end = 0 // reset mouse selection
 					mouse_selection_start = 0

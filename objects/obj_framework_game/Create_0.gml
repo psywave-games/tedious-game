@@ -138,4 +138,8 @@ self.videogames = [
 self.select = 0
 #endregion
 
+#region INIT EASTEREGGS
+surprises = instance_create_layer(x,y, "Instances", obj_framework_surprises)
+#endregion
+
 event_user(ev_init)

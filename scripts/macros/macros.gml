@@ -6,16 +6,19 @@
 #macro	volume_music		0				/// channel mixer 0
 #macro	volume_fx			1				/// channel mixer 1
 
-#macro	ev_init				0
-#macro	ev_interact_down	1				/// Iniciar Interação
-#macro	ev_interact_up		2				/// Desfazer Interação
-#macro	ev_interact_switch	3				/// Alterar Interação
-#macro	ev_interact_message	4				/// Menssagem Interação
-#macro	ev_interact_broken	5				/// Quebrado Interação
-#macro	ev_interact_using	7				/// Utilizando Interação
-#macro	ev_lite_step		6				/// Ticket leve (apenas visivel, 3x por segundo)
-#macro	ev_mygame_restart	14
-#macro	ev_mygame_start		15
+#macro	ev_init						0		/// Alteração de estado de jogo
+#macro	ev_interact_down			1		/// Iniciar Interação
+#macro	ev_interact_up				2		/// Desfazer Interação
+#macro	ev_interact_switch			3		/// Alterar Interação
+#macro	ev_interact_message			4		/// Menssagem Interação
+#macro	ev_interact_broken			5		/// Quebrado Interação
+#macro	ev_interact_using			7		/// Utilizando Interação
+#macro	ev_lite_step				6		/// Ticket leve (apenas visivel, 3x por segundo)
+#macro	ev_mygame_restart_end		10		/// Após Preparar jogo para reiniciar
+#macro	ev_mygame_start_end			11		/// Após Iniciar Jogo
+#macro	ev_mygame_restart			14		/// Preparar jogo para reiniciar
+#macro	ev_mygame_start				15		/// Iniciar Jogo
+
 
 #macro  color_verde_a		(0xC4E43A)
 #macro  color_verde_b		(0xC4FD39)
