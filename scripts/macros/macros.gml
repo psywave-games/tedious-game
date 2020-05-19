@@ -117,6 +117,13 @@ enum credits_scene {
 	final = 4777
 }
 
+enum thematic {
+	none,	
+	halflife,
+	chris,
+	gta,
+	size
+}
 
 enum msg {
 	pt,	

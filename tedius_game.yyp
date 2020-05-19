@@ -447,6 +447,14 @@
             }
         },
         {
+            "Key": "260a60c8-c8e5-467a-9fe5-05aaafd96717",
+            "Value": {
+                "id": "6a6663df-8705-4b29-8368-31417fe57f14",
+                "resourcePath": "sounds\/snd_halflife_step4\/snd_halflife_step4.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "26767cbb-ee4b-4803-92d0-98ef415577e0",
             "Value": {
                 "id": "7f599383-1298-43c6-b72f-2c2f648dfa85",
@@ -767,6 +775,14 @@
             }
         },
         {
+            "Key": "49e0962b-b140-4c96-9d3d-897f54b47353",
+            "Value": {
+                "id": "684da45e-e7d3-46ae-a1b2-29dd69bde45a",
+                "resourcePath": "views\/49e0962b-b140-4c96-9d3d-897f54b47353.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "4a80f2ee-c80b-4caf-8f30-4455c0eb7a86",
             "Value": {
                 "id": "87280272-17c2-4211-b614-4cefd82e5be4",
@@ -855,6 +871,14 @@
             }
         },
         {
+            "Key": "53dd9aaf-dfe7-4eb2-8518-dce0dff0ab80",
+            "Value": {
+                "id": "517efa44-b79f-4076-af43-b48b50856301",
+                "resourcePath": "sounds\/snd_halflife_step2\/snd_halflife_step2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "541e5a20-2704-4273-84d2-0d42d4d2722e",
             "Value": {
                 "id": "67bd217f-d1c9-4414-827b-8ab57afe2643",
@@ -884,6 +908,14 @@
                 "id": "db1ce785-c278-41e8-a328-26e67c21951c",
                 "resourcePath": "scripts\/draw_input\/draw_input.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "573fb0ec-d20b-4323-a8f0-f44d87d93ab2",
+            "Value": {
+                "id": "fa4f2618-26e0-4be6-890f-2bf86cf6ec2f",
+                "resourcePath": "sounds\/snd_halflife_step1\/snd_halflife_step1.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1431,6 +1463,14 @@
             }
         },
         {
+            "Key": "88c7cd19-311e-4620-8154-f36392ad6815",
+            "Value": {
+                "id": "1a3f7274-37af-4bd8-9458-6f9a0f6572c8",
+                "resourcePath": "timelines\/tl_surprise_halflife_welcome\/tl_surprise_halflife_welcome.yy",
+                "resourceType": "GMTimeline"
+            }
+        },
+        {
             "Key": "8936c2b3-5c95-449e-b7f5-ff82f01528b9",
             "Value": {
                 "id": "da6798b0-d6cf-43d8-979e-c7d8c0b9ba10",
@@ -1471,6 +1511,14 @@
             }
         },
         {
+            "Key": "8e48460d-6724-4c4f-9c63-666fe08b0c4d",
+            "Value": {
+                "id": "4ba3c624-9321-4158-9504-5d7db891f13c",
+                "resourcePath": "sounds\/snd_halflife_done\/snd_halflife_done.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "8fe92957-e991-4cae-957b-eff7f121dd63",
             "Value": {
                 "id": "f2a7a9dd-9795-4db4-aeb4-327c94a255a0",
@@ -1500,6 +1548,14 @@
                 "id": "d146d630-aab1-4a87-8651-b8de8c237e9d",
                 "resourcePath": "scripts\/text_switch\/text_switch.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "921a8eda-2cad-4340-97af-aa8ff6de5cda",
+            "Value": {
+                "id": "ee0bcb3d-d66d-46f3-8582-8b6979508dab",
+                "resourcePath": "sounds\/snd_quack\/snd_quack.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1972,6 +2028,14 @@
                 "id": "9112137d-2151-4fad-8af5-7c53e6ddb20c",
                 "resourcePath": "scripts\/@__background_set_internal\/__background_set_internal.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "bcf688ac-fe55-4a98-bdcc-735cc634b048",
+            "Value": {
+                "id": "03b66b72-1abe-4fd6-968c-69325d663eb8",
+                "resourcePath": "sounds\/snd_halflife_step3\/snd_halflife_step3.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -2839,6 +2903,14 @@
             }
         },
         {
+            "Key": "fa54f8d7-643b-409a-9988-cc53fccb85e0",
+            "Value": {
+                "id": "bc7fdffa-a78c-4db0-86ef-b6ec967cd571",
+                "resourcePath": "scripts\/event_tada\/event_tada.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fa96b81a-9f12-4eae-9145-7dfb8b2b8dfe",
             "Value": {
                 "id": "3f33052d-1d2c-4f52-bd52-f8720186f647",
@@ -2903,6 +2975,14 @@
             }
         },
         {
+            "Key": "febf2f0b-8d80-4b9d-986e-e26cde8bfaf4",
+            "Value": {
+                "id": "921c21e8-9f43-458c-9119-7108a663b407",
+                "resourcePath": "sounds\/snd_halflife_deny\/snd_halflife_deny.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "feee7608-5429-4625-a64c-d62164c09255",
             "Value": {
                 "id": "45394d1e-7383-4cb8-a3be-4ad7284f38a4",
@@ -2963,6 +3043,7 @@
         "09663c49-4f3a-4aed-b969-c49e1711afdf",
         "7e63ce0b-82db-4ebe-b719-9de41dcdee39",
         "feee7608-5429-4625-a64c-d62164c09255",
+        "fa54f8d7-643b-409a-9988-cc53fccb85e0",
         "f41c094f-ef34-4bdd-a84d-cfe76816ae87",
         "87568870-2f36-4da6-95d2-a5035a31fb69",
         "ee0ee7a4-8ccb-4f69-b1ff-a70070b5c95c",

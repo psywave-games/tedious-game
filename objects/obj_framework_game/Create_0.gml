@@ -14,6 +14,10 @@ end
 global.app = self.id
 #endregion
 
+#region RANDOMIZE
+random_set_seed(randomize())
+#endregion
+
 #region INSTANCE VARIABLES 
 /// @see				Jogador
 /// @example			game.app.player.x

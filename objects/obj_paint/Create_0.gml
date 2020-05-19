@@ -1,3 +1,4 @@
 mob_install(fsm_mob.idle)
 image_blend = color_verde_a
-art = spr_paint2
+sprite_index = spr_paint2
+mask_index = spr_paint0
