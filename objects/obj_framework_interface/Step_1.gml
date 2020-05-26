@@ -121,8 +121,8 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuOpti
 			
 		/// Cam Speed
 		case 1:
-			var _gamepad = game.app.input.gamepad + _in
-			game.app.input.gamepad = clamp(_gamepad, 0, 3)
+			//var _gamepad = game.app.input.gamepad + _in
+			//game.app.input.gamepad = clamp(_gamepad, 0, 3)
 			break	
 			
 		/// Enter menu window

@@ -25,6 +25,7 @@ if fire_c then
 #region FIRE
 if state == fsm_mob.running begin
 
+
 	part_type_color3(part_fire, c_white, color(color_amarelo_b), color(color_vermelho))
 	
 	if fire_a or fire_na begin

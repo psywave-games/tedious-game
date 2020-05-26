@@ -128,11 +128,6 @@ global.inventory = instance_create_layer(x,y, "Instances", obj_inventory)
 
 #endregion
 
-#region INIT CONSOLE
-global.console = instance_create_layer(x,y, "Instances", obj_console)
-
-#endregion
-
 #region INIT VIDEOGAMES
 self.videogames = [
 	instance_create_layer(x,y, "Instances", obj_game_asteroids),

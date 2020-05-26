@@ -16,9 +16,7 @@ key_interact = false
 
 key_input_text = "NONE"
 
-gamepad = 0
-
 hover = false
 
-suport_gamepad = gamepad_is_supported()
+global.suport_gamepad = gamepad_is_supported()
 device_mouse_dbclick_enable(false)

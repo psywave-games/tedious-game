@@ -86,8 +86,8 @@ end
 
 #region INTERFACE MENU OPTION
 else if game.app.state == fsm_game.menuOptions begin
-	var _gamepad = t(msg.psy_joystick) + " " + string(game.app.input.gamepad + 1)
-	var _color_gamepad = gamepad_is_connected(game.app.input.gamepad)? c_white: c_red
+	var _gamepad = gamepad_get_description(0)
+	var _color_gamepad = c_red
 
 	draw_menu(0, t(msg.menu_lang))
 	draw_menu(1, t(msg.menu_gamepad))

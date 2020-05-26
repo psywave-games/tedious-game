@@ -3,6 +3,7 @@ var _gamepad_up = false
 var _gamepad_down = false
 var _gamepad_left = false
 var _gamepad_right = false
+var _gamepad_circle = false
 
 var _gamepaded_cross = false
 var _gamepaded_circle = false
@@ -21,35 +22,55 @@ var _gamepad_axis_m = false
 var _gamepad_axis_x = 0
 var _gamepad_axis_y = 0
 
-if self.suport_gamepad begin
+var max_gamepad = gamepad_get_device_count()
 
-	_gamepaded_up = gamepad_button_check_pressed(gamepad, gp_padu)
-	_gamepaded_down = gamepad_button_check_pressed(gamepad, gp_padd)
-	_gamepaded_left = gamepad_button_check_pressed(gamepad, gp_padl)
-	_gamepaded_right = gamepad_button_check_pressed(gamepad, gp_padr)
+if global.suport_gamepad then for (var gamepad = 0; gamepad < max_gamepad; gamepad++) begin
 
-	_gamepad_up = gamepad_button_check(gamepad, gp_padu)
-	_gamepad_down = gamepad_button_check(gamepad, gp_padd)
-	_gamepad_left = gamepad_button_check(gamepad, gp_padl)
-	_gamepad_right = gamepad_button_check(gamepad, gp_padr)
+	if not gamepad_is_connected(gamepad) then
+		continue
+
+	_gamepaded_up |= gamepad_button_check_pressed(gamepad, gp_padu)
+	_gamepaded_down |= gamepad_button_check_pressed(gamepad, gp_padd)
+	_gamepaded_left |= gamepad_button_check_pressed(gamepad, gp_padl)
+	_gamepaded_right |= gamepad_button_check_pressed(gamepad, gp_padr)
+
+	_gamepad_up |= gamepad_button_check(gamepad, gp_padu)
+	_gamepad_down |= gamepad_button_check(gamepad, gp_padd)
+	_gamepad_left |= gamepad_button_check(gamepad, gp_padl)
+	_gamepad_right |= gamepad_button_check(gamepad, gp_padr)
+	_gamepad_circle |= gamepad_button_check(gamepad, gp_face2)
 	
-	_gamepaded_cross = gamepad_button_check_pressed(gamepad, gp_face1)
-	_gamepaded_circle = gamepad_button_check_pressed(gamepad, gp_face2)
-	_gamepaded_square = gamepad_button_check_pressed(gamepad, gp_face3)
-	_gamepaded_triangle = gamepad_button_check_pressed(gamepad, gp_face4)
-	_gamepaded_zl = gamepad_button_check_pressed(gamepad, gp_shoulderlb)
-	_gamepaded_zr = gamepad_button_check_pressed(gamepad, gp_shoulderrb)
-	_gamepaded_start = gamepad_button_check_pressed(gamepad, gp_start) 
-	_gamepaded_start|= gamepad_button_check_pressed(gamepad, gp_select)
+	_gamepaded_cross |= gamepad_button_check_pressed(gamepad, gp_face1)
+	_gamepaded_circle |= gamepad_button_check_pressed(gamepad, gp_face2)
+	_gamepaded_square |= gamepad_button_check_pressed(gamepad, gp_face3)
+	_gamepaded_triangle |= gamepad_button_check_pressed(gamepad, gp_face4)
+	_gamepaded_zl |= gamepad_button_check_pressed(gamepad, gp_shoulderlb)
+	_gamepaded_zr |= gamepad_button_check_pressed(gamepad, gp_shoulderrb)
+	_gamepaded_start |= gamepad_button_check_pressed(gamepad, gp_start) 
+	_gamepaded_start |= gamepad_button_check_pressed(gamepad, gp_select)
 	
-	_gamepad_axis_m = gamepad_button_check(gamepad, gp_stickl)
+	_gamepad_axis_m |= gamepad_button_check(gamepad, gp_stickl)
 	
+	
+	var max_hats = gamepad_hat_count(gamepad)
+	for (var hat = 0; hat < max_hats; hat++) begin
+		var dpad = gamepad_hat_value(gamepad, hat)
+		
+		_gamepad_up |= dpad >> 1 & 1
+		_gamepad_down |= dpad >> 4 & 1
+		_gamepad_left |= dpad >> 8 & 1
+		_gamepad_right |= dpad >> 2 & 1
+	end
+
 	var ax = gamepad_axis_value(gamepad, gp_axislh)
 	var ay = gamepad_axis_value(gamepad, gp_axislv)
 	
-	_gamepad_axis_x = abs(ax) <= 0.1? 0: sign(ax)
-	_gamepad_axis_y = abs(ay) <= 0.3? 0: sign(ay)
+	_gamepad_axis_x = abs(ax) <= 0.1? 0: ax
+	_gamepad_axis_y = abs(ay) <= 0.3? 0: ay
 end
+
+_gamepad_axis_x = clamp(_gamepad_axis_x, -1, 1)
+_gamepad_axis_y = clamp(_gamepad_axis_y, -1, 1)
 #endregion
 
 #region KEYBOARD INPUTS
@@ -175,7 +196,7 @@ if game.app.state == fsm_game.play begin
 	key_moonwalk = _key_ord_m
 	key_interact = _keyd_enter or _keyd_ord_f
 	
-	if game.app.input.suport_gamepad begin 
+	if global.suport_gamepad begin 
 		key_axis_x += _gamepad_right - _gamepad_left
 		key_axis_x += _gamepad_axis_x
 		key_axis_y += _gamepad_axis_y
@@ -183,7 +204,7 @@ if game.app.state == fsm_game.play begin
 		key_axis_switch += _gamepaded_triangle - _gamepaded_square
 		key_axis_switch += _gamepaded_zr - _gamepaded_zl
 		
-		key_run |= _gamepaded_circle
+		key_run |= _gamepad_circle
 		key_interact |= _gamepaded_cross
 		key_moonwalk |= _gamepad_axis_m
 	end
