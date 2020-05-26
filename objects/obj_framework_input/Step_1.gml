@@ -67,6 +67,7 @@ if global.suport_gamepad then for (var gamepad = 0; gamepad < max_gamepad; gamep
 	
 	_gamepad_axis_x = abs(ax) <= 0.1? 0: ax
 	_gamepad_axis_y = abs(ay) <= 0.3? 0: ay
+	
 end
 
 _gamepad_axis_x = clamp(_gamepad_axis_x, -1, 1)
