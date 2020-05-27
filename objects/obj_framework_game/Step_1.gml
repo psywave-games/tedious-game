@@ -11,10 +11,9 @@ end
 #endregion
 
 #region GAME OVER
-if p_exists() then if game.app.player.state == fsm_player.died and game.app.state == fsm_game.play begin
-	time_speedrun_end = current_time
-	state_reset(game.app, fsm_game.over)
-end
+if p_exists() then
+	if game.app.player.state == fsm_player.died and game.app.state == fsm_game.play then
+		event_user(ev_mygame_end)
 #endregion
 
 #region CLOCK

@@ -60,12 +60,6 @@ self.happy = 100
 /// @return	string		Apelido do jogador
 self.nickname =	""
 
-
-/// @see				Cronometrar tempo de jogo
-self.time_speedrun_end = current_time
-self.time_speedrun_init = current_time
-self.time_cron_step	= 0
-
 global.fullscreen_web = false
 self.clock_hour = 23
 self.clock_minute = 10
