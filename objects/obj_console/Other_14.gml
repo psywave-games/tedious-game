@@ -336,18 +336,17 @@ if (text_part[0] == commands[command_1.create]) {
 					var display_to_user = ""
 					var countnumber 
 
-					#region Instances 
-						display_to_user += "Instances: " + string(instance_number(all))
-					#endregion
 					#region Surfaces 
 						countnumber = 0
 						for (var i = 0; i < 1000; ++i) {
 						    if (surface_exists(i)) {countnumber++}
 						}
-						display_to_user += " Surfaces: " + string(countnumber)
+						display_to_user += "SURFACES: " + string(countnumber)
+						temp_post_message = display_to_user
+						event_user(1); // post message to the history 
 					#endregion
 					#region ds_list 
-						display_to_user += " DS: "
+						display_to_user = "DS: "
 					
 						countnumber = 0
 						for (var i = 0; i < 1000; ++i) {
@@ -389,13 +388,17 @@ if (text_part[0] == commands[command_1.create]) {
 						    if (ds_exists(i,ds_type_priority)) {countnumber++}
 						}
 						display_to_user += " priority: " + string(countnumber)
+						temp_post_message = display_to_user
+						event_user(1); // post message to the history 
 					#endregion
 					#region paths 
 						countnumber = 0
 						for (var i = 0; i < 1000; ++i) {
 						    if (path_exists(i)) {countnumber++}
 						}
-						display_to_user += " Paths: " + string(countnumber)
+						display_to_user = "PATHS: " + string(countnumber)
+						temp_post_message = display_to_user
+						event_user(1); // post message to the history 
 					#endregion
 					#region particles
 						countnumber = 0
@@ -412,25 +415,28 @@ if (text_part[0] == commands[command_1.create]) {
 								}
 							}
 						}
-						display_to_user += " PARTICLES: total:" + string(particlenumber) + " systems:" + string(countnumber) + " emitter:" + string(emitternumber)
+						display_to_user = "PARTICLES: total:" + string(particlenumber) + " systems:" + string(countnumber) + " emitter:" + string(emitternumber)
+						temp_post_message = display_to_user
+						event_user(1); // post message to the history 
 					#endregion
 					#region sound emitter 
 						countnumber = 0
 						for (var i = 0; i < 1000; ++i) {
 						    if (audio_emitter_exists(i)) {countnumber++}
 						}
-						display_to_user += " Audio Emitter: " + string(countnumber)
+						display_to_user = "AUDIO EMMITERS: " + string(countnumber)
+						temp_post_message = display_to_user
+						event_user(1); // post message to the history 
 					#endregion
 					#region buffer
 						countnumber = 0
 						for (var i = 0; i < 1000; ++i) {
 						    if (buffer_exists(i)) {countnumber++}
 						}
-						display_to_user += " buffer: " + string(countnumber)
+						display_to_user = "BUFFERS: " + string(countnumber)
+						temp_post_message = display_to_user
+						event_user(1); // post message to the history 
 					#endregion
-				
-					temp_post_message = display_to_user
-					event_user(1); // post message to the history 
 					command_done = true
 				#endregion
 			} else if (text_part[1] == "instance_count") {

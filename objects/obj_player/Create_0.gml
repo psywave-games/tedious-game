@@ -29,7 +29,7 @@ part_system = part_system_create()
 /// cascata de mijo
 part_emitter_penis = part_emitter_create(part_system)
 part_piss = part_type_create()
-part_type_sprite(part_piss, square, false, false, false)
+part_type_shape(part_piss, pt_shape_square)
 part_type_alpha3(part_piss, 1, 1, 0)
 part_type_speed(part_piss, 0.02, 0.025, 0, 0)
 part_type_direction(part_piss, 0, 0, 0, 0)

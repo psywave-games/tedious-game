@@ -76,6 +76,7 @@ switch self.state begin
 	case fsm_player.sleep:
 	case fsm_player.shower:
 		if game.app.input.key_interact and not self.in_first begin
+			game.app.input.key_interact = false
 			self.state = fsm_player.idle
 		end
 		break
@@ -133,9 +134,6 @@ else if self.state == fsm_player.shower begin
 		game.app.interface.can_interact = true
 	end
 end
-
-/// não é mais o primeiro interact com o mob
-self.in_first = false
 #endregion
 
 #region DEPTH
@@ -171,3 +169,7 @@ if not game.app.happy
 	image_index = 0
 end
 #endregion
+
+
+/// não é mais o primeiro interact com o mob
+self.in_first = false

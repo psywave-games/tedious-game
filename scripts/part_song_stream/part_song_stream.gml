@@ -14,9 +14,9 @@ if not (game.app.step % (room_speed/2)) begin
 	
 	/// alternar direita esquerda
 	if part_song_sign then
-		part_type_direction(part_song, 350, 360, 1, 10)
+		part_type_direction(part_song, 0, 10, 1, 10)
 	else
-		part_type_direction(part_song, 180, 190, 1, 10)
+		part_type_direction(part_song, 180, 170, 1, 10)
 	
 	part_emitter_burst(part_system, part_emitter_guitar, part_song, 1)
 end

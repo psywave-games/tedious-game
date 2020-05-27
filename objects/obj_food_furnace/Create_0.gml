@@ -15,7 +15,7 @@ part_emitter_c = part_emitter_create(part_system)
 #region FIRE
 part_fire = part_type_create()
 
-part_type_sprite(part_fire, square, false, false, false)
+part_type_shape(part_fire, pt_shape_square)
 part_type_alpha3(part_fire, 0, 1, 0)
 
 part_type_gravity(part_fire, 0.001, 90)
