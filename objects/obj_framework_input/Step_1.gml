@@ -3,10 +3,12 @@ var _gamepad_up = false
 var _gamepad_down = false
 var _gamepad_left = false
 var _gamepad_right = false
+
 var _gamepad_cross = false
 var _gamepad_circle = false
+var _gamepad_square = false
 
-
+var _gamepaded_any = false
 var _gamepaded_cross = false
 var _gamepaded_circle = false
 var _gamepaded_square = false
@@ -23,6 +25,8 @@ var _gamepaded_right = false
 var _gamepad_axis_m = false
 var _gamepad_axis_x = 0
 var _gamepad_axis_y = 0
+var _gamepaded_axis_x = 0
+var _gamepaded_axis_y = 0
 
 var max_gamepad = gamepad_get_device_count()
 
@@ -45,6 +49,7 @@ if global.suport_gamepad then for (var gamepad = 0; gamepad < max_gamepad; gamep
 	if string_pos("xinput", string_lower(gamepad_get_description(gamepad))) begin
 		_gamepad_cross |= gamepad_button_check(gamepad, gp_face1)
 		_gamepad_circle |= gamepad_button_check(gamepad, gp_face2)
+		_gamepad_square |= gamepad_button_check(gamepad, gp_face3)
 		_gamepaded_cross |= gamepad_button_check_pressed(gamepad, gp_face1)
 		_gamepaded_circle |= gamepad_button_check_pressed(gamepad, gp_face2)
 		_gamepaded_square |= gamepad_button_check_pressed(gamepad, gp_face3)
@@ -55,6 +60,7 @@ if global.suport_gamepad then for (var gamepad = 0; gamepad < max_gamepad; gamep
 	else begin
 		_gamepad_cross |= gamepad_button_check(gamepad, gp_face3)
 		_gamepad_circle |= gamepad_button_check(gamepad, gp_face2)
+		_gamepad_square |= gamepad_button_check(gamepad, gp_face4)
 		_gamepaded_cross |= gamepad_button_check_pressed(gamepad, gp_face3)
 		_gamepaded_circle |= gamepad_button_check_pressed(gamepad, gp_face2)
 		_gamepaded_square |= gamepad_button_check_pressed(gamepad, gp_face4)
@@ -86,9 +92,13 @@ if global.suport_gamepad then for (var gamepad = 0; gamepad < max_gamepad; gamep
 	_gamepad_axis_x = abs(ax) <= 0.1? 0: ax
 	_gamepad_axis_y = abs(ay) <= 0.3? 0: ay
 end
+_gamepaded_any = _gamepaded_cross or _gamepaded_circle  or _gamepaded_square or _gamepaded_triangle or _gamepaded_start
+_gamepaded_axis_x = _gamepaded_right - _gamepaded_left
+_gamepaded_axis_y = _gamepaded_down - _gamepaded_up
 
 _gamepad_axis_x = clamp(_gamepad_axis_x, -1, 1)
 _gamepad_axis_y = clamp(_gamepad_axis_y, -1, 1)
+
 #endregion
 
 #region KEYBOARD INPUTS
@@ -144,28 +154,28 @@ hover = game.app.interface.hover
 
 #region MENUS
 if game.app.state == fsm_game.intro begin 
-	key_menu_open = _keyd_enter + _msed_left
+	key_menu_open = _keyd_enter + _msed_left + _gamepaded_any
 end 
 
 else if game.app.state == fsm_game.play begin
-	key_menu_open = _keyd_esc
+	key_menu_open = _keyd_esc + _gamepaded_start
 end
 
 else if game.app.state == fsm_game.videogamePlay begin
-	key_menu_esc = _keyd_esc
+	key_menu_esc = _keyd_esc + _gamepaded_start
 end
 
 else if game.app.state == fsm_game.cutscene begin
-	key_menu_open = _keyd_esc
+	key_menu_open = _keyd_esc + _gamepaded_start
 end
 
 else if game.app.state == fsm_game.over begin
-	key_menu_open = _keyd_esc
+	key_menu_open = _keyd_esc + _gamepaded_start
 end
 
 else if game.app.state == fsm_game.credits begin
-	key_menu_open = _keyd_esc
-	key_menu_enter = _key_enter
+	key_menu_open = _keyd_esc  + _gamepaded_start
+	key_menu_enter = _key_enter + _gamepaded_any
 end
 
 else if game.app.state == fsm_game.menuMain 
@@ -175,21 +185,21 @@ else if game.app.state == fsm_game.menuMain
 	or game.app.state == fsm_game.menuWindow
 	or game.app.state == fsm_game.videogameMenu begin
 	
-	key_menu_esc = _keyd_esc
-	key_menu_enter = _keyd_enter
-	key_menu_go = _keyd_down - _keyd_up
-	key_menu_in = _keyd_righ - _keyd_left + _keyd_enter + _mouse_axis
+	key_menu_esc = _keyd_esc or _gamepaded_cross
+	key_menu_enter = _keyd_enter or _gamepaded_circle
+	key_menu_go = _keyd_down - _keyd_up + _gamepaded_axis_y
+	key_menu_in = _keyd_righ - _keyd_left + _keyd_enter + _mouse_axis + _gamepaded_axis_x
 end
 
 else if game.app.state == fsm_game.videogameMain begin
-	key_menu_esc = _keyd_esc
-	key_menu_enter = _keyd_enter + _mouse_axis
-	key_menu_go = _keyd_righ - _keyd_left + (_keyd_down - _keyd_up) * 3
+	key_menu_esc = _keyd_esc + _gamepad_cross + _gamepaded_start
+	key_menu_enter = _keyd_enter + _mouse_axis + _gamepaded_circle 
+	key_menu_go = _keyd_righ - _keyd_left + (_keyd_down - _keyd_up) * 3 + _gamepaded_axis_x + _gamepaded_axis_y * 3
 end
 
 else if game.app.state == fsm_game.lang begin 
-	key_menu_go = _keyd_righ - _keyd_left 
-	key_menu_in = _keyd_enter + _mouse_axis
+	key_menu_go = _keyd_righ - _keyd_left  + _gamepaded_axis_x
+	key_menu_in = _keyd_enter + _mouse_axis + _gamepaded_any
 end
 
 else if game.app.state == fsm_game.warn then
@@ -199,7 +209,7 @@ else if game.app.state == fsm_game.waitFocus then
 	key_menu_in = _msed_left or _msed_right
 	
 else if game.app.state == fsm_game.menuTutorial begin
-	key_menu_esc = _keyd_esc or _keyd_enter
+	key_menu_esc = _keyd_esc or _keyd_enter + _gamepaded_any
 end
 #endregion
 
@@ -231,9 +241,9 @@ end
 
 #region VIDEOGAME
 if  game.app.state == fsm_game.videogamePlay begin
-	key_axis_x = _key_righ - _key_left
-	key_axis_y = _key_up - _key_down 
-	key_fire = _keyd_ord_f
+	key_axis_x = _key_righ - _key_left + _gamepad_axis_x
+	key_axis_y = _key_up - _key_down + _gamepad_cross - _gamepad_square
+	key_fire = _keyd_ord_f + _gamepaded_circle
 end
 #endregion
 
