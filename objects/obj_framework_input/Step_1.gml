@@ -3,7 +3,9 @@ var _gamepad_up = false
 var _gamepad_down = false
 var _gamepad_left = false
 var _gamepad_right = false
+var _gamepad_cross = false
 var _gamepad_circle = false
+
 
 var _gamepaded_cross = false
 var _gamepaded_circle = false
@@ -38,19 +40,35 @@ if global.suport_gamepad then for (var gamepad = 0; gamepad < max_gamepad; gamep
 	_gamepad_down |= gamepad_button_check(gamepad, gp_padd)
 	_gamepad_left |= gamepad_button_check(gamepad, gp_padl)
 	_gamepad_right |= gamepad_button_check(gamepad, gp_padr)
-	_gamepad_circle |= gamepad_button_check(gamepad, gp_face2)
 	
-	_gamepaded_cross |= gamepad_button_check_pressed(gamepad, gp_face1)
-	_gamepaded_circle |= gamepad_button_check_pressed(gamepad, gp_face2)
-	_gamepaded_square |= gamepad_button_check_pressed(gamepad, gp_face3)
-	_gamepaded_triangle |= gamepad_button_check_pressed(gamepad, gp_face4)
+	/// MICROSOFT XBOX CONTROLLER
+	if string_pos("xinput", string_lower(gamepad_get_description(gamepad))) begin
+		_gamepad_cross |= gamepad_button_check(gamepad, gp_face1)
+		_gamepad_circle |= gamepad_button_check(gamepad, gp_face2)
+		_gamepaded_cross |= gamepad_button_check_pressed(gamepad, gp_face1)
+		_gamepaded_circle |= gamepad_button_check_pressed(gamepad, gp_face2)
+		_gamepaded_square |= gamepad_button_check_pressed(gamepad, gp_face3)
+		_gamepaded_triangle |= gamepad_button_check_pressed(gamepad, gp_face4)
+	end
+	
+	/// USB GENERIC|PLAYSTATION CONTROLLER
+	else begin
+		_gamepad_cross |= gamepad_button_check(gamepad, gp_face3)
+		_gamepad_circle |= gamepad_button_check(gamepad, gp_face2)
+		_gamepaded_cross |= gamepad_button_check_pressed(gamepad, gp_face3)
+		_gamepaded_circle |= gamepad_button_check_pressed(gamepad, gp_face2)
+		_gamepaded_square |= gamepad_button_check_pressed(gamepad, gp_face4)
+		_gamepaded_triangle |= gamepad_button_check_pressed(gamepad, gp_face1)
+	end
+	
+	_gamepaded_zl |= gamepad_button_check_pressed(gamepad, gp_shoulderl)
+	_gamepaded_zr |= gamepad_button_check_pressed(gamepad, gp_shoulderr)
 	_gamepaded_zl |= gamepad_button_check_pressed(gamepad, gp_shoulderlb)
 	_gamepaded_zr |= gamepad_button_check_pressed(gamepad, gp_shoulderrb)
 	_gamepaded_start |= gamepad_button_check_pressed(gamepad, gp_start) 
 	_gamepaded_start |= gamepad_button_check_pressed(gamepad, gp_select)
 	
 	_gamepad_axis_m |= gamepad_button_check(gamepad, gp_stickl)
-	
 	
 	var max_hats = gamepad_hat_count(gamepad)
 	for (var hat = 0; hat < max_hats; hat++) begin
@@ -67,7 +85,6 @@ if global.suport_gamepad then for (var gamepad = 0; gamepad < max_gamepad; gamep
 	
 	_gamepad_axis_x = abs(ax) <= 0.1? 0: ax
 	_gamepad_axis_y = abs(ay) <= 0.3? 0: ay
-	
 end
 
 _gamepad_axis_x = clamp(_gamepad_axis_x, -1, 1)
@@ -205,8 +222,8 @@ if game.app.state == fsm_game.play begin
 		key_axis_switch += _gamepaded_triangle - _gamepaded_square
 		key_axis_switch += _gamepaded_zr - _gamepaded_zl
 		
-		key_run |= _gamepad_circle
-		key_interact |= _gamepaded_cross
+		key_run |= _gamepad_cross
+		key_interact |= _gamepaded_circle
 		key_moonwalk |= _gamepad_axis_m
 	end
 end
