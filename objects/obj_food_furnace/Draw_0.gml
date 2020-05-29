@@ -24,25 +24,28 @@ if fire_c then
 
 #region FIRE
 if state == fsm_mob.running begin
-
-
-	part_type_color3(part_fire, c_white, color(color_amarelo_b), color(color_vermelho))
+	/// _anc = _ancora do shape
+	var _anc = os_browser != browser_not_a_browser? 1.0: 0.5
+	var _xx0 = x - 2 + _anc
+	var _xx1 = x + 2 + _anc
+	
+	part_type_color2(part_fire, color(color_amarelo_b), color(color_vermelho))
 	
 	if fire_a or fire_na begin
-		part_emitter_region(part_system, part_emitter_a, x - 8, x - 4, y -6, y -4, ps_shape_diamond, ps_distr_linear)	
-		part_emitter_burst(part_system, part_emitter_a, part_fire, 4)
+		part_emitter_region(part_system, part_emitter_a, _xx0 - 6, _xx1 - 6, y -6, y -4, ps_shape_diamond, ps_distr_gaussian)	
+		part_emitter_burst(part_system, part_emitter_a, part_fire, 3)
 	end
 	
 	if fire_b or fire_na begin
-		part_emitter_region(part_system, part_emitter_b, x - 2, x + 2, y -6, y -4, ps_shape_diamond, ps_distr_linear)
-		part_emitter_burst(part_system, part_emitter_b, part_fire, 4)
+		part_emitter_region(part_system, part_emitter_b, _xx0, _xx1, y -6, y -4, ps_shape_diamond, ps_distr_gaussian)
+		part_emitter_burst(part_system, part_emitter_b, part_fire, 3)
 	end
 	
 	if fire_c or fire_na begin
-		part_emitter_region(part_system, part_emitter_c, x + 4, x + 8, y -6, y -4, ps_shape_diamond, ps_distr_linear)
-		part_emitter_burst(part_system, part_emitter_c, part_fire, 4)
+		part_emitter_region(part_system, part_emitter_c, _xx0 + 6, _xx1 + 6, y -6, y -4, ps_shape_diamond, ps_distr_gaussian)
+		part_emitter_burst(part_system, part_emitter_c, part_fire, 3)
 	end
-end
+end	
 #endregion
 
 #region BARS

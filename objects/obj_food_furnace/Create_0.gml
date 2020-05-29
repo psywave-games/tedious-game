@@ -15,8 +15,8 @@ part_emitter_c = part_emitter_create(part_system)
 #region FIRE
 part_fire = part_type_create()
 
+part_type_size(part_fire, 0.008, 0.016, -0.0001, 0)
 part_type_shape(part_fire, pt_shape_square)
-part_type_alpha3(part_fire, 0, 1, 0)
-
+part_type_alpha2(part_fire, 1.0, 0.80)
 part_type_gravity(part_fire, 0.001, 90)
 #endregion
