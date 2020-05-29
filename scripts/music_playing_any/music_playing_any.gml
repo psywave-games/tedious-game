@@ -1,0 +1,1 @@
+return audio_is_playing(game.app.audio.sound_music)

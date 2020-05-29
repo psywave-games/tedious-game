@@ -631,6 +631,14 @@
             }
         },
         {
+            "Key": "32d867a3-0f93-4d48-94f5-c10fcf6ae5ac",
+            "Value": {
+                "id": "2e4dec2a-afef-463f-be9c-d684083d41e1",
+                "resourcePath": "scripts\/music_playing_get\/music_playing_get.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "330175ba-4528-4f44-bf89-ede2119cc0bc",
             "Value": {
                 "id": "5e0df3fd-12c5-4a85-a3fa-78aaa87c7759",
@@ -1663,6 +1671,14 @@
             }
         },
         {
+            "Key": "8b525450-6048-44a5-b8fa-7d23a207cb6a",
+            "Value": {
+                "id": "cd56e988-5ea4-4d51-9f01-e27d06e7f3ec",
+                "resourcePath": "scripts\/music_playing_any\/music_playing_any.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8d9913c3-bf33-40bd-8b93-eddaa63eeeae",
             "Value": {
                 "id": "10ef0690-495c-4e74-8830-cb816ac5c58d",
@@ -1851,6 +1867,14 @@
             "Value": {
                 "id": "7ac9288b-7f4f-47cf-b6d8-30bde8cb8c65",
                 "resourcePath": "scripts\/mob_enter\/mob_enter.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9f85419e-3298-470d-9d2c-a0cfcdf120b1",
+            "Value": {
+                "id": "56bc041d-02e4-4eb2-883b-fd8ce3ea5b37",
+                "resourcePath": "scripts\/music_playing_is\/music_playing_is.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3405,6 +3429,9 @@
         "8a2f1882-4d87-4c1f-9e3b-917b8e4cfab0",
         "3ee13b87-6b12-42f7-902e-07ed12a87d90",
         "222ef42a-2c8a-4acb-84f6-fc13557b09f6",
+        "9f85419e-3298-470d-9d2c-a0cfcdf120b1",
+        "8b525450-6048-44a5-b8fa-7d23a207cb6a",
+        "32d867a3-0f93-4d48-94f5-c10fcf6ae5ac",
         "de2f671e-007d-44e7-89ca-c39e9a8a0f06",
         "b66e50bf-5441-4ef8-98c9-e91c95174bf3",
         "9c001332-e518-4984-b520-73bae9196c5f",

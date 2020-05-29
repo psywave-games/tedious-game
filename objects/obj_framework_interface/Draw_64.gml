@@ -41,11 +41,11 @@ else if game.app.state == fsm_game.warn begin
 	draw_background(c_black, 1.0)
 	
 	/// PROSEGUIR
-	if self.step > room_speed * 9 then
+	if self.step > room_speed * 12 then
 		state_reset(game.app, fsm_game.intro)
 		
 	/// AVISO
-	else if self.step > room_speed * 3 begin
+	else if self.step > room_speed * 4 begin
 		draw_set_halign(fa_center)
 		draw_set_valign(fa_top)
 		
