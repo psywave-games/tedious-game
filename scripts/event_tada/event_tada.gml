@@ -2,7 +2,7 @@
 
 var _event = argument0
 
-with game.app.surprises begin
+with game.app.fun begin
 	in_mob = other.id
 	in_pass = false
 	in_object = other.object_index
@@ -10,5 +10,5 @@ with game.app.surprises begin
 	alarm_set(_event, 1)
 end
 
-if not game.app.surprises.in_pass then
+if not game.app.fun.in_pass then
 	event_user(_event)

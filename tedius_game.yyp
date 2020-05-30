@@ -487,6 +487,14 @@
             }
         },
         {
+            "Key": "2471f795-09e6-40d8-9956-0030415928e6",
+            "Value": {
+                "id": "ccb2512b-fdd1-4c4d-939f-b8b90c0b2fa8",
+                "resourcePath": "scripts\/music_stop\/music_stop.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "24f68884-ad0a-44c9-ad03-264ab6a6c2c9",
             "Value": {
                 "id": "d3c09e88-85e6-451f-9e51-572c43362215",
@@ -1147,6 +1155,14 @@
             "Value": {
                 "id": "b03dac2c-50a2-44b2-92ca-64a35492bb4e",
                 "resourcePath": "sounds\/snd_shoot\/snd_shoot.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "5f91e655-d91f-44f6-8bca-d739521be9c9",
+            "Value": {
+                "id": "613e06e9-efd4-46fe-87f2-ea7d03b8d383",
+                "resourcePath": "sounds\/snd_music_halflife\/snd_music_halflife.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -2607,6 +2623,14 @@
             }
         },
         {
+            "Key": "d537bd25-7764-4155-8340-e30796279ce3",
+            "Value": {
+                "id": "c7886496-4bc3-4ac6-bacc-f7539f61af66",
+                "resourcePath": "scripts\/sprite_frame\/sprite_frame.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d5a2da13-cadf-4d05-8311-70a455a9a442",
             "Value": {
                 "id": "b28ff261-9657-42fb-8b13-0465d35f2e0e",
@@ -3463,6 +3487,7 @@
         "d99613ff-8e1b-40a0-8a15-a4a3905d86ee",
         "ab398c71-def6-441c-b892-f0eb02003fd3",
         "71c1957f-8cfc-49b0-b0be-1fe3977bd6de",
+        "d537bd25-7764-4155-8340-e30796279ce3",
         "ae2a75e6-b006-41bc-95a6-0310707d1333",
         "cbd18dab-f9ee-4a24-8c63-db4ff27e3cf8",
         "541e5a20-2704-4273-84d2-0d42d4d2722e",
@@ -3473,6 +3498,7 @@
         "9f85419e-3298-470d-9d2c-a0cfcdf120b1",
         "8b525450-6048-44a5-b8fa-7d23a207cb6a",
         "32d867a3-0f93-4d48-94f5-c10fcf6ae5ac",
+        "2471f795-09e6-40d8-9956-0030415928e6",
         "de2f671e-007d-44e7-89ca-c39e9a8a0f06",
         "b66e50bf-5441-4ef8-98c9-e91c95174bf3",
         "9c001332-e518-4984-b520-73bae9196c5f",

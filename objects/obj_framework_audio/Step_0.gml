@@ -22,8 +22,7 @@ end
 
 /// fad out music dying
 if game.app.player.state == fsm_player.dying begin
-	var _out = 1 - (game.app.player.image_index/4)
-	var _volume = gain_get(volume_music) * _out
+	var _volume = gain_get(volume_music) * anim_fadein(game.app.player.image_index, 0, 4)
 	audio_sound_gain(music_playing_get(), _volume, 0)
 end
 #endregion

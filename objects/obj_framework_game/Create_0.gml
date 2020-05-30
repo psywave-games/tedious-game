@@ -1,16 +1,8 @@
 #region CREATE INSTANCE SINGLETON MODE
+if instance_number(self.object_index) > 1 begin
+	instance_destroy()
+end
 
-/// @pattern			singleton
-///	@see				só ira permitir este objeto ser instanciado uma vez
-if variable_global_exists("app") begin
-	/// verificado se é conflitante
-	instance_destroy(self)	/// auto destruir-se
-	exit					/// parar execução
-end 
-
-/// @patern				singleton
-/// @example			game.app
-/// @return	object		ponto global de acesso ao jogo com todas suas dependencias
 global.app = self.id
 #endregion
 
@@ -132,7 +124,7 @@ self.select = 0
 #endregion
 
 #region INIT EASTEREGGS
-surprises = instance_create_layer(x,y, "Instances", obj_framework_surprises)
+fun = instance_create_layer(x,y, "Instances", obj_framework_surprises)
 #endregion
 
 event_user(ev_init)

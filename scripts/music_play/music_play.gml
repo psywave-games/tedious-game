@@ -1,9 +1,7 @@
 /// @arg0 channel
 /// @arg1 index
 
-
-if audio_is_playing(game.app.audio.sound_music) then
-	audio_stop_sound(game.app.audio.sound_music)
+music_stop()
 
 game.app.audio.sound_music = argument0
 audio_play_sound(game.app.audio.sound_music, 0, true)

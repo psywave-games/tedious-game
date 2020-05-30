@@ -127,8 +127,9 @@ enum credits_scene {
 enum thematic {
 	none,	
 	halflife,
-	chris,
-	gta,
+	credits,
+	//chris,
+	//gta,
 	size
 }
 

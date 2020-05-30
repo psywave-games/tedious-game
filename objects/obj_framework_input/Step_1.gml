@@ -174,7 +174,6 @@ else if game.app.state == fsm_game.over begin
 end
 
 else if game.app.state == fsm_game.credits begin
-	key_menu_open = _keyd_esc  + _gamepaded_start
 	key_menu_enter = _key_enter + _gamepaded_any
 end
 

@@ -9,7 +9,7 @@ var _size = argument2
 if _step <= 0 then
 	return 1
 	
-if _step > _size then
+if _step >= _size then
 	return 0
 	
 return (_size - _step) / _size

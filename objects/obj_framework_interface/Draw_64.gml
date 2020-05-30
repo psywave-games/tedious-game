@@ -4,15 +4,21 @@ if game.app.state == fsm_game.play begin
 	var _score_color = happy_sign < 0? c_red: c_white
 	
 	/// FADOUT DYING
-	if game.app.player.state = fsm_player.dying then
-		draw_background(c_black, game.app.player.image_index/4)
+	if game.app.player.state = fsm_player.dying or game.app.player.state == fsm_player.died then
+		draw_background(c_black, max(
+			anim_fadeout(game.app.player.image_index, 0, 4),
+			game.app.player.state == fsm_player.died
+		)
+	)
+	
+		
 	
 	if self.can_interact then 
 		draw_gui(0, 0, fa_left, fa_top, self.message, fnt_game0, c_white, 1.0, 1.4)
 	draw_gui(0,0, fa_right, fa_bottom, text_build(), fnt_game0, c_white, 1, 1)
 	draw_gui(0,0, fa_left, fa_bottom, _date, fnt_game0, c_white, 1, 1)
 	draw_gui(0,0, fa_right, fa_top, text_score(), fnt_game0, _score_color, 1, 1.4)
-	
+		
 	self.message = ""
 end
 #endregion

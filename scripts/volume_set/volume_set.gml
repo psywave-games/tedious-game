@@ -20,7 +20,6 @@ switch _mixer begin
 		
 	case volume_music:
 		game.app.audio.mixer[volume_music] = _volume
-		for (var i = 0; i < array_length_1d(game.app.audio.sound_music); i++) begin
-			audio_sound_gain(game.app.audio.sound_music[i], gain_get(volume_music), 0)
-		end break
+		audio_sound_gain(game.app.audio.sound_music, gain_get(volume_music), 0)
+		break
 end

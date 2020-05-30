@@ -12,13 +12,21 @@ end
 #region HALF LIFE WALK SOUND
 if game.app.player.state == fsm_player.walk and self.select == thematic.halflife then with game.app.player begin
 	var _sound = self.speed >= 2? snd_halflife_step4: snd_halflife_step2
+	var _step = round(sprite_frame(spr_playerWalk0))
 	
-	//show_debug_message(image_index)
-	//if not self.image_index % 4 then
-	//	
-		
-	//else if self.image_index == 4 then
-	//	audio_play(self.x, self.yfoot, _sound, false)
+	/// PE ESQUERDO
+	if not (_step % 4) and not other.player_steped begin 
+		audio_play(self.x, self.yfoot, _sound - 1, false)
+		other.player_steped = true
+	end
 	
+	/// PE DIREITO
+	else if not (_step % 2) and not other.player_steped begin
+		audio_play(self.x, self.yfoot, _sound, false)
+		other.player_steped = true
+	end
+	
+	else if _step % 2 then
+		other.player_steped = false
 end
 #endregion

@@ -6,7 +6,7 @@ switch self.state begin
 		break
 		
 	case fsm_player.dying:	
-		image_speed = 0.032
+		image_speed = 0.064
 		speed = 0
 		break
 	
@@ -48,7 +48,7 @@ switch self.state begin
 			hspeed -= sign(self.axis_x) * p_speed()
 
 		/// velocidade da animação
-		image_speed = hspeed/4 * sign(hspeed)
+		image_speed = hspeed/7 * sign(hspeed)
 		break
 end
 #endregion

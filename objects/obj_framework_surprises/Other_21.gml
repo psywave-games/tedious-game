@@ -8,6 +8,7 @@ switch self.select begin
 		obj_paint.image_blend = color_cinza_c
 		timeline_index = tl_surprise_halflife_welcome
 		timeline_running = true
+		music_stop()
 		break
 
 
