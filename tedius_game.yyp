@@ -471,6 +471,14 @@
             }
         },
         {
+            "Key": "22ccbbf7-8684-4842-b478-43ceed4f2db0",
+            "Value": {
+                "id": "37e79260-df7a-4da0-9651-4dd478fdcd63",
+                "resourcePath": "scripts\/anim_fadeout\/anim_fadeout.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "23f8c22d-23a2-476c-96ef-69e68b270c7b",
             "Value": {
                 "id": "e293c44f-e9f5-4482-b31d-5004ce62d50b",
@@ -1911,11 +1919,27 @@
             }
         },
         {
+            "Key": "a3bef6c7-e4e8-49ee-881b-804df8e49060",
+            "Value": {
+                "id": "18a0a207-8371-4f1d-82c4-dd3556df902b",
+                "resourcePath": "scripts\/anim_fade\/anim_fade.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a3dc2e2f-75db-42fc-9309-5a83a41608f7",
             "Value": {
                 "id": "3e8423a4-e8e9-4e7e-9294-cbefebaffa85",
                 "resourcePath": "scripts\/volume_get\/volume_get.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a408d78f-70fc-41e3-9460-afa82c812f4e",
+            "Value": {
+                "id": "7012777e-83e7-455a-ab03-7a73d9f0c69e",
+                "resourcePath": "views\/a408d78f-70fc-41e3-9460-afa82c812f4e.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -2451,6 +2475,14 @@
             "Value": {
                 "id": "5c9ab2e5-a27e-46d7-9a56-7ccd02966876",
                 "resourcePath": "scripts\/gj_user_info_fromusername\/gj_user_info_fromusername.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "cbcd5df2-8db5-4f65-88a0-0862bf938921",
+            "Value": {
+                "id": "4b384dfc-7a4a-4595-92dc-2a4bc52e0ba7",
+                "resourcePath": "scripts\/browser\/browser.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -3103,6 +3135,14 @@
             }
         },
         {
+            "Key": "f3e53e8e-fdfb-4331-b04e-81776f3dbe67",
+            "Value": {
+                "id": "31701835-f4b3-428a-a325-eb21a495d385",
+                "resourcePath": "scripts\/anim_fadein\/anim_fadein.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "d113fc65-0c23-4330-a43e-0a8dc5e3f5a1",
@@ -3393,6 +3433,7 @@
         "53d84f8d-bb40-42a8-b221-982ec37f107d",
         "94a07a12-9973-4d20-b2ff-43edf55843e0",
         "697b282c-65dc-4c3b-b037-4ed9638ea612",
+        "cbcd5df2-8db5-4f65-88a0-0862bf938921",
         "22accf10-0699-4a92-8827-7e57239c6665",
         "bca9024e-14fb-48b7-9352-1981a290bbd4",
         "ed12b41d-549c-4f98-96a0-190016418320",
@@ -3450,6 +3491,9 @@
         "3a1a89ba-29d2-4dc5-8084-ba6887671e82",
         "f33f063a-5b3c-4ba8-a69a-dcf43f906ba0",
         "428aeabe-e81c-4896-9df8-a93e70c42fa3",
+        "f3e53e8e-fdfb-4331-b04e-81776f3dbe67",
+        "22ccbbf7-8684-4842-b478-43ceed4f2db0",
+        "a3bef6c7-e4e8-49ee-881b-804df8e49060",
         "befe9efb-cebb-4c0d-b275-ae590b5ed3c4",
         "b545f798-3391-409f-bf1a-819032e8aa95",
         "028a5c78-f2cd-4144-bfe2-19e227344076",

@@ -6,6 +6,7 @@ switch self.state begin
 		break
 		
 	case fsm_player.dying:	
+		image_speed = 0.032
 		speed = 0
 		break
 	
@@ -67,7 +68,7 @@ switch self.state begin
 	case fsm_player.dying:	
 		if image_index >= 4 begin 
 			self.state = fsm_player.died
-			audio_play(x, y, snd_shoot, false)
+			//audio_play(x, y, snd_shoot, false)
 		end
 		break
 	

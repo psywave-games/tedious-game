@@ -3,6 +3,9 @@ if game.app.state == fsm_game.play begin
 	var _date = text_time(false) + "\n" + text_date("-")
 	var _score_color = happy_sign < 0? c_red: c_white
 	
+	/// FADOUT DYING
+	if game.app.player.state = fsm_player.dying then
+		draw_background(c_black, game.app.player.image_index/4)
 	
 	if self.can_interact then 
 		draw_gui(0, 0, fa_left, fa_top, self.message, fnt_game0, c_white, 1.0, 1.4)
@@ -36,7 +39,6 @@ else if game.app.state == fsm_game.warn begin
 	var xx = display_get_gui_width()/2
 	var yy = display_get_gui_height()/2
 	
-	self.step += 1 
 	draw_set_font(fnt_game1)
 	draw_background(c_black, 1.0)
 	
@@ -51,15 +53,17 @@ else if game.app.state == fsm_game.warn begin
 		
 		draw_text_transformed_color(xx, -64, t(msg.warn_title), 8, 8, 0, c_red, c_red, c_red, c_red, 1)		
 		draw_text_ext_transformed_color(xx, 160, t(msg.warn_text), 32, xx - 32, 2, 2, 0, c_white, c_white, c_white, c_white, 1)
+		draw_background(c_black, anim_fade(self.step, room_speed * 4, room_speed * 12, room_speed/3))
 	end
 	
 	/// FAXETARIA
-	else begin
+	else begin		
 		draw_sprite_ext(spr_esrb, 0, xx, yy, 1.2, 1.2, 0, c_white, 1)
 		draw_set_halign(fa_left)
 		draw_set_valign(fa_middle)
 		draw_set_font(fnt_game1)
 		draw_text_ext_transformed_color(xx - (xx/8), yy -40, t(msg.esrb), 16, yy, 2.4, 2.4, 0, c_black, c_black, c_black, c_black, 1)
+		draw_background(c_black, anim_fade(self.step, 0, room_speed * 4, room_speed/3))
 	end
 end	
 #endregion
@@ -69,6 +73,7 @@ else if game.app.state == fsm_game.intro begin
 	
 	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), lite()? fnt_game0: fnt_title, c_white, 1, lite()? 2.6: 0.8)
 	draw_gui(0, 100, fa_center, fa_bottom, t(msg.press_start), fnt_game0, c_white, current_second%2)
+	//draw_background(c_black, anim_fadein(self.step, 0, room_speed/3))
 end
 #endregion
 
@@ -313,6 +318,7 @@ else if game.app.state == fsm_game.over begin
 	var xx = display_get_gui_width()/2
 	var yy = display_get_gui_height()/2
 	
+	draw_background(c_black, 1.0)
 	draw_set_text_config(fnt_game1, c_red, 1.0, fa_center, fa_top)	
 	draw_text_transformed(xx, -64, t(msg.gameover_title), 8, 8, 0)		
 	
@@ -328,7 +334,7 @@ end
 else if game.app.state == fsm_game.credits begin
 	var xx = display_get_gui_width()/2
 	
-	step += game.app.input.key_menu_enter? 4: 1
+	step += game.app.input.key_menu_enter? 4: 0
 	
 	draw_set_font(fnt_game0)
 	draw_set_halign(fa_center)

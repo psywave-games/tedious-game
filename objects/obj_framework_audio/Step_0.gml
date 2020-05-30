@@ -13,10 +13,17 @@ end
 #endregion
 
 #region SOUND MUSIC GAMEPLAY
-if game.app.state == fsm_game.play  and music_playing_is(snd_music_happy) begin
+/// pitch gameplay music
+if game.app.state == fsm_game.play and music_playing_is(snd_music_happy) begin
 	var _music = music_playing_get()
-	var _pitch = clamp(round(game.app.happy/8)*0.1, 0.4, 1)
-
+	var _pitch = clamp(round(game.app.happy/8)*0.16, 0.48, 1)
 	audio_sound_pitch(_music, _pitch)
+end
+
+/// fad out music dying
+if game.app.player.state == fsm_player.dying begin
+	var _out = 1 - (game.app.player.image_index/4)
+	var _volume = gain_get(volume_music) * _out
+	audio_sound_gain(music_playing_get(), _volume, 0)
 end
 #endregion

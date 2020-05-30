@@ -3,8 +3,11 @@
 /// @arg0 color
 /// @arg1 alpha
 
-draw_set_color(argument0)
-draw_set_alpha(argument1)
+var _color = argument0
+var _alpha = clamp(argument1, 0, 1)
+
+draw_set_color(_color)
+draw_set_alpha(_alpha)
 draw_rectangle(
 	0,0,
 	display_get_gui_width(),
