@@ -1,6 +1,8 @@
 /// GML MAIS AMIGAVEL
 #macro	game				global			/// @example game.app.players
 #macro	max_nickname		16				/// max characteres for string name
+#macro	database_file		"data.ini"		/// Database name
+#macro	database_global		"global game"	/// [section INI name]
 
 #macro	volume_master		2				/// channel master
 #macro	volume_music		0				/// channel mixer 0
@@ -92,6 +94,7 @@ enum fsm_player {
 
 /// FINITE STATE MACHINE GAME MODE
 enum fsm_game {
+	load,									/// STATE: Carregando jogo
 	lang,									/// STATE: Selecione Idioma
 	warn,									/// STATE: Aviso
 	intro,									/// STATE: Intro do jogo
@@ -119,10 +122,6 @@ enum fsm_mob {
 	broken									/// STATE: quebrado
 }
 
-enum credits_scene {
-	memorial = 3888,
-	final = 4777
-}
 
 enum thematic {
 	none,	

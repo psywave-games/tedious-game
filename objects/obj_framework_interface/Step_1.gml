@@ -9,7 +9,6 @@ self.can_interact = false
 #region SELECT LANG
 if game.app.state == fsm_game.lang and abs(_in) begin
 	lang_set(self.select? msg.en: msg.pt)
-	state_reset(game.app, fsm_game.warn)
 end
 #endregion
 
@@ -312,6 +311,6 @@ end
 
 #region WAIT FOCUS
 else if game.app.state == fsm_game.waitFocus and game.app.input.key_menu_in then
-	state_reset(game.app, fsm_game.lang)
+	lang_load()
 	
 #endregion

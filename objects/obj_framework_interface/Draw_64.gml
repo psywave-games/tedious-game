@@ -347,21 +347,22 @@ else if game.app.state == fsm_game.credits begin
 	draw_set_valign(fa_top)
 
 	/// Reiniciar jogo
-	if step > credits_scene.final then
+	if step > room_speed * 100 then
 		with game.app event_user(ev_mygame_restart)
 
 	/// Em memoria de:
-	else if step > credits_scene.memorial  begin
-		var yy = display_get_gui_height() - self.step + credits_scene.memorial
-		draw_text_ext_transformed_color(xx, yy, t(msg.memorial), 32, display_get_gui_width() - 16, 2, 2, 0, c_white, c_white, c_white, c_white, 1)
+	else if step > room_speed * 81 begin
+		var yy = display_get_gui_height() - self.step + (room_speed * 81)
+		draw_text_ext_transformed_color(xx, yy, t(msg.memorial), 32, display_get_gui_width()/3, 2, 2, 0, c_white, c_white, c_white, c_white, 1)
 	end
 	
 	/// Agredicimentos
 	else begin
 		var yy = display_get_gui_height() - self.step
-		draw_text_ext_transformed_color(xx, yy, t(msg.credits), 32, display_get_gui_width() - 16, 2, 2, 0, c_white, c_white, c_white, c_white, 1)
+		draw_text_ext_transformed_color(xx, yy, t(msg.credits), 32, display_get_gui_width()/3, 2, 2, 0, c_white, c_white, c_white, c_white, 1)
 	end
 	
+	draw_background( c_black, anim_fade(self.step, 0, room_speed * 100, room_speed * 3))
 end
 #endregion
 
@@ -370,5 +371,11 @@ else if game.app.state == fsm_game.waitFocus begin
 	draw_background(c_black, 1.0)
 	draw_sprite(spr_jolt, 0, display_get_gui_width()/2, display_get_gui_height()/2)
 	draw_gui(0, display_get_gui_height()/4, fa_center, fa_bottom, "mouse click to focus game", fnt_game1, c_white, current_second%2)
+end
+#endregion
+
+#region LOADED
+else if game.app.state == fsm_game.load begin
+	draw_background(c_black, 1.0)
 end
 #endregion

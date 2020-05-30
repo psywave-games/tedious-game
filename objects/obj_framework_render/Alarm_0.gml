@@ -33,5 +33,5 @@ end
 
 #endregion
 
-global.fullscreen_web = true
+game.app.render.mode_fullscreen_web = true
 resolution_set(resolution, ratio)

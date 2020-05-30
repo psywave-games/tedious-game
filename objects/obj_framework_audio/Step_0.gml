@@ -26,3 +26,10 @@ if game.app.player.state == fsm_player.dying begin
 	audio_sound_gain(music_playing_get(), _volume, 0)
 end
 #endregion
+
+#region SOUND MUSIC CREDITS FADOUT
+if game.app.state == fsm_game.credits begin
+	var _volume = gain_get(volume_music) * anim_fadein(game.app.interface.step, room_speed * 99, room_speed)
+	audio_sound_gain(music_playing_get(), _volume, 0)
+end
+#endregion

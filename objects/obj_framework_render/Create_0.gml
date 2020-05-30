@@ -41,6 +41,7 @@ self.size_ratio = [
 
 #region PREPARE CONFIGS
 /// resolução selecionada
+self.mode_fullscreen_web = false
 self.mode_resolution = 5
 self.mode_ratio = 1
 self.mode_light_hd = true

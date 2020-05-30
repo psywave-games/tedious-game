@@ -53,7 +53,7 @@ window_set_size(resolution_width, resolution_height)
 #region CENTER BROWSER WINDOW
 if os_browser != browser_not_a_browser begin
 	/// ajustar fullscreen
-	if global.fullscreen_web begin
+	if game.app.render.mode_fullscreen_web begin
 		window_set_size(browser_width, browser_height)
 		window_set_position(0,0)
 	end

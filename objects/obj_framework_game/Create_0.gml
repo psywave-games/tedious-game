@@ -32,8 +32,7 @@ self.started = false
 /// @see				idioma do jogo
 ///	@example			game.app.lang
 /// @return	enum		msg.en ou msg.pt
-self.lang = msg.pt	
-
+self.lang = 0
 
 /// @see				faz a camera tremer
 ///	@example			game.app.earthquake += 5
@@ -52,7 +51,6 @@ self.happy = 100
 /// @return	string		Apelido do jogador
 self.nickname =	""
 
-global.fullscreen_web = false
 self.clock_hour = 23
 self.clock_minute = 10
 #endregion
@@ -63,7 +61,7 @@ self.clock_minute = 10
 /// @pattern			Finite State Machine
 /// @example			game.app.state 
 /// @return fsm_game	estado comportamental do jogo
-state = os_browser == browser_not_a_browser? fsm_game.lang: fsm_game.waitFocus
+state = fsm_game.load
 #endregion
 
 #region INIT INPUT
@@ -127,4 +125,4 @@ self.select = 0
 fun = instance_create_layer(x,y, "Instances", obj_framework_surprises)
 #endregion
 
-event_user(ev_init)
+alarm_set(ev_init, 2)
