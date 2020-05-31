@@ -41,7 +41,7 @@ if gui_width <= 640 then
 if gui_height <= 640 then
 	gui_height = 720
 
-display_set_gui_size(gui_width, gui_height)
+display_set_gui_size(gui_width, mobile? gui_height*2: gui_height)
 #endregion
 
 #region AJUST RESOLUTION

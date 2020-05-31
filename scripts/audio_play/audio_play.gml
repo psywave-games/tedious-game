@@ -27,6 +27,7 @@ game.app.audio.index_fx[channel] = sound
 game.app.audio.sound_fx[channel] = audio_play_sound_on(game.app.audio.emitter[channel], sound, loop, channel)
 audio_emitter_position(game.app.audio.emitter[channel], xx, yy * 3, 0)
 audio_emitter_gain(game.app.audio.emitter[channel], gain_get(volume_fx))
+audio_emitter_pitch(game.app.audio.emitter[channel], 1.0)
 
 /// retornar id do audio
 return channel

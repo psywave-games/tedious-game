@@ -208,7 +208,7 @@ else if game.app.state == fsm_game.waitFocus then
 	key_menu_in = _msed_left or _msed_right
 	
 else if game.app.state == fsm_game.menuTutorial begin
-	key_menu_esc = _keyd_esc or _keyd_enter + _gamepaded_any
+	key_menu_esc = _keyd_esc or _keyd_enter or _gamepaded_any or mouse_in_any()
 end
 #endregion
 

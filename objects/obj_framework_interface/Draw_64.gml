@@ -167,12 +167,14 @@ else if game.app.state == fsm_game.menuAudio begin
 	draw_menu(0, t(msg.menu_audio_geral))
 	draw_menu(1, t(msg.menu_audio_music))
 	draw_menu(2, t(msg.menu_audio_sfx))
-	draw_menu(3, t(msg.back), 10, 60)
+	draw_menu(3, t(msg.menu_audio_mute))
+	draw_menu(4, t(msg.back), 10, 60)
 	
 	
 	draw_bars(0, game.app.audio.volume, 200)
 	draw_bars(1, game.app.audio.mixer[0], 200)
 	draw_bars(2, game.app.audio.mixer[1], 200)
+	draw_chck(3, game.app.audio.mute, 200)
 end
 #endregion
 
@@ -214,15 +216,14 @@ else if game.app.state == fsm_game.menuTutorial begin
 	draw_tutorial(make_color_rgb(189,91,76), t(msg.tutorial_interact), 3)
 
 	/// keyboard/gamepad
-	draw_sprite_align(spr_tuto_keyboard, 0, _xx, _yy, fa_left, fa_bottom, make_color_rgb(91,106,120), 1.0, 3)
-	draw_sprite_align(spr_tuto_keyboard, 1, _xx, _yy, fa_left, fa_bottom, make_color_rgb(119,130,188), 1.0, 3)
-	draw_sprite_align(spr_tuto_keyboard, 2, _xx, _yy, fa_left, fa_bottom, make_color_rgb(222,185,50), 1.0, 3)
-	draw_sprite_align(spr_tuto_keyboard, 3, _xx, _yy, fa_left, fa_bottom, make_color_rgb(129,183,117), 1.0, 3)
-	draw_sprite_align(spr_tuto_keyboard, 4, _xx, _yy, fa_left, fa_bottom, make_color_rgb(189,91,76), 1.0, 3)
-	draw_sprite_align(spr_tuto_gamepad, 00, _xx, _yy, fa_right, fa_bottom, c_white, 1.0, 1.2)
-		
-	
-	draw_menu(0, t(msg.back), 0, 150)
+	if ratio_get() >= 1.0 begin
+		draw_sprite_align(spr_tuto_keyboard, 0, _xx, _yy, fa_left, fa_bottom, make_color_rgb(91,106,120), 1.0, 3)
+		draw_sprite_align(spr_tuto_keyboard, 1, _xx, _yy, fa_left, fa_bottom, make_color_rgb(119,130,188), 1.0, 3)
+		draw_sprite_align(spr_tuto_keyboard, 2, _xx, _yy, fa_left, fa_bottom, make_color_rgb(222,185,50), 1.0, 3)
+		draw_sprite_align(spr_tuto_keyboard, 3, _xx, _yy, fa_left, fa_bottom, make_color_rgb(129,183,117), 1.0, 3)
+		draw_sprite_align(spr_tuto_keyboard, 4, _xx, _yy, fa_left, fa_bottom, make_color_rgb(189,91,76), 1.0, 3)
+		draw_sprite_align(spr_tuto_gamepad, 00, _xx, _yy, fa_right, fa_bottom, c_white, 1.0, 1.2)
+	end
 end
 #endregion
 

@@ -5,11 +5,16 @@
 var _mixer = argument0
 var _volume = argument1
 
+
+
 switch _mixer begin
 
 	case volume_master:
 		game.app.audio.volume = _volume
-		audio_master_gain(gain_get(volume_master))
+		if game.app.audio.mute then
+			audio_master_gain(0)
+		else
+			audio_master_gain(gain_get(volume_master))
 		break
 		
 	case volume_fx:

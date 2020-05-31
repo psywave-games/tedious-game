@@ -18,5 +18,9 @@ key_input_text = "NONE"
 
 hover = false
 
+screen = false
+mode_button = 0
+mode_layout = 0
+
 global.suport_gamepad = gamepad_is_supported()
 device_mouse_dbclick_enable(false)

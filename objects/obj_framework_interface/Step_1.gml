@@ -57,7 +57,7 @@ else if abs (game.app.input.key_menu_go) begin
 			break	
 			
 		case fsm_game.menuAudio:
-			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 3)
+			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 4)
 			break
 			
 		case fsm_game.videogameMain:
@@ -251,8 +251,14 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuAudi
 			volume_set(volume_fx, clamp(volume_get(volume_fx) + _in, 0, 10))
 			break
 			
-		/// voltar para o menu
+		/// Mutar
 		case 3:
+			game.app.audio.mute ^= true
+			volume_set(volume_master, volume_get(volume_master))
+			break
+			
+		/// voltar para o menu
+		case 4:
 			state_back( game.app )
 	end
 end

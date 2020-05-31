@@ -262,15 +262,17 @@ if game.app.lang == msg.en begin
 		case msg.psy_sofa:
 			return "sofa"
 		case msg.interact_stair_down:
-			return "up the stair"
+			return "up the stairs"
 		case msg.interact_stair_up:
-			return "down the stair"
+			return "down the stairs"
 		case msg.menu_tutorial:
 			return "How To Play"
 		case msg.menu_gamepad:
 			return "Gamepad:"
 		case msg.psy_joystick:
 			return "Joystick"
+		case msg.menu_audio_mute:
+			return "Mute:"
 	end
 end
 switch argument[0] begin
@@ -637,6 +639,8 @@ switch argument[0] begin
 		return "Fixa Super Suave"
 	case msg.psy_shower:
 		return "Chuveiro"
+	case msg.menu_audio_mute:
+		return "Mutar:"
 end
 
 return "#Error T_18_" + string(argument0)

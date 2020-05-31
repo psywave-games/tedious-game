@@ -317,5 +317,6 @@ enum msg {
 	psy_shower,
 	interact_shower_up,
 	interact_shower_down,
+	menu_audio_mute,
 }
 

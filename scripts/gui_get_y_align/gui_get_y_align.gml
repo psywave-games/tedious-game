@@ -29,5 +29,4 @@ switch _av begin
 end
 #endregion
 
-show_debug_message(max_y)
 return clamp(_yy, min_y, max_y)
