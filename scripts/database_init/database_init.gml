@@ -1,10 +1,17 @@
+#region DATABASE VERSION LOAD
 ini_open(database_file)
-
+var _save_version = ini_read_string(database_global, "version", "")
+ini_close()
+#endregion
 #region DATABASE VALIDATE|CREATE
-if ini_read_string(database_global, "version", "") != GM_version begin
+if _save_version != GM_version begin
 	file_delete(database_file)
-	database_create()
+	ini_open(database_file)
+	ini_write_string(database_global, "version", GM_version)
+	ini_write_string(database_global, "updated", date_date_string(GM_build_date))
+	ini_close()
 end
 #endregion
-
-ini_close()
+#region DATABASE CONFIG LOAD
+database_update(false)
+#endregion

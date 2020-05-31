@@ -16,7 +16,6 @@ else begin
 	end
 end
 #endregion
-
 #region ROOM MANAGER
 switch self.state begin
 	/// house map
@@ -31,5 +30,10 @@ switch self.state begin
 		if room != rm_intro then
 			room_goto(rm_intro)
 		break
+end
+#endregion
+#region DATABASE SAVE
+if self.state == fsm_game.credits or self.state == fsm_game.menuOptions begin
+	database_update(true)
 end
 #endregion

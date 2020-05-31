@@ -1,8 +1,8 @@
 {
-    "id": "6e0ae627-0b5b-4a04-9b94-62d82c958b38",
+    "id": "a7a1a11c-7ac9-4508-b572-ef761939f08b",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "database_save_real",
+    "name": "database_update",
     "IsCompatibility": false,
     "IsDnD": false
 }
