@@ -10,6 +10,14 @@ game.app.render.mode_ratio = _mode_ratio
 var resolution_height= game.app.render.resolutions[_mode_resolution]
 var resolution_width = round(game.app.render.size_ratio[_mode_ratio] * resolution_height)
 var camera_width = game.app.render.size_ratio[_mode_ratio] * word.height
+var mobile = false
+
+if resolution_width < resolution_height begin
+	resolution_width *= 2
+	mobile = true
+end
+
+
 
 /// ajustar resolução para ser divisvel por 8
 while resolution_width % 8 begin 
@@ -20,8 +28,7 @@ while camera_width % 8 begin
 	camera_width = round(camera_width + 1)
 end
 
-view_visible[0] = true
-view_enabled = true
+
 
 
 #region AJUST GUI SIZE
@@ -46,9 +53,8 @@ else
 	camera_set_view_size(view_camera[0], camera_width, word.height)
 
 /// Janela
-window_set_size(resolution_width, resolution_height)
+window_set_size(resolution_width, mobile? resolution_height*2: resolution_height)
 #endregion
-
 
 #region CENTER BROWSER WINDOW
 if os_browser != browser_not_a_browser begin
@@ -66,6 +72,17 @@ if os_browser != browser_not_a_browser begin
 		window_set_position(min_x, min_y)
 	end
 end
+#endregion
+
+#region VIEW SIZE
+var _w = window_get_width()
+var _h = window_get_height()
+view_enabled = true
+view_set_visible(1, mobile)
+view_set_wport(0, _w)
+view_set_hport(0, mobile? _h/2: _h)
+view_set_wport(1, 0)
+view_set_wport(1, 0)
 #endregion
 
 window_set_colour(c_black)

@@ -4,9 +4,13 @@
 var _yy = argument0
 var _av = argument1
 
+var _ww = window_get_width()
+var _wh = window_get_height()
+var _vh = display_get_gui_height()
+
 #region Enquadramento
 var min_y = padding
-var max_y = display_get_gui_height() - padding
+var max_y = _wh > _ww? (_vh/2) - (padding*2): _vh - padding
 #endregion
 
 #region Posicionamento Vertical
@@ -20,9 +24,10 @@ switch _av begin
 		break
 		
 	case fa_middle:
-		_yy += display_get_gui_height() / 2
+		_yy += max_y/2
 		break
 end
 #endregion
 
+show_debug_message(max_y)
 return clamp(_yy, min_y, max_y)

@@ -13,5 +13,5 @@ if _save_version != GM_version begin
 end
 #endregion
 #region DATABASE CONFIG LOAD
-database_update(false)
+//database_update(false)
 #endregion

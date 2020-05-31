@@ -5,20 +5,29 @@ var ratio = 0
 var resolution = 0
 
 #region SELECT DESKTOP RESOLUTION
-if os_browser == browser_not_a_browser begin
+if not browser() begin
 	resolution_set(self.mode_resolution,self.mode_ratio)
 	exit
 end
 #endregion
 
 #region SELECT BETTER RESOLUTION
-/// get ratio
-do begin 
-	if ratio == array_length_1d(self.size_ratio) then
-		break
+/// VERTICAL MOBILE
+if browser_height >= browser_width begin
+	ratio = browser_height >= (browser_width * 1.33333333)
+end
 
-	ratio += 1
-end until browser_ratio < self.size_ratio[ratio]
+/// HORIZONTAL MOBILE
+else begin
+/// get ratio
+	do begin 
+		if ratio == array_length_1d(self.size_ratio) then
+			break
+
+		ratio += 1
+	end until browser_ratio < self.size_ratio[ratio]
+end
+
 
 
 /// get resolution

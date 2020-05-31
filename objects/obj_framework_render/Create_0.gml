@@ -21,7 +21,9 @@ self.resolutions = [
 ]
 
 /// proporçoes pré definidas
-self.name_ratio = [
+self.name_ratio = [ 
+	"4:3 (Mobile)",
+	"1:1 (Mobile)",
 	"1:1",
 	"4:3",
 	"16:9",
@@ -31,6 +33,8 @@ self.name_ratio = [
 
 /// para uso de troca de solução
 self.size_ratio = [
+	0.65555555,
+	0.50000000,
 	1.00000000,
 	1.33333333,
 	1.77777778,
@@ -43,13 +47,14 @@ self.size_ratio = [
 /// resolução selecionada
 self.mode_fullscreen_web = false
 self.mode_resolution = 5
-self.mode_ratio = 1
+self.mode_ratio = 3
 self.mode_light_hd = true
 self.mode_outline = true
 self.mode_reflex = true
 self.mode_debug = 0
 self.mode_font_hd = true
 self.mode_camera = 0
+self.mode_auto = true
 self.font_speed = 3
 #endregion
 
