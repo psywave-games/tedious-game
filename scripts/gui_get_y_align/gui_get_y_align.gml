@@ -10,7 +10,7 @@ var _vh = display_get_gui_height()
 
 #region Enquadramento
 var min_y = padding
-var max_y = _wh > _ww? (_vh/2) - (padding*2): _vh - padding
+var max_y = _wh > _ww? (_vh*ratio_get()) - (padding*2): _vh - padding
 #endregion
 
 #region Posicionamento Vertical

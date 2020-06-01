@@ -1583,6 +1583,14 @@
             }
         },
         {
+            "Key": "7db98daf-bd16-4adc-a804-7ebc68927096",
+            "Value": {
+                "id": "ee190d86-0e81-4b75-876a-4041c84ddeb9",
+                "resourcePath": "scripts\/touch_button_check_pressed\/touch_button_check_pressed.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7e63ce0b-82db-4ebe-b719-9de41dcdee39",
             "Value": {
                 "id": "ee8ba63a-4590-4548-aae6-d24e5aefc315",
@@ -2359,6 +2367,14 @@
             }
         },
         {
+            "Key": "bad27012-3af5-4cf6-93f1-8097567d7b67",
+            "Value": {
+                "id": "7c9047de-3855-47cc-a24a-5aedd5743d49",
+                "resourcePath": "scripts\/touch_button_check_realesed\/touch_button_check_realesed.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bad7abed-710e-4192-a1fa-3858ed30b1cf",
             "Value": {
                 "id": "f599f54b-bf69-44b6-8821-479fa4836fc2",
@@ -2399,6 +2415,14 @@
             }
         },
         {
+            "Key": "bcc18be3-60e5-45e6-bff3-7b4c61ea91e3",
+            "Value": {
+                "id": "94afbb5f-6eb2-40f3-bcb7-4fe4216f558a",
+                "resourcePath": "scripts\/touch_button_check\/touch_button_check.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bcf688ac-fe55-4a98-bdcc-735cc634b048",
             "Value": {
                 "id": "03b66b72-1abe-4fd6-968c-69325d663eb8",
@@ -2412,6 +2436,14 @@
                 "id": "45d89dbd-3221-4dbe-8530-b694823a2665",
                 "resourcePath": "sprites\/spr_food_furnace3\/spr_food_furnace3.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bee9a393-d8e6-42ea-ac96-b8cc32c47a88",
+            "Value": {
+                "id": "1f056b05-422e-4f7a-a68a-72b4a0ec015a",
+                "resourcePath": "views\/bee9a393-d8e6-42ea-ac96-b8cc32c47a88.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3662,6 +3694,9 @@
         "9e253f25-08bd-45a9-8ee4-a0443c116751",
         "a65276c9-7aba-4cd5-8acb-371172faa255",
         "97828e8d-a655-46fb-8d81-3a9c05737cf6",
+        "bcc18be3-60e5-45e6-bff3-7b4c61ea91e3",
+        "7db98daf-bd16-4adc-a804-7ebc68927096",
+        "bad27012-3af5-4cf6-93f1-8097567d7b67",
         "52528d71-51ab-4359-b41d-51a4cfcabb10",
         "4d2d654b-b8ac-4ec3-87b1-5eefef096337",
         "064103ea-7d9a-43b3-84eb-11bed7e17381",

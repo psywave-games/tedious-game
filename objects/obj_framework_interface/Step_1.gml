@@ -1,5 +1,5 @@
 #region DETECT INPUTS
-if not keyboard_check(vk_anykey) and not mouse_check_button(mb_any) then
+if not game.app.input.pressed_any then
 	exit
 
 var _in = game.app.input.key_menu_in

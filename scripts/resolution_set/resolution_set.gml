@@ -80,7 +80,7 @@ var _h = window_get_height()
 view_enabled = true
 view_set_visible(1, mobile)
 view_set_wport(0, _w)
-view_set_hport(0, mobile? _h/2: _h)
+view_set_hport(0, mobile? _h*ratio_get(): _h)
 view_set_wport(1, 0)
 view_set_wport(1, 0)
 #endregion

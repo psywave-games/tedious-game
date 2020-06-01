@@ -17,10 +17,13 @@ key_interact = false
 key_input_text = "NONE"
 
 hover = false
+pressed_any = false
 
 screen = false
 mode_button = 0
-mode_layout = 0
+
+internal_old_buttons = 0
+internal_new_buttons = 0
 
 global.suport_gamepad = gamepad_is_supported()
 device_mouse_dbclick_enable(false)
