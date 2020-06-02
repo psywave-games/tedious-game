@@ -1,0 +1,1 @@
+return game.app.input.internal_analog_dpad

@@ -108,6 +108,8 @@ _gamepaded_circle |= touch_button_check_pressed(gp_face2)
 _gamepaded_square |= touch_button_check_pressed(gp_face3)
 _gamepaded_triangle |= touch_button_check_pressed(gp_face4)
 _gamepaded_start |= touch_button_check_pressed(gp_start)
+_gamepad_axis_x += touch_get_axis(gp_axislh)
+_gamepad_axis_y += touch_get_axis(gp_axislv)
 #endregion
 #region GAMEPAD ADJUSTMENTS
 _gamepaded_any = _gamepaded_cross or _gamepaded_circle  or _gamepaded_square or _gamepaded_triangle or _gamepaded_start

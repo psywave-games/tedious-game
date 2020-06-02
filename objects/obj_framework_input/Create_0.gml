@@ -24,6 +24,11 @@ mode_button = 0
 
 internal_old_buttons = 0
 internal_new_buttons = 0
+internal_analog_init = 0
+internal_analog_dpad = 0
+internal_analog_axis_x = 0
+internal_analog_axis_y = 0
+
 
 global.suport_gamepad = gamepad_is_supported()
 device_mouse_dbclick_enable(false)

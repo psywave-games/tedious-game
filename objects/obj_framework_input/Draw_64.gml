@@ -21,8 +21,8 @@ if _mobile begin
 	internal_new_buttons += 8 * draw_btn(gui_get_x_align(_w*0.5, fa_right), _mh - _h * 3, make_color_rgb(222,185,50))
 	internal_new_buttons += 2 * draw_btn(gui_get_x_align(_w*1.5, fa_right), _mh - _h * 2, make_color_rgb(189,91,76))
 	internal_new_buttons += 4 * draw_btn(gui_get_x_align(_w*2.5, fa_right), _mh - _h * 1, make_color_rgb(119,130,188))
-	internal_new_buttons += 1 * draw_analog(gui_get_x_align(_w*1.5, fa_left), _mh - _h * 1)
-	internal_old_buttons += internal_new_buttons >> 0 & 1 /// botão verde não pode ser pressed
+	internal_new_buttons += 1 * draw_analog(padding + (_w*1.0), _mh - _h * 1)
+	internal_old_buttons |= internal_new_buttons >> 0 & 1 /// botão verde não pode ser pressed
 	
 	if game.app.state != fsm_game.menuTutorial then
 		internal_new_buttons += 512 * draw_btn2(_vw/2, _vh - _h * 4, make_color_rgb(91,106,120), "start")

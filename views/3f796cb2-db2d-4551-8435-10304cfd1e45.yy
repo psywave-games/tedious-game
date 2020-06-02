@@ -9,13 +9,11 @@
         "9c001332-e518-4984-b520-73bae9196c5f",
         "ab55a0e0-b5c7-4fcd-be5f-7922aa693c62",
         "aaa0ee36-b507-4673-ba19-400e485cc6ca",
-        "b206946d-8512-40eb-83cd-41556487f394",
-        "9fb06a0b-6c88-4053-8097-4144a266e0e7",
-        "5f1b5939-44bd-4b6f-b40c-46ced5c12f5c",
         "b6ad906c-413f-40ac-a1f8-c9b18d6d6af0",
         "7db0f9cb-854f-49ed-a09c-a64c9e5733e7",
         "ddb3099f-31e9-488d-bccd-6a672bfb75f6",
-        "a408d78f-70fc-41e3-9460-afa82c812f4e"
+        "a408d78f-70fc-41e3-9460-afa82c812f4e",
+        "defc8c82-ef26-4454-9472-fc7c5a4703aa"
     ],
     "filterType": "GMScript",
     "folderName": "interface",
