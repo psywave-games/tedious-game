@@ -7,8 +7,12 @@ var _vh = display_get_gui_height()
 var _rt = ratio_get()
 var _mobile = _wh >_ww
 
+/// reset controllers
 internal_old_buttons = internal_new_buttons
 internal_new_buttons = 0
+internal_analog_dpad = 0
+internal_analog_axis_x = 0
+internal_analog_axis_y = 0
 
 if _mobile begin
 	draw_set_color(make_color_rgb(62, 70, 80))

@@ -85,10 +85,10 @@ if global.suport_gamepad then for (var gamepad = 0; gamepad < max_gamepad; gamep
 	for (var hat = 0; hat < max_hats; hat++) begin
 		var dpad = gamepad_hat_value(gamepad, hat)
 		
-		_gamepad_up |= dpad >> 1 & 1
-		_gamepad_down |= dpad >> 4 & 1
-		_gamepad_left |= dpad >> 8 & 1
-		_gamepad_right |= dpad >> 2 & 1
+		_gamepad_up |= dpad >> 0 & 1
+		_gamepad_down |= dpad >> 2 & 1
+		_gamepad_left |= dpad >> 3 & 1
+		_gamepad_right |= dpad >> 1 & 1
 	end
 
 	var ax = gamepad_axis_value(gamepad, gp_axislh)
@@ -99,22 +99,26 @@ if global.suport_gamepad then for (var gamepad = 0; gamepad < max_gamepad; gamep
 end
 #endregion
 #region GAMEPAD TOUCH
-_gamepad_cross |= touch_button_check(gp_face1)
-_gamepad_circle |= touch_button_check(gp_face2)
-_gamepad_square |= touch_button_check(gp_face3)
-_gamepad_triangle |= touch_button_check(gp_face4)
+_gamepaded_up |= touch_dpad_hat() >> 0 & 1
+_gamepaded_down |= touch_dpad_hat() >> 2 & 1
+_gamepaded_left |= touch_dpad_hat() >> 3 & 1
+_gamepaded_right |= touch_dpad_hat() >> 1 & 1
 _gamepaded_cross |= touch_button_check_pressed(gp_face1)
 _gamepaded_circle |= touch_button_check_pressed(gp_face2)
 _gamepaded_square |= touch_button_check_pressed(gp_face3)
 _gamepaded_triangle |= touch_button_check_pressed(gp_face4)
 _gamepaded_start |= touch_button_check_pressed(gp_start)
+_gamepad_cross |= touch_button_check(gp_face1)
+_gamepad_circle |= touch_button_check(gp_face2)
+_gamepad_square |= touch_button_check(gp_face3)
+_gamepad_triangle |= touch_button_check(gp_face4)
 _gamepad_axis_x += touch_get_axis(gp_axislh)
 _gamepad_axis_y += touch_get_axis(gp_axislv)
 #endregion
 #region GAMEPAD ADJUSTMENTS
-_gamepaded_any = _gamepaded_cross or _gamepaded_circle  or _gamepaded_square or _gamepaded_triangle or _gamepaded_start
 _gamepaded_axis_x = _gamepaded_right - _gamepaded_left
 _gamepaded_axis_y = _gamepaded_down - _gamepaded_up
+_gamepaded_any = _gamepaded_cross or _gamepaded_circle  or _gamepaded_square or _gamepaded_triangle or _gamepaded_start or abs(_gamepaded_axis_x) or abs(_gamepaded_axis_y)
 
 _gamepad_axis_x = clamp(_gamepad_axis_x, -1, 1)
 _gamepad_axis_y = clamp(_gamepad_axis_y, -1, 1)

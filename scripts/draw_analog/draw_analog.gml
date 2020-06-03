@@ -7,7 +7,7 @@ var _xx = argument0
 var _yy = argument1
 var _size = sqrt(display_get_gui_height() * display_get_gui_width())
 var _distance = mouse_nearest_distance(_xx, _yy)/(_size/8)
-var _in_button = _distance <= 1 and _distance >= 0.70
+var _in_button = _distance <= 1 and _distance >= 0.64
 var _in_analog = _distance <= 1
 var _axis_x = 0
 var _axis_y = 0
@@ -59,37 +59,23 @@ _yy += clamp(_axis_y * _sizeC, _min_y, _max_y)
 
 /// button
 draw_set_color(make_color_rgb(62, 70, 80))
-draw_set_alpha(_in_analog? 0.64: 1.0)
+draw_set_alpha(1.0)
 draw_circle(_xx, _yy, _sizeA, false)
 draw_set_alpha(1.0)
 draw_set_color(c_black)
 draw_circle(_xx, _yy, _sizeA, true)
 #endregion
 #region DPAD
-/*
 if not _in_analog begin
 	game.app.input.internal_analog_init = 0
-	game.app.input.internal_analog_dpad = 0
 end
 else if not game.app.input.internal_analog_init begin
 	game.app.input.internal_analog_init = game.app.step
-	game.app.input.internal_analog_dpad += 1 * (_axis_y < -0.5) /// up
-	game.app.input.internal_analog_dpad += 4 * (_axis_y > 0.5) /// down
-	game.app.input.internal_analog_dpad += 8 * (_axis_x < -0.5) /// left
-	game.app.input.internal_analog_dpad += 2 * (_axis_y > 0.5) /// right
+	game.app.input.internal_analog_dpad |= 1 * (_axis_y < -0.4) /// up
+	game.app.input.internal_analog_dpad |= 4 * (_axis_y > 0.4) /// down
+	game.app.input.internal_analog_dpad |= 8 * (_axis_x < -0.4) /// left
+	game.app.input.internal_analog_dpad |= 2 * (_axis_x > 0.4) /// right
 end
-else if not (game.app.input.internal_analog_init + game.app.step) % (room_speed/3) begin
-	game.app.input.internal_analog_dpad += 1 * (_axis_y < -0.5) /// up
-	game.app.input.internal_analog_dpad += 4 * (_axis_y > 0.5) /// down
-	game.app.input.internal_analog_dpad += 8 * (_axis_x < -0.5) /// left
-	game.app.input.internal_analog_dpad += 2 * (_axis_x > 0.5) /// right
-end 
-else begin 
-	game.app.input.internal_analog_dpad = 0
-end
-*/
 #endregion
-
-
 
 return _in_button
