@@ -25,18 +25,40 @@ end
 
 #region INTERFACE MENU LANG
 else if game.app.state == fsm_game.lang begin
-	var _xx = display_get_gui_width()/3
-	var _yy = display_get_gui_height()/2
+	var _w = display_get_gui_width()
+	var _h = display_get_gui_height()
 	var _pt = t(msg.pt)
 	var _en = t(msg.en)
 	
 	draw_background(c_black, 1.0)
 	
-	mouse_select(gui_get_x_align(_xx, fa_left), _yy, _pt, 0)
-	draw_gui(_xx, 0, fa_left, fa_middle, _pt, fnt_game0, c_white, select? 0.5: 1)
+	/// widescreen
+	if _h <= _w begin
+		var _xx = _w/3
+		var _yy = _h/2
+		mouse_select(gui_get_x_align(_xx, fa_left), _yy, _pt, 0)
+		draw_gui(_xx, 0, fa_left, fa_middle, _pt, fnt_game0, c_white, select? 0.5: 1)
 	
-	mouse_select(gui_get_x_align(_xx, fa_right) - string_width(_en), _yy, _en, 1)
-	draw_gui(_xx, 0, fa_right, fa_middle, _en, fnt_game0, c_white, select? 1: 0.5)
+		mouse_select(gui_get_x_align(_xx, fa_right) - string_width(_en), _yy, _en, 1)
+		draw_gui(_xx, 0, fa_right, fa_middle, _en, fnt_game0, c_white, select? 1: 0.5)
+	end
+	
+	/// mobile
+	else begin
+		if mouse_in_rectangle(1, 1, _w -1, (_h/2) -1) begin
+			hover |= true
+			select = 0
+		end
+		else if mouse_in_rectangle(1, (_h/2) + 1, _w -1, _h -1) begin
+			hover |= true
+			select = 1
+		end
+		
+		draw_set_halign(fa_center)
+		draw_set_valign(fa_middle)
+		draw_text_transformed_color(_w/2, _h/4, _pt, 1.6, 1.6, 0, c_white, c_white, c_white, c_white, select? 0.64: 1)
+		draw_text_transformed_color(_w/2, _h - (_h/4), _en, 1.6, 1.6, 0, c_white, c_white, c_white, c_white, select? 1: 0.64)
+	end
 end
 #endregion
 

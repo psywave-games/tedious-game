@@ -1,18 +1,21 @@
 /// @description draw_controllers
 
-var _ww = window_get_width()
-var _wh = window_get_height()
-var _vw = display_get_gui_width()
-var _vh = display_get_gui_height()
-var _rt = ratio_get()
-var _mobile = _wh >_ww
-
 /// reset controllers
 internal_old_buttons = internal_new_buttons
 internal_new_buttons = 0
 internal_analog_dpad = 0
 internal_analog_axis_x = 0
 internal_analog_axis_y = 0
+
+if not screen then 
+	exit
+
+var _ww = window_get_width()
+var _wh = window_get_height()
+var _vw = display_get_gui_width()
+var _vh = display_get_gui_height()
+var _rt = ratio_get()
+var _mobile = _wh >_ww
 
 if _mobile begin
 	draw_set_color(make_color_rgb(62, 70, 80))

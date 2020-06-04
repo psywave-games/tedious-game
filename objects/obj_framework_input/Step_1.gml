@@ -215,7 +215,7 @@ else if game.app.state == fsm_game.menuMain
 end
 
 else if game.app.state == fsm_game.videogameMain begin
-	key_menu_esc = _keyd_esc + _gamepad_cross + _gamepaded_start
+	key_menu_esc = _keyd_esc + _gamepaded_cross + _gamepaded_start
 	key_menu_enter = _keyd_enter + _mouse_axis + _gamepaded_circle 
 	key_menu_go = _keyd_righ - _keyd_left + (_keyd_down - _keyd_up) * 3 + _gamepaded_axis_x + _gamepaded_axis_y * 3
 end

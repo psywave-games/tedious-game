@@ -40,7 +40,5 @@ else begin
 end
 #endregion
 
-if show_debug(2) then
-	draw_rectangle(_xx0, _yy0, _xx1, _yy1, true)
 
 return mouse_in_rectangle(_xx0, _yy0, _xx1, _yy1)
