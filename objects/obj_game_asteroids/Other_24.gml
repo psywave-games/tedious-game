@@ -1,6 +1,12 @@
 /// @description ev_mygame_restart
-/// resetar escore
-myscore = 0
+/// resetar escore quando gameover ou apertou botão
+if not transition or not life begin
+	myscore = 0
+	level = 1
+	life = 3
+end
+
+transition = 0
 
 /// resetar variaveis do player
 player_x =    240
@@ -20,10 +26,15 @@ asteroid_y = array_create(64, -1)
 for (var i = 0; i < 10; i++) begin 
     do begin
         var success = true
+		var _n1 = 0.5 * min(level/3, 1)
+		var _n2 = 1.0 * min(level/3, 1)
+		var _n3 = 2.0 * min(level/3, 1)
+		var _n4 = 2.5 * min(level/3, 1)
+
         asteroid_x[i] = irandom(480)
         asteroid_y[i] = irandom(240)
-        asteroid_vspeed[i] = choose(-2.5, -2, -1, 1, 2, 2.5)
-        asteroid_hspeed[i] = choose(-0.5, 0, 0, 0, 0.5)
+        asteroid_vspeed[i] = choose(-_n4, -_n3, -_n2, _n2, _n3, _n4)
+        asteroid_hspeed[i] = choose(-_n1, 0, 0, 0, 0, 0, _n1)
 
         for (var j = 0; j < 10; j++) begin
             if i == j then

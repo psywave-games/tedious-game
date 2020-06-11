@@ -336,6 +336,9 @@ else if game.app.state == fsm_game.videogamePlay begin
 	var _yysubtitle = string_height(_title) + (padding * 2)
 	var _score =  "score: " + score_get_string(variable_instance_get(game.app.videogames[game.app.select], "myscore"))
 	
+	if variable_instance_exists(game.app.videogames[game.app.select], "life") then
+		_score +=  "\nlifes: " + string(variable_instance_get(game.app.videogames[game.app.select], "life"))
+	
 	/// title videogame
 	draw_text_hd(_center, padding, _title, 1.0)
 	draw_text_transformed(_center, _yysubtitle, _score, 0.28, 0.28, 0)

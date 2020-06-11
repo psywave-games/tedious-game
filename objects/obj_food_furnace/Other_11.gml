@@ -53,14 +53,14 @@ end
 
 #region TURN ON FURNACE 
 else if self.state == fsm_mob.idle and not gas begin
-	audio_play(x, y, snd_furnace_gas, true)
+	audio_play_at(x, y, snd_furnace_gas, true)
 	self.gas = true
 end
 
 else if self.state == fsm_mob.idle and gas begin
 	audio_stop(snd_furnace_gas)
-	audio_play(x, y, snd_furnace_on, false)
-	audio_play(x, y, snd_furnace_fire, true)
+	audio_play_at(x, y, snd_furnace_on, false)
+	audio_play_at(x, y, snd_furnace_fire, true)
 	audio_gain(snd_furnace_on, gas_size/5)
 	self.state = fsm_mob.running
 end

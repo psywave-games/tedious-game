@@ -7,4 +7,4 @@ with obj_baseLamp begin
 		self.state = fsm_mob.broken
 end
 
-audio_play(x, y, snd_broki, false)
+audio_play_at(x, y, snd_broki, false)

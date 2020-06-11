@@ -4,7 +4,7 @@ switch self.select begin
 	/// Ligar computador
 	case 1:
 		alarm[ev_interact_down] = room_speed * 2
-		audio_play(x,y, snd_pc_up, false)
+		audio_play_at(x,y, snd_pc_up, false)
 		state = fsm_mob.none
 		break
 
@@ -29,7 +29,7 @@ switch self.select begin
 		
 	/// maquinas agricolas
 	case 3:
-		audio_play(x,y, snd_pc_tada, false)
+		audio_play_at(x,y, snd_pc_tada, false)
 		url_open_ext("https://www.google.com/search?tbm=isch&q=maquinas+agricolas+tunadas", "_blank")
 		score_add(troll_points)
 		troll_points = 0

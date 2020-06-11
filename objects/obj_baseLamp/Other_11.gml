@@ -14,4 +14,4 @@ if global.points_switch > 0 begin
 end
 #endregion
 
-audio_play(x, y, snd_click, false)
+audio_play_at(x, y, snd_click, false)

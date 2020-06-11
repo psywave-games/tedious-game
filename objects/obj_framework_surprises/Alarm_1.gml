@@ -8,7 +8,7 @@ switch self.in_object begin
 			break
 			
 		audio_stop(snd_door_open)
-		audio_play(self.in_mob.x, self.in_mob.y, snd_quack, false)
+		audio_play_at(self.in_mob.x, self.in_mob.y, snd_quack, false)
 		break
 		
 end

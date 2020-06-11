@@ -4,9 +4,9 @@ if game.app.state != fsm_game.play then
 #region HALF LIFE USE SOUND
 if game.app.input.key_interact and self.select == thematic.halflife begin
 	if game.app.interface.can_interact then
-		audio_play(game.app.player.x, game.app.player.y, snd_halflife_done, false)
+		audio_play_at(game.app.player.x, game.app.player.y, snd_halflife_done, false)
 	else 
-		audio_play(game.app.player.x, game.app.player.y, snd_halflife_deny, false)
+		audio_play_at(game.app.player.x, game.app.player.y, snd_halflife_deny, false)
 end
 #endregion
 #region HALF LIFE WALK SOUND
@@ -16,13 +16,13 @@ if game.app.player.state == fsm_player.walk and self.select == thematic.halflife
 	
 	/// PE ESQUERDO
 	if not (_step % 4) and not other.player_steped begin 
-		audio_play(self.x, self.yfoot, _sound - 1, false)
+		audio_play_at(self.x, self.yfoot, _sound - 1, false)
 		other.player_steped = true
 	end
 	
 	/// PE DIREITO
 	else if not (_step % 2) and not other.player_steped begin
-		audio_play(self.x, self.yfoot, _sound, false)
+		audio_play_at(self.x, self.yfoot, _sound, false)
 		other.player_steped = true
 	end
 	

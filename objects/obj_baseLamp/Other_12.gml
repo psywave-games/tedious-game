@@ -5,4 +5,4 @@ with obj_baseLamp begin
 		self.state = fsm_mob.idle
 end
 
-audio_play(x, y, snd_click, false)
+audio_play_at(x, y, snd_click, false)

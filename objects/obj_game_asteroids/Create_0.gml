@@ -1,5 +1,7 @@
-
+level = 1
+life = 3
 myscore = 0
+transition = 0
 
 player_x =    240
 player_y =    120
