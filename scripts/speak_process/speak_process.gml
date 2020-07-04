@@ -15,6 +15,10 @@ if self.speak_init <= self.speak_step and self.speak_step < self.speak_finish be
 		var _text_speed = 4 / game.app.render.font_speed /// velocidade do texto
 		var _current = (self.speak_step - self.speak_init) / _text_speed //// tempo passado
 		var _eos = clamp (_current, 1, string_length(self.speak_text)) /// ultimo caracter
+		
+		/// tocar som de voz
+		if not voice_playing_any() then
+			voice_play(string_copy(self.speak_text, round(_eos), 1))
 			
 		/// extrair texto da fala
 		var _text = string_copy(self.speak_text, 0, round(_eos)) /// copiar do primeiro ao ultimo caracter conforme o tempo passado
