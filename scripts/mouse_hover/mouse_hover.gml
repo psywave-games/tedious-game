@@ -10,6 +10,9 @@ var _yy0 = 0
 var _xx1 = 0
 var _yy1 = 0
 
+if not game.app.input.mouse then
+	return false
+
 #region HORIZONTAL
 if draw_get_halign() == fa_left begin
 	_xx0 = argument0

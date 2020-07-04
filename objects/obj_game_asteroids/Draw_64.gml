@@ -76,10 +76,10 @@ if (abs(player_hspeed) + abs(player_vspeed)) < 0.12 begin
 end
 #endregion
 #region PLAYER SOUND
-if game.app.input.key_axis_y < 0 and not audio_playing_is(snd_asteroids_extraShip) then
+if game.app.input.key_axis_y < 0 and not audio_is_playing(snd_asteroids_extraShip) then
 	audio_play(snd_asteroids_extraShip, false)
 	
-if game.app.input.key_axis_y > 0 and not audio_playing_is(snd_asteroids_trust) then
+if game.app.input.key_axis_y > 0 and not audio_is_playing(snd_asteroids_trust) then
 	audio_play(snd_asteroids_trust, true)
 	
 else if game.app.input.key_axis_y == 0 then
@@ -308,8 +308,8 @@ for (var i = 0; i < array_length_1d(shoot_x); i++) begin
 					asteroid_x[n] = asteroid_x[j]
 					asteroid_y[n] = asteroid_y[j]
 					
-					asteroid_hspeed[n] = (asteroid_hspeed[j] + 0.5) * choose(-2, -1, 1, 2) * (level/10)
-					asteroid_vspeed[n] = asteroid_vspeed[j] * random_range(-2, 2) * (level/10)
+					asteroid_hspeed[n] = (asteroid_hspeed[j] + 0.5) * choose(-2, -1, 1, 2) * min(level/5, 1)
+					asteroid_vspeed[n] = asteroid_vspeed[j] * random_range(-2, 2) * min(level/5, 1)
 					break
 				end
 			end
@@ -331,7 +331,11 @@ for (var i = 0; i < array_length_1d(asteroid_x); i++) begin
 	_asteroids += 1
 	
 	/// colision player
-	_colision |= point_distance(asteroid_x[i], asteroid_y[i], player_x, player_y) <= asteroid_size[i] + 3
+	if point_distance(asteroid_x[i], asteroid_y[i], player_x, player_y) <= asteroid_size[i] + 3 begin
+		audio_play(snd_asteroids_bangLarge, false)
+		asteroid_x[i] = -1
+		_colision |= true
+	end
 end
 #endregion
 #region PLAYER DRAW

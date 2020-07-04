@@ -17,6 +17,7 @@ key_interact = false
 key_input_text = "NONE"
 
 hover = false
+mouse = false
 pressed_any = false
 
 screen = false
@@ -29,6 +30,8 @@ internal_analog_dpad = 0
 internal_analog_axis_x = 0
 internal_analog_axis_y = 0
 
+internal_mouse_old_x = 0
+internal_mouse_old_y = 0
 
 global.suport_gamepad = gamepad_is_supported()
 device_mouse_dbclick_enable(false)

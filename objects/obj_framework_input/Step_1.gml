@@ -1,3 +1,12 @@
+#region MOUSE IS UPDATING
+var _mx = device_mouse_x_to_gui(0)
+var _my = device_mouse_y_to_gui(0)
+
+self.mouse = self.internal_mouse_old_x != _mx or self.internal_mouse_old_y != _my 
+self.internal_mouse_old_x = _mx
+self.internal_mouse_old_y = _my
+
+#endregion
 #region GAMEPAD VARIABLES
 var _gamepad_up = false
 var _gamepad_down = false
@@ -164,7 +173,7 @@ if self.hover then
 	_mouse_axis = _msed_left - _msed_right
 	
 #endregion
-
+#region RESET KEYS|GAMEPAD|TOUCH|MOUSE
 pressed_any = keyboard_check(vk_anykey) or mouse_check_button(mb_any) or _gamepaded_any
 
 key_menu_open = false
@@ -174,8 +183,8 @@ key_axis_x = 0
 key_axis_y = 0
 key_menu_go = 0
 key_menu_in = 0
-hover = game.app.interface.hover
-
+hover = self.mouse and game.app.interface.hover
+#endregion
 #region MENUS
 if game.app.state == fsm_game.intro begin 
 	key_menu_open = _keyd_enter + _msed_left + _gamepaded_any
@@ -235,7 +244,6 @@ else if game.app.state == fsm_game.menuTutorial begin
 	key_menu_esc = _keyd_esc or _keyd_enter or _gamepaded_any or abs(_mouse_axis)
 end
 #endregion
-
 #region GAMEPLAY
 
 if game.app.state == fsm_game.play begin
@@ -261,7 +269,6 @@ if game.app.state == fsm_game.play begin
 	
 end
 #endregion
-
 #region VIDEOGAME
 if  game.app.state == fsm_game.videogamePlay begin
 	key_axis_x = _key_righ - _key_left + _gamepad_axis_x
@@ -269,8 +276,6 @@ if  game.app.state == fsm_game.videogamePlay begin
 	key_fire = _keyd_ord_f + _gamepaded_circle
 end
 #endregion
-
-
 #region INPUTEXT GAMEOVER
 if game.app.state == fsm_game.over begin
 	key_menu_delete = _keyd_del

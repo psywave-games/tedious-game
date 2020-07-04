@@ -7,7 +7,7 @@ internal_analog_dpad = 0
 internal_analog_axis_x = 0
 internal_analog_axis_y = 0
 
-if not screen then 
+if not screen or not mouse then 
 	exit
 
 var _ww = window_get_width()
