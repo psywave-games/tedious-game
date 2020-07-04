@@ -2,9 +2,11 @@
 var _mx = device_mouse_x_to_gui(0)
 var _my = device_mouse_y_to_gui(0)
 
-self.mouse = self.internal_mouse_old_x != _mx or self.internal_mouse_old_y != _my 
-self.internal_mouse_old_x = _mx
-self.internal_mouse_old_y = _my
+if not (game.app.step % 4) begin
+	self.mouse = self.internal_mouse_old_x != _mx or self.internal_mouse_old_y != _my 
+	self.internal_mouse_old_x = _mx
+	self.internal_mouse_old_y = _my
+end
 
 #endregion
 #region GAMEPAD VARIABLES

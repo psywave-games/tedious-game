@@ -7,8 +7,8 @@ var _xx = argument0
 var _yy = argument1
 var _size = sqrt(display_get_gui_height() * display_get_gui_width())
 var _distance = mouse_nearest_distance(_xx, _yy)/(_size/8)
-var _in_button = _distance <= 1 and _distance >= 0.64
-var _in_analog = _distance <= 1
+var _in_button = _distance <= 1 and _distance >= 0.64 and game.app.input.mouse
+var _in_analog = _distance <= 1 and game.app.input.mouse
 var _axis_x = 0
 var _axis_y = 0
 var _sizeA = _size/32
