@@ -7,6 +7,8 @@
 #macro	volume_master		2				/// channel master
 #macro	volume_music		0				/// channel mixer 0
 #macro	volume_fx			1				/// channel mixer 1
+#macro	volume_voice		3				/// channel mixer 3
+
 
 #macro	ev_init						0		/// Alteração de estado de jogo
 #macro	ev_interact_down			1		/// Iniciar Interação

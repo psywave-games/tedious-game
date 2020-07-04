@@ -11,7 +11,9 @@ volume = 5
 audio_master_gain(0.5)
 
 /// Mixer de volume do jogo
-mixer = array_create(2, 5)
+mixer_fx = 5
+mixer_music = 5
+mixer_voice = 5
 
 /// Audio desligado
 mute = false

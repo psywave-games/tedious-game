@@ -193,9 +193,9 @@ else if game.app.state == fsm_game.menuAudio begin
 	draw_menu(4, t(msg.back), 10, 60)
 	
 	
-	draw_bars(0, game.app.audio.volume, 200)
-	draw_bars(1, game.app.audio.mixer[0], 200)
-	draw_bars(2, game.app.audio.mixer[1], 200)
+	draw_bars(0, volume_get(volume_master), 200)
+	draw_bars(1, volume_get(volume_music), 200)
+	draw_bars(2, volume_get(volume_fx), 200)
 	draw_chck(3, game.app.audio.mute, 200)
 end
 #endregion

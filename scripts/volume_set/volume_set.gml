@@ -18,13 +18,13 @@ switch _mixer begin
 		break
 		
 	case volume_fx:
-		game.app.audio.mixer[volume_fx] = _volume
+		game.app.audio.mixer_fx = _volume
 		for (var i = 0; i < array_length_1d(game.app.audio.sound_fx); i++) begin
 			audio_emitter_gain(game.app.audio.emitter[i], gain_get(volume_fx))
 		end break
 		
 	case volume_music:
-		game.app.audio.mixer[volume_music] = _volume
+		game.app.audio.mixer_music = _volume
 		audio_sound_gain(game.app.audio.sound_music, gain_get(volume_music), 0)
 		break
 end
