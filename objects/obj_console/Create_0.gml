@@ -98,7 +98,7 @@ predict_shrink_speed = 53 // in px
 dt = delta_time / 100000
 #endregion
 #region font
-font_for_main = fnt_game0
+font_for_main = console_font_value
 #endregion
 #region only 1 of this object allowed 
 if (instance_number(obj_console) < 1) {

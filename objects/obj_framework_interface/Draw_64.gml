@@ -1,3 +1,17 @@
+#region GAME LOGO
+if game.app.state == fsm_game.menuMain
+	or game.app.state == fsm_game.menuOptions
+	or game.app.state == fsm_game.menuGraphic
+	or game.app.state == fsm_game.menuWindow
+	or game.app.state == fsm_game.menuAudio
+	or game.app.state == fsm_game.intro
+	begin 
+	
+	draw_gui(button_menu_margin, -100, fa_right, fa_middle, t(msg.game_name), lite()? fnt_game0: fnt_title, c_white, 1, lite()? 2.6: 0.8)
+
+end
+#endregion
+
 #region INTERFACE GUI GAMEPLAY
 if game.app.state == fsm_game.play begin
 	var _date = text_time(false) + "\n" + text_date("-")
@@ -98,8 +112,6 @@ end
 
 #region ANIMATION INTRO
 else if game.app.state == fsm_game.intro begin
-	
-	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), lite()? fnt_game0: fnt_title, c_white, 1, lite()? 2.6: 0.8)
 	draw_gui(0, 100, fa_center, fa_bottom, t(msg.press_start), fnt_game0, c_white, current_second%2)
 	//draw_background(c_black, anim_fadein(self.step, 0, room_speed/3))
 end
@@ -107,9 +119,6 @@ end
 
 #region INTERFACE MENU MAIN
 else if game.app.state == fsm_game.menuMain begin
-	
-	draw_gui(0, 0, fa_right, fa_middle, t(msg.game_name), lite()? fnt_game0: fnt_title, c_white, 1, lite()? 2.6: 0.8)
-	
 	draw_menu(0, t(msg.menu_start))
 	draw_menu(1, t(msg.menu_config))
 	draw_menu(2, t(msg.menu_tutorial))
@@ -119,18 +128,12 @@ end
 
 #region INTERFACE MENU OPTION
 else if game.app.state == fsm_game.menuOptions begin
-	var _gamepad = gamepad_get_description(0)
-	var _color_gamepad = c_red
-
-	draw_menu(0, t(msg.menu_lang))
-	draw_menu(1, t(msg.menu_gamepad))
+	draw_menu(0, t(game.app.lang), button_type_options, options(game.app.lang, msg.pt, msg.en), t(msg.menu_lang))
+	draw_menu(1, t(msg.menu_gamepad), button_type_check, game.app.input.mode_button)
 	draw_menu(2, t(msg.menu_window))
 	draw_menu(3, t(msg.menu_video))
 	draw_menu(4, t(msg.menu_audio))
 	draw_menu(5, t(msg.back), 10, 60)
-	
-	draw_item(0, t(game.app.lang), 200)
-	draw_item(1, _gamepad, 200, 30, _color_gamepad)
 end
 #endregion
 
@@ -140,23 +143,15 @@ else if game.app.state == fsm_game.menuWindow begin
 	var menu_resolution = string(display_get_gui_width()) + "x" + string(display_get_gui_height())
 	var menu_proportion = game.app.render.name_ratio[game.app.render.mode_ratio]
 	var menu_fullscreen = fullscreen_get()
-	var menu_font_speed = game.app.render.font_speed
 	var menu_cam_mode = t(msg.menu_video_cameramode0 + game.app.render.mode_camera)
 	
 	
-	draw_menu(0, t(msg.video_size))
-	draw_menu(1, t(msg.video_ratio))
-	draw_menu(2, t(msg.menu_video_cameramode))
+	draw_menu(0, menu_resolution, button_type_options, options(game.app.render.mode_resolution, 0, last_resolution), t(msg.video_size))
+	draw_menu(1, menu_proportion, button_type_options, options(game.app.render.mode_ratio, 0, last_ratio), t(msg.video_ratio))
+	draw_menu(2, menu_cam_mode, button_type_options, options(game.app.render.mode_camera, 0, 5), t(msg.menu_video_cameramode))
 	draw_menu(3, t(msg.video_digto))
-	draw_menu(4, t(msg.video_full))
-
+	draw_menu(4, t(msg.video_full), button_type_check, menu_fullscreen)
 	draw_menu(5, t(msg.back), 10, 60)
-	
-	draw_item(0, menu_resolution, 200)
-	draw_item(1, menu_proportion, 200)
-	draw_item(2, menu_cam_mode, 200)
-	draw_bars(3, menu_font_speed, 200)
-	draw_chck(4, menu_fullscreen, 200)
 end
 #endregion
 

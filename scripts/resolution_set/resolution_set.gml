@@ -7,21 +7,21 @@ var _mode_ratio = argument1
 game.app.render.mode_resolution = _mode_resolution
 game.app.render.mode_ratio = _mode_ratio
 
-var resolution_height= game.app.render.resolutions[_mode_resolution]
-var resolution_width = round(game.app.render.size_ratio[_mode_ratio] * resolution_height)
+var _resolution_height = game.app.render.resolutions[_mode_resolution]
+var _resolution_width = round(game.app.render.size_ratio[_mode_ratio] * _resolution_height)
 var camera_width = game.app.render.size_ratio[_mode_ratio] * word.height
 var mobile = false
 
-if resolution_width < resolution_height begin
-	resolution_width *= 2
+if _resolution_width < _resolution_height begin
+	_resolution_width *= 2
 	mobile = true
 end
 
 
 
 /// ajustar resolução para ser divisvel por 8
-while resolution_width % 8 begin 
-	resolution_width = round(resolution_width + 1)
+while _resolution_width % 8 begin 
+	_resolution_width = round(_resolution_width + 1)
 end
 
 while camera_width % 8 begin 
@@ -32,8 +32,8 @@ end
 
 
 #region AJUST GUI SIZE
-var gui_width = resolution_width
-var gui_height = resolution_height 
+var gui_width = _resolution_width
+var gui_height = _resolution_height 
 
 if gui_width <= 640 then
 	gui_width = 720
@@ -53,7 +53,7 @@ else
 	camera_set_view_size(view_camera[0], camera_width, word.height)
 
 /// Janela
-window_set_size(resolution_width, mobile? resolution_height*2: resolution_height)
+window_set_size(_resolution_width, mobile? _resolution_height*2: _resolution_height)
 #endregion
 
 #region CENTER BROWSER WINDOW
@@ -66,8 +66,8 @@ if os_browser != browser_not_a_browser begin
 	
 	/// ajustar bordas
 	else begin
-		var min_x = (browser_width - resolution_width) / 2
-		var min_y = (browser_height - resolution_height) / 2
+		var min_x = (browser_width - _resolution_width) / 2
+		var min_y = (browser_height - _resolution_height) / 2
 
 		window_set_position(min_x, min_y)
 	end

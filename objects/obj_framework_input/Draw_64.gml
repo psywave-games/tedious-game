@@ -18,7 +18,7 @@ var _rt = ratio_get()
 var _mobile = _wh >_ww
 
 if _mobile begin
-	draw_set_color(make_color_rgb(62, 70, 80))
+	draw_set_color(button_color_background)
 	draw_set_alpha(1.0)
 	draw_rectangle(0, (_vh * _rt) - padding, _vw, _vh, false)
 	var _mh = _vh/2 + _vh/4

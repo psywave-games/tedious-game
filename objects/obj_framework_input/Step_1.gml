@@ -1,13 +1,19 @@
-#region MOUSE IS UPDATING
+#region MOUSE DETECT
 var _mx = device_mouse_x_to_gui(0)
 var _my = device_mouse_y_to_gui(0)
+var _mouse_precessed = mouse_check_button_pressed(mb_any)
+var _mouse_realese = mouse_check_button_released(mb_any)
+var _mouse_axis = _mouse_precessed? self.internal_mouse_axis: 0
 
+/// mouse is updating
 if not (game.app.step % 4) begin
 	self.mouse = self.internal_mouse_old_x != _mx or self.internal_mouse_old_y != _my 
 	self.internal_mouse_old_x = _mx
 	self.internal_mouse_old_y = _my
 end
 
+self.internal_mouse_hover = false
+self.internal_mouse_axis = false
 #endregion
 #region GAMEPAD VARIABLES
 var _gamepad_up = false
@@ -135,9 +141,6 @@ _gamepad_axis_x = clamp(_gamepad_axis_x, -1, 1)
 _gamepad_axis_y = clamp(_gamepad_axis_y, -1, 1)
 #endregion
 #region KEYBOARD INPUTS
-var _msed_left = mouse_check_button_pressed(mb_left)
-var _msed_right = mouse_check_button_pressed(mb_right)
-
 var _keyd_enter = keyboard_check_pressed(vk_enter)
 var _keyd_esc = keyboard_check_pressed(vk_escape)
 var _keyd_del = keyboard_check_pressed(vk_backspace) or keyboard_check_pressed(vk_delete)
@@ -168,15 +171,11 @@ var _key_down = keyboard_check(vk_down) or _key_ord_s
 var _key_righ = keyboard_check(vk_right) or _key_ord_d
 var _key_shift = keyboard_check(vk_shift)
 var _key_enter = keyboard_check(vk_enter)
+var _any = keyboard_check_pressed(vk_anykey) or _mouse_precessed or _gamepaded_any
 
-var _mouse_axis = 0
-
-if self.hover then
-	_mouse_axis = _msed_left - _msed_right
-	
 #endregion
 #region RESET KEYS|GAMEPAD|TOUCH|MOUSE
-pressed_any = keyboard_check(vk_anykey) or mouse_check_button(mb_any) or _gamepaded_any
+pressed_any = _any
 
 key_menu_open = false
 key_menu_esc = false
@@ -185,11 +184,10 @@ key_axis_x = 0
 key_axis_y = 0
 key_menu_go = 0
 key_menu_in = 0
-hover = self.mouse and game.app.interface.hover
 #endregion
 #region MENUS
 if game.app.state == fsm_game.intro begin 
-	key_menu_open = _keyd_enter + _msed_left + _gamepaded_any
+	key_menu_open = _keyd_enter + _gamepaded_any + _mouse_axis
 end 
 
 else if game.app.state == fsm_game.play begin
@@ -240,10 +238,10 @@ else if game.app.state == fsm_game.warn then
 	key_menu_in = _keyd_del
 	
 else if game.app.state == fsm_game.waitFocus then
-	key_menu_in = _msed_left or _msed_right
+	key_menu_in = _mouse_precessed
 	
 else if game.app.state == fsm_game.menuTutorial begin
-	key_menu_esc = _keyd_esc or _keyd_enter or _gamepaded_any or abs(_mouse_axis)
+	key_menu_esc = _any
 end
 #endregion
 #region GAMEPLAY

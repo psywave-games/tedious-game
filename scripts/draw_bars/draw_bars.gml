@@ -10,11 +10,11 @@ var text = string_repeat("|", bars)
 
 switch argument_count begin
 	case 2: 
-		draw_menu(menu, text)
+		draw_menu_lite(menu, text)
 		break 
 		
 	case 3: 
-		draw_menu(menu, text, argument[2])
+		draw_menu_lite(menu, text, argument[2])
 		break
 		
 	case 4:

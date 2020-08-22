@@ -1,13 +1,45 @@
 /// GML MAIS AMIGAVEL
-#macro	game				global			/// @example game.app.players
-#macro	max_nickname		16				/// max characteres for string name
-#macro	database_file		"data.ini"		/// Database name
-#macro	database_global		"global game"	/// [section INI name]
+#macro	game						global			/// @example game.app.players
+#macro	max_nickname				16				/// max characteres for string name
+#macro	database_file				"data.ini"		/// Database name
+#macro	database_global				"global game"	/// [section INI name]
 
-#macro	volume_master		2				/// channel master
-#macro	volume_music		0				/// channel mixer 0
-#macro	volume_fx			1				/// channel mixer 1
-#macro	volume_voice		3				/// channel mixer 3
+#macro	volume_master				2				/// channel master
+#macro	volume_music				0				/// channel mixer 0
+#macro	volume_fx					1				/// channel mixer 1
+#macro	volume_voice				3				/// channel mixer 3
+
+/// window sizes
+#macro	padding						10
+#macro	resolution_width			1920
+#macro	resolution_height			1080
+#macro	font_size_menu				0.32
+#macro	font_size_description		0.80
+#macro	last_resolution				array_length_1d(game.app.render.resolutions) - 1
+#macro	last_ratio					array_length_1d(game.app.render.name_ratio) - 1
+
+
+/// buttom config
+#macro	button_menu_width			240
+#macro	button_menu_height			48
+#macro	button_menu_padding			24
+#macro	button_menu_round			_height/6
+#macro	button_menu_margin			64
+#macro	button_type_normal			0
+#macro	button_type_check			1
+#macro	button_type_options			2
+#macro	button_type_bars			3
+#macro	button_alpha_normal			0.75
+#macro	button_alpha_hover			1.00
+#macro	button_color_text			0xb9b5b0
+#macro	button_color_background		0x50463e
+#macro	button_font_description		fnt_game0
+#macro	button_font_value			fnt_menu
+#macro	button_default_ah			fa_left
+#macro	button_default_vh			fa_middle
+
+/// Console config
+#macro	console_font_value			fnt_game0
 
 
 #macro	ev_init						0		/// Alteração de estado de jogo
@@ -60,7 +92,6 @@
 #macro	gamejolt_score_points	"507767"
 #macro	gamejolt_trophy_started "122109"
 
-#macro	padding				10
 
 enum word {
 	limit = 10,
@@ -88,7 +119,7 @@ enum fsm_player {
 	piss,									/// Jogador está mijando
 	sit,									/// Jogador está sentado
 	guitar_idle,							/// Jogador está parado com o violão
-	guitar_walk,								/// Jogador está andando o violão
+	guitar_walk,							/// Jogador está andando o violão
 	shower									/// Jogador está tomando banho										
 }
 

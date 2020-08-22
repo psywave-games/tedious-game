@@ -1,16 +1,18 @@
 /// @arg0 y
 /// @arg1 align
+/// @arg2 OPTIONAL_padding
 
-var _yy = argument0
-var _av = argument1
+var _yy = argument[0]
+var _av = argument[1]
+var _padding = argument_count > 2? argument[2]: padding
 
 var _ww = window_get_width()
 var _wh = window_get_height()
 var _vh = display_get_gui_height()
 
 #region Enquadramento
-var min_y = padding
-var max_y = _wh > _ww? (_vh*ratio_get()) - (padding*2): _vh - padding
+var min_y = _padding
+var max_y = _wh > _ww? (_vh*ratio_get()) - (_padding*2): _vh - _padding
 #endregion
 
 #region Posicionamento Vertical

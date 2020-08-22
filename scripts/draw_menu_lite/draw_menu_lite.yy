@@ -1,8 +1,8 @@
 {
-    "id": "671ee6c6-2c6f-4c2b-ae5c-c7bd05c09b19",
+    "id": "30fed892-1072-4169-b688-03d62a891f50",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "draw_menu",
+    "name": "draw_menu_lite",
     "IsCompatibility": false,
     "IsDnD": false
 }

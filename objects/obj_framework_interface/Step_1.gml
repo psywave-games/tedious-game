@@ -149,7 +149,6 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuWind
 	switch game.app.interface.select begin
 		/// alterar resolucao
 		case 0:
-			var last_resolution = array_length_1d(game.app.render.resolutions) - 1
 			var resolution = game.app.render.mode_resolution + _in
 			var mode = clamp(resolution, 0, last_resolution)
 			resolution_set (mode, game.app.render.mode_ratio)
@@ -157,7 +156,6 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuWind
 			
 		/// alterar proporção (ratio)
 		case 1:
-			var last_ratio = array_length_1d(game.app.render.size_ratio) - 1
 			var ratio = game.app.render.mode_ratio + _in
 			var mode = clamp(ratio, 0, last_ratio)
 			resolution_set (game.app.render.mode_resolution, mode)
