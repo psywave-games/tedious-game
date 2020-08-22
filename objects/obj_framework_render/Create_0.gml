@@ -56,6 +56,7 @@ self.mode_font_hd = true
 self.mode_camera = 0
 self.mode_auto = true
 self.font_speed = 3
+self.color_invert = 0
 #endregion
 
 /// @see						posicionamento da camera no mapa

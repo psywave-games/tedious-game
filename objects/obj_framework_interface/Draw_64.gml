@@ -16,7 +16,9 @@ switch game.app.state begin
 	#region GAMEPLAY
 	case fsm_game.play:
 		var _date = text_time(false) + "\n" + text_date("-")
-		var _score_color = happy_sign < 0? c_red: c_white
+		var _font = game.app.fun.select == thematic.halflife? fnt_game1: fnt_game0
+		var _color = game.app.fun.select == thematic.halflife? c_orange: c_white
+		var _score_color = happy_sign < 0? c_red: _color
 	
 		/// FADOUT DYING
 		if game.app.player.state = fsm_player.dying or game.app.player.state == fsm_player.died then
@@ -27,10 +29,10 @@ switch game.app.state begin
 		)
 	
 		if self.can_interact then 
-			draw_gui(0, 0, fa_left, fa_top, self.message, fnt_game0, c_white, 1.0, 1.4)
-		draw_gui(0,0, fa_right, fa_bottom, text_build(), fnt_game0, c_white, 1, 1)
-		draw_gui(0,0, fa_left, fa_bottom, _date, fnt_game0, c_white, 1, 1)
-		draw_gui(0,0, fa_right, fa_top, text_score(), fnt_game0, _score_color, 1, 1.4)
+			draw_gui(0, 0, fa_left, fa_top, self.message, _font, _color, 1.0, 1.4)
+		draw_gui(0,0, fa_right, fa_bottom, text_build(), _font, _color, 1, 1)
+		draw_gui(0,0, fa_left, fa_bottom, _date, _font, _color, 1, 1)
+		draw_gui(0,0, fa_right, fa_top, text_score(), _font, _score_color, 1, 1.4)
 		
 		self.message = ""
 		break

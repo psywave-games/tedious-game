@@ -2767,6 +2767,14 @@
             }
         },
         {
+            "Key": "cac4815e-d766-4677-a1a5-d9b5e187504e",
+            "Value": {
+                "id": "eabcef02-3e2d-4a7c-84a3-59f8ead94f18",
+                "resourcePath": "sounds\/snd_halflife_denied\/snd_halflife_denied.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "cb426223-d289-4058-b204-7cdfc4027c95",
             "Value": {
                 "id": "66abc169-ef26-4eb4-b84b-d0c326d22bed",
