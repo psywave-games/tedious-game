@@ -4,13 +4,13 @@ if game.app.lang == msg.en begin
 		case msg.press_start:
 			return "press enter to start"
 		case msg.menu_start:
-			return game.app.started?"Continue":"New Game"
+			return game.app.started? "Continue": "New Game"
 		case msg.pt:
 			return "Portuguese"
 		case msg.en:
 			return "English"
 		case msg.menu_lang:
-			return "Language:"
+			return "Language"
 		case msg.menu_window:
 			return "Display"
 		case msg.menu_video:
@@ -20,23 +20,23 @@ if game.app.lang == msg.en begin
 		case msg.back:
 			return "return "
 		case msg.video_palete:
-			return "Pallete:"
+			return "Pallete"
 		case msg.video_ratio:
-			 return "Ratio:"
+			 return "Ratio"
 		case msg.video_size:
-			return "Resolution:"
+			return "Resolution"
 		case msg.video_digto:
-			return "Text Speed:"
+			return "Text Speed"
 		case msg.video_fnthd:
-			return "Fonts HD:"
+			return "Fonts HD"
 		case msg.video_color:
-			return "Colorize:"
+			return "Colorize"
 		case msg.video_full:
-			return "FullScreen:"
+			return "FullScreen"
 		case msg.video_outline:
-			return "Outline:"
+			return "Outline"
 		case msg.video_reflex:
-			return "Reflections:"
+			return "Reflections"
 		case msg.warn_title: 
 			return "W A R N I N G"
 		case msg.warn_text:
@@ -58,7 +58,7 @@ if game.app.lang == msg.en begin
 		case msg.menu_config:
 		   return "options"
 		case msg.game_name:
-		   return lite()?"Tedious Simulator [Lite]":"Tedious Simulator"
+		   return lite()? "Tedious Simulator [Lite]": "Tedious Simulator"
 		case msg.video_lighthd:
 		   return "HD Lights"
 		case msg.psy_light:
@@ -268,24 +268,24 @@ if game.app.lang == msg.en begin
 		case msg.menu_tutorial:
 			return "How To Play"
 		case msg.menu_gamepad:
-			return "Gamepad:"
+			return "Gamepad"
 		case msg.psy_joystick:
 			return "Joystick"
 		case msg.menu_audio_mute:
-			return "Mute:"
+			return "Mute"
 	end
 end
 switch argument[0] begin
 	case msg.press_start:
 		return "pressione enter para jogar"
 	case msg.menu_start:
-		return game.app.started?"Continuar":"Novo Jogo"
+		return game.app.started? "Continuar": "Novo Jogo"
 	case msg.pt:
 		return "Português"
 	case msg.en:
-		return "English"
+		return "Inglês"
 	case msg.menu_lang:
-		return "Idioma:"
+		return "Idioma"
 	case msg.menu_window:
 		return "Exibição"
 	case msg.menu_video:
@@ -295,23 +295,23 @@ switch argument[0] begin
 	case msg.back:
 		return "voltar"
 	case msg.video_palete:
-		return "Paleta:"
+		return "Paleta"
 	case msg.video_ratio:
-		 return "Janela:"
+		 return "Janela"
 	case msg.video_size:
-		return "Resolução:"
+		return "Resolução"
 	case msg.video_digto:
-		return "Digitacao:"
+		return "Digitacao"
 	case msg.video_fnthd:
-		return "Letras HD:"
+		return "Letras HD"
 	case msg.video_color:
-		return "Colorizar:"
+		return "Colorizar"
 	case msg.video_full:
-		return "Tela cheia:"
+		return "Tela cheia"
 	case msg.video_outline:
-		return "Contorno:"
+		return "Contorno"
 	case msg.video_reflex:
-		return "Reflexos:"	
+		return "Reflexos"	
 	case msg.warn_title:
 		return "A V I S O"
 	case msg.warn_text:
@@ -333,7 +333,7 @@ switch argument[0] begin
 	case msg.menu_config:
 		return "Configurações"
 	case msg.game_name:
-		return lite()?"Simulador de Tedio [Lite]":"Simulador de Tedio"
+		return lite()? "Simulador de Tedio [Lite]": "Simulador de Tedio"
 	case msg.video_lighthd:
 		return "Luzes em HD"
 	case msg.psy_light:
@@ -543,7 +543,7 @@ switch argument[0] begin
 	case msg.menu_tutorial:
 		return "Como Jogar?"
 	case msg.menu_gamepad:
-		return "Manete:"
+		return "Manete"
 	case msg.psy_joystick:
 		return "Controle"
 	case msg.psy_energy:
@@ -571,7 +571,7 @@ switch argument[0] begin
         return "Analizar o que tem na geladeira"
     case msg.interact_freezer_emputy:
 		return not irandom(500)? "Vou transformar essa galadeira em uma caixa de som massa!":
-			(not irandom(10)? choose("Fridge made In venezuela", "Sumiu!! cade tete?"):"Essa geladeira esta vazia")
+			(not irandom(10)? choose("Fridge made In venezuela", "Sumiu!! cade tete?"): "Essa geladeira esta vazia")
 	case msg.interact_pan_furnace_put:
 		return "Colocar Panela no fogão"
 	case msg.interact_soap_freezer_gap:
@@ -624,7 +624,7 @@ switch argument[0] begin
 	case msg.menu_videogame_game9:
 		return ""
 	case msg.menu_video_cameramode:
-		return "Modo de Camera:"
+		return "Modo de Camera"
 	case msg.menu_video_cameramode0:
 		return "Suave"
 	case msg.menu_video_cameramode1:
@@ -640,7 +640,7 @@ switch argument[0] begin
 	case msg.psy_shower:
 		return "Chuveiro"
 	case msg.menu_audio_mute:
-		return "Mutar:"
+		return "Mutar"
 end
 
 return "#Error T_18_" + string(argument0)
