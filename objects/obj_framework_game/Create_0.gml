@@ -11,48 +11,39 @@ random_set_seed(randomize())
 #endregion
 
 #region INSTANCE VARIABLES 
-/// @see				Jogador
-/// @example			game.app.player.x
-/// @return	object		obj_player
+/// Jogador
 self.player = 0
 
-/// @see				contador de steps do jogo
-///	@example			game.app.step
-/// @return	integer		numero de ticks passados desde de a criação do game
+
+/// Steps
 self.step = 0
 self.step_play = 0
 
 
-/// @see				verifica se o jogo foi iniciado
-/// @example			game.app.started
-/// @return boolean		se o jogo já foi iniciado	
+/// Verifica se o jogo foi iniciado
 self.started = false
 
 
-/// @see				idioma do jogo
-///	@example			game.app.lang
-/// @return	enum		msg.en ou msg.pt
+/// Idioma do jogo (old)
 self.lang = 0
 
-/// @see				faz a camera tremer
-///	@example			game.app.earthquake += 5
-/// @return	float		força do terremoto
+/// Faz a camera tremer (unusued)
 self.earthquake = 0
 
 
-/// @see				Nivel de felicidade do jogador
-/// @example			game.app.happy
-/// @return	int			valor de felcidade
+/// Nivel de felicidade do jogador
 self.happy = 100
 
 
-/// @see				Nome do jogador
-/// @example			game.app.nickname
-/// @return	string		Apelido do jogador
+/// Nome do jogador
 self.nickname =	""
 
+/// Horário
 self.clock_hour = 23
 self.clock_minute = 10
+
+global.eula = false
+global.language = "pt"
 #endregion
 
 #region INIT FINITE SATE MACHINE

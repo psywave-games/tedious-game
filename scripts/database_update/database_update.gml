@@ -1,5 +1,7 @@
 var _save = argument0
 ini_open(database_file)
+database_include_boolean(database_global, "eula", _save)
+database_include_string(database_global, "language", _save)
 database_include_string(game.app, "nickname", _save)
 database_include_int(game.app.render, "mode_fullscreen_web", _save)
 database_include_int(game.app.render, "mode_resolution", _save)

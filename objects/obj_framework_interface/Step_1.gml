@@ -5,33 +5,28 @@ if not game.app.input.pressed_any then
 var _in = game.app.input.key_menu_in
 self.can_interact = false
 #endregion
-
 #region SELECT LANG
 if game.app.state == fsm_game.lang and abs(_in) begin
 	lang_set(self.select? msg.en: msg.pt)
 end
 #endregion
-
 #region WARNING SKIP
 else if game.app.state == fsm_game.warn and game.app.input.key_menu_in then
 	state_reset( game.app, fsm_game.intro)
 
 #endregion
-
 #region OPEN MENU
 else if game.app.input.key_menu_open begin 
 	state_set (game.app, fsm_game.menuMain)
 	game.app.interface.select = 0
 end 
 #endregion
-
 #region BACK MENU
 else if game.app.input.key_menu_esc begin 
 	game.app.interface.select = 0
 	state_back(game.app)
 end
 #endregion
-
 #region NAVIAGATE MENU
 else if abs (game.app.input.key_menu_go) begin
 	switch game.app.state begin
@@ -66,7 +61,6 @@ else if abs (game.app.input.key_menu_go) begin
 	end
 end
 #endregion
-
 #region SET MENU MAIN
 else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuMain begin
 	switch game.app.interface.select begin
@@ -109,7 +103,6 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuMain
 	end 
 end
 #endregion
-
 #region SET MENU OPTIONS
 else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuOptions begin
 	switch game.app.interface.select begin
@@ -151,7 +144,6 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuOpti
 	end 
 end
 #endregion
-
 #region SET MENU DISPLAY
 else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuWindow begin
 	switch game.app.interface.select begin
@@ -197,7 +189,6 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuWind
 	end
 end
 #endregion
-
 #region SET MENU GRAPHIC
 else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuGraphic begin
 	switch game.app.interface.select begin
@@ -232,7 +223,6 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuGrap
 	end
 end
 #endregion
-
 #region SET MENU AUDIO
 else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuAudio begin
 	switch game.app.interface.select begin
@@ -263,7 +253,6 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuAudi
 	end
 end
 #endregion
-
 #region SET VIDEOGAME MENU MAIN
 else if game.app.state == fsm_game.videogameMain and game.app.input.key_menu_enter begin
 	switch select begin
@@ -294,7 +283,6 @@ else if game.app.state == fsm_game.videogameMain and game.app.input.key_menu_ent
 	end
 end
 #endregion
-
 #region GAMEOVER WRITE NICKNAME
 else if game.app.state == fsm_game.over begin
 	var _len = string_length(game.app.nickname)
@@ -314,7 +302,6 @@ else if game.app.state == fsm_game.over begin
 	end
 end
 #endregion
-
 #region WAIT FOCUS
 else if game.app.state == fsm_game.waitFocus and game.app.input.key_menu_in then
 	lang_load()

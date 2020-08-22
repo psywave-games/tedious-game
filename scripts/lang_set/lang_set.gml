@@ -1,12 +1,16 @@
 /// @description set lang and title game
 /// @arg0 lang
 
+/// set language
 game.app.lang = argument0
+global.language = argument0 == msg.pt? "pt": "en"
+
+/// rename window title
 window_set_caption(t(msg.game_name))
 
-ini_open(database_file)
-ini_write_string("framework game", "lang", game.app.lang == msg.pt? "pt": "en")
-ini_close()
-
-if game.app.state == fsm_game.lang then
+/// continue to game
+if game.app.state == fsm_game.lang 
+	or game.app.state == fsm_game.load 
+	or game.app.state == fsm_game.waitFocus begin
 	state_reset(game.app, fsm_game.warn)
+end

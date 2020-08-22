@@ -1,6 +1,23 @@
 /// @description ev_init
 event_all(ev_init)
 
+#region BOOTSTRAP GAME
+if self.state == fsm_game.load begin
+	database_init()
+	eula_init()
+
+	/// focar a primeira vez
+	if not variable_global_exists("focus") then
+		global.focus = true
+
+	/// em computar ou segunda vez não precisa focar
+	if browser() and global.focus then
+		state_reset(self.id, fsm_game.waitFocus)
+		
+	/// carregar idioma
+	else lang_load()
+end
+#endregion
 #region VIDEOGAMES MANAGER
 /// ligar consoles
 if self.state == fsm_game.videogamePlay begin
@@ -33,7 +50,10 @@ switch self.state begin
 end
 #endregion
 #region DATABASE SAVE
-if self.state == fsm_game.credits or self.state == fsm_game.menuOptions begin
+if self.state == fsm_game.credits
+	or self.state == fsm_game.menuOptions 
+	or self.state == fsm_game.menuMain
+	begin
 	database_update(true)
 end
 #endregion
