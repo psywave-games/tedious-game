@@ -13,6 +13,8 @@
 #macro	padding						10
 #macro	resolution_width			1920
 #macro	resolution_height			1080
+#macro	font_size_title_lite		2.60
+#macro	font_size_title				0.80
 #macro	font_size_menu				0.32
 #macro	font_size_description		0.80
 #macro	last_resolution				array_length_1d(game.app.render.resolutions) - 1
@@ -21,10 +23,9 @@
 
 /// buttom config
 #macro	button_menu_width			240
-#macro	button_menu_height			48
-#macro	button_menu_padding			24
+#macro	button_menu_height			56
+#macro	button_menu_padding			20
 #macro	button_menu_round			_height/6
-#macro	button_menu_margin			64
 #macro	button_type_normal			0
 #macro	button_type_check			1
 #macro	button_type_options			2
@@ -37,6 +38,8 @@
 #macro	button_font_value			fnt_menu
 #macro	button_default_ah			fa_left
 #macro	button_default_vh			fa_middle
+#macro	button_margin_vertical		10
+#macro	button_margin_horizontal	64
 
 /// Console config
 #macro	console_font_value			fnt_game0

@@ -28,8 +28,8 @@ var _alpha = game.app.interface.select == _menu? button_alpha_normal: button_alp
 #endregion
 #region POSITION
 /// ajustar posicão conforme menus anteriores e align
-_xx = gui_get_x_align(_xx, _ah, button_menu_margin)
-_yy = gui_get_y_align(_yy + (_menu * (button_menu_padding + button_menu_height)), _av, button_menu_margin)
+_xx = gui_get_x_align(_xx, _ah, button_margin_horizontal)
+_yy = gui_get_y_align(_yy + (_menu * (button_menu_padding + button_menu_height)), _av, button_margin_vertical)
 
 /// xx0|xx1|yy0|yy1 são posições de canto do retangulo
 switch _ah begin

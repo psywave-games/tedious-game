@@ -18,12 +18,10 @@ else if game.app.state == fsm_game.warn and game.app.input.key_menu_in then
 #region OPEN MENU
 else if game.app.input.key_menu_open begin 
 	state_set (game.app, fsm_game.menuMain)
-	game.app.interface.select = 0
 end 
 #endregion
 #region BACK MENU
 else if game.app.input.key_menu_esc begin 
-	game.app.interface.select = 0
 	state_back(game.app)
 end
 #endregion
@@ -63,7 +61,7 @@ end
 #endregion
 #region SET MENU MAIN
 else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuMain begin
-	switch game.app.interface.select begin
+	switch self.select begin
 		/// JOGAR AGORA
 		case 0:
 			/// Começar Novo jogo
@@ -74,19 +72,16 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuMain
 			else begin
 				state_back( game.app )
 			end
-			break			
+			break	
+		
+		/// How to play
+		case 1:
+			state_set( game.app, fsm_game.menuTutorial)
+			break
 	
 		/// Enter menu options
-		case 1: 
+		case 2: 
 			state_set( game.app, fsm_game.menuOptions)
-			game.app.interface.select = 0
-			break
-			
-		/// How to play
-		case 2:
-			state_set( game.app, fsm_game.menuTutorial)
-			game.app.interface.select = 0
-			//url_open_ext("https://tediusgame.com/scoreboard", "_blank")
 			break
 				
 		/// Sair do jogo		
@@ -105,7 +100,7 @@ end
 #endregion
 #region SET MENU OPTIONS
 else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuOptions begin
-	switch game.app.interface.select begin
+	switch self.select begin
 		/// Alterar idioma do jogo
 		case 0:
 			lang_set(game.app.lang == msg.en? msg.pt: msg.en)
@@ -120,25 +115,21 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuOpti
 		/// Enter menu window
 		case 2: 
 			state_set( game.app, fsm_game.menuWindow)
-			game.app.interface.select = 0
 			break
 			
 		/// Enter menu graphic
 		case 3: 
 			state_set( game.app, fsm_game.menuGraphic)
-			game.app.interface.select = 0
 			break
 			
 		/// Enter menu graphic
 		case 4: 
 			state_set( game.app, fsm_game.menuAudio)
-			game.app.interface.select = 0
 			break
 			
 		/// Voltar para menu anterior
 		case 5:
 			state_back( game.app )
-			self.select = 0
 			break
 			
 	end 
@@ -146,7 +137,7 @@ end
 #endregion
 #region SET MENU DISPLAY
 else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuWindow begin
-	switch game.app.interface.select begin
+	switch self.select begin
 		/// alterar resolucao
 		case 0:
 			var resolution = game.app.render.mode_resolution + _in
@@ -182,14 +173,13 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuWind
 		/// voltar para o menu
 		case 5:
 			state_back( game.app )
-			self.select = 0
 			break	
 	end
 end
 #endregion
 #region SET MENU GRAPHIC
 else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuGraphic begin
-	switch game.app.interface.select begin
+	switch self.select begin
 		/// alternar fontes em HD
 		case 0:
 			gpu_set_texfilter(false)
@@ -215,7 +205,6 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuGrap
 		/// voltar para o menu
 		case 4:
 			state_back( game.app )
-			self.select = 0
 			break
 		
 	end
@@ -223,7 +212,7 @@ end
 #endregion
 #region SET MENU AUDIO
 else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuAudio begin
-	switch game.app.interface.select begin
+	switch self.select begin
 		/// Master volume do jogo
 		case 0:
 			volume_set(volume_master, clamp(volume_get(volume_master) + _in, 0, 10))
@@ -253,7 +242,7 @@ end
 #endregion
 #region SET VIDEOGAME MENU MAIN
 else if game.app.state == fsm_game.videogameMain and game.app.input.key_menu_enter begin
-	switch select begin
+	switch self.select begin
 		/// menu voltar
 		case 0:
 			state_back(game.app)
