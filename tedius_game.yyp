@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "01b43f81-186c-4fdd-8692-218936551c06",
+            "Value": {
+                "id": "84d04e17-961c-4dd5-9ca1-e3c5cdcbf791",
+                "resourcePath": "sprites\/spr_sleep_chest3\/spr_sleep_chest3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "02312479-22aa-437c-b2fd-937c31d4d8e2",
             "Value": {
                 "id": "ad8a380b-3faa-4202-9d50-490a7eaa60fc",
@@ -820,6 +828,14 @@
                 "id": "a46ac767-5730-452c-84a8-6f5f36614b06",
                 "resourcePath": "views\/3ceb6148-7dd4-4b25-acb5-33e827d6ef42.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3d27f959-bc76-442c-b6cb-76d40786f751",
+            "Value": {
+                "id": "a79dd5d2-d2e0-461b-a59c-9142898bc888",
+                "resourcePath": "sprites\/spr_sleep_chest2\/spr_sleep_chest2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
