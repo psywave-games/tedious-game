@@ -42,6 +42,6 @@ draw_sprite_ext(spr_sleep_chest3,
 	image_xscale,
 	image_yscale,
 	image_angle,
-	color(color_vermelho), 
+	broken? color(color_cinza_c): color(color_vermelho), 
 	image_alpha
 )

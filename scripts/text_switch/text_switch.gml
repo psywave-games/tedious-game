@@ -12,7 +12,7 @@ if argument0 < self.select
 if argument1 > self.select 
 	_text = _text + "[E] "
 	
-if argument0 >= self.select and argument1 <= self.select then
-	_text = "#Error_QE_" + string(argument0) + "_" + string(self.select) + "_" + string(argument1)
+if argument0 > argument1 or self.select < argument0 or self.select > argument1 then
+	return _text = "#Error_QE_" + string(argument0) + "_" + string(self.select) + "_" + string(argument1)
 
-return  _text + t(msg.interact_switch) + "\n"
+return string_length(_text)? (_text + t(msg.interact_switch) + "\n"): ""

@@ -1,4 +1,4 @@
-/// @description ev_interact
+/// @description ev_interact_down
 
 switch self.select begin
 
@@ -19,5 +19,10 @@ switch self.select begin
 			points = 0
 		end
 		else score_add(points? 5: -5)
+		break
+		
+	case 2:
+		self.state = state == fsm_mob.idle? fsm_mob.running: fsm_mob.idle
+		audio_play_at(x, y, snd_click, false)
 		break
 end

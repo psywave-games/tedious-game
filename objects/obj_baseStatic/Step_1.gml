@@ -29,9 +29,9 @@ if game.app.player.state == fsm_player.idle begin
 		/// Interagir
 		if game.app.input.key_interact and self.state == fsm_mob.idle begin
 			if ++self.switchs >= 2 and self.can_break begin
-				event_tada(ev_interact_broken)
-				speak(game.app.player, t(msg.interact_broken), p_head_direction(bbox_bottom, bbox_top))
 				self.state = fsm_mob.broken
+				speak(game.app.player, t(msg.interact_broken), p_head_direction(bbox_bottom, bbox_top))
+				event_tada(ev_interact_broken)
 			end
 			else
 				event_tada(ev_interact_down)
