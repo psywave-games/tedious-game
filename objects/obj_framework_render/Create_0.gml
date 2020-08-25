@@ -54,17 +54,17 @@ self.mode_reflex = true
 self.mode_debug = 0
 self.mode_font_hd = true
 self.mode_camera = 0
-self.mode_auto = true
 self.font_speed = 3
 self.color_invert = 0
+self.color_darkness = 0.3
 #endregion
 
-/// @see						posicionamento da camera no mapa
-/// @return	float				posição da camera
+///	posicionamento da camera no mapa
 self.camx = 0
 self.camy = 0
 self.camwait = false
 
 self.background = -1
+self.surface_darkness = 0
 
 alarm_set(ev_init,1)
