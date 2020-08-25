@@ -3,6 +3,7 @@
 #macro	max_nickname				16				/// max characteres for string name
 #macro	database_file				"data.ini"		/// Database name
 #macro	database_global				"global game"	/// [section INI name]
+#macro	light_alpha					0.1
 
 #macro	volume_master				2				/// channel master
 #macro	volume_music				0				/// channel mixer 0

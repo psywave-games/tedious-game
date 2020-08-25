@@ -32,15 +32,17 @@ if self.state == fsm_mob.running and not lite() begin
 			/// desenhar recorte
 			if abs(other.x - self.x) < middle 
 				and abs(other.y - self.y) < word.height
-				and other.y < self.y then
+				and other.y < self.y begin
+				draw_set_alpha(1.0)
 				draw_rectangle(_xx1, 0, _xx2, _yy, false)
+			end
 		end
 		surface_reset_target()
 		gpu_set_blendmode(bm_normal)
 		#endregion
 		#region SURFACE RENDER
 		gpu_set_blendmode(bm_add)
-		draw_set_alpha(lerp(0.3, 0.75, game.app.render.color_darkness/2))
+		draw_set_alpha(light_alpha)
 		draw_surface(surface_light, x - middle, y - 1)
 		draw_set_alpha(1.0)
 		gpu_set_blendmode(bm_normal)
