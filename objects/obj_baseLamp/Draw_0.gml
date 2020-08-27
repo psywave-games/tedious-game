@@ -21,7 +21,7 @@ if self.state == fsm_mob.running and not lite() begin
 		surface_reset_target()
 		#endregion
 		#region RAYTRACER
-		with instance_nearest(x, y, obj_door0) begin
+		with obj_door0 begin
 			
 			/// lado direito
 			var _xx1 = middle - (other.x - self.x) - 3

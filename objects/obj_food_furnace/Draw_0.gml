@@ -45,6 +45,15 @@ if state == fsm_mob.running begin
 		part_emitter_region(part_system, part_emitter_c, _xx0 + 6, _xx1 + 6, y -6, y -4, ps_shape_diamond, ps_distr_gaussian)
 		part_emitter_burst(part_system, part_emitter_c, part_fire, 3)
 	end
+	
+	if self.state == fsm_mob.running and surface_exists(game.app.render.surface_darkness) begin
+		surface_set_target(game.app.render.surface_darkness)
+		draw_set_blend_mode(bm_subtract)
+		draw_roundrect_color_ext(x - 16, y - 14, x + 16, y + 3, 16, 16, choose(0xAAAAAA, 0xBABABA, 0x999999), c_black, false)
+		surface_reset_target()
+		draw_set_blend_mode(bm_normal)
+	end
+	
 end	
 #endregion
 

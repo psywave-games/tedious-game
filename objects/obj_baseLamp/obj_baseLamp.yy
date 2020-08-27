@@ -105,6 +105,20 @@
             "value": "0",
             "varName": "channel",
             "varType": 1
+        },
+        {
+            "id": "81b1450b-6fc5-44fd-88f1-8155627b5f63",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "light_size",
+            "varType": 0
         }
     ],
     "solid": false,

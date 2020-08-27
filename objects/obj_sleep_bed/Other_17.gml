@@ -4,15 +4,10 @@ if game.app.step % (room_speed * 2) then
 	exit
 
 #region RATE LIGHT ON
-with obj_baseLamp begin
-	if not speaking(game.app.player)
-	and self.state == fsm_mob.running 
-	and self.channel == 0 begin
-	
-		speak(game.app.player, t(msg.interact_light_rate))
-		score_add(-15)
-		exit
-	end
+if game.app.player.darkness < 0.5 begin
+	speak(game.app.player, t(msg.interact_light_rate2))
+	score_add(-15)
+	exit
 end
 #endregion
 

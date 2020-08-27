@@ -18,8 +18,8 @@ self.yhead = y
 self.gravity = 1
 #endregion
 
-#region PROGRESS
-self.book_read = 0
+#region MISC
+self.darkness = 0
 self.requirements = array_create(3, 50)
 #endregion
 

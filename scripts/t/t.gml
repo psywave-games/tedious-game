@@ -273,6 +273,8 @@ if game.app.lang == msg.en begin
 			return "Joystick"
 		case msg.menu_audio_mute:
 			return "Mute"
+		case msg.interact_light_rate:
+			return choose("It's too dark I can't read!", "I can't read in this darkness", "I need to turn on the lights to be able to read this")
 	end
 end
 switch argument[0] begin
@@ -557,6 +559,8 @@ switch argument[0] begin
 	case msg.interact_unmotivated:
 		return choose("Não estou afim de fazer isso agora!", "Estou cansado para isso!", "Já chega!")
 	case msg.interact_light_rate:
+		return choose("Esta muito escuro nao consigo ler!", "eu nao consigo ler com essa escurida", "preciso ligar a luz para poder ler isso")
+	case msg.interact_light_rate2:
 		return choose("Sai desgraça eu quero dormir, poha!", "A hora que quiser apagar a luz estamos ai né", "Ata, esqueci a luz acesa", "Tenho que desligar essa merda!")
 	case msg.interact_sleep_full:
 		return not irandom(2000)? "Oxe Mainha, seria melhor dormir na rede mesmo!":

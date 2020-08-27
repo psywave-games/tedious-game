@@ -317,6 +317,7 @@ enum msg {
 	psy_ramen,
 	interact_unmotivated,
 	interact_light_rate,
+	interact_light_rate2,
 	interact_sleep_full,
 	interact_toilet_down,
 	interact_toilet_up,

@@ -29,7 +29,7 @@ end
 if self.state == fsm_mob.running and surface_exists(game.app.render.surface_darkness) begin
 	surface_set_target(game.app.render.surface_darkness)
 	draw_set_blend_mode(bm_subtract)
-	draw_circle_color(x -7, y -11, 32, c_white, c_black, false)
+	draw_circle_color(x -7, y -11, light_force, c_white, c_black, false)
 	surface_reset_target()
 	draw_set_blend_mode(bm_normal)
 end

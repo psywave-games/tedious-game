@@ -11,20 +11,35 @@ switch self.select begin
 
 	/// livro
 	case 2:
-		/// começar a ler livro
-		if not game.app.player.book_read then
-			book_page = 1
-
-		/// ler livro
-		speak(game.app.player, t(msg.interact_book + book_page), p_head_direction(bbox_bottom, bbox_top))
-		game.app.player.book_read = true
+		if game.app.player.darkness > 0.4 begin
+			speak(game.app.player, t(msg.interact_light_rate))
+		break end
 		
-		/// livro terminado
-		if ++book_page > 13 begin
+		var _readed = book_read(
+			msg.interact_book0,
+			msg.interact_book1,
+			msg.interact_book2,
+			msg.interact_book3,
+			msg.interact_book4,
+			msg.interact_book5,
+			msg.interact_book6,
+			msg.interact_book7,
+			msg.interact_book8,
+			msg.interact_book9,
+			msg.interact_book10,
+			msg.interact_book11,
+			msg.interact_book12
+		)
+		
+		if _readed begin
 			score_add(book_points)
 			book_points = 0
-			book_page = 1
-		end else score_add(book_points? 5: -5)
+		end
+		if book_points begin 
+			book_points -= 10
+			score_add(10)
+		end
+		else score_add(-15)
 		break
 		
 	/// maquinas agricolas
