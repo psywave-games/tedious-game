@@ -104,7 +104,7 @@ switch game.app.state begin
 	#endregion
 	#region MENU WINDOW
 	case fsm_game.menuWindow:
-		var menu_resolution = string(display_get_gui_width()) + "x" + string(display_get_gui_height())
+		var menu_resolution = game.app.render.name_resolution
 		var menu_proportion = game.app.render.name_ratio[game.app.render.mode_ratio]
 		var menu_fullscreen = fullscreen_get()
 		var menu_cam_mode = t(msg.menu_video_cameramode0 + game.app.render.mode_camera)
@@ -119,9 +119,9 @@ switch game.app.state begin
 	#endregion
 	#region MENU GRAPHYIC
 	case fsm_game.menuGraphic:
-		draw_menu(0, t(msg.video_fnthd), button_type_check, game.app.render.mode_reflex)
-		draw_menu(1, t(msg.video_lighthd), button_type_check, game.app.render.mode_reflex)
-		draw_menu(2, t(msg.video_outline), button_type_check, game.app.render.mode_reflex)
+		draw_menu(0, t(msg.video_fnthd), button_type_check, game.app.render.mode_shadow_hd)
+		draw_menu(1, t(msg.video_lighthd), button_type_check, game.app.render.mode_light_hd)
+		draw_menu(2, t(msg.video_outline), button_type_check, game.app.render.mode_outline)
 		draw_menu(3, t(msg.video_reflex), button_type_check, game.app.render.mode_reflex)
 		draw_menu(4, t(msg.back), 10, 60)
 		break
@@ -137,48 +137,63 @@ switch game.app.state begin
 	#endregion
 	#region MENU TUTORIAL
 	case fsm_game.menuTutorial:
-		draw_set_text_config( fnt_game0, make_color_rgb(62, 70, 80), 1.0, fa_middle, fa_top)
-	
+		draw_set_text_config(fnt_game0, make_color_rgb(62, 70, 80), 1.0, fa_middle, fa_top)
+		
 		/// instances positions
 		var _text = t(msg.tutorial_about)
+		var _center = display_get_gui_width()/2
 		var _middle = display_get_gui_width()/2
 		var _xx = display_get_gui_width()/3
 		var _yy = display_get_gui_height()/3
-		var _bottom = string_height_ext(_text, 32, _xx * 2)
+		var _ratio = ratio_get()
+		var _resolution = game.app.render.resolutions[game.app.render.mode_resolution]
+		var _mini = (_ratio >= 1.0 and _resolution <= 640) or (_ratio == 1.0 and _resolution <= 900)
+		var _size = _mini? 1.0: clamp(_resolution/1280, 0.8, 4)
+		var _sizet = max(_resolution/720, 1.0)
+		var _bottom = string_height_ext(_text, 32, (_xx*2/_sizet))
+		var _vak = _mini? fa_center: fa_left
+		var _vag = _mini? fa_center: fa_right
+		var _vhkg = _mini? fa_middle: fa_top
+		var _xxkg = _mini? 0: _xx
+		var _yyk = _mini? (_yy/3) - 64:  _yy + (_bottom * _sizet) + 16
+		var _yyg = _mini? (_yy/-3) - 64: _yy + (_bottom * _sizet) + 16
 	
-		/// box text
-		draw_rectangle(
-			_middle - _xx - padding,
-			_yy/2 - padding, 
-			_middle + _xx + padding, 
-			_yy/2 + _bottom + padding, 
-			false
-		)
+		if not _mini begin
+			/// box text
+			draw_rectangle(
+				_center - _xx - padding,
+				_yy/2 - padding, 
+				_center + padding + _xx , 
+				_yy/2 + padding + (_bottom * _sizet), 
+				false
+			)
 	
-		/// draw text description
-		draw_set_alpha(0.8)
-		draw_set_color(c_white)
-		draw_text_ext(_middle, _yy/2, _text, 32, _xx * 2)
+			/// draw text description
+			draw_set_alpha(0.8)
+			draw_set_color(c_white)
+			draw_text_ext_transformed(_center, _yy/2, _text, 32, (_xx*2)/_sizet, _sizet, _sizet, 0)
+		end
 	
 		/// draw text title
 		draw_set_text_config(lite()? fnt_game0: fnt_title, c_white, 1.0, fa_center, fa_top)
-		draw_text_hd(_middle, padding, t(msg.tutorial_title), 1.0)
+		draw_text_hd(_center, padding, t(msg.tutorial_title), 1.0)
 	
 	
 		/// boxtutorial
-		draw_tutorial(make_color_rgb(129,183,117), t(msg.tutorial_run),  0)
-		draw_tutorial(make_color_rgb(91,106,120), t(msg.tutorial_move), 1)
-		draw_tutorial([make_color_rgb(119,130,188), make_color_rgb(222,185,50)], t(msg.tutorial_switch), 2)
-		draw_tutorial(make_color_rgb(189,91,76), t(msg.tutorial_interact), 3)
+		draw_tutorial(make_color_rgb(129,183,117), t(msg.tutorial_run),  0, _size)
+		draw_tutorial(make_color_rgb(91,106,120), t(msg.tutorial_move), 1, _size)
+		draw_tutorial([make_color_rgb(119,130,188), make_color_rgb(222,185,50)], t(msg.tutorial_switch), 2, _size)
+		draw_tutorial(make_color_rgb(189,91,76), t(msg.tutorial_interact), 3, _size)
+		
 
 		/// keyboard/gamepad
-		if ratio_get() >= 1.0 begin
-			draw_sprite_align(spr_tuto_keyboard, 0, _xx, _yy, fa_left, fa_bottom, make_color_rgb(91,106,120), 1.0, 3)
-			draw_sprite_align(spr_tuto_keyboard, 1, _xx, _yy, fa_left, fa_bottom, make_color_rgb(119,130,188), 1.0, 3)
-			draw_sprite_align(spr_tuto_keyboard, 2, _xx, _yy, fa_left, fa_bottom, make_color_rgb(222,185,50), 1.0, 3)
-			draw_sprite_align(spr_tuto_keyboard, 3, _xx, _yy, fa_left, fa_bottom, make_color_rgb(129,183,117), 1.0, 3)
-			draw_sprite_align(spr_tuto_keyboard, 4, _xx, _yy, fa_left, fa_bottom, make_color_rgb(189,91,76), 1.0, 3)
-			draw_sprite_align(spr_tuto_gamepad, 00, _xx, _yy, fa_right, fa_bottom, c_white, 1.0, 1.2)
+		if _ratio >= 1.0 begin
+			draw_sprite_align(spr_tuto_keyboard, 0, _xxkg, _yyk, _vak, _vhkg, make_color_rgb(91,106,120), 1.0, _size * 3.0)
+			draw_sprite_align(spr_tuto_keyboard, 1, _xxkg, _yyk, _vak, _vhkg, make_color_rgb(119,130,188), 1.0, _size * 3.0)
+			draw_sprite_align(spr_tuto_keyboard, 2, _xxkg, _yyk, _vak, _vhkg, make_color_rgb(222,185,50), 1.0, _size * 3.0)
+			draw_sprite_align(spr_tuto_keyboard, 3, _xxkg, _yyk, _vak, _vhkg, make_color_rgb(129,183,117), 1.0, _size * 3.0)
+			draw_sprite_align(spr_tuto_keyboard, 4, _xxkg, _yyk, _vak, _vhkg, make_color_rgb(189,91,76), 1.0, _size * 3.0)
+			draw_sprite_align(spr_tuto_gamepad, 00, _xxkg, _yyg, _vag, _vhkg, c_white, 1.0, _size * 1.2)
 		end
 	break
 	#endregion

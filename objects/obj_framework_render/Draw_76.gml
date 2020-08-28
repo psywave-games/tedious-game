@@ -4,13 +4,19 @@ if background != -1 then
 	
 #endregion
 #region DARKNESS
-surface_darkness = surface_create(room_width, room_height)
-if surface_exists(surface_darkness) begin
-	surface_set_target(surface_darkness)
-	draw_set_alpha(color_darkness)
-	draw_set_color(c_white)
-	draw_rectangle(0, 0, room_width, room_height, false)
-	draw_set_alpha(1.0)
-	surface_reset_target()
+if game.app.render.mode_shadow_hd and game.app.render.mode_light_hd begin 
+	surface_darkness = surface_create(room_width, room_height)
+	if surface_exists(surface_darkness) begin
+		surface_set_target(surface_darkness)
+		draw_set_alpha(color_darkness)
+		draw_set_color(c_white)
+		draw_rectangle(0, 0, room_width, room_height, false)
+		draw_set_alpha(1.0)
+		surface_reset_target()
+	end
+end
+/// ADAPT
+else begin
+	game.app.player.darkness = 0
 end
 #endregion

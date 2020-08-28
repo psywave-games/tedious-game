@@ -182,8 +182,7 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuGrap
 	switch self.select begin
 		/// alternar fontes em HD
 		case 0:
-			gpu_set_texfilter(false)
-			game.app.render.mode_font_hd ^= true
+			game.app.render.mode_shadow_hd ^= true
 			break
 			
 		/// alternar Luzes em HD

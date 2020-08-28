@@ -28,9 +28,6 @@ while camera_width % 8 begin
 	camera_width = round(camera_width + 1)
 end
 
-
-
-
 #region AJUST GUI SIZE
 var gui_width = _resolution_width
 var gui_height = _resolution_height 
@@ -87,3 +84,4 @@ view_set_wport(1, 0)
 
 window_set_colour(c_black)
 draw_clear_alpha(c_black, 1.0)
+game.app.render.name_resolution = string(_resolution_width) + "x" + string(_resolution_height)

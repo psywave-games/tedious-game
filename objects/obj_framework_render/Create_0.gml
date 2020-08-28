@@ -48,6 +48,7 @@ self.size_ratio = [
 self.mode_fullscreen_web = false
 self.mode_resolution = 5
 self.mode_ratio = 3
+self.mode_shadow_hd = true
 self.mode_light_hd = true
 self.mode_outline = true
 self.mode_reflex = true
@@ -66,5 +67,6 @@ self.camwait = false
 
 self.background = -1
 self.surface_darkness = 0
+self.name_resolution = ""
 
 alarm_set(ev_init,1)

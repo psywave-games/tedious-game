@@ -1,4 +1,4 @@
-if self.state == fsm_mob.running and not lite() begin
+if self.state == fsm_mob.running and not lite() and light_force begin
 	#region SURFACE DRAW LIGHT
 	var width = light_force * 2
 	var middle = width/2
