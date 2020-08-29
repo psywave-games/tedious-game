@@ -9,14 +9,19 @@ game.app.render.mode_ratio = _mode_ratio
 
 var _mobile = _mode_ratio == 0
 var _ratio_auto = _mode_ratio == 1
+var _ratio_full = _mode_ratio == last_ratio
 var _resolution_auto = _mode_resolution == 0 or _mobile
 var _display_height = browser()? browser_height: display_get_height()
 var _display_width = browser()? browser_width: display_get_width()
 var _resolution_height = 720
 var _resolution_width = 720
 
-
-if _mobile begin
+if _ratio_full begin
+	var _ratio = room_width/word.height
+	_resolution_height = game.app.render.size_resolution[_mode_resolution]
+	_resolution_width = _resolution_height * _ratio	
+end
+else if _mobile begin
 	var _ratio = _display_height >= _display_width? _display_height/_display_width:  _display_width/_display_height
 	_resolution_width = game.app.render.size_resolution[_mode_resolution]
 	_resolution_height =  _resolution_width * _ratio
@@ -114,5 +119,5 @@ draw_clear_alpha(c_black, 1.0)
 if _ratio_auto or _mobile then
 	game.app.render.resolution = game.app.render.name_resolution[_mode_resolution]
 else
-	game.app.render.resolution = string(_resolution_width) + "x" + string(_resolution_height)
+	game.app.render.resolution = string(round(_resolution_width)) + "x" + string(round(_resolution_height))
 #endregion

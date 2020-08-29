@@ -28,7 +28,7 @@
     "option_html5_use_facebook": false,
     "option_html5_usebuiltinfont": true,
     "option_html5_usebuiltinparticles": true,
-    "option_html5_usesplash": false,
+    "option_html5_usesplash": true,
     "option_html5_version": {
         "build": 1,
         "major": 0,

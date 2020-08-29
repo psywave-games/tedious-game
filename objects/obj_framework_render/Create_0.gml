@@ -62,7 +62,8 @@ self.name_ratio = [
 	"16:9",
 	"21:9",
 	"32:9",
-	"4:1"
+	"4:1",
+	"Full"
 ]
 
 /// para uso de troca de solução
@@ -75,6 +76,7 @@ self.size_ratio = [
 	2.33333333,
 	3.55555556,
 	4.00000000,
+	0.00000000,
 ]
 #endregion
 #region CONFIGS
@@ -92,3 +94,6 @@ self.font_speed = 3
 self.color_invert = 0
 self.color_darkness = 0.6
 #endregion
+
+self.internal_old_width = 0
+self.internal_old_height = 0
