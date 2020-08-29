@@ -12,13 +12,11 @@
 
 /// window sizes
 #macro	padding						10
-#macro	resolution_width			1920
-#macro	resolution_height			1080
 #macro	font_size_title_lite		2.60
 #macro	font_size_title				0.80
 #macro	font_size_menu				0.32
 #macro	font_size_description		0.80
-#macro	last_resolution				array_length_1d(game.app.render.resolutions) - 1
+#macro	last_resolution				array_length_1d(game.app.render.name_resolution) - 1
 #macro	last_ratio					array_length_1d(game.app.render.name_ratio) - 1
 
 
@@ -131,7 +129,8 @@ enum fsm_player {
 
 /// FINITE STATE MACHINE GAME MODE
 enum fsm_game {
-	load,									/// STATE: Carregando jogo
+	loading,								/// STATE: Carregando jogo
+	loaded,									/// STATE: Carregado Jogo
 	lang,									/// STATE: Selecione Idioma
 	warn,									/// STATE: Aviso
 	intro,									/// STATE: Intro do jogo

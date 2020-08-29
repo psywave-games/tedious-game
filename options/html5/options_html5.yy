@@ -30,7 +30,7 @@
     "option_html5_usebuiltinparticles": true,
     "option_html5_usesplash": false,
     "option_html5_version": {
-        "build": 0,
+        "build": 1,
         "major": 0,
         "minor": 9,
         "revision": 0

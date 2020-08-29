@@ -1,1 +1,1 @@
-resolution_set(game.app.render.mode_resolution, game.app.render.mode_ratio)
+resolution_set(mode_resolution, mode_ratio)

@@ -52,7 +52,7 @@ global.language = "pt"
 /// @pattern			Finite State Machine
 /// @example			game.app.state 
 /// @return fsm_game	estado comportamental do jogo
-state = fsm_game.load
+state = fsm_game.loading
 #endregion
 
 #region INIT INPUT

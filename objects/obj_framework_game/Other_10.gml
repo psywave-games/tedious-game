@@ -2,10 +2,14 @@
 event_all(ev_init)
 
 #region BOOTSTRAP GAME
-if self.state == fsm_game.load begin
+/// LOAD GAME CONFIGS
+if self.state == fsm_game.loading begin
 	database_init()
 	eula_init()
-
+	state_reset( self.id, fsm_game.loaded)
+end
+/// UPDATE GAME CONFIGS
+else if self.state == fsm_game.loaded begin 
 	/// focar a primeira vez
 	if not variable_global_exists("focus") then
 		global.focus = true

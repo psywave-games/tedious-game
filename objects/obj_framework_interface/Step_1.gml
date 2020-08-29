@@ -141,7 +141,7 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuWind
 		/// alterar resolucao
 		case 0:
 			var resolution = game.app.render.mode_resolution + _in
-			var mode = clamp(resolution, 0, last_resolution)
+			var mode = clamp(resolution, 1, last_resolution)
 			resolution_set (mode, game.app.render.mode_ratio)
 			break
 			

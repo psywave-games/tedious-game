@@ -1,6 +1,14 @@
 /// @description ev_init
 
-if game.app.state == fsm_game.warn and not music_playing_is(snd_music_sad) then
+
+if game.app.state == fsm_game.loaded begin
+	volume_set(volume, volume_master)
+	volume_set(mixer_fx, volume_fx)
+	volume_set(mixer_music, volume_music)
+	volume_set(mixer_voice, volume_voice)
+end
+
+else if game.app.state == fsm_game.warn and not music_playing_is(snd_music_sad) then
 	music_play(snd_music_sad)
 	
 else if game.app.state == fsm_game.play and not game.app.started then

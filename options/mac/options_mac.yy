@@ -28,7 +28,7 @@
     "option_mac_team_id": "",
     "option_mac_texture_page": "1024x1024",
     "option_mac_version": {
-        "build": 0,
+        "build": 1,
         "major": 0,
         "minor": 9,
         "revision": 0

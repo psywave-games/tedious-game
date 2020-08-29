@@ -104,7 +104,7 @@ switch game.app.state begin
 	#endregion
 	#region MENU WINDOW
 	case fsm_game.menuWindow:
-		var menu_resolution = game.app.render.name_resolution
+		var menu_resolution = game.app.render.resolution
 		var menu_proportion = game.app.render.name_ratio[game.app.render.mode_ratio]
 		var menu_fullscreen = fullscreen_get()
 		var menu_cam_mode = t(msg.menu_video_cameramode0 + game.app.render.mode_camera)
@@ -142,23 +142,25 @@ switch game.app.state begin
 		/// instances positions
 		var _text = t(msg.tutorial_about)
 		var _center = display_get_gui_width()/2
-		var _middle = display_get_gui_width()/2
+		var _middle = display_get_gui_height()/2
 		var _xx = display_get_gui_width()/3
 		var _yy = display_get_gui_height()/3
 		var _ratio = ratio_get()
-		var _resolution = game.app.render.resolutions[game.app.render.mode_resolution]
-		var _mini = (_ratio >= 1.0 and _resolution <= 640) or (_ratio == 1.0 and _resolution <= 900)
-		var _size = _mini? 1.0: clamp(_resolution/1280, 0.8, 4)
-		var _sizet = max(_resolution/720, 1.0)
+		var _resolution = game.app.render.size_resolution[game.app.render.mode_resolution]
+		var _mobile = game.app.render.mode_ratio == 0
+		var _mini = _resolution <= 640 or (_ratio == 1.0 and _resolution < 900)
+		var _size = _mobile? 1.4: clamp(_resolution/1280, 0.6924, 8)
+		var _sizet = max(_resolution/900, 1)
 		var _bottom = string_height_ext(_text, 32, (_xx*2/_sizet))
 		var _vak = _mini? fa_center: fa_left
 		var _vag = _mini? fa_center: fa_right
-		var _vhkg = _mini? fa_middle: fa_top
+		var _vhkg = fa_top
 		var _xxkg = _mini? 0: _xx
-		var _yyk = _mini? (_yy/3) - 64:  _yy + (_bottom * _sizet) + 16
-		var _yyg = _mini? (_yy/-3) - 64: _yy + (_bottom * _sizet) + 16
+		var _yyk = _mini? gui_get_y_align(128 * _size, fa_middle):  _yy + (_bottom * _sizet) + 16
+		var _yyg = _mini? gui_get_y_align(-128 * _size, fa_middle): _yy + (_bottom * _sizet) + 16
+		show_debug_message(_ratio)
 	
-		if not _mini begin
+		if not _mini or (_mobile and _resolution > 640) begin
 			/// box text
 			draw_rectangle(
 				_center - _xx - padding,
@@ -187,7 +189,7 @@ switch game.app.state begin
 		
 
 		/// keyboard/gamepad
-		if _ratio >= 1.0 begin
+		if not _mobile begin
 			draw_sprite_align(spr_tuto_keyboard, 0, _xxkg, _yyk, _vak, _vhkg, make_color_rgb(91,106,120), 1.0, _size * 3.0)
 			draw_sprite_align(spr_tuto_keyboard, 1, _xxkg, _yyk, _vak, _vhkg, make_color_rgb(119,130,188), 1.0, _size * 3.0)
 			draw_sprite_align(spr_tuto_keyboard, 2, _xxkg, _yyk, _vak, _vhkg, make_color_rgb(222,185,50), 1.0, _size * 3.0)
@@ -340,7 +342,12 @@ switch game.app.state begin
 		break
 	#endregion
 	#region LOAD
-	case fsm_game.load:
+	case fsm_game.loading:
+		draw_background(c_black, 1.0)
+		draw_set_color(c_white)
+		draw_text(0, 0, "Loading...")
+		break
+	case fsm_game.loaded:
 		draw_background(c_black, 1.0)
 		break
 	#endregion

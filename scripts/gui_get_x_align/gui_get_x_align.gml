@@ -7,18 +7,18 @@ var _ah = argument[1]
 var _padding = argument_count > 2? argument[2]: padding
 
 #region Enquadramento
-var min_x = _padding
-var max_x = display_get_gui_width() - _padding
+var _min_x = _padding
+var _max_x = display_get_gui_width() - _padding
 #endregion
 
 #region Posicionamento Horizontal
 switch _ah begin 
 	case fa_left:
-		_xx += min_x
+		_xx += _min_x
 		break
 		
 	case fa_right: 
-		_xx = max_x - _xx
+		_xx = _max_x - _xx
 		break
 		
 	case fa_center:
@@ -26,4 +26,4 @@ switch _ah begin
 end
 #endregion
 
-return clamp(_xx, min_x, max_x)
+return clamp(_xx, _min_x, _max_x)

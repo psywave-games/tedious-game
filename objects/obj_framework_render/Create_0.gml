@@ -1,53 +1,86 @@
-/// @description Insert description here
-// You can write your code in this editor
+orientation = display_get_orientation()
+background = -1
+surface_darkness = 0
+resolution = "#error_resolution_unknown"
 
+///	posicionamento da camera no mapa
+self.camx = 0
+self.camy = 0
+self.camwait = false
 
 #region RESOLUTIONS
+self.name_resolution = [
+	"#error_resolution_internal_access",
+	"160p",
+	"240p",
+	"360p",
+	"640p",
+	"HD 720p",
+	"HD 728p",
+	"HD+ 800p",
+	"HD+ 900p",
+	"HD+ 1024p",
+	"FullHD 1080p",
+	"FullHD 1144p",
+	"FullHD 1360p",
+	"QuadHD 1440p",
+	"UltraHD 4K",
+	"UltraHD 5K",
+	"UltraHD 6K",
+	"UltraHD 8K",
+	"UltraHD 16K"
+]
 /// resoluções pré defefinidas
-self.resolutions = [
+self.size_resolution = [
+	720,
 	160,
 	240,
 	360,
 	640,
 	720,
 	768,
+	800,
 	900,
 	1024,
 	1080,
 	1144,
 	1360,
 	1440,
-	2160
+	2160,
+	2880,
+	3456,
+	4320,
+	8640,
 ]
 
 /// proporçoes pré definidas
 self.name_ratio = [ 
-	"4:3 (Mobile)",
-	"1:1 (Mobile)",
+	"Mobile",
+	"Auto",
 	"1:1",
 	"4:3",
 	"16:9",
 	"21:9",
 	"32:9",
+	"4:1"
 ]
 
 /// para uso de troca de solução
 self.size_ratio = [
-	0.65555555,
-	0.50000000,
+	0.00000000,
+	0.00000000,
 	1.00000000,
 	1.33333333,
 	1.77777778,
 	2.33333333,
 	3.55555556,
+	4.00000000,
 ]
 #endregion
-
-#region PREPARE CONFIGS
-/// resolução selecionada
+#region CONFIGS
 self.mode_fullscreen_web = false
-self.mode_resolution = 5
-self.mode_ratio = 3
+self.mode_resolution = 0
+self.mode_ratio = 1
 self.mode_shadow_hd = true
 self.mode_light_hd = true
 self.mode_outline = true
@@ -59,14 +92,3 @@ self.font_speed = 3
 self.color_invert = 0
 self.color_darkness = 0.6
 #endregion
-
-///	posicionamento da camera no mapa
-self.camx = 0
-self.camy = 0
-self.camwait = false
-
-self.background = -1
-self.surface_darkness = 0
-self.name_resolution = ""
-
-alarm_set(ev_init,1)
