@@ -38,15 +38,15 @@ else if abs (game.app.input.key_menu_go) begin
 			break
 			
 		case fsm_game.menuOptions:
-			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 5)
+			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 4)
 			break
 		
 		case fsm_game.menuWindow:
-			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 5)
+			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 4)
 			break
 		
 		case fsm_game.menuGraphic:
-			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 4)
+			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 3)
 			break	
 			
 		case fsm_game.menuAudio:
@@ -106,29 +106,23 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuOpti
 			lang_set(game.app.lang == msg.en? msg.pt: msg.en)
 			break
 			
-		/// Cam Speed
-		case 1:
-			//var _gamepad = game.app.input.gamepad + _in
-			//game.app.input.gamepad = clamp(_gamepad, 0, 3)
-			break	
-			
 		/// Enter menu window
-		case 2: 
+		case 1: 
 			state_set( game.app, fsm_game.menuWindow)
 			break
 			
 		/// Enter menu graphic
-		case 3: 
+		case 2: 
 			state_set( game.app, fsm_game.menuGraphic)
 			break
 			
 		/// Enter menu graphic
-		case 4: 
+		case 3: 
 			state_set( game.app, fsm_game.menuAudio)
 			break
 			
 		/// Voltar para menu anterior
-		case 5:
+		case 4:
 			state_back( game.app )
 			break
 			
@@ -152,26 +146,21 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuWind
 			resolution_set (game.app.render.mode_resolution, mode)
 			break
 	
-		/// Cam Speed
+		/// Cam Mode
 		case 2:
 			var cam_speed = game.app.render.mode_camera + _in
 			game.app.render.mode_camera = clamp(cam_speed, 0, 5)
 			break
 			
-		/// Cam Speed
-		case 3:
-			var font_speed = game.app.render.font_speed + _in
-			game.app.render.font_speed = clamp(font_speed, 1, 10)
-			break
 		
 		/// alternal tela cheia
-		case 4:
+		case 3:
 			var fullscreen = not fullscreen_get()
 			fullscreen_set(fullscreen)
 			break
 			
 		/// voltar para o menu
-		case 5:
+		case 4:
 			state_back( game.app )
 			break	
 	end
@@ -180,29 +169,23 @@ end
 #region SET MENU GRAPHIC
 else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuGraphic begin
 	switch self.select begin
-		/// alternar fontes em HD
-		case 0:
-			game.app.render.mode_shadow_hd ^= true
-			break
-			
 		/// alternar Luzes em HD
-		case 1:
+		case 0:
 			game.app.render.mode_light_hd ^= true
 			break
-		
 			
 		/// alternar Outiline
-		case 2:
+		case 1:
 			game.app.render.mode_outline ^= true
 			break
 			
 		/// alternar Reflexos
-		case 3:
+		case 2:
 			game.app.render.mode_reflex ^= true
 			break
 			
 		/// voltar para o menu
-		case 4:
+		case 3:
 			state_back( game.app )
 			break
 		

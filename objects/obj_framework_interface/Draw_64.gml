@@ -95,11 +95,10 @@ switch game.app.state begin
 	#region MENU OPTION
 	case fsm_game.menuOptions:
 		draw_menu(0, t(game.app.lang), button_type_options, options(game.app.lang, msg.pt, msg.en), t(msg.menu_lang))
-		draw_menu(1, t(msg.menu_gamepad), button_type_check, game.app.input.mode_button)
-		draw_menu(2, t(msg.menu_window))
-		draw_menu(3, t(msg.menu_video))
-		draw_menu(4, t(msg.menu_audio))
-		draw_menu(5, t(msg.back), 10, 60)
+		draw_menu(1, t(msg.menu_window))
+		draw_menu(2, t(msg.menu_video))
+		draw_menu(3, t(msg.menu_audio))
+		draw_menu(4, t(msg.back), 10, 60)
 		break
 	#endregion
 	#region MENU WINDOW
@@ -112,18 +111,16 @@ switch game.app.state begin
 		draw_menu(0, menu_resolution, button_type_options, options(game.app.render.mode_resolution, 0, last_resolution), t(msg.video_size))
 		draw_menu(1, menu_proportion, button_type_options, options(game.app.render.mode_ratio, 0, last_ratio), t(msg.video_ratio))
 		draw_menu(2, menu_cam_mode, button_type_options, options(game.app.render.mode_camera, 0, 5), t(msg.menu_video_cameramode))
-		draw_menu(3, t(msg.video_digto))
-		draw_menu(4, t(msg.video_full), button_type_check, menu_fullscreen)
-		draw_menu(5, t(msg.back), 10, 60)
+		draw_menu(3, t(msg.video_full), button_type_check, menu_fullscreen)
+		draw_menu(4, t(msg.back), 10, 60)
 		break 
 	#endregion
 	#region MENU GRAPHYIC
 	case fsm_game.menuGraphic:
-		draw_menu(0, t(msg.video_fnthd), button_type_check, game.app.render.mode_shadow_hd)
-		draw_menu(1, t(msg.video_lighthd), button_type_check, game.app.render.mode_light_hd)
-		draw_menu(2, t(msg.video_outline), button_type_check, game.app.render.mode_outline)
-		draw_menu(3, t(msg.video_reflex), button_type_check, game.app.render.mode_reflex)
-		draw_menu(4, t(msg.back), 10, 60)
+		draw_menu(0, t(msg.video_lighthd), button_type_check, game.app.render.mode_light_hd)
+		draw_menu(1, t(msg.video_outline), button_type_check, game.app.render.mode_outline)
+		draw_menu(2, t(msg.video_reflex), button_type_check, game.app.render.mode_reflex)
+		draw_menu(3, t(msg.back), 10, 60)
 		break
 	#endregion 
 	#region MENU AUDIO

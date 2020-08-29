@@ -3,16 +3,16 @@ if score <= game.app.interface.display_score begin
 	return score
 end
 	
-var sum = 1
-var distance = score - game.app.interface.display_score
+var _sum = 1
+var _distance = score - game.app.interface.display_score
 
-if distance >= 5000 then
-	sum = 1000
-else if distance >= 500 then
-	sum = 100
-else if distance >= 50
-	sum = 10
+if _distance >= 5000 then
+	_sum = 1000
+else if _distance >= 500 then
+	_sum = 100
+else if _distance >= 50
+	_sum = 10
 	
-game.app.interface.display_score += sum
+game.app.interface.display_score += _sum
 	
-return score <= game.app.interface.display_score? score: game.app.interface.display_score
+return min(score, game.app.interface.display_score)

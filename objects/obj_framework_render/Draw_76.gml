@@ -15,8 +15,4 @@ if game.app.render.mode_shadow_hd and game.app.render.mode_light_hd begin
 		surface_reset_target()
 	end
 end
-/// ADAPT
-else begin
-	game.app.player.darkness = 0
-end
 #endregion

@@ -2279,6 +2279,14 @@
             }
         },
         {
+            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
+            "Value": {
+                "id": "3c38c145-8296-4ffc-ba4c-29b91080cc10",
+                "resourcePath": "options\/linux\/options_linux.yy",
+                "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
             "Key": "a94c1f1e-bdf1-40b2-b86f-bb21fc49fc02",
             "Value": {
                 "id": "4e9f789f-ab35-48d4-a9dc-ac5d6ab30bee",
@@ -2828,6 +2836,14 @@
                 "id": "93d33a6f-b6df-4564-84af-d16044704cb4",
                 "resourcePath": "scripts\/audio_play_at\/audio_play_at.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
+            "Value": {
+                "id": "46fc55fa-7cc5-462b-b278-772540dc1194",
+                "resourcePath": "options\/windows\/options_windows.yy",
+                "resourceType": "GMWindowsOptions"
             }
         },
         {
