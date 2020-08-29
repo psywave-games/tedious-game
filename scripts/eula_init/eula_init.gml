@@ -15,7 +15,13 @@ file_text_close(_file)
 #endregion
 
 /// show eula
-show_message_async(_text)
+if browser() begin
+	/// @todo modal eula
+end
+else begin
+	show_message_async(_text)
+end
+
 global.eula = true
 
 /// save eula

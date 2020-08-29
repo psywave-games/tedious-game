@@ -8,11 +8,11 @@ if game.app.state == fsm_game.loaded begin
 	volume_set(mixer_voice, volume_voice)
 end
 
-else if game.app.state == fsm_game.warn and not music_playing_is(snd_music_sad) then
-	music_play(snd_music_sad)
+else if game.app.state == fsm_game.warn and not music_playing_is("music/menu.ogg") then
+	music_play("music/menu.ogg")
 	
 else if game.app.state == fsm_game.play and not game.app.started then
-	music_play(snd_music_happy)
+	music_play("music/game.ogg")
 	
-else if game.app.state == fsm_game.credits and not music_playing_is(snd_music_menu) then
-	music_play(snd_music_menu)
+else if game.app.state == fsm_game.credits and not music_playing_is("music/credits.ogg") then
+	music_play("music/credits.ogg")

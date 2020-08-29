@@ -1,7 +1,6 @@
-orientation = display_get_orientation()
-background = -1
-surface_darkness = 0
-resolution = "#error_resolution_unknown"
+self.background = -1
+self.surface_darkness = 0
+self.resolution = "#error_resolution_unknown"
 
 ///	posicionamento da camera no mapa
 self.camx = 0
@@ -80,7 +79,7 @@ self.size_ratio = [
 ]
 #endregion
 #region CONFIGS
-self.mode_fullscreen_web = false
+self.mode_fullscreen_web = true
 self.mode_resolution = 0
 self.mode_ratio = 1
 self.mode_shadow_hd = true
@@ -97,3 +96,9 @@ self.color_darkness = 0.6
 
 self.internal_old_width = 0
 self.internal_old_height = 0
+
+if display_get_orientation() == display_portrait
+	or  display_get_orientation() == display_portrait_flipped
+	or display_get_width() < display_get_height() begin
+	self.mode_ratio = 0
+end

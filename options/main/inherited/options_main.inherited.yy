@@ -64,10 +64,10 @@
                     "groupName": "txt_fonts",
                     "targets": 461609314234257646,
                     "autocrop": true,
-                    "border": 2,
+                    "border": 0,
                     "groupParent": "00000000-0000-0000-0000-000000000000",
                     "mipsToGenerate": 0,
-                    "scaled": true
+                    "scaled": false
                 }
             },
             {
@@ -174,6 +174,21 @@
                     "mipsToGenerate": 0,
                     "scaled": true
                 }
+            },
+            {
+                "Key": 12,
+                "Value": {
+                    "id": "e5edf5f6-5a2a-4b4b-9df6-5f489b8fd640",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "txt_interface",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
             }
         ],
         "Checksum": "ࢺ懜璙ᓆ锯翋꤯맫",
@@ -185,7 +200,9 @@
         ]
     }
 }←1225f6b0-ac20-43bd-a82e-be73fa0b6f4f|{
-    "targets": 461609314234257646
+    "targets": 461609314234257646,
+    "scaled": true,
+    "autocrop": true
 }←7fa50043-cea6-4cd0-9521-a8ba8c6ea9f0|{
     "audioGroups": {
         "Additions": [

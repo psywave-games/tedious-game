@@ -20,8 +20,8 @@ var _description = argument_count > 4? argument[4]: ""
 var _color = argument_count > 5? argument[5]: button_color_text
 var _ah = argument_count > 6? argument[6]: button_default_ah
 var _av = argument_count > 7? argument[7]: button_default_vh
-var _xx = argument_count > 8? argument[8]: 0
-var _yy = argument_count > 9? argument[9]: 0
+var _xx = argument_count > 8? argument[8]: button_default_xx
+var _yy = argument_count > 9? argument[9]: button_default_yy
 var _width = argument_count > 10? argument[10]: button_menu_width
 var _height = argument_count > 11? argument[11]: button_menu_height
 var _alpha = game.app.interface.select == _menu? button_alpha_normal: button_alpha_hover

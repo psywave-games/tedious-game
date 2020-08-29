@@ -7,7 +7,7 @@
     "option_mac_allow_incoming_network": false,
     "option_mac_allow_outgoing_network": false,
     "option_mac_app_category": "Games",
-    "option_mac_app_id": "com.company.game",
+    "option_mac_app_id": "com.psywave.tedious",
     "option_mac_apple_sign_in": false,
     "option_mac_build_app_store": false,
     "option_mac_copyright": "(c) 2018 CompanyName",

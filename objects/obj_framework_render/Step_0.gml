@@ -11,11 +11,12 @@ if not (game.app.step % room_speed) begin
 		internal_old_width = browser_width
 	end
 
-	else if display_get_width() != browser_width 
-		or display_get_height() != browser_height begin 
+	else if internal_old_width != display_get_width() 
+		or internal_old_height != display_get_height() begin 
 		resolution_set(mode_resolution, mode_ratio)
 		internal_old_height = display_get_height()
 		internal_old_width = display_get_width()
 	end
+	
 end
 #endregion

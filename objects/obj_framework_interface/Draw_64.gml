@@ -7,8 +7,11 @@ if game.app.state == fsm_game.menuMain
 	or game.app.state == fsm_game.intro
 	begin 
 	
-	draw_gui(button_margin_horizontal, -100, fa_right, fa_middle, t(msg.game_name), lite()? fnt_game0: fnt_title, c_white, 1, lite()? font_size_title_lite: font_size_title)
+	var _xx = game.app.render.mode_ratio? -100: 0
+	var _vh = game.app.render.mode_ratio? fa_right: fa_center
+	var _va = game.app.render.mode_ratio? fa_middle: fa_top
 
+	draw_gui(_xx, -100, _vh, _va, t(msg.game_name), lite()? fnt_game0: fnt_title, c_white, 1, lite()? font_size_title_lite: font_size_title)
 end
 #endregion
 #region INTERFACE

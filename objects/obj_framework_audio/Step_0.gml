@@ -14,7 +14,7 @@ end
 
 #region SOUND MUSIC GAMEPLAY
 /// pitch gameplay music
-if game.app.state == fsm_game.play and music_playing_is(snd_music_happy) begin
+if game.app.state == fsm_game.play and music_playing_is("music/game.ogg") begin
 	var _music = music_playing_get()
 	var _pitch = clamp(round(game.app.happy/8)*0.16, 0.48, 1)
 	audio_sound_pitch(_music, _pitch)

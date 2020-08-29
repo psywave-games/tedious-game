@@ -6,8 +6,8 @@
 var _xx = argument0
 var _yy = argument1
 var _color = argument2
-var _size = sqrt(display_get_gui_height() * display_get_gui_width())/24
-var _pressed = mouse_in_circle(_xx, _yy, _size) and game.app.input.mouse
+var _size = sqrt(display_get_gui_height() * display_get_gui_width())/20
+var _pressed = mouse_in_circle(_xx, _yy, _size)
 
 draw_set_color(_color)
 draw_set_alpha(_pressed?0.64:1.0)

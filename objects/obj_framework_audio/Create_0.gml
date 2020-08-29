@@ -21,6 +21,7 @@ mute = false
 /// Canais de audio
 sound_fx = array_create(12, 0)
 index_fx = array_create(12, 0)
+atual_music = ""
 sound_music = 0
 sound_voice = 0
 

@@ -21,9 +21,9 @@
 
 
 /// buttom config
-#macro	button_menu_width			240
-#macro	button_menu_height			56
-#macro	button_menu_padding			20
+#macro	button_menu_width			(game.app.render.mode_ratio? 300: 400)
+#macro	button_menu_height			(game.app.render.mode_ratio? 56: 64)
+#macro	button_menu_padding			(game.app.render.mode_ratio? 20: 32)
 #macro	button_menu_round			_height/6
 #macro	button_type_normal			0
 #macro	button_type_check			1
@@ -35,8 +35,10 @@
 #macro	button_color_background		0x50463e
 #macro	button_font_description		fnt_game0
 #macro	button_font_value			fnt_menu
-#macro	button_default_ah			fa_left
-#macro	button_default_vh			fa_middle
+#macro	button_default_ah			(game.app.render.mode_ratio? fa_left: fa_center)
+#macro	button_default_vh			(game.app.render.mode_ratio? fa_middle: fa_top)
+#macro	button_default_xx			0
+#macro	button_default_yy			(game.app.render.mode_ratio? 0: 150)
 #macro	button_margin_vertical		10
 #macro	button_margin_horizontal	64
 

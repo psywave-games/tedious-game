@@ -11,7 +11,7 @@ var _xx0 = _xx - _size * 2
 var _yy0 = _yy - _size / 2 
 var _xx1 = _xx + _size * 2
 var _yy1 = _yy + _size / 2
-var _pressed = mouse_in_rectangle(_xx0, _yy0, _xx1, _yy1) and game.app.input.mouse
+var _pressed = mouse_in_rectangle(_xx0, _yy0, _xx1, _yy1)
 
 draw_set_color(_color)
 draw_set_alpha(_pressed?0.64:1.0)

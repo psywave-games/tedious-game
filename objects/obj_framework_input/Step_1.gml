@@ -171,11 +171,11 @@ var _key_down = keyboard_check(vk_down) or _key_ord_s
 var _key_righ = keyboard_check(vk_right) or _key_ord_d
 var _key_shift = keyboard_check(vk_shift)
 var _key_enter = keyboard_check(vk_enter)
-var _any = keyboard_check_pressed(vk_anykey) or _mouse_precessed or _gamepaded_any
+var _any = _keyd_enter or _keyd_esc or _mouse_precessed or _gamepaded_any
 
 #endregion
 #region RESET KEYS|GAMEPAD|TOUCH|MOUSE
-pressed_any = _any
+pressed_any = _any or keyboard_check(vk_anykey)
 
 key_menu_open = false
 key_menu_esc = false
@@ -187,7 +187,7 @@ key_menu_in = 0
 #endregion
 #region MENUS
 if game.app.state == fsm_game.intro begin 
-	key_menu_open = _keyd_enter + _gamepaded_any + _mouse_axis
+	key_menu_open = _any
 end 
 
 else if game.app.state == fsm_game.play begin
