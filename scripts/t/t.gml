@@ -136,29 +136,29 @@ if game.app.lang == msg.en begin
 		case msg.interact_furnace_off:
 		    return "turn off stove"
 		case msg.interact_book0:
-		    return "I do feel some sympathy for people who use Windows"
+		    return "I do feel some sympathy for people who use Vindows"
 		case msg.interact_book1:
 		    return "especially those who've been using it for a long time."
 		case msg.interact_book2:
-		    return "There were a lot of bugs in Windows 3.x"
+		    return "There were a lot of bugs in Vindows 3.x"
 		case msg.interact_book3:
-		    return "Windows 95"
+		    return "Vindows 95"
 		case msg.interact_book4:
-		    return "Windows 98"
+		    return "Vindows 98"
 		case msg.interact_book5:
-		    return "Windows 98SE"
+		    return "Vindows 98SE"
 		case msg.interact_book6:
-		    return "Windows 2000"
+		    return "Vindows 2000"
 		case msg.interact_book7:
-		    return "Windows ME"
+		    return "Vindows ME"
 		case msg.interact_book8:
-		    return "Windows XP"
+		    return "Vindows XP"
 		case msg.interact_book9:
-		    return "Windows Vista"
+		    return "Vindows Wista"
 		case msg.interact_book10:
-		    return "and even in Windows 7, Windows 8 and Windows 8.1"
+		    return "and even in Vindows 7, Vindows 8 and Vindows 8.1"
 		case msg.interact_book11:
-		    return "That's why we're going all-out with Windows 10,"
+		    return "That's why we're going all-out with Vindows 10,"
 		case msg.interact_book12:
 		    return "to get rid of those bugs and replace them with all-new ones."
 		case msg.interact_book:
