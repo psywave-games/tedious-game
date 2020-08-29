@@ -14,5 +14,3 @@ self.switchs = 0
 
 self.visible = false
 self.reflex = false
-
-outline_init()

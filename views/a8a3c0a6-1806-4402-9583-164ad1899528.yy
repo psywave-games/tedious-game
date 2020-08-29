@@ -4,7 +4,7 @@
     "mvc": "1.1",
     "name": "a8a3c0a6-1806-4402-9583-164ad1899528",
     "children": [
-        "a6c9e5c4-b62e-4a2c-92b0-03f0447a92e2"
+        
     ],
     "filterType": "GMShader",
     "folderName": "shaders",
