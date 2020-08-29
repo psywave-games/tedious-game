@@ -43,6 +43,8 @@
                     "mvc": "1.0",
                     "argCount": 1,
                     "args": [
+                        1,
+                        1,
                         1
                     ],
                     "externalName": "show_modal",
@@ -60,11 +62,11 @@
                     "args": [
                         
                     ],
-                    "externalName": "splashscreen_hide",
+                    "externalName": "splashscreen",
                     "help": "",
                     "hidden": false,
                     "kind": 5,
-                    "name": "splashscreen_hide",
+                    "name": "splashscreen",
                     "returnType": 2
                 }
             ],

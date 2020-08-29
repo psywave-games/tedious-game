@@ -9,14 +9,14 @@ if global.eula then
 #region LOAD FILE EULA.TXT
 _file = file_text_open_read(_file)
 while not file_text_eof(_file) begin
-    _text += file_text_readln(_file)
+    _text += file_text_readln(_file) + (browser()? "<br/>": "")
 end
 file_text_close(_file)
 #endregion
 
 /// show eula
 if browser() begin
-	show_modal(_text)
+	show_modal("Please review the license terms before play the game.", _text, "I accept the terms in the License Agreement")
 end
 else begin
 	show_message_async(_text)
