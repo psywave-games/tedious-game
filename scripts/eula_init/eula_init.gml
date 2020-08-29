@@ -16,7 +16,7 @@ file_text_close(_file)
 
 /// show eula
 if browser() begin
-	/// @todo modal eula
+	show_modal(_text)
 end
 else begin
 	show_message_async(_text)

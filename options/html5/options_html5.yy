@@ -15,7 +15,7 @@
     "option_html5_google_analytics_enable": true,
     "option_html5_google_tracking_id": "UA-161577714-1",
     "option_html5_icon": "${options_dir}\/html5\/fav.ico",
-    "option_html5_index": "use_default",
+    "option_html5_index": "index.html",
     "option_html5_interpolate_pixels": false,
     "option_html5_jsprepend": "",
     "option_html5_loadingbar": "Use Default",
@@ -28,7 +28,7 @@
     "option_html5_use_facebook": false,
     "option_html5_usebuiltinfont": true,
     "option_html5_usebuiltinparticles": true,
-    "option_html5_usesplash": true,
+    "option_html5_usesplash": false,
     "option_html5_version": {
         "build": 1,
         "major": 0,

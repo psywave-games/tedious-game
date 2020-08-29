@@ -503,6 +503,14 @@
             }
         },
         {
+            "Key": "22836233-a2df-47c7-bd71-b980fce4cdd1",
+            "Value": {
+                "id": "86920f12-7e43-4f59-a5d2-9242ad7feb13",
+                "resourcePath": "extensions\/Javascript\/Javascript.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "22accf10-0699-4a92-8827-7e57239c6665",
             "Value": {
                 "id": "4bb4f5ac-3913-4e58-98e4-c98f988936cd",
@@ -683,6 +691,14 @@
             "Value": {
                 "id": "213d858b-a8a8-4f14-aea3-8ecce5a8b063",
                 "resourcePath": "views\/2fc53ff7-f510-4f2f-890a-6f3632b8dab1.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3031d4d5-02df-4c8e-a715-73d802fa69cc",
+            "Value": {
+                "id": "2f4841af-2031-43ef-bebf-5dc6769628c0",
+                "resourcePath": "views\/3031d4d5-02df-4c8e-a715-73d802fa69cc.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -1252,6 +1268,14 @@
                 "id": "c0d69e14-1e18-45f8-8b20-41e1d2ecc277",
                 "resourcePath": "views\/58d79194-8c18-4ca6-9968-2e31cc4b0149.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "591acc23-2d92-479a-86bc-9883830727ab",
+            "Value": {
+                "id": "62e6c094-d7ee-4e4d-8015-6a3ba3f164ed",
+                "resourcePath": "datafiles_yy\/index.html.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -2924,6 +2948,14 @@
                 "id": "e8f43bb7-9af8-418e-b175-f7c34bcd2c97",
                 "resourcePath": "scripts\/ratio_get\/ratio_get.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d2926606-4893-404f-a0c8-862c3a8168dd",
+            "Value": {
+                "id": "19e6ba37-4559-4183-b704-de1f58149b79",
+                "resourcePath": "datafiles_yy\/splash.gif.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
