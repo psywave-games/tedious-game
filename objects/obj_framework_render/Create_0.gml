@@ -1,3 +1,4 @@
+self.doors = 0
 self.background = -1
 self.surface_darkness = 0
 self.resolution = "#error_resolution_unknown"
@@ -89,6 +90,8 @@ self.mode_reflex = true
 self.mode_debug = 0
 self.mode_font_hd = true
 self.mode_camera = 0
+self.mode_emu_lite = 0
+self.mode_emu_browser = 0
 self.font_speed = 3
 self.color_invert = 0
 self.color_darkness = 0.6
@@ -102,3 +105,5 @@ if display_get_orientation() == display_portrait
 	or display_get_width() < display_get_height() begin
 	self.mode_ratio = 0
 end
+
+gpu_set_blendenable(!lite())

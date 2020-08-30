@@ -51,7 +51,7 @@
                     "help": "",
                     "hidden": false,
                     "kind": 5,
-                    "name": "show_modal",
+                    "name": "web_show_modal",
                     "returnType": 2
                 },
                 {
@@ -66,7 +66,7 @@
                     "help": "",
                     "hidden": false,
                     "kind": 5,
-                    "name": "splashscreen",
+                    "name": "web_splashscreen",
                     "returnType": 2
                 },
                 {
@@ -143,6 +143,21 @@
                     "kind": 5,
                     "name": "web_music_pitch",
                     "returnType": 1
+                },
+                {
+                    "id": "31b4a5bf-8bea-43b0-bdbf-519c03419d39",
+                    "modelName": "GMExtensionFunction",
+                    "mvc": "1.0",
+                    "argCount": 0,
+                    "args": [
+                        
+                    ],
+                    "externalName": "game_end",
+                    "help": "",
+                    "hidden": false,
+                    "kind": 5,
+                    "name": "web_game_end",
+                    "returnType": 2
                 }
             ],
             "init": "",
@@ -154,7 +169,8 @@
                 "91e090a3-2181-4fac-a30b-24039ab77d3a",
                 "b72c1123-529c-4853-9614-480e087c17e4",
                 "4dff4df9-3cd9-4576-b926-ae354c4781e9",
-                "58292fa7-c5f5-4710-9268-e9f61a3ab576"
+                "58292fa7-c5f5-4710-9268-e9f61a3ab576",
+                "31b4a5bf-8bea-43b0-bdbf-519c03419d39"
             ],
             "origname": "",
             "uncompress": false

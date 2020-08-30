@@ -20,3 +20,15 @@ if not (game.app.step % room_speed) begin
 	
 end
 #endregion
+
+#region DOORS UPDATE
+if mode_light_hd and not lite() begin 
+	self.doors = 0
+	var _count = 0
+
+	with obj_door0 begin 
+		other.doors |= (self.state == fsm_mob.running) << _count
+		_count += 1
+	end
+end
+#endregion

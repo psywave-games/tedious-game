@@ -1,1 +1,1 @@
-return lite() or os_browser == browser_not_a_browser
+return lite() or not browser()

@@ -18,6 +18,12 @@ function hide_modal()
     return 1;
 }
 
+function game_end()
+{
+    window.close();
+    return 1;
+}
+
 function splashscreen()
 {
     window.document.getElementById("canvas").style.display = "block";

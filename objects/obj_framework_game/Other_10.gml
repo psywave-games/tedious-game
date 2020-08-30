@@ -4,7 +4,7 @@ event_all(ev_init)
 #region BOOTSTRAP GAME
 /// LOAD GAME CONFIGS
 if self.state == fsm_game.loading begin
-	splashscreen()
+	web_splashscreen()
 	database_init()
 	eula_init()
 	state_reset( self.id, fsm_game.loaded)

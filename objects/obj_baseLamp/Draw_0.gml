@@ -1,11 +1,18 @@
-if self.state == fsm_mob.running and not lite() and light_force begin
-	#region SURFACE DRAW LIGHT
+if not light_force or state != fsm_mob.running then 
+	exit
+
+#region LIGHTS HD
+if not lite() and game.app.render.mode_light_hd begin
+	#region SURFACE DRAW|UPDATE
 	var width = light_force * 2
 	var middle = width/2
-	var surface_light = surface_create(width, word.height)
-	var surface_brightness = surface_create(width, word.height)
-	
-	if surface_exists(surface_brightness) and surface_exists(surface_light) begin
+	if not surface_exists(surface_light) begin
+		if surface_exists(surface_brightness) then
+			surface_free(surface_brightness)
+			
+		surface_brightness = surface_create(width, word.height)
+		surface_light = surface_create(width, word.height)
+
 		#region DRAW LIGHT
 		surface_set_target(surface_light)
 		if light_force >= light_size begin
@@ -40,13 +47,13 @@ if self.state == fsm_mob.running and not lite() and light_force begin
 				and other.y < self.y begin
 				draw_set_alpha(1.0)
 				
-				surface_set_target(surface_light)
+				surface_set_target(other.surface_light)
 				gpu_set_blendmode(bm_subtract)
 				draw_rectangle(_xx1, 0, _xx2, _yy, false)
 				gpu_set_blendmode(bm_normal)
 				surface_reset_target()
 				
-				surface_set_target(surface_brightness)
+				surface_set_target(other.surface_brightness)
 				gpu_set_blendmode(bm_subtract)
 				draw_rectangle(_xx1, 0, _xx2, _yy, false)
 				gpu_set_blendmode(bm_normal)
@@ -54,7 +61,11 @@ if self.state == fsm_mob.running and not lite() and light_force begin
 			end
 		end		
 		#endregion
-		#region SURFACE RENDER
+	end
+	#endregion 
+	#region RENDER SURFACE
+	if surface_exists(surface_brightness) and surface_exists(surface_light) begin
+		#region LIGHT
 		gpu_set_blendmode(bm_add)
 		draw_set_alpha(light_alpha)
 		draw_surface(surface_brightness, x - middle, y - 1)
@@ -62,7 +73,7 @@ if self.state == fsm_mob.running and not lite() and light_force begin
 		draw_surface(surface_light, x - middle, y - 1)
 		gpu_set_blendmode(bm_normal)
 		#endregion
-		#region DARKNESS REMOVE
+		#region DARKNESS
 		if surface_exists(game.app.render.surface_darkness) begin
 			surface_set_target(game.app.render.surface_darkness)
 			gpu_set_blendmode(bm_subtract)
@@ -71,8 +82,26 @@ if self.state == fsm_mob.running and not lite() and light_force begin
 			surface_reset_target()
 		end
 		#endregion
-		surface_free(surface_brightness)
-		surface_free(surface_light)
 	end
 	#endregion
 end
+#endregion
+#region LIGHTS LITE
+else if lite() begin
+	draw_set_alpha(0.64)
+	draw_set_color(c_white)
+	var _in = lerp(0, 8, light_force/max(light_size, 1))
+	draw_triangle(x, y, x - _in, y + _in/2, x + _in, y + _in/2, false)
+	draw_set_alpha(1.0)
+end
+#endregion
+#region LIGHTS SIMPLE
+else begin
+	gpu_set_blendmode(bm_add)
+	var _in = lerp(0, 6, light_force/max(light_size, 1))
+	draw_set_alpha(0.64)
+	draw_trapeze_color(bbox_left + 2, y, bbox_right - 1, y, bbox_left - _in + 1, y + _in, bbox_right + _in, y + _in, c_white, c_white, c_black, c_black, false)
+	draw_set_alpha(1.0)
+	gpu_set_blendmode(bm_normal)
+end
+#endregion

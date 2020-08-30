@@ -16,7 +16,7 @@ file_text_close(_file)
 
 /// show eula
 if browser() begin
-	show_modal("Please review the license terms before play the game.", _text, "I accept the terms in the License Agreement")
+	web_show_modal("Please review the license terms before play the game.", _text, "I accept the terms in the License Agreement")
 end
 else begin
 	show_message_async(_text)
