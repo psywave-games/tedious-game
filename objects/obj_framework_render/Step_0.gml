@@ -4,7 +4,7 @@ end
 
 #region RESIZE SCREEN
 if not (game.app.step % room_speed) begin
-	if browser() then if internal_old_width != browser_width 
+	if is_browser then if internal_old_width != browser_width 
 		or internal_old_height != browser_height begin 
 		resolution_set(mode_resolution, mode_ratio)
 		internal_old_height = browser_height

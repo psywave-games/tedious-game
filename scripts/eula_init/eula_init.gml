@@ -15,7 +15,7 @@ file_text_close(_file)
 #endregion
 
 /// show eula
-if browser() begin
+if is_browser begin
 	web_show_modal("Please review the license terms before play the game.", _text, "I accept the terms in the License Agreement")
 end
 else begin

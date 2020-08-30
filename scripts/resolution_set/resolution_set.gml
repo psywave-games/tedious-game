@@ -11,8 +11,8 @@ var _mobile = _mode_ratio == 0
 var _ratio_auto = _mode_ratio == 1
 var _ratio_full = _mode_ratio == last_ratio
 var _resolution_auto = _mode_resolution == 0 or _mobile
-var _display_height = browser()? browser_height: display_get_height()
-var _display_width = browser()? browser_width: display_get_width()
+var _display_height = is_browser? browser_height: display_get_height()
+var _display_width = is_browser? browser_width: display_get_width()
 var _resolution_height = 720
 var _resolution_width = 720
 
@@ -79,7 +79,7 @@ window_set_size(_resolution_width, _resolution_height)
 #endregion
 
 #region CENTER WINDOW
-if browser() begin
+if is_browser begin
 	/// ajustar a tela
 	if game.app.render.mode_fullscreen_web begin
 		window_set_size(browser_width, browser_height)

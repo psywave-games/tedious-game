@@ -4,6 +4,7 @@
 #macro	database_file				"data.ini"		/// Database name
 #macro	database_global				"global game"	/// [section INI name]
 #macro	light_alpha					0.1
+#macro	is_browser					(os_browser != browser_not_a_browser)
 #macro	null_surface				((os_browser != browser_not_a_browser)? 0: noone)
 
 #macro	volume_master				2				/// channel master

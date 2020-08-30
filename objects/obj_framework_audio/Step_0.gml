@@ -19,7 +19,7 @@ if game.app.state == fsm_game.play and music_playing_is("music/game.ogg") begin
 	var _pitch = clamp(round(game.app.happy/8)*0.16, 0.48, 1)
 	if _pitch != internal_old_pitch begin 
 		self.internal_old_pitch = _pitch 
-		if browser() then
+		if is_browser then
 			web_music_pitch(_pitch)
 			
 		else 

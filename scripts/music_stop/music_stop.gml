@@ -1,5 +1,5 @@
 /// @descripition stop playing music
-if browser() then
+if is_browser then
 	web_music_stop()
 
 else if audio_is_playing(game.app.audio.sound_music) begin

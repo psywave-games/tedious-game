@@ -87,7 +87,7 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuMain
 		/// Sair do jogo		
 		case 3:
 			// fechar jogo em desktop
-			if os_browser  == browser_not_a_browser then
+			if not is_browser then
 				game_end()
 				
 			// fechar jogo no navegador

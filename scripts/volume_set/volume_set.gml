@@ -19,7 +19,7 @@ switch _mixer begin
 			audio_master_gain(gain_get(volume_master))
 			
 		/// browser music volume
-		if browser() then
+		if is_browser then
 			web_music_volume(gain_get(volume_music) * (!game.app.audio.mute? gain_get(volume_master): 0))
 		break
 		
@@ -33,7 +33,7 @@ switch _mixer begin
 		game.app.audio.mixer_music = _volume
 	
 		/// browser music volume
-		if browser() then
+		if is_browser then
 			web_music_volume(gain_get(volume_music) * (!game.app.audio.mute? gain_get(volume_master): 0))
 			
 		/// game music

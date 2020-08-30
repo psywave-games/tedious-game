@@ -6,7 +6,7 @@ music_stop()
 game.app.audio.atual_music = argument0
 
 #region BROWSER MUSIC
-if browser() begin
+if is_browser begin
 	volume_set(volume_music, volume_get(volume_music))
 	web_music_play(game.app.audio.atual_music)
 end 
