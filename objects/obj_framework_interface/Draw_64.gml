@@ -22,6 +22,7 @@ switch game.app.state begin
 		var _font = game.app.fun.select == thematic.halflife? fnt_game1: fnt_game0
 		var _color = game.app.fun.select == thematic.halflife? c_orange: c_white
 		var _score_color = happy_sign < 0? c_red: _color
+		var _size = is_mobile? 1.20: 1.0
 	
 		/// FADOUT DYING
 		if game.app.player.state = fsm_player.dying or game.app.player.state == fsm_player.died then
@@ -32,10 +33,10 @@ switch game.app.state begin
 		)
 	
 		if self.can_interact then 
-			draw_gui(0, 0, fa_left, fa_top, self.message, _font, _color, 1.0, 1.4)
-		draw_gui(0,0, fa_right, fa_bottom, text_build(), _font, _color, 1, 1)
-		draw_gui(0,0, fa_left, fa_bottom, _date, _font, _color, 1, 1)
-		draw_gui(0,0, fa_right, fa_top, text_score(), _font, _score_color, 1, 1.4)
+			draw_gui(0, 0, fa_left, fa_top, self.message, _font, _color, 1.0, 1.4 * _size)
+		draw_gui(0,0, fa_right, fa_bottom, text_build(), _font, _color, 1, 1 * _size)
+		draw_gui(0,0, fa_left, fa_bottom, _date, _font, _color, 1, 1 * _size)
+		draw_gui(0,0, fa_right, fa_top, text_score(), _font, _score_color, 1, 1.4 * _size)
 		
 		self.message = ""
 		break
@@ -338,7 +339,7 @@ switch game.app.state begin
 	case fsm_game.waitFocus:
 		draw_background(c_black, 1.0)
 		draw_sprite(spr_jolt, 0, display_get_gui_width()/2, display_get_gui_height()/2)
-		draw_gui(0, display_get_gui_height()/4, fa_center, fa_bottom, "mouse click to focus game", fnt_game1, c_white, current_second%2)
+		draw_gui(0, display_get_gui_height()/4, fa_center, fa_bottom, "mouse click to focus game", fnt_game1, c_white, current_second%2, is_mobile? 4.0:1.6)
 		break
 	#endregion
 	#region LOAD

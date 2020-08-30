@@ -106,4 +106,4 @@ if display_get_orientation() == display_portrait
 	self.mode_ratio = 0
 end
 
-gpu_set_blendenable(!lite())
+draw_set_circle_precision(64)

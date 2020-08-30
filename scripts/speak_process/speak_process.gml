@@ -32,10 +32,11 @@ if self.speak_init <= self.speak_step and self.speak_step < self.speak_finish be
 	draw_set_text_config(fnt_game1, c_white, 1.0, fa_center, fa_bottom)
 		
 	/// posicionar texto
+	var _display_height = is_mobile? display_get_gui_height()/2: display_get_gui_height()
+	var _size = is_mobile? 2.0: 1.2
 	var _xx = (self.x - game.app.render.camx) * (display_get_gui_width()/camera_get_view_width(view_camera[0]))
-	var _yy = (self.yhead - abs(8 * self.image_yscale) - game.app.render.camy) * (display_get_gui_height()/camera_get_view_height(view_camera[0])) 
+	var _yy = (self.yhead - abs(8 * self.image_yscale) - game.app.render.camy) * (_display_height/camera_get_view_height(view_camera[0])) 
 	
-				
 	/// renderizar
-	draw_text_ext_transformed(_xx, _yy, _text, 16, 256, 1.0, 1.0, 0)	
+	draw_text_ext_transformed(_xx, _yy, _text, 16, 256, _size, _size, 0)	
 end
