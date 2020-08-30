@@ -4,7 +4,7 @@ if background != -1 then
 	
 #endregion
 #region DARKNESS
-if game.app.render.mode_shadow_hd and game.app.render.mode_light_hd begin 
+if not lite() if game.app.render.mode_shadow_hd and game.app.render.mode_light_hd begin 
 	surface_darkness = surface_create(room_width, room_height)
 	if surface_exists(surface_darkness) begin
 		surface_set_target(surface_darkness)
