@@ -5,6 +5,7 @@ self.state = argument0
 
 self.select = 1
 
+self.can_surface = false
 self.can_interact = false
 self.can_reflex = false
 self.can_break = false
