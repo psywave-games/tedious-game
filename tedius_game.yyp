@@ -1963,14 +1963,6 @@
             }
         },
         {
-            "Key": "8db7692f-a77f-43a3-ab0f-8eafe8160159",
-            "Value": {
-                "id": "07c3b382-e0bc-43be-acc8-f1d4e6fa127c",
-                "resourcePath": "extensions\/Lens_flare\/Lens_flare.yy",
-                "resourceType": "GMExtension"
-            }
-        },
-        {
             "Key": "8e2fdf19-bb3a-463a-ab0d-8fe1526d66e2",
             "Value": {
                 "id": "8e7c2946-c12f-470c-ab77-b48c7ad6ef0f",
