@@ -1,1 +1,1 @@
-return audio_is_playing(game.app.audio.sound_music)
+return browser()? web_music_playing_any(): audio_is_playing(game.app.audio.sound_music)

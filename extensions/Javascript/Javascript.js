@@ -24,3 +24,48 @@ function splashscreen()
     window.document.getElementById("img-splash").style.display = "none";
     return 1;
 }
+
+function music_play(file)
+{
+    var music = window.document.getElementById("music");
+
+    console.log("music load:" + file);
+    music.src = "game/" + file;
+    music.playbackRate = 1.0;
+    music.currentTime = 0;
+    music.loop = true;
+
+    music.play().then(function() {
+        console.log("success!");
+    }).catch(function(error) {
+        console.log(error);
+    });
+    return 1;
+}
+
+function music_pitch(pitch)
+{
+    var music = window.document.getElementById("music");
+    music.playbackRate = pitch;
+    return 1;   
+}
+
+function music_volume(volume)
+{
+    var music = window.document.getElementById("music");
+    music.volume = volume;
+    return 1;   
+}
+
+function music_stop()
+{
+    var music = window.document.getElementById("music");
+    music.pause();
+    return 1;
+}
+
+function music_playing()
+{
+    var music = window.document.getElementById("music");
+    return !music.paused && music.duration > 0;
+}

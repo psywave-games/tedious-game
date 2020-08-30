@@ -33,3 +33,5 @@ for (var i = 0; i < 12; i++) begin
 	audio_emitter_falloff(emitter[i], 64, 192, 2)
 	audio_emitter_gain(emitter[i], 0.5)
 end
+
+internal_old_pitch = 0.0

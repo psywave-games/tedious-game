@@ -11,10 +11,16 @@ switch _mixer begin
 
 	case volume_master:
 		game.app.audio.volume = _volume
+		/// mute game
 		if game.app.audio.mute then
 			audio_master_gain(0)
+		/// unmute game
 		else
 			audio_master_gain(gain_get(volume_master))
+			
+		/// browser music volume
+		if browser() then
+			web_music_volume(gain_get(volume_music) * (!game.app.audio.mute? gain_get(volume_master): 0))
 		break
 		
 	case volume_fx:
@@ -25,6 +31,13 @@ switch _mixer begin
 		
 	case volume_music:
 		game.app.audio.mixer_music = _volume
-		audio_sound_gain(game.app.audio.sound_music, gain_get(volume_music), 0)
+	
+		/// browser music volume
+		if browser() then
+			web_music_volume(gain_get(volume_music) * (!game.app.audio.mute? gain_get(volume_master): 0))
+			
+		/// game music
+		else 
+			audio_sound_gain(game.app.audio.sound_music, gain_get(volume_music), 0)
 		break
 end

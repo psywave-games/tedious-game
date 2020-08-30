@@ -17,7 +17,14 @@ end
 if game.app.state == fsm_game.play and music_playing_is("music/game.ogg") begin
 	var _music = music_playing_get()
 	var _pitch = clamp(round(game.app.happy/8)*0.16, 0.48, 1)
-	audio_sound_pitch(_music, _pitch)
+	if _pitch != internal_old_pitch begin 
+		self.internal_old_pitch = _pitch 
+		if browser() then
+			web_music_pitch(_pitch)
+			
+		else 
+			audio_sound_pitch(_music, _pitch)
+	end
 end
 
 /// fad out music dying
