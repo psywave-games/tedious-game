@@ -52,7 +52,7 @@ function music_play(file)
 function music_pitch(pitch)
 {
     var music = window.document.getElementById("music");
-    music.playbackRate = pitch;
+    music.playbackRate = clamp(0.32 + (pitch/1.44), 0.56, 1);
     return 1;   
 }
 
@@ -74,4 +74,9 @@ function music_playing()
 {
     var music = window.document.getElementById("music");
     return !music.paused && music.duration > 0;
+}
+
+function clamp(value, min, max)
+{
+    return Math.max(min, Math.min(value, max));
 }

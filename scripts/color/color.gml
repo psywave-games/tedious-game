@@ -8,8 +8,8 @@
     var color_b = color_get_blue(argument[0])
     var gray_scale = argument_count > 1? argument[1]: sad()
 #endregion
-#region LITE GRAY SCALE
-if lite() begin
+#region OPTIMIZE BROWSER GRAY SCALE
+if browser() begin
 	gray_scale = round(gray_scale*10)/10
 end
 #endregion
