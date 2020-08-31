@@ -32,10 +32,11 @@
 #macro	button_type_check			1
 #macro	button_type_options			2
 #macro	button_type_bars			3
-#macro	button_alpha_normal			0.75
+#macro	button_alpha_normal			1.00
 #macro	button_alpha_hover			1.00
 #macro	button_color_text			0xb9b5b0
 #macro	button_color_background		0x50463e
+#macro	button_color_backghover		0x786a5b
 #macro	button_font_description		fnt_game0
 #macro	button_font_value			fnt_menu
 #macro	button_default_ah			(game.app.render.mode_ratio? fa_left: fa_center)

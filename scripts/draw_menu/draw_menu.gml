@@ -25,6 +25,7 @@ var _yy = argument_count > 9? argument[9]: button_default_yy
 var _width = argument_count > 10? argument[10]: button_menu_width
 var _height = argument_count > 11? argument[11]: button_menu_height
 var _alpha = game.app.interface.select == _menu? button_alpha_normal: button_alpha_hover
+var _background_color = game.app.interface.select == _menu? button_color_backghover: button_color_background
 #endregion
 #region POSITION
 /// ajustar posicão conforme menus anteriores e align
@@ -70,7 +71,7 @@ _xx = (_xx0 + _xx1)/2
 _yy = (_yy0 + _yy1)/2
 #endregion
 #region BACKGROUND DRAW
-draw_set_color(button_color_background)
+draw_set_color(_background_color)
 draw_set_alpha(_alpha)
 draw_roundrect_ext(_xx0, _yy0, _xx1, _yy1, button_menu_round, button_menu_round, false)
 #endregion 
@@ -110,7 +111,7 @@ switch _type begin
 				_yy + lengthdir_y(_height/1.8, 205),
 				false
 			)
-			draw_set_color(button_color_background)
+			draw_set_color(_background_color)
 			draw_triangle(
 				_xx - _height/3, _yy,
 				_xx + lengthdir_x(_height/1.8, 155),
@@ -131,7 +132,7 @@ switch _type begin
 				_yy - lengthdir_y(_height/1.8, 205),
 				false
 			)
-			draw_set_color(button_color_background)
+			draw_set_color(_background_color)
 			draw_triangle(
 				_xx + _height/3, _yy,
 				_xx - lengthdir_x(_height/1.8, 155),
@@ -147,7 +148,7 @@ switch _type begin
 	case button_type_check:
 		draw_text_hd(_xx, _yy, _text, 1 * font_size_menu)
 		draw_circle(_xx1 - _height/2, _yy, _height/4, false)
-		draw_set_color(button_color_background)
+		draw_set_color(_background_color)
 		draw_circle(_xx1 - _height/2, _yy, _height/4.8, false)
 		if bool(_value) begin
 			draw_set_color(_color)
