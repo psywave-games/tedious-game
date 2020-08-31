@@ -161,4 +161,10 @@ switch _type begin
 end
 #endregion
 
-mouse_select2(_menu, _xx0, _yy0, _xx1, _yy1)
+mouse_select2(
+	_menu, 
+	_xx0 - button_tolerance_hover,
+	_yy0 - button_tolerance_hover,
+	_xx1 + button_tolerance_hover,
+	_yy1 + button_tolerance_hover
+)

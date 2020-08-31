@@ -32,3 +32,11 @@ if mode_light_hd and not lite() begin
 	end
 end
 #endregion
+
+#region DEBUG MODES
+if not (game.app.step % (room_speed * 2) ) begin
+	show_debug_overlay(debug(debug_mode_loadavarage))
+
+
+end
+#endregion

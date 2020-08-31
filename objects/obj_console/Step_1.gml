@@ -12,7 +12,6 @@ if (display_frame > 0) { // I'm open
 		
 		*/
 		if (keyboard_check(vk_delete)) {
-			show_debug_message("hold stopped working =/ ")
 			holding_delete_frames++
 			if (holding_delete_frames > holding_frame_to_activate) {
 				if (((holding_delete_frames) mod holding_frame_delete_speed) == 0) {
@@ -402,7 +401,6 @@ if (display_frame > 0) { // I'm open
 										#endregion
 								
 										for (var i = 0; i <= focus_count-1; ++i) {
-											show_debug_message(i)
 											if (predictions_visible[i] == true) { // this one is visible so select it 
 												predictions_focused[i] = true
 												predictions_focused[focus_count-1] = false
@@ -613,7 +611,6 @@ if (display_frame > 0) { // I'm open
 	
 	if (mouse_check_button_pressed(mb_any)) {
 		if (device_mouse_y_to_gui(0) > max(predict_y2,main_y2)) { // clicking out of the console 
-			show_debug_message("close console")
 			display_direction = -display_close_speed
 		} else { // clicking on the console 
 			#region // clicking on the console
@@ -648,8 +645,6 @@ if (display_frame > 0) { // I'm open
 				
 				#endregion
 				
-			} else { // mouse in predicted text
-				show_debug_message("Todo: Mouse in predicted text")
 			}
 			
 			#endregion

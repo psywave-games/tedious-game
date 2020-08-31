@@ -3715,6 +3715,14 @@
             }
         },
         {
+            "Key": "f9636b85-1b96-446d-9187-883b2bf1fedd",
+            "Value": {
+                "id": "deb52076-4f92-41dd-b02f-3a59ba085d59",
+                "resourcePath": "scripts\/debug\/debug.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f9d4c65a-2178-4cbc-b0ec-e51665d9643a",
             "Value": {
                 "id": "4fb8df09-7e20-4b24-9b2a-466e0941ff0d",
@@ -3894,6 +3902,7 @@
         "94a07a12-9973-4d20-b2ff-43edf55843e0",
         "697b282c-65dc-4c3b-b037-4ed9638ea612",
         "cbcd5df2-8db5-4f65-88a0-0862bf938921",
+        "f9636b85-1b96-446d-9187-883b2bf1fedd",
         "22accf10-0699-4a92-8827-7e57239c6665",
         "bca9024e-14fb-48b7-9352-1981a290bbd4",
         "ed12b41d-549c-4f98-96a0-190016418320",

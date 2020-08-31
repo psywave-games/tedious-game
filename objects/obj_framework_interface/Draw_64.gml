@@ -159,7 +159,6 @@ switch game.app.state begin
 		var _xxkg = _mini? 0: _xx
 		var _yyk = _mini? gui_get_y_align(128 * _size, fa_middle):  _yy + (_bottom * _sizet) + 16
 		var _yyg = _mini? gui_get_y_align(-128 * _size, fa_middle): _yy + (_bottom * _sizet) + 16
-		show_debug_message(_ratio)
 	
 		if not _mini or (_mobile and _resolution > 640) begin
 			/// box text

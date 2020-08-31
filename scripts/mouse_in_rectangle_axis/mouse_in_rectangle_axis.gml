@@ -9,8 +9,11 @@ var _xx1 = argument2
 var _yy1 = argument3
 var _xxm = (_xx0 + _xx1) / 2
 
-//if debug(debug_mode_text) then
-//	draw_line(_xx0, _yy, _xx1, _yy)
+if debug(debug_mode_mousehover) begin
+	draw_set_color(c_white)
+	draw_rectangle( _xx0, _yy0, _xx1, _yy1, true)
+	draw_line(_xxm, _yy0, _xxm, _yy1)
+end
 
 for (var mouse = 0; mouse < 5; mouse++) begin
 	var _xx = device_mouse_x_to_gui(mouse)

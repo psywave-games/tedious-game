@@ -16,7 +16,6 @@ if not lite() and game.app.render.mode_light_hd begin
 			
 		surface_brightness = surface_create(width, word.height)
 		surface_light = surface_create(width, word.height)
-		show_debug_message("light updated!")
 
 		#region DRAW LIGHT
 		surface_set_target(surface_light)

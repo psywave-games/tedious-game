@@ -3,11 +3,15 @@
 #macro	max_nickname				16				/// max characteres for string name
 #macro	database_file				"data.ini"		/// Database name
 #macro	database_global				"global game"	/// [section INI name]
-#macro	light_alpha					0.1
+
+
 #macro	is_mobile					(game.app.render.mode_ratio == 0)
 #macro	is_browser					(os_browser != browser_not_a_browser)
+#macro	is_smartphone				(os_type == os_android or os_type == os_ios or os_type == os_winphone)
 #macro	null_surface				((os_browser != browser_not_a_browser)? 0: noone)
 
+
+/// Volumes
 #macro	volume_master				2				/// channel master
 #macro	volume_music				0				/// channel mixer 0
 #macro	volume_fx					1				/// channel mixer 1
@@ -19,15 +23,15 @@
 #macro	font_size_title				0.80
 #macro	font_size_menu				0.32
 #macro	font_size_description		0.80
-#macro	last_resolution				array_length_1d(game.app.render.name_resolution) - 1
-#macro	last_ratio					array_length_1d(game.app.render.name_ratio) - 1
+#macro	last_resolution				(array_length_1d(game.app.render.name_resolution) - 1)
+#macro	last_ratio					(array_length_1d(game.app.render.name_ratio) - 1)
 
 
 /// buttom config
 #macro	button_menu_width			(game.app.render.mode_ratio? 300: 400)
 #macro	button_menu_height			(game.app.render.mode_ratio? 56: 64)
 #macro	button_menu_padding			(game.app.render.mode_ratio? 20: 32)
-#macro	button_menu_round			_height/6
+#macro	button_menu_round			_height/4
 #macro	button_type_normal			0
 #macro	button_type_check			1
 #macro	button_type_options			2
@@ -45,10 +49,15 @@
 #macro	button_default_yy			(game.app.render.mode_ratio? 0: 150)
 #macro	button_margin_vertical		10
 #macro	button_margin_horizontal	64
+#macro	button_tolerance_hover		8
 
 /// Console config
 #macro	console_font_value			fnt_game0
-
+#macro	debug_mode_colision			0
+#macro	debug_mode_skeleton			1
+#macro	debug_mode_looking			2
+#macro	debug_mode_mousehover		3
+#macro	debug_mode_loadavarage		4
 
 #macro	ev_init						0		/// Alteração de estado de jogo
 #macro	ev_interact_down			1		/// Iniciar Interação
@@ -100,6 +109,9 @@
 #macro	gamejolt_score_points	"507767"
 #macro	gamejolt_trophy_started "122109"
 
+
+
+#macro	light_alpha					0.1
 
 enum word {
 	limit = 10,

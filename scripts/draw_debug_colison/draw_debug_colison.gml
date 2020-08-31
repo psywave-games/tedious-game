@@ -1,4 +1,4 @@
-if not show_debug(0) then
+if not debug(debug_mode_colision) then
 	exit
 
 var _color = c_white
