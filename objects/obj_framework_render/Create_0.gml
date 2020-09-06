@@ -91,6 +91,7 @@ self.mode_debug = 0
 self.mode_font_hd = true
 self.mode_camera = 0
 self.mode_safe = true
+self.mode_particles = true
 self.mode_emu_lite = 0
 self.mode_emu_browser = 0
 self.font_speed = 3

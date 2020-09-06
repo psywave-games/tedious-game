@@ -979,7 +979,7 @@
             "Key": "4816c82b-89e9-423f-a66b-f63569f2a3af",
             "Value": {
                 "id": "b9bf89b2-0add-4361-ba0d-7b3185c6ba8f",
-                "resourcePath": "sprites\/spr_keyboard\/spr_keyboard.yy",
+                "resourcePath": "sprites\/spr_keyboard0\/spr_keyboard0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1277,6 +1277,14 @@
                 "id": "d19f0267-eb12-432a-808d-cacc28cdd320",
                 "resourcePath": "scripts\/p_head_direction\/p_head_direction.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5ae70bc3-3155-4bf3-ad79-08dfe200bb78",
+            "Value": {
+                "id": "924905d6-8f51-46a9-af4b-2dfefe12ff93",
+                "resourcePath": "sprites\/spr_food_furnace5\/spr_food_furnace5.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2251,6 +2259,14 @@
             }
         },
         {
+            "Key": "a5652fd2-0574-444d-b8d6-20ee6b611257",
+            "Value": {
+                "id": "149d4217-6990-4bc1-92b9-583bcfeacb71",
+                "resourcePath": "sprites\/spr_keyboard1\/spr_keyboard1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a63f2eb7-eff5-437f-81ad-293bc436c399",
             "Value": {
                 "id": "c9773562-60bc-4bbe-b83b-d6651e3083c9",
@@ -2619,6 +2635,14 @@
             }
         },
         {
+            "Key": "bc61d67f-bfb4-42ac-a905-6a7af2356f0b",
+            "Value": {
+                "id": "e00b850b-ad13-4322-b317-d1c8055f2f25",
+                "resourcePath": "sprites\/spr_food_furnace4\/spr_food_furnace4.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bca9024e-14fb-48b7-9352-1981a290bbd4",
             "Value": {
                 "id": "9112137d-2151-4fad-8af5-7c53e6ddb20c",
@@ -2896,6 +2920,14 @@
                 "id": "9b081b28-5283-4b10-813e-762771e14c01",
                 "resourcePath": "objects\/obj_sleep_chest\/obj_sleep_chest.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ce66e41c-9db3-44f3-a8c3-144b33c7f683",
+            "Value": {
+                "id": "59642cb6-6928-4bc3-9b01-011ea42285c5",
+                "resourcePath": "sprites\/spr_food_furnace6\/spr_food_furnace6.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

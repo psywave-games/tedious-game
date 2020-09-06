@@ -4,6 +4,9 @@
 
 var xx = argument0
 var yy = argument1 - 8
+
+if not game.app.render.mode_particles or lite() then
+	exit
 	
 part_system_depth(part_system, depth - 5)
 		

@@ -115,7 +115,8 @@ with game.app.player begin
 			
 		case fsm_player.guitar_walk:
 		case fsm_player.guitar_idle:
-			draw_sprite_ext(spr_guitar, 0, x, y, image_xscale, image_yscale, 315, make_color_rgb(irandom(255),irandom(255),irandom(255)), 1.0)	
+			var _color = color(color_cinza_b, sad(), irandom(16))
+			draw_sprite_ext(spr_guitar, 0, x + 2, y - 1, abs(_xscale), _yscale, 315, _color, 1.0)	
 			break
 	end
 	#endregion
