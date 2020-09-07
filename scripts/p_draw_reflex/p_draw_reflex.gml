@@ -10,4 +10,4 @@ if game.app.clock_hour == 3 and game.app.clock_minute <= 3 begin
 end
 /// draw normal player reflex
 else 
-	p_draw(_xx, _yy, _xscale, self.image_yscale, _alpha)
+	p_draw(_xx, _yy, _xscale, game.app.player.image_yscale, _alpha)

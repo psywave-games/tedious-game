@@ -2,7 +2,7 @@
     "id": "64c17b75-1fbb-4d65-b39c-28b6a4cc2ed2",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "song",
+    "name": "pt_song",
     "For3D": false,
     "HTile": false,
     "VTile": false,

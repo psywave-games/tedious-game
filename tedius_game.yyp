@@ -1403,7 +1403,7 @@
             "Key": "64c17b75-1fbb-4d65-b39c-28b6a4cc2ed2",
             "Value": {
                 "id": "283e2d9e-afca-4caf-9f07-17392c510050",
-                "resourcePath": "sprites\/song\/song.yy",
+                "resourcePath": "sprites\/pt_song\/pt_song.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1971,6 +1971,14 @@
             }
         },
         {
+            "Key": "8dc819a7-1e7f-450a-bdc6-af847f508ffc",
+            "Value": {
+                "id": "073eb572-6fad-4eea-b821-0660a6713522",
+                "resourcePath": "extensions\/Particles\/Particles.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "8e2fdf19-bb3a-463a-ab0d-8fe1526d66e2",
             "Value": {
                 "id": "8e7c2946-c12f-470c-ab77-b48c7ad6ef0f",
@@ -2088,14 +2096,6 @@
                 "id": "f5ea127a-4a8e-459c-a27d-ba44a9ecc83d",
                 "resourcePath": "datafiles_yy\/EULA.txt.yy",
                 "resourceType": "GMIncludedFile"
-            }
-        },
-        {
-            "Key": "97828e8d-a655-46fb-8d81-3a9c05737cf6",
-            "Value": {
-                "id": "87cc578c-f334-4394-8e41-6fbba1b761c8",
-                "resourcePath": "scripts\/part_song_stream\/part_song_stream.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -2339,14 +2339,6 @@
             }
         },
         {
-            "Key": "aa6b3cd8-b367-47a8-b803-75ea5ee63d65",
-            "Value": {
-                "id": "486e2ca2-e3a5-4a21-8f4d-0c3fd3092cd4",
-                "resourcePath": "views\/aa6b3cd8-b367-47a8-b803-75ea5ee63d65.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "aaa0ee36-b507-4673-ba19-400e485cc6ca",
             "Value": {
                 "id": "f7c07ee8-23cf-4443-b16c-46c0d6f99c62",
@@ -2456,14 +2448,6 @@
                 "id": "cf25282b-c593-4ee6-b5e4-169477814300",
                 "resourcePath": "sprites\/spr_bath_mirror1\/spr_bath_mirror1.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "b0a7147e-0f66-42c0-9c42-66642df9facb",
-            "Value": {
-                "id": "a8e8a651-b9ee-417b-a15e-a8311f3dd8ba",
-                "resourcePath": "scripts\/part_song_install\/part_song_install.yy",
-                "resourceType": "GMScript"
             }
         },
         {
@@ -4037,10 +4021,8 @@
         "fb2df7eb-7ada-464b-b23f-5838a0be209b",
         "2f24eef4-21fb-4d2a-ab91-f73a38d783a5",
         "0fe7a4c1-7d99-4a23-b881-c2868a0d0aed",
-        "b0a7147e-0f66-42c0-9c42-66642df9facb",
         "9e253f25-08bd-45a9-8ee4-a0443c116751",
         "a65276c9-7aba-4cd5-8acb-371172faa255",
-        "97828e8d-a655-46fb-8d81-3a9c05737cf6",
         "bcc18be3-60e5-45e6-bff3-7b4c61ea91e3",
         "7db98daf-bd16-4adc-a804-7ebc68927096",
         "bad27012-3af5-4cf6-93f1-8097567d7b67",

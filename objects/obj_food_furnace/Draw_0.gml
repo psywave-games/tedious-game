@@ -29,8 +29,6 @@ if _fire and game.app.render.mode_particles begin
 	var _xx0 = x - 2 + _anc
 	var _xx1 = x + 2 + _anc
 	
-	part_type_color2(part_fire, color_amarelo_b, color_vermelho)
-	
 	if _fire_a or _fire_na begin
 		part_emitter_region(part_system, part_emitter_a, _xx0 - 6, _xx1 - 6, y -6, y -4, ps_shape_diamond, ps_distr_gaussian)	
 		part_emitter_burst(part_system, part_emitter_a, part_fire, 3)
