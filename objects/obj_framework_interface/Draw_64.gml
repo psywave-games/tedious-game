@@ -1,3 +1,16 @@
+#region GAME BACKGROUND NOISE
+if game.app.render.mode_ratio == 0 and game.app.render.resolution <= 640
+	then if game.app.state == fsm_game.menuMain
+	or game.app.state == fsm_game.menuOptions
+	or game.app.state == fsm_game.menuGraphic
+	or game.app.state == fsm_game.menuWindow
+	or game.app.state == fsm_game.menuAudio
+	or game.app.state == fsm_game.intro
+	begin 
+	
+	draw_sprite_tiled_ext(pt_noise, image_index, 0, 0, 1.0, 1.0, 0x333333, 1.0)
+end
+#endregion
 #region GAME LOGO
 if game.app.state == fsm_game.menuMain
 	or game.app.state == fsm_game.menuOptions
@@ -107,7 +120,7 @@ switch game.app.state begin
 	#endregion
 	#region MENU WINDOW
 	case fsm_game.menuWindow:
-		var menu_resolution = game.app.render.resolution
+		var menu_resolution = game.app.render.quality
 		var menu_proportion = game.app.render.name_ratio[game.app.render.mode_ratio]
 		var menu_fullscreen = fullscreen_get()
 		var menu_cam_mode = t(msg.menu_video_cameramode0 + game.app.render.mode_camera)
@@ -147,7 +160,7 @@ switch game.app.state begin
 		var _xx = display_get_gui_width()/3
 		var _yy = display_get_gui_height()/3
 		var _ratio = ratio_get()
-		var _resolution = game.app.render.size_resolution[game.app.render.mode_resolution]
+		var _resolution = game.app.render.resolution
 		var _mobile = game.app.render.mode_ratio == 0
 		var _mini = _resolution <= 640 or (_ratio == 1.0 and _resolution < 900)
 		var _size = _mobile? 1.4: clamp(_resolution/1280, 0.6924, 8)

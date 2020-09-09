@@ -88,21 +88,6 @@
             {
                 "Key": 6,
                 "Value": {
-                    "id": "ab8f1540-e74e-4880-bf4e-951a18a70e95",
-                    "modelName": "GMTextureGroup",
-                    "mvc": "1.0",
-                    "groupName": "txt_esrb",
-                    "targets": 461609314234257646,
-                    "autocrop": true,
-                    "border": 0,
-                    "groupParent": "00000000-0000-0000-0000-000000000000",
-                    "mipsToGenerate": 0,
-                    "scaled": true
-                }
-            },
-            {
-                "Key": 7,
-                "Value": {
                     "id": "5e3ee7bf-28fd-46e7-9e32-67392002e4e0",
                     "modelName": "GMTextureGroup",
                     "mvc": "1.0",
@@ -116,7 +101,7 @@
                 }
             },
             {
-                "Key": 8,
+                "Key": 7,
                 "Value": {
                     "id": "217e26fc-dcda-4b92-9b5e-caa5b8356c29",
                     "modelName": "GMTextureGroup",
@@ -131,7 +116,7 @@
                 }
             },
             {
-                "Key": 9,
+                "Key": 8,
                 "Value": {
                     "id": "cfd6400d-5abc-4e07-b03a-78bd60b8e278",
                     "modelName": "GMTextureGroup",
@@ -146,7 +131,7 @@
                 }
             },
             {
-                "Key": 10,
+                "Key": 9,
                 "Value": {
                     "id": "ca5a6c3e-73bd-49c1-bf2a-ea10f5ed4926",
                     "modelName": "GMTextureGroup",
@@ -161,7 +146,7 @@
                 }
             },
             {
-                "Key": 11,
+                "Key": 10,
                 "Value": {
                     "id": "aca7af7d-cf47-4dfa-8d04-fd88385b4a4e",
                     "modelName": "GMTextureGroup",
@@ -176,7 +161,7 @@
                 }
             },
             {
-                "Key": 12,
+                "Key": 11,
                 "Value": {
                     "id": "e5edf5f6-5a2a-4b4b-9df6-5f489b8fd640",
                     "modelName": "GMTextureGroup",

@@ -1,4 +1,5 @@
 self.doors = 0
+self.quality = 0
 self.background = -1
 self.surface_darkness = 0
 self.resolution = "#error_resolution_unknown"

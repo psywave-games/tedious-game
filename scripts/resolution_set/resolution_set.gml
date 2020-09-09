@@ -134,14 +134,15 @@ draw_clear_alpha(c_black, 1.0)
 #endregion 
 
 #region SAVE
+game.app.render.resolution = game.app.render.size_resolution[_mode_resolution]
 game.app.render.mode_resolution = _mode_resolution
 game.app.render.mode_ratio = _mode_ratio
 #endregion
 #region NAME
 if _ratio_auto or _mobile then
-	game.app.render.resolution = game.app.render.name_resolution[_mode_resolution]
+	game.app.render.quality = game.app.render.name_resolution[_mode_resolution]
 else
-	game.app.render.resolution = string(round(_resolution_width)) + "x" + string(round(_resolution_height))
+	game.app.render.quality = string(round(_resolution_width)) + "x" + string(round(_resolution_height))
 #endregion
 
 return true

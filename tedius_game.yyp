@@ -680,6 +680,14 @@
             }
         },
         {
+            "Key": "2ea7f6db-4501-4bfc-bfac-819ef6be54ee",
+            "Value": {
+                "id": "113748f6-58a6-4890-abc0-13a869e25d91",
+                "resourcePath": "sprites\/pt_noise\/pt_noise.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2f24eef4-21fb-4d2a-ab91-f73a38d783a5",
             "Value": {
                 "id": "bbd9a60b-016a-4e02-840c-7a09fffb7240",
