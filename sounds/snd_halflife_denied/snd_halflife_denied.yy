@@ -1,5 +1,5 @@
 {
-    "id": "cac4815e-d766-4677-a1a5-d9b5e187504e",
+    "id": "febf2f0b-8d80-4b9d-986e-e26cde8bfaf4",
     "modelName": "GMSound",
     "mvc": "1.0",
     "name": "snd_halflife_denied",

@@ -85,6 +85,7 @@ if invaders_direction < 4 begin
 		
 			/// kill invader
 			if point_in_rectangle(fire_pos_x, fire_pos_y - 8, xx0, yy0, xx1, yy1) and invaders_live[enemy] begin
+				audio_play(snd_invaders_explosion, false)
 				invaders_live[enemy] = false /// died enemy
 				fire_pos_y = -1 /// reset shoot
 				myscore += 5
@@ -185,12 +186,12 @@ end
 
 #region SHOOT MOVE
 /// spawn shoot
-if game.app.input.key_fire begin
-	if fire_pos_y < 0 begin
-		fire_pos_x = player_pos
-		fire_pos_y = 238
-	end
+if game.app.input.key_fire then if fire_pos_y < 0 begin
+	audio_play(snd_invaders_fire, false)
+	fire_pos_x = player_pos
+	fire_pos_y = 238
 end
+
 
 /// shoot move
 fire_pos_y -= 16

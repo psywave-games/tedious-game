@@ -307,6 +307,7 @@ switch game.app.state begin
 		break
 	#endregion
 	#region CREDITS
+	case fsm_game.credits:
 		var xx = display_get_gui_width()/2
 
 		step += game.app.input.key_menu_enter? 4: 0

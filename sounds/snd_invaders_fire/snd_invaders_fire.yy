@@ -1,8 +1,8 @@
 {
-    "id": "c222399b-a7e3-4161-bded-042f362edc56",
+    "id": "b04a18d7-0ffd-4869-b68d-aca8ea2c09ae",
     "modelName": "GMSound",
     "mvc": "1.0",
-    "name": "snd_halflife_deny",
+    "name": "snd_invaders_fire",
     "audioGroupGuid": "7b2c4976-1e09-44e5-8256-c527145e03bb",
     "bitDepth": 1,
     "bitRate": 128,
@@ -10,5 +10,5 @@
     "preload": false,
     "sampleRate": 44100,
     "type": 0,
-    "volume": 1
+    "volume": 0.17
 }

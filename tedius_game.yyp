@@ -2443,6 +2443,14 @@
             }
         },
         {
+            "Key": "b04a18d7-0ffd-4869-b68d-aca8ea2c09ae",
+            "Value": {
+                "id": "e951b73a-fecc-4205-8f44-f0546fbb778a",
+                "resourcePath": "sounds\/snd_invaders_fire\/snd_invaders_fire.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "b075be09-e2cb-40c9-9ee7-d0b5c0a898c7",
             "Value": {
                 "id": "cf25282b-c593-4ee6-b5e4-169477814300",
@@ -2691,6 +2699,14 @@
             }
         },
         {
+            "Key": "c222399b-a7e3-4161-bded-042f362edc56",
+            "Value": {
+                "id": "5719ca24-c77c-47b1-969a-55d771c4af60",
+                "resourcePath": "sounds\/snd_halflife_deny\/snd_halflife_deny.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "c2557a3a-c4e3-4816-aa45-abc5cd64e343",
             "Value": {
                 "id": "1efe08a7-5887-45d5-a1ba-9284d1e33626",
@@ -2792,14 +2808,6 @@
                 "id": "50f50ed2-dd97-40f2-a37a-ffc5668802da",
                 "resourcePath": "sprites\/spr_food_cleaner0\/spr_food_cleaner0.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "cac4815e-d766-4677-a1a5-d9b5e187504e",
-            "Value": {
-                "id": "eabcef02-3e2d-4a7c-84a3-59f8ead94f18",
-                "resourcePath": "sounds\/snd_halflife_denied\/snd_halflife_denied.yy",
-                "resourceType": "GMSound"
             }
         },
         {
@@ -3048,6 +3056,14 @@
                 "id": "f88456f5-bf33-4874-a3bb-0c2d5f46f9a6",
                 "resourcePath": "sprites\/spr_food_freezer\/spr_food_freezer.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d755a583-59af-4331-aaba-7b514f0a2381",
+            "Value": {
+                "id": "321ab057-5020-4e8e-858e-45c8d2a9effc",
+                "resourcePath": "sounds\/snd_invaders_explosion\/snd_invaders_explosion.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -3531,6 +3547,14 @@
             }
         },
         {
+            "Key": "ee4243eb-674a-429f-bba2-a257fa35cd34",
+            "Value": {
+                "id": "5f2883d9-319c-4d8a-b089-053e47bb702e",
+                "resourcePath": "views\/ee4243eb-674a-429f-bba2-a257fa35cd34.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "ef0581e6-5230-45fe-83c3-cc55016ea975",
             "Value": {
                 "id": "f461f242-b8c8-4d1b-b988-193a2734d740",
@@ -3830,7 +3854,7 @@
             "Key": "febf2f0b-8d80-4b9d-986e-e26cde8bfaf4",
             "Value": {
                 "id": "921c21e8-9f43-458c-9119-7108a663b407",
-                "resourcePath": "sounds\/snd_halflife_deny\/snd_halflife_deny.yy",
+                "resourcePath": "sounds\/snd_halflife_denied\/snd_halflife_denied.yy",
                 "resourceType": "GMSound"
             }
         },
