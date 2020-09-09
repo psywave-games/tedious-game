@@ -664,6 +664,14 @@
             }
         },
         {
+            "Key": "2d6d2f7b-fed7-4c83-a6f6-75e6d965eb24",
+            "Value": {
+                "id": "7d856cac-777f-40a7-af82-4f3ec817ba67",
+                "resourcePath": "datafiles_yy\/social\/scores.json.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "2e0ab907-09e3-4f0b-af35-e505340c4992",
             "Value": {
                 "id": "50a8040e-494f-437a-a26b-f265e7035929",
@@ -812,6 +820,14 @@
             "Value": {
                 "id": "75f2c3e1-4a04-4860-a29a-e4f427a9f9e6",
                 "resourcePath": "datafiles_yy\/CREDITS-EN.md.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "3a9e0ce7-4fcb-4b93-9cf3-f6a06dbec45c",
+            "Value": {
+                "id": "161dbb84-6270-4a11-9836-9b79e87206ad",
+                "resourcePath": "datafiles_yy\/social\/cheats.json.yy",
                 "resourceType": "GMIncludedFile"
             }
         },
@@ -1835,6 +1851,14 @@
             }
         },
         {
+            "Key": "81ff6399-9cbf-4f0d-969c-0cc030e87a71",
+            "Value": {
+                "id": "5444dbef-eeac-4a80-99f6-c08ae8e7d9ac",
+                "resourcePath": "views\/81ff6399-9cbf-4f0d-969c-0cc030e87a71.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "8256dda6-c855-4a39-b88b-abcf66614aa2",
             "Value": {
                 "id": "dc8e384b-36d5-4284-a44a-cb2ab860571c",
@@ -2352,6 +2376,14 @@
                 "id": "f7c07ee8-23cf-4443-b16c-46c0d6f99c62",
                 "resourcePath": "scripts\/draw_set_text_config\/draw_set_text_config.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "aae51df0-78d7-4903-b109-e4644e41131e",
+            "Value": {
+                "id": "9cf84dcd-1e71-4f3f-9972-e8864082efa7",
+                "resourcePath": "datafiles_yy\/social\/achievements.json.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

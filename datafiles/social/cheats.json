@@ -1,0 +1,10 @@
+[
+    {
+        "name": "zabuza",
+        "commands": ["set obj_player image_xscale -1", "set obj_player gravity -1"]
+    },
+    {
+        "name": "3ddiff",
+        "commands": ["set obj_framework_render mode_safe 0"]
+    }
+]
