@@ -273,6 +273,8 @@ if game.app.lang == msg.en begin
 			return "Mute"
 		case msg.interact_light_rate:
 			return choose("It's too dark I can't read!", "I can't read in this darkness", "I need to turn on the lights to be able to read this")
+		case msg.credits_nicolasc:
+			return "Nicolas Cage"
 	end
 end
 switch argument[0] begin
@@ -545,7 +547,7 @@ switch argument[0] begin
 	case msg.psy_joystick:
 		return "Controle"
 	case msg.psy_energy:
-		return "Guaraná Antarctica"
+		return "Guarana"
 	case msg.psy_coffe:
 		return "Café"
 	case msg.psy_soap:
@@ -641,6 +643,8 @@ switch argument[0] begin
 		return "Chuveiro"
 	case msg.menu_audio_mute:
 		return "Mutar"
+	case msg.credits_nicolasc:
+		return "Ednaldo Pereira"
 end
 
 return "#Error T_18_" + string(argument0)
