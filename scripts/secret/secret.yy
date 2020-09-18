@@ -1,8 +1,8 @@
 {
-    "id": "fa54f8d7-643b-409a-9988-cc53fccb85e0",
+    "id": "9259a81f-4cce-46cc-9891-dd5fbf350d0a",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "event_tada",
+    "name": "secret",
     "IsCompatibility": false,
     "IsDnD": false
 }

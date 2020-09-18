@@ -18,5 +18,15 @@
         "name": "time-survival",
         "gamejolt": 0,
         "steamid": 0
+    },
+    {
+        "name": "game-asteroids",
+        "gamejolt": 0,
+        "steamid": 0
+    },
+    {
+        "name": "game-invanders",
+        "gamejolt": 0,
+        "steamid": 0
     }
 ]

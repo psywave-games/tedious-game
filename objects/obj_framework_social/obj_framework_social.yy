@@ -2,7 +2,7 @@
     "id": "73f375f8-551f-498f-b092-d577f56d0756",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_gamejolt",
+    "name": "obj_framework_social",
     "eventList": [
         {
             "id": "a7231990-acac-41b8-9263-70b465a14049",
@@ -51,6 +51,26 @@
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 23,
+            "eventtype": 7,
+            "m_owner": "73f375f8-551f-498f-b092-d577f56d0756"
+        },
+        {
+            "id": "ffd440b3-9b09-4c88-b712-4bfc2f5ebb25",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 112,
+            "eventtype": 9,
+            "m_owner": "73f375f8-551f-498f-b092-d577f56d0756"
+        },
+        {
+            "id": "aa28bfa0-627e-4c48-b65d-1c78a2ba280c",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 21,
             "eventtype": 7,
             "m_owner": "73f375f8-551f-498f-b092-d577f56d0756"
         }

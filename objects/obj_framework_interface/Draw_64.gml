@@ -32,8 +32,8 @@ switch game.app.state begin
 	#region GAMEPLAY
 	case fsm_game.play:
 		var _date = text_time(false) + "\n" + text_date("-")
-		var _font = game.app.fun.select == thematic.halflife? fnt_game1: fnt_game0
-		var _color = game.app.fun.select == thematic.halflife? c_orange: c_white
+		var _font = secret(thematic_halflife)? fnt_game1: fnt_game0
+		var _color = secret(thematic_halflife)? c_orange: c_white
 		var _score_color = happy_sign < 0? c_red: _color
 		var _size = is_mobile? 1.20: 1.0
 	

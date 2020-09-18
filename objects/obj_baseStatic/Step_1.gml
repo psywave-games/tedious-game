@@ -31,15 +31,15 @@ if game.app.player.state == fsm_player.idle begin
 			if ++self.switchs >= 2 and self.can_break begin
 				self.state = fsm_mob.broken
 				speak(game.app.player, t(msg.interact_broken), p_head_direction(bbox_bottom, bbox_top))
-				event_tada(ev_interact_broken)
+				event_user(ev_interact_broken)
 			end
 			else
-				event_tada(ev_interact_down)
+				event_user(ev_interact_down)
 		end
 	
 		/// Desinteragir
 		else if game.app.input.key_interact and self.state == fsm_mob.running then
-			event_tada(ev_interact_up)
+			event_user(ev_interact_up)
 		
 		/// Trocar interação
 		else if abs(game.app.input.key_axis_switch) then

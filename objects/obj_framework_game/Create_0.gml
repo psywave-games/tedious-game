@@ -42,52 +42,19 @@ self.nickname =	""
 self.clock_hour = 23
 self.clock_minute = 10
 
+state = fsm_game.loading
+
 global.eula = false
 global.language = "pt"
 #endregion
 
-#region INIT FINITE SATE MACHINE
 
-/// @see				controla o padrão comportamental do estado de jogo
-/// @pattern			Finite State Machine
-/// @example			game.app.state 
-/// @return fsm_game	estado comportamental do jogo
-state = fsm_game.loading
-#endregion
-
-#region INIT INPUT
-/// @see				controles do jogo
-/// @pattern			singleton
-/// @example			game.app.input.menu[key_enter]
-/// @return object		instancia do obj_input
+#region FRAMEWORK
 self.input = instance_create_layer(x,y, "Instances", obj_framework_input)
-#endregion 
-
-#region INIT AUDIO
-/// @see				estabelece sons do jogo
-/// @pattern			singleton
-/// @example			game.app.audio.volume
-/// @return object		instancia do obj_audio
-audio = instance_create_layer(x,y, "Instances", obj_framework_audio)
-
-#endregion
-
-#region INIT RENDER 
-/// @see				estabelece as cores do jogo
-/// @pattern			singleton
-/// @example			game.app.render.light_hd
-/// @return object		instancia do obj_display
+self.audio = instance_create_layer(x,y, "Instances", obj_framework_audio)
 self.render = instance_create_layer(x,y, "Instances", obj_framework_render)
-#endregion
-
-#region INIT INTERFACE
-///////
-/// @see				controle de menus do jogo (depedente do game.app.state)
-/// @pattern			singleton
-/// @example			game.app.mediator.player.[0].state
-/// @return object		instancia do obj_menu
-interface = instance_create_layer(x,y, "Instances", obj_framework_interface)
-
+self.interface = instance_create_layer(x,y, "Instances", obj_framework_interface)
+self.social = instance_create_layer(x,y, "Instances", obj_framework_social)
 #endregion
 
 #region INIT MEMENTO
@@ -110,10 +77,6 @@ self.videogames = [
 ]
 
 self.select = 0
-#endregion
-
-#region INIT EASTEREGGS
-fun = instance_create_layer(x,y, "Instances", obj_framework_surprises)
 #endregion
 
 alarm_set(ev_init, 2)

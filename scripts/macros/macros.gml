@@ -102,6 +102,19 @@
 #macro	art_invader0			[2,0, 2,14, 0,14, 0,15, 3,15, 3,11, 12,11, 12,15, 15,15, 15,14, 13,14, 13,0, 12,0, 12,4, 10,4, 9,2, 6,2, 5,4, 3,4, 3,0, 2,0]
 #macro	art_invader1			[0,0, 0,5, 2,7, 2,15, 5,15, 5,14, 3,14, 3,11, 12,11, 12,14, 10,14, 10,15, 13,15, 13,7, 15,5, 15,0, 14,0, 14,5, 10,6, 9,2, 6,2, 5,6, 2,6, 1,5, 1,0, 0,0]
 
+#macro	thematic_duckquack		0
+#macro	thematic_missigno		1
+#macro	thematic_goagain		2
+#macro	thematic_halflife		3
+#macro	thematic_nicolasc		4
+#macro	thematic_friendly		5
+#macro	thematic_tuntunt		6
+#macro	thematic_horror			7
+#macro	thematic_trololo		8
+#macro	thematic_vgnglitch		9
+
+
+
 #macro	gamejolt_api_id			"478388"		
 #macro	gamejolt_api_token		"810d041ed39a0594fb8131c748fe86a0"
 #macro	gamejolt_score_survive	"485435"
@@ -176,15 +189,6 @@ enum fsm_mob {
 	broken									/// STATE: quebrado
 }
 
-
-enum thematic {
-	none,	
-	halflife,
-	credits,
-	//chris,
-	//gta,
-	size
-}
 
 enum msg {
 	pt,	
