@@ -26,58 +26,52 @@ end
 /// @exclude 13 15 16 21 22  24
 switch _color_invert begin
 	case 1:
-		return make_color_rgb(_color_r, _color_r, _color_g)
-
+		return make_color_rgb(_color_b, _color_r, _color_b)
+		
 	case 2:
-		return make_color_rgb(_color_r, _color_r, _color_b)
-
-	case 3:
 		return make_color_rgb(_color_r, _color_g, _color_r)
 
-	case 4:
+	case 3:
 		return make_color_rgb(_color_r, _color_g, _color_g)
 
-	case 5:
+	case 4:
 		return make_color_rgb(_color_r, _color_g, _color_b)
 
-	case 6:
+	case 5:
 		return make_color_rgb(_color_r, _color_b, _color_r)
 
-	case 7:
+	case 6:
 		return make_color_rgb(_color_r, _color_b, _color_g)
 
-	case 8:
+	case 7:
 		return make_color_rgb(_color_r, _color_b, _color_b)
 
-	case 9:
+	case 8:
 		return make_color_rgb(_color_g, _color_r, _color_r)
 
-	case 10:
+	case 9:
 		return make_color_rgb(_color_g, _color_r, _color_g)
 
-	case 11:
+	case 10:
 		return make_color_rgb(_color_g, _color_r, _color_b)
 
-	case 12:
-		return make_color_rgb(_color_g, _color_g, _color_r)
-
-	case 14:
-		return make_color_rgb(_color_g, _color_b, _color_r)
-
-	case 17:
+	case 11:
 		return make_color_rgb(_color_b, _color_r, _color_r)
 
-	case 18:
-		return make_color_rgb(_color_b, _color_r, _color_g)
+	case 12:
+		return make_color_rgb(_color_b, _color_r, _color_g)	
 
-	case 19:
-		return make_color_rgb(_color_b, _color_r, _color_b)
+	case 13://hl
+		return make_color_rgb(_color_g, _color_b, _color_r)
 
-	case 20:
+	case 14:
 		return make_color_rgb(_color_b, _color_g, _color_r)
 
-	case 23:
+	case 15:
 		return make_color_rgb(_color_b, _color_b, _color_r)
+		
+	case 16:
+		return make_color_rgb(_color_r, _color_r, _color_g)
 
 	default:
 		return make_color_rgb(_color_r, _color_g, _color_b)

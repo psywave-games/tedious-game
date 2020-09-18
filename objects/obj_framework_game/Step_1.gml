@@ -5,8 +5,8 @@ if self.state == fsm_game.play begin
 
 	self.step_play += 1
 
-	if self.happy > 0 and not (self.step_play % (room_speed * 3)) then
-		self.happy -= 1
+	if self.happy > 0 and not (self.step_play % room_speed) then
+		self.happy -= game.app.player.darkness
 end
 #endregion
 

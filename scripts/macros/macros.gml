@@ -90,7 +90,8 @@
 #macro  color_branco		(0xF2F2F2)
 #macro  color_cinza_d		(0xA7A7A7)
 #macro	color_verde_d		(0x4f4f2f)
-
+#macro	color_normal		(0xC)
+#macro	color_halflife		(0xD)
 
 /// asteroids graphics
 #macro	art_asteroid_large		[9,0, 9,5, 5,4, 0,10, 6,13, 3,16, 5,20, 10,22, 16,22, 19,19, 20,17, 22,14, 22,11, 18,4, 9,0]
