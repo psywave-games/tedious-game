@@ -96,6 +96,7 @@ self.mode_particles = true
 self.mode_emu_lite = 0
 self.mode_emu_browser = 0
 self.font_speed = 3
+self.font_time = 3
 self.color_invert = 0
 self.color_darkness = 0.6
 #endregion

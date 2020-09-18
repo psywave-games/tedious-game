@@ -5,7 +5,7 @@ var _book_id = variable_global_exists("book_id")? global.book_id: self.id
 
 if _book_id != self.id
 	or _book_page >= argument_count 
-	or  (current_second - _last_second) > 6 begin
+	or  (current_second - _last_second) > (6 * lerp(0.8, 2, game.app.render.font_time/5)) begin
 	_book_page = 0
 end
 
