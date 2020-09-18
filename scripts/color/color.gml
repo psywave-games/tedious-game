@@ -22,7 +22,8 @@ end
     _color_b = clamp(_color_b + ((_midde - _color_b) *  _gray_scale), 0, 255)
 #endregion
 
-/// return color
+/// return color 
+/// @exclude 13 15 16 21 22  24
 switch _color_invert begin
 	case 1:
 		return make_color_rgb(_color_r, _color_r, _color_g)
@@ -60,17 +61,8 @@ switch _color_invert begin
 	case 12:
 		return make_color_rgb(_color_g, _color_g, _color_r)
 
-	case 13:
-		return make_color_rgb(_color_g, _color_g, _color_b)
-
 	case 14:
 		return make_color_rgb(_color_g, _color_b, _color_r)
-
-	case 15:
-		return make_color_rgb(_color_g, _color_b, _color_g)
-
-	case 16:
-		return make_color_rgb(_color_g, _color_b, _color_b)
 
 	case 17:
 		return make_color_rgb(_color_b, _color_r, _color_r)
@@ -84,17 +76,8 @@ switch _color_invert begin
 	case 20:
 		return make_color_rgb(_color_b, _color_g, _color_r)
 
-	case 21:
-		return make_color_rgb(_color_b, _color_g, _color_g)
-
-	case 22:
-		return make_color_rgb(_color_b, _color_g, _color_b)
-
 	case 23:
 		return make_color_rgb(_color_b, _color_b, _color_r)
-
-	case 24:
-		return make_color_rgb(_color_b, _color_b, _color_g)
 
 	default:
 		return make_color_rgb(_color_r, _color_g, _color_b)

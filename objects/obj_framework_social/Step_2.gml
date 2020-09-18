@@ -12,3 +12,7 @@ if  game.app.state == fsm_game.play then if game.app.input.key_interact then if 
 		audio_play_at(game.app.player.x, game.app.player.y, snd_halflife_deny, false)
 end
 #endregion
+#region TECH-HOUSE
+if not (game.app.step % (room_speed/4)) then if secret(thematic_tuntunt) then
+	game.app.render.color_invert = irandom(25)
+#endregion
