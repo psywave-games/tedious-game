@@ -10,18 +10,16 @@ var _yy = argument1
 var _xscale = argument2
 var _yscale = argument3
 var _alpha = argument4
-var _image_index = round(image_index)
+var _image_index = round(game.app.player.image_index)
 
 
 with game.app.player begin
 
 	#region ATTACH PRE-DRAW
 	switch self.state begin
-	
 		case fsm_player.dying:
-			p_draw_attach(x, y, spr_item_pistol1, 0xBABACA)
+			p_draw_attach(_xx, _yy, _xscale, _yscale, spr_item_pistol1, 0xBABACA, _alpha)
 			break
-	
 	end
 	#endregion
 
@@ -107,16 +105,15 @@ with game.app.player begin
 	switch self.state begin
 		case fsm_player.drink:
 			if self.in_mob == spr_item_tea then
-				p_draw_attach(x, y, spr_item_tea, color(color_amarelo_a))
+				p_draw_attach(_xx, _yy, _xscale, _yscale, spr_item_tea, color(color_amarelo_a), _alpha)
 			
 			if self.in_mob == spr_item_monster then
-				p_draw_attach(x, y, spr_item_monster, color(color_verde_c))
+				p_draw_attach(_xx, _yy, _xscale, _yscale, spr_item_monster, color(color_verde_c), _alpha)
 			break
 			
 		case fsm_player.guitar_walk:
 		case fsm_player.guitar_idle:
-			var _color = color(color_cinza_b, sad(), irandom(16))
-			draw_sprite_ext(spr_guitar, 0, x + 2, y - 1, abs(_xscale), _yscale, 315, _color, 1.0)	
+			p_draw_attach(_xx, _yy, _xscale, _yscale, spr_guitar, color(color_cinza_b, sad(), irandom(16)), _alpha)
 			break
 	end
 	#endregion

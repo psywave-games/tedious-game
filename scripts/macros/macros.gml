@@ -120,6 +120,7 @@
 
 enum trophy {
 	firstplay = 0,
+	moonwwalk = 5,
 	memorial = 8
 }
 

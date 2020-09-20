@@ -11,14 +11,13 @@ if reflex begin
 	if (surface_exists(surface_player)) begin
 		var _xx = 11 + game.app.player.x - self.x
 		var _yy = 11 + (game.app.player.y - self.y)/4
-		var _sign = sign(game.app.player.image_xscale) / clamp(image_index, 1, 2)
+		var _sign = (0.8)/clamp(image_index, 1, 2)
 		
 		surface_set_target(surface_player)
 	
 		draw_clear_alpha(c_black, 0);
 		
-		
-		p_draw(_xx, _yy, 0.8 * _sign, 0.8, 0.32)
+		p_draw_reflex(_xx, _yy, _sign, 0.8, 0.32)
 	
 		gpu_set_blendmode(bm_subtract) 
 	

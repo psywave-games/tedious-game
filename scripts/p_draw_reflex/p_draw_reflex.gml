@@ -1,8 +1,15 @@
+/// @description reflexion player
+/// @arg0 x
+/// @arg1 y
+/// @arg2 width
+/// @art3 height
+/// @arg4 alpha
+
 var _xx = argument0
 var _yy = argument1
-var _xscale = argument2
-var _alpha = argument3
-
+var _width = argument2
+var _height = argument3
+var _alpha = argument4
 
 /// easter egg missngno (vulgo: matuto)
 if game.app.clock_hour == 3 and game.app.clock_minute <= 3 begin
@@ -10,4 +17,4 @@ if game.app.clock_hour == 3 and game.app.clock_minute <= 3 begin
 end
 /// draw normal player reflex
 else 
-	p_draw(_xx, _yy, _xscale, game.app.player.image_yscale, _alpha)
+	p_draw(_xx, _yy, game.app.player.image_xscale * _width, game.app.player.image_yscale * _height, _alpha)
