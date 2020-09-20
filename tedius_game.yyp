@@ -1779,6 +1779,14 @@
             }
         },
         {
+            "Key": "7bb7d295-a1b9-4a0e-aa5a-a18bce8f71ad",
+            "Value": {
+                "id": "d4dd215c-2025-46de-bb72-6f1532b55b99",
+                "resourcePath": "scripts\/w_draw_reflex\/w_draw_reflex.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7bc1f063-6aa0-4db0-bd71-5509ac466a93",
             "Value": {
                 "id": "f3325250-4d05-4168-a515-14e2cc93d9f0",
@@ -1976,6 +1984,14 @@
                 "id": "735003fc-08db-4706-9552-488b89547bc9",
                 "resourcePath": "sprites\/spr_power\/spr_power.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8795f267-0ab6-4653-afdf-320acaadab7f",
+            "Value": {
+                "id": "b1d20170-e7ba-4721-ad98-38f456b2ba9e",
+                "resourcePath": "views\/8795f267-0ab6-4653-afdf-320acaadab7f.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -3983,6 +3999,7 @@
         "ef16f6f6-26a3-4e7f-ac67-eade280df748",
         "594fb8f0-fd30-4ca6-83c6-ad6c79e2a744",
         "534daed3-0fea-444d-8a9b-6d7f1dec028e",
+        "7bb7d295-a1b9-4a0e-aa5a-a18bce8f71ad",
         "107080d7-8f6b-41ec-867b-51cd37edaa22",
         "019ce918-60af-4619-9485-372fa67c3bdb",
         "d7c82358-4435-4222-a717-1ca1bb603bd1",

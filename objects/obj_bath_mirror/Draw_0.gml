@@ -4,7 +4,7 @@ draw(
 )
 
 #region REFLEX
-if reflex begin 
+if reflex_world begin 
 
 	var surface_player = surface_create(10, 13)
 	if (surface_exists(surface_player)) begin

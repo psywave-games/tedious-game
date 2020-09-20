@@ -14,4 +14,5 @@ self.persistent_draw = false
 self.switchs = 0
 
 self.visible = false
-self.reflex = false
+self.reflex_world = false
+self.reflex_player = false

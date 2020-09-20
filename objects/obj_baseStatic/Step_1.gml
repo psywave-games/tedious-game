@@ -67,7 +67,8 @@ end
 
 #region RELFEX
 if can_reflex  and game.app.render.mode_reflex and not lite() begin
-	reflex = point_in_rectangle(
+	reflex_world = true
+	reflex_player = point_in_rectangle(
 		game.app.player.x,
 		game.app.player.y,
 		bbox_left - 32,
@@ -77,7 +78,8 @@ if can_reflex  and game.app.render.mode_reflex and not lite() begin
 	)
 end
 else begin
-	reflex = false
+	reflex_world = false
+	reflex_player = false
 end
 #endregion
 

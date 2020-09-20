@@ -5,7 +5,7 @@ if image_index < 1 and state == fsm_mob.idle then
 	image_index = 1
 
 #region REFLEX
-if reflex begin 
+if reflex_world begin 
 	
 	var surface_player = surface_create(22, 22)
 	if (surface_exists(surface_player)) begin
@@ -17,11 +17,13 @@ if reflex begin
 	
 		draw_clear_alpha(c_black, 0);
 		
-		p_draw_reflex(_xx, _yy, _sign, 0.8, 0.32)
+		w_draw_reflex(x, y, _sign, 0.8, 0.32, 5, -11, reflex_mobs)
+		if reflex_player then 
+			p_draw_reflex(_xx, _yy, _sign, 0.8, 0.32)
 	
 		gpu_set_blendmode(bm_subtract) 
 	
-		if self.state == fsm_mob.running then
+		if image_index > 1 then
 			draw_rectangle(11 - image_index, 0, 10 + image_index, 22, false)
 	
 		gpu_set_blendmode(bm_normal)
