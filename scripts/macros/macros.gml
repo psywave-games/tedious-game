@@ -115,17 +115,23 @@
 #macro	thematic_vgnglitch		9
 
 
-
-#macro	gamejolt_api_id			"478388"		
-#macro	gamejolt_api_token		"810d041ed39a0594fb8131c748fe86a0"
-#macro	gamejolt_score_survive	"485435"
-#macro	gamejolt_score_speedrun	"507729"
-#macro	gamejolt_score_points	"507767"
-#macro	gamejolt_trophy_started "122109"
-
-
-
 #macro	light_alpha					0.1
+
+
+enum trophy {
+	firstplay = 0,
+	memorial = 8
+}
+
+enum scoreboard {
+	memorial = 0,
+	points = 1,
+	speedrun = 2,
+	survival = 3,
+	asteroids = 4,
+	invanders = 5
+}
+
 
 enum word {
 	limit = 10,

@@ -1,5 +1,5 @@
 {
-    "id": "2d6d2f7b-fed7-4c83-a6f6-75e6d965eb24",
+    "id": "64cb9591-bc18-4060-b5e2-6c11889f416d",
     "modelName": "GMIncludedFile",
     "mvc": "1.0",
     "name": "scores.json",

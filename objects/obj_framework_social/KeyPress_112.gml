@@ -1,2 +1,2 @@
 /// @desc enable cheats
-global.cheats = true
+global.cheat = true

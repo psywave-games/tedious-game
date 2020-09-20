@@ -46,6 +46,7 @@ state = fsm_game.loading
 
 global.eula = false
 global.language = "pt"
+global.achiviements = 0
 #endregion
 
 

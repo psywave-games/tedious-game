@@ -11,7 +11,7 @@
 #endregion
 #region OPTIMIZE BROWSER GRAY SCALE
 if browser() begin
-	gray_scale = round(gray_scale*10)/10
+	_gray_scale = round(_gray_scale * 10)/10
 end
 #endregion
 #region apply gray

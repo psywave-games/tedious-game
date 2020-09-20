@@ -1,32 +1,44 @@
 [
     {
+        "id": 0,
         "name": "memorial",
         "gamejolt": 0,
-        "steamid": 0
+        "steamid": 0,
+        "guest": true
     },
     {
+        "id": 1,
         "name": "points-highscore",
         "gamejolt": 0,
-        "steamid": 0
+        "steamid": 0,
+        "guest": false
     },
     {
-        "name": "time-speedRun",
+        "id": 2,
+        "name": "time-speed-run",
         "gamejolt": 0,
-        "steamid": 0
+        "steamid": 0,
+        "guest": false
     },
     {
+        "id": 3,
         "name": "time-survival",
         "gamejolt": 0,
-        "steamid": 0
+        "steamid": 0,
+        "guest": false
     },
     {
+        "id": 4,
         "name": "game-asteroids",
         "gamejolt": 0,
-        "steamid": 0
+        "steamid": 0,
+        "guest": false
     },
     {
+        "id": 5,
         "name": "game-invanders",
         "gamejolt": 0,
-        "steamid": 0
+        "steamid": 0,
+        "guest": false
     }
 ]
