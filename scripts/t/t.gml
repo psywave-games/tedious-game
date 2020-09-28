@@ -612,7 +612,7 @@ switch argument[0] begin
 	case msg.menu_videogame_game2:
 		return "Invasores do Espaço"
 	case msg.menu_videogame_game3:
-		return "Torres da Danki"
+		return "Paredao TG"
 	case msg.menu_videogame_game4:
 		return ""
 	case msg.menu_videogame_game5:

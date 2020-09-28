@@ -74,7 +74,8 @@ global.inventory = instance_create_layer(x,y, "Instances", obj_inventory)
 #region INIT VIDEOGAMES
 self.videogames = [
 	instance_create_layer(x,y, "Instances", obj_game_asteroids),
-	instance_create_layer(x,y, "Instances", obj_game_invanders)
+	instance_create_layer(x,y, "Instances", obj_game_invanders),
+	instance_create_layer(x,y, "Instances", obj_game_pong),	
 ]
 
 self.select = 0

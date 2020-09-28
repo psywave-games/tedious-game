@@ -249,6 +249,12 @@ else if game.app.state == fsm_game.videogameMain and game.app.input.key_menu_ent
 			game.app.select = 1
 			state_set(game.app, fsm_game.videogamePlay)
 			break
+			
+		/// play space pong (game2)
+		case 5:
+			game.app.select = 2
+			state_set(game.app, fsm_game.videogamePlay)
+			break
 	end
 end
 #endregion

@@ -392,6 +392,14 @@
             }
         },
         {
+            "Key": "18d27785-c76d-457e-87f6-6a92a8452f55",
+            "Value": {
+                "id": "746f56f4-50ff-4a36-9d8c-acd82606dbef",
+                "resourcePath": "objects\/obj_game_pong\/obj_game_pong.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "19763150-b43f-43cc-ba66-decb0e403942",
             "Value": {
                 "id": "d872bb9a-02a5-4ba6-af84-26eb5e8f79a3",
