@@ -20,8 +20,10 @@ draw_rectangle(
 #endregion
 
 #region BALL MOVE
-draw_set_color(c_white)
-draw_circle(vgn_x(ball_x), vgn_y(ball_y), 8, false)
+if ball_x >= 0 begin
+	draw_set_color(c_white)
+	draw_circle(vgn_x(ball_x), vgn_y(ball_y), 8, false)
+end 
 
 ball_x += ball_hspeed 
 ball_y += ball_vspeed

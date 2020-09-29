@@ -203,11 +203,10 @@ if fire_pos_y < enemy_min_y + 8 then
 
 #region RESET GAME
 if invaders_direction > (room_speed * 2) begin
-	var old_score = myscore
+	/// yanderedev be like:
+	var old_score = gameover? 0: myscore
+	myscore = gameover? myscore: 0
 	event_user(ev_mygame_restart)
-	
-	/// change dificult
-	if not gameover then
-		myscore = old_score
+	myscore = old_score
 end
 #endregion

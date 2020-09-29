@@ -1,10 +1,19 @@
 /// @description ev_mygame_restart
-/// resetar escore quando gameover ou apertou botão
+#region resetar escore quando gameover ou apertou botão
 if not transition or not life begin
+	#region SAVE SCORE RANK
+	if myscore begin
+		var _score = "Score: " + text_number(myscore)
+		rank(scoreboard.asteroids, _score, myscore)
+	end
+	#endregion
+	#region RESET GAME
 	myscore = 0
 	level = 1
 	life = 3
+	#endregion
 end
+#endregion
 
 transition = 0
 

@@ -1,4 +1,11 @@
 /// @description ev_mygame_restart
+#region SAVE SCORE RANK
+if myscore begin
+	var _score = "Score: " + text_number(myscore)
+	rank(scoreboard.singlepong, _score, myscore)
+end
+#endregion
+
 myscore = 0
 player = 88
 

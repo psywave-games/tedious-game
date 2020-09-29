@@ -40,5 +40,12 @@
         "gamejolt": 0,
         "steamid": 0,
         "guest": false
+    },
+    {
+        "id": 6,
+        "name": "game-single-pong",
+        "gamejolt": 0,
+        "steamid": 0,
+        "guest": false
     }
 ]

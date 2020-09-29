@@ -130,7 +130,8 @@ enum scoreboard {
 	speedrun = 2,
 	survival = 3,
 	asteroids = 4,
-	invanders = 5
+	invanders = 5,
+	singlepong = 6
 }
 
 
