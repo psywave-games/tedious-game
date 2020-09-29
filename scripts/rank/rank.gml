@@ -17,7 +17,7 @@ for (var i = 0, j = ds_list_size(_scores); i < j; i++) begin
 		var _token = string(ds_map_find_value(_json, "gamejolt"))
 		var _guest = bool(ds_map_find_value(_json, "guest"))
 		
-		/// update rank
+		/// update rank gamejolt
 		if not _guest then gj_scores_add(_token, _score, _sort, GM_version)
 		else gj_scores_add_guest(_token,  _score, _sort, GM_version, game.app.nickname)
 		

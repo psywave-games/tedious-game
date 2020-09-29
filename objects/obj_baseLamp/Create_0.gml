@@ -9,6 +9,7 @@ can_break = true
 can_surface = true
 
 global.points_switch = 10
+global.lights_broken = 0
 
 surface_light = null_surface
 surface_brightness = null_surface

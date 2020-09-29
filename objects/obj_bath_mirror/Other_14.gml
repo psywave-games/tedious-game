@@ -1,0 +1,1 @@
+self.message = t(msg.interact_mirror_down)

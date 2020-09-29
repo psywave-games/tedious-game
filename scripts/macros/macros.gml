@@ -120,7 +120,12 @@
 
 enum trophy {
 	firstplay = 0,
+	quackquack = 1,
+	matutoreal = 2,
+	lightbroki = 3,
+	guitarhero = 4,
 	moonwwalk = 5,
+	cjgoagain = 7,
 	memorial = 8
 }
 
@@ -386,6 +391,9 @@ enum msg {
 	interact_shower_up,
 	interact_shower_down,
 	menu_audio_mute,
-	credits_nicolasc
+	credits_nicolasc,
+	interact_mirror_down,
+	interact_mirror_rate,
+	interact_mirror_matuto
 }
 

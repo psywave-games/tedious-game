@@ -11,3 +11,9 @@ if secret(thematic_halflife) begin
 		music_stop()
 end
 #endregion
+#region CJ GO AGAIN
+if secret(thematic_goagain) begin 
+	speak(game.app.player, "oh shit, where go again!")
+	unlock(trophy.cjgoagain)
+end
+#endregion
