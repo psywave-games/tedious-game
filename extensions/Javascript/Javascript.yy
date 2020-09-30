@@ -158,6 +158,21 @@
                     "kind": 5,
                     "name": "web_game_end",
                     "returnType": 2
+                },
+                {
+                    "id": "0b3fb5b4-6174-47af-b913-f928d0217f4d",
+                    "modelName": "GMExtensionFunction",
+                    "mvc": "1.0",
+                    "argCount": 0,
+                    "args": [
+                        1
+                    ],
+                    "externalName": "achievement",
+                    "help": "",
+                    "hidden": false,
+                    "kind": 5,
+                    "name": "web_achievement",
+                    "returnType": 2
                 }
             ],
             "init": "",
@@ -170,7 +185,8 @@
                 "b72c1123-529c-4853-9614-480e087c17e4",
                 "4dff4df9-3cd9-4576-b926-ae354c4781e9",
                 "58292fa7-c5f5-4710-9268-e9f61a3ab576",
-                "31b4a5bf-8bea-43b0-bdbf-519c03419d39"
+                "31b4a5bf-8bea-43b0-bdbf-519c03419d39",
+                "0b3fb5b4-6174-47af-b913-f928d0217f4d"
             ],
             "origname": "",
             "uncompress": false

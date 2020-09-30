@@ -720,6 +720,14 @@
             }
         },
         {
+            "Key": "30b7f4ae-025a-41ef-9ba5-2d465e507934",
+            "Value": {
+                "id": "1141a698-0614-4572-9100-ce585bdeedaf",
+                "resourcePath": "datafiles_yy\/html5\/modal.css.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "30fed892-1072-4169-b688-03d62a891f50",
             "Value": {
                 "id": "df398f7c-ab3f-4837-854c-fcc411bd5fe2",
@@ -845,6 +853,14 @@
                 "id": "be84e3c7-eb84-49d6-8c08-a4a2a41a2fa3",
                 "resourcePath": "sprites\/spr_playerIdle1\/spr_playerIdle1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3b8e2852-25c6-4ae6-bf41-65001d06db0a",
+            "Value": {
+                "id": "3e7400db-3e5c-4af3-a5bf-cc99429b357c",
+                "resourcePath": "datafiles_yy\/html5\/achievements.css.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -1088,6 +1104,14 @@
             }
         },
         {
+            "Key": "4efb4c07-37df-4acd-9fd8-f6942c3d2cef",
+            "Value": {
+                "id": "3c1babf1-987e-4449-9bbf-4245e3576c89",
+                "resourcePath": "views\/4efb4c07-37df-4acd-9fd8-f6942c3d2cef.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "4f004d4d-d767-48cc-a81e-d767ce380158",
             "Value": {
                 "id": "e717bd53-5c73-48a5-b913-89a146e3d5b9",
@@ -1325,6 +1349,14 @@
                 "id": "924905d6-8f51-46a9-af4b-2dfefe12ff93",
                 "resourcePath": "sprites\/spr_food_furnace5\/spr_food_furnace5.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5c3f72b3-875c-4570-8642-5d01285e98ca",
+            "Value": {
+                "id": "2b418e38-01f1-4f40-a88e-a0f4737086a5",
+                "resourcePath": "views\/5c3f72b3-875c-4570-8642-5d01285e98ca.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -1736,6 +1768,14 @@
                 "id": "450ba533-23b9-4cc8-81fe-11ba9bb676df",
                 "resourcePath": "scripts\/p_speed\/p_speed.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "77f1db79-84e1-45a3-a42c-3f6db305c025",
+            "Value": {
+                "id": "2af2b41b-74f8-4ef3-9109-c7d3c0d7cf59",
+                "resourcePath": "datafiles_yy\/icon\/jolt.jpg.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

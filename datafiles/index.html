@@ -10,6 +10,9 @@
 
         <!-- Set the title bar of the page -->
         <title>Tedious Simulator Game</title>
+        <link rel="stylesheet" href="game/html5/achievements.css">
+        <link rel="stylesheet" href="game/html5/modal.css">
+
         <script>window.document.title = "Loading..."</script>
 
         <!-- Set the background colour of the document -->
@@ -47,61 +50,6 @@
                 right: 0;  
                 left: 0; 
                 top: 0;
-            }
-            /** modal (@by Fatima Aurelia) **/
-            .modal {
-                position: fixed;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                display: none;
-                overflow: auto;
-                background-color: #000000;
-                background-color: rgba(0, 0, 0, 0.7);
-                z-index: 9999;
-            }
-
-            .modal-window {
-                position: relative;
-                background-color: #FFFFFF;
-                width: 50vmax;
-                margin: 10% auto;
-                padding: 20px;
-            }
-
-            .modal-window.small {
-                width: 30%;
-            }
-
-            .modal-window.large {
-                width: 75%;
-            }
-
-            .close {
-                position: absolute;
-                top: 0;
-                right: 0;
-                color: rgba(0,0,0,0.3);
-                height: 30px;
-                width: 30px;
-                font-size: 30px;
-                line-height: 30px;
-                text-align: center;
-            }
-
-            .close:hover,
-            .close:focus {
-                color: #000000;
-                cursor: pointer;
-            }
-
-            .open {
-                display: block;
-            }
-            
-            #modal-content {
-                font-size: 1vmax;
             }
 
             /** full screen fixture **/
@@ -150,6 +98,12 @@
                 <button id="modal-close" onclick="hide_modal()">{Close}</button>
             </div>
         </div>
+
+        <!-- Achievements -->
+        <span id="achievement-game">
+            <img id="achievement-img" src="game/icon/jolt.jpg">
+            <p id="achievement-name">#error_i18n_achievement</p>
+        </span>
 
         <!-- Run the game code -->
         <script type="text/javascript" src="game/tedius_game.js"></script>

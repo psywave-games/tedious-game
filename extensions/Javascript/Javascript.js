@@ -80,3 +80,17 @@ function clamp(value, min, max)
 {
     return Math.max(min, Math.min(value, max));
 }
+
+function achievement(name)
+{
+    console.log("Trophy Unlock:" + name);
+
+    window.document.getElementById("achievement-name").innerHTML = name;
+    window.document.getElementById("achievement-game").classList.add('unlock');
+    
+    const _lock = window.document.getElementById("achievement-game").addEventListener('animationend', function () {
+        window.document.getElementById("achievement-game").classList.remove('unlock');
+    });
+
+    return 1;
+}
