@@ -6,9 +6,10 @@ if not show_interface() and game.app.state != fsm_game.cutscene then
 /// computar frame de textos
 self.speak_step += 1
 var _time = lerp(0.8, 2, game.app.render.font_time/10)
+var _incr = (self.speak_finish - self.speak_init) * _time
 
 /// renderizar texto de fala
-if self.speak_init <= self.speak_step and self.speak_step <= (self.speak_finish * _time) begin
+if self.speak_init <= self.speak_step and self.speak_step <= (self.speak_finish + _incr) begin
 	/// se a velocidade de digitação não for instanea, renderizar conforme steps
 	if game.app.render.font_speed < 10 begin
 
