@@ -6,7 +6,10 @@ var _look = 0
 with game.app.player begin 
 
 	#region LOOKING
-	if self.state == fsm_player.piss then
+	if game.app.state != fsm_game.play then
+		_look = 0
+	
+	else if self.state == fsm_player.piss then
 		_look = 7.5
 	
 	else if self.state == fsm_player.sleep and speaking(self) then

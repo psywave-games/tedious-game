@@ -1,5 +1,5 @@
 #region BACKEGROUND
-draw_set_alpha(1.0)
+draw_set_alpha(light_vgn)
 draw_set_color(c_black)
 draw_rectangle(vgn_x(0), vgn_y(0), vgn_x(480), vgn_y(240), false)
 
@@ -8,7 +8,7 @@ draw_rectangle(vgn_x(0), vgn_y(0), vgn_x(480), vgn_y(240), true)
 #endregion
 
 #region PLAYER MOVE
-player = clamp( (player - (game.app.input.key_axis_y * 6)), 32, 208)
+player = clamp( (player - (game.app.input.key_axis_y * 6)), 36, 204)
 draw_set_color(c_white)
 draw_rectangle(
 	vgn_x(4), 
@@ -33,7 +33,7 @@ ball_y += ball_vspeed
 if ball_y <= 4 or ball_y >= 236 then
 	ball_vspeed *= -1
 
-if ball_x >= 480 then
+if ball_x >= 472 then
 	ball_hspeed *= -1
 #endregion
 

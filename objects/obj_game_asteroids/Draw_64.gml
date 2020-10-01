@@ -2,6 +2,7 @@
 var _asteroids = 0
 var _colision = false
 #region SCREEN BACKGROUND DRAW
+draw_set_alpha(light_vgn)
 draw_set_color(c_black)
 draw_rectangle(vgn_x(0), vgn_y(0), vgn_x(480), vgn_y(240), false)
 

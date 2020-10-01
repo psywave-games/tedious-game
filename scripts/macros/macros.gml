@@ -117,9 +117,9 @@
 #macro	thematic_trololo		8
 #macro	thematic_vgnglitch		9
 
-
+/// enlightenment
 #macro	light_alpha					0.1
-
+#macro	light_vgn					(lite()? 1.0: 0.75)
 
 enum trophy {
 	firstplay = 0,

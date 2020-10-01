@@ -7,6 +7,7 @@ var enemy_max_x = 0
 var enemy_max_y = 0
 
 #region SCREEN DRAW
+draw_set_alpha(light_vgn)
 draw_set_color(c_black)
 draw_rectangle(vgn_x(0), vgn_y(0), vgn_x(480), vgn_y(240), false)
 
