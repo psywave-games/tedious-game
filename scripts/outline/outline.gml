@@ -1,14 +1,18 @@
 /// @arg0 sprite
 /// @arg1 signs
-/// 0: cima
-/// 2: baixo
-/// 3: esquerda
-/// 1: direita
+/// 0: cima (1)
+/// 2: baixo (4)
+/// 3: esquerda (8)
+/// 1: direita (2)
 
 if not argument1 then
 	exit
 	
 if not game.app.render.mode_outline then
+	exit
+	
+/// @todo fix
+if browser() then
 	exit
 	
 var _width = sprite_get_width(argument0)
@@ -31,15 +35,15 @@ for (var i = 0; i < 4; i++) begin
 			draw_sprite_ext(_sprite, image_index, _center, _middle - 1, image_xscale, image_yscale, image_angle, c_white, 1.0)
 			break 
 			
-		case 1:
+		case 2:
 			draw_sprite_ext(_sprite, image_index, _center, _middle + 1, image_xscale, image_yscale, image_angle, c_white, 1.0)
 			break 
 		
-		case 2:
+		case 3:
 			draw_sprite_ext(_sprite, image_index, _center - 1, _middle, image_xscale, image_yscale, image_angle, c_white, 1.0)
 			break 
 		
-		case 3:
+		case 1:
 			draw_sprite_ext(_sprite, image_index, _center + 1, _middle, image_xscale, image_yscale, image_angle, c_white, 1.0)
 			break 
 	end
@@ -59,7 +63,11 @@ surface_reset_target()
 
 
 draw_set_blend_mode(bm_add)
-draw_surface_ext(_surface_line, x - _center, y - _middle, 1.0, 1.0, 0, c_white, lerp(0.16, 0.64, anim_fadetent(game.app.step, 0, room_speed/2, room_speed/4)))
+var _sx = display_get_gui_width()/camera_get_view_width(view_camera[0])
+var _sy = display_get_gui_height()/camera_get_view_height(view_camera[0])
+var _xx = ((x - _center) - game.app.render.camx) * _sx
+var _yy = ((y - _middle) - game.app.render.camy) * _sy
+draw_surface_ext(_surface_line, _xx, _yy, _sx, _sy, 0, c_white, lerp(0.16, 0.64, anim_fadetent(game.app.step, 0, room_speed/2, room_speed/4)))
 surface_free(_surface_line)
 surface_free(_surface_role)
 draw_set_blend_mode(bm_normal)
