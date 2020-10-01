@@ -25,15 +25,15 @@ end
 #endregion
 #region VIDEOGAMES MANAGER
 /// ligar consoles
-if self.state == fsm_game.videogamePlay begin
-	for (var i = 0; i < array_length_1d(self.videogames); i++) begin
-		self.videogames[i].visible = self.select == i
+if self.state == fsm_game.insider begin
+	for (var i = 0, j = last_game; i <= j; i++) begin
+		self.videogames[i].visible = self.in_videogame == i
 	end
 end
 
 /// desligar consoles
 else begin
-	for (var i = 0; i < array_length_1d(self.videogames); i++) begin
+	for (var i = 0, j = last_game; i <= j; i++) begin
 		self.videogames[i].visible = false
 	end
 end

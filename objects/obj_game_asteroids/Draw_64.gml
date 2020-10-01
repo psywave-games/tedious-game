@@ -243,24 +243,24 @@ for (var i = 0; i < array_length_1d(shoot_x); i++) begin
 			/// asteroid pequeno pequeno
 			if asteroid_size[j] <= 3 begin
 				audio_play(snd_asteroids_bangSmall, false)
-				myscore += 25
+				myscore += score_vgn(25)
 			end
 			
 			/// asteroid pequeno
 			else if asteroid_size[j] <= 4 begin
 				audio_play(snd_asteroids_bangMedium, false)
-				myscore += 10
+				myscore += score_vgn(10)
 			end
 			
 			/// asteroid medio
 			else if asteroid_size[j] <= 9 begin
 				audio_play(snd_asteroids_bangLarge, false)
-				myscore += 5
+				myscore += score_vgn(5)
 			end
 			
 			/// asteroid grande
 			else begin 
-				myscore += 1
+				myscore += score_vgn(1)
 				audio_play(snd_asteroids_bangLarge, false)
 			end
 			
@@ -362,7 +362,7 @@ if transition begin
 		
 	/// show level
 	else begin
-		var _text = "Level: " + string(level)
+		var _text = "Level: " + string(level) + "\nLifes: " + string(life)
 		draw_text(vgn_x(240), vgn_y(120), _text)
 	end
 end

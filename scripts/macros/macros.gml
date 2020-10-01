@@ -23,8 +23,11 @@
 #macro	font_size_title				0.80
 #macro	font_size_menu				0.32
 #macro	font_size_description		0.80
+
+/// numbers
 #macro	last_resolution				(array_length_1d(game.app.render.name_resolution) - 1)
 #macro	last_ratio					(array_length_1d(game.app.render.name_ratio) - 1)
+#macro	last_game					(array_length_1d(game.app.videogames) - 1)
 
 
 /// buttom config
@@ -167,7 +170,7 @@ enum fsm_player {
 	sit,									/// Jogador está sentado
 	guitar_idle,							/// Jogador está parado com o violão
 	guitar_walk,							/// Jogador está andando o violão
-	shower									/// Jogador está tomando banho										
+	shower,									/// Jogador está tomando banho
 }
 
 
@@ -190,9 +193,7 @@ enum fsm_game {
 	over,									/// STATE: Fim de jogo
 	credits,								/// STATE: Creditos finais
 	waitFocus,								/// STATE: Wait Focus
-	videogameMain,							/// STATE: Menu Principal/Pause VIDEOGAME
-	videogameMenu,							/// STATE: Menu de Opções VIDEOGAME
-	videogamePlay							///	STATE: Gameplay VIDEOGAME
+	insider									/// STATE: Jogando dentro do Jogo
 }
 
 

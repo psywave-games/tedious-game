@@ -39,7 +39,7 @@ if ball_x >= 480 then
 
 #region BALL BOUNCE
 if rectangle_in_circle(4, player - 32, 8, player + 32, ball_x, ball_y, 4) begin
-	myscore += 10
+	myscore += score_vgn(10)
 	ball_hspeed = min(abs(ball_hspeed) * 1.1, 6)
 	ball_vspeed = clamp(ball_vspeed + lerp(-1, 1, (ball_y - player) / 64), -ball_hspeed, ball_hspeed)
 end

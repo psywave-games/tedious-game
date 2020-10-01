@@ -88,7 +88,7 @@ if invaders_direction < 4 begin
 				audio_play(snd_invaders_explosion, false)
 				invaders_live[enemy] = false /// died enemy
 				fire_pos_y = -1 /// reset shoot
-				myscore += 5
+				myscore += score_vgn(5)
 			end
 	
 			/// render enemy

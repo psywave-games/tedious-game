@@ -4,4 +4,4 @@ if state = fsm_mob.idle then
 	select = 1
 	
 else 
-	select = clamp(select + game.app.input.key_axis_switch, 1, 2)
+	select = clamp(select + game.app.input.key_axis_switch, 1, last_game + 2)

@@ -7,7 +7,7 @@ switch self.select begin
 		audio_stop(snd_tv_noise)
 		break
 		
-	case 2:
+	default:
 		mob_enter(fsm_player.sit, obj_tv_chair)
 		alarm_set(ev_interact_up, 2)
 		break

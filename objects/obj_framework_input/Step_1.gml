@@ -194,7 +194,7 @@ else if game.app.state == fsm_game.play begin
 	key_menu_open = _keyd_esc + _gamepaded_start
 end
 
-else if game.app.state == fsm_game.videogamePlay begin
+else if game.app.state == fsm_game.insider begin
 	key_menu_esc = _keyd_esc + _gamepaded_start
 end
 
@@ -214,19 +214,12 @@ else if game.app.state == fsm_game.menuMain
 	or game.app.state == fsm_game.menuOptions
 	or game.app.state == fsm_game.menuGraphic 
 	or game.app.state == fsm_game.menuAudio
-	or game.app.state == fsm_game.menuWindow
-	or game.app.state == fsm_game.videogameMenu begin
+	or game.app.state == fsm_game.menuWindow begin
 	
 	key_menu_esc = _keyd_esc + _gamepaded_cross + _gamepaded_start + _gamepaded_square
 	key_menu_enter = _keyd_enter 
 	key_menu_go = _keyd_down - _keyd_up + _gamepaded_axis_y
 	key_menu_in = _keyd_righ - _keyd_left + _keyd_enter + _mouse_axis + _gamepaded_axis_x - _gamepaded_circle + _gamepaded_triangle
-end
-
-else if game.app.state == fsm_game.videogameMain begin
-	key_menu_esc = _keyd_esc + _gamepaded_cross + _gamepaded_start
-	key_menu_enter = _keyd_enter + _mouse_axis + _gamepaded_circle 
-	key_menu_go = _keyd_righ - _keyd_left + (_keyd_down - _keyd_up) * 3 + _gamepaded_axis_x + _gamepaded_axis_y * 3
 end
 
 else if game.app.state == fsm_game.lang begin 
@@ -270,7 +263,7 @@ if game.app.state == fsm_game.play begin
 end
 #endregion
 #region VIDEOGAME
-if  game.app.state == fsm_game.videogamePlay begin
+if  game.app.state == fsm_game.insider begin
 	key_axis_x = _key_righ - _key_left + _gamepad_axis_x
 	key_axis_y = _key_up - _key_down + _gamepad_cross - _gamepad_square + _gamepad_triangle
 	key_fire = _keyd_ord_f + _gamepaded_circle

@@ -52,10 +52,6 @@ else if abs (game.app.input.key_menu_go) begin
 		case fsm_game.menuAudio:
 			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 4)
 			break
-			
-		case fsm_game.videogameMain:
-			self.select = clamp( self.select + game.app.input.key_menu_go, 0, 5)
-			break
 	end
 end
 #endregion
@@ -219,42 +215,6 @@ else if abs (game.app.input.key_menu_in) and game.app.state == fsm_game.menuAudi
 		/// voltar para o menu
 		case 4:
 			state_back( game.app )
-	end
-end
-#endregion
-#region SET VIDEOGAME MENU MAIN
-else if game.app.state == fsm_game.videogameMain and game.app.input.key_menu_enter begin
-	switch self.select begin
-		/// menu voltar
-		case 0:
-			state_back(game.app)
-			break
-			
-		/// reset atual game
-		case 2:
-			with game.app.videogames[clamp(game.app.select, 0, array_length_1d(game.app.videogames) -1)] begin
-				event_user(ev_mygame_restart)
-			end
-			state_set(game.app, fsm_game.videogamePlay)
-			break
-		
-		/// play asteroids (game 0)
-		case 3:
-			game.app.select = 0
-			state_set(game.app, fsm_game.videogamePlay)
-			break
-			
-		/// play space invaders (game1)
-		case 4:
-			game.app.select = 1
-			state_set(game.app, fsm_game.videogamePlay)
-			break
-			
-		/// play space pong (game2)
-		case 5:
-			game.app.select = 2
-			state_set(game.app, fsm_game.videogamePlay)
-			break
 	end
 end
 #endregion

@@ -72,13 +72,14 @@ global.inventory = instance_create_layer(x,y, "Instances", obj_inventory)
 #endregion
 
 #region INIT VIDEOGAMES
+global.videogame_points = 1100
 self.videogames = [
 	instance_create_layer(x,y, "Instances", obj_game_asteroids),
 	instance_create_layer(x,y, "Instances", obj_game_invanders),
 	instance_create_layer(x,y, "Instances", obj_game_pong),	
 ]
 
-self.select = 0
+self.in_videogame = 0
 #endregion
 
 alarm_set(ev_init, 2)

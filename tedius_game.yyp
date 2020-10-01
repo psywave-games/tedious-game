@@ -1008,6 +1008,14 @@
             }
         },
         {
+            "Key": "47361594-e2a5-4e5d-b5e3-0df7f95465ad",
+            "Value": {
+                "id": "73bd66fc-50a6-45d9-93c5-94a1d0260b5d",
+                "resourcePath": "scripts\/score_vgn\/score_vgn.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "47891b85-a68c-471a-a00a-03e46c6f9aae",
             "Value": {
                 "id": "51f57fb2-7952-477b-a939-1617860c4cda",
@@ -4110,6 +4118,7 @@
         "ee0ee7a4-8ccb-4f69-b1ff-a70070b5c95c",
         "9aee0d22-932d-472a-bd96-c92e10769e09",
         "d1d06992-54b7-4c53-b93f-69a9550c299b",
+        "47361594-e2a5-4e5d-b5e3-0df7f95465ad",
         "46707b57-5ce2-423f-ab68-cc2c456432e6",
         "31921138-e993-4596-83b5-067f46cbd325",
         "57c2f086-b804-46b4-a683-8da6d098b689",

@@ -213,95 +213,19 @@ switch game.app.state begin
 	break
 	#endregion
 	#region VGN PLAY
-	case fsm_game.videogamePlay:
+	case fsm_game.insider:
 		draw_set_text_config(lite()? fnt_game0: fnt_title, c_white, 1.0, fa_center, fa_top)
-	
+		
+		/// data get
 		var _title = t(msg.menu_videogame_name)
 		var _center = display_get_gui_width()/2
 		var _yysubtitle = string_height(_title) + (padding * 2)
-		var _score =  "score: " + score_get_string(variable_instance_get(game.app.videogames[game.app.select], "myscore"))
-	
-		if variable_instance_exists(game.app.videogames[game.app.select], "life") then
-			_score +=  "\nlifes: " + string(variable_instance_get(game.app.videogames[game.app.select], "life"))
+		var _score =  "score: " + score_get_string(variable_instance_get(game.app.videogames[game.app.in_videogame], "myscore"))
 	
 		/// title videogame
 		draw_text_hd(_center, padding, _title, 1.0)
 		draw_text_transformed(_center, _yysubtitle, _score, 0.28, 0.28, 0)
 		break
-	#endregion
-	#region VGN MENU MAIN
-	case fsm_game.videogameMain:
-		draw_set_text_config(lite()? fnt_game0: fnt_title, c_white, 1.0, fa_center, fa_top)
-	
-		var _title = t(msg.menu_videogame_name)
-		var _xx =  display_get_gui_width()/8
-		var _xx0 = gui_get_x_align(_xx * -2, fa_center)
-		var _xx3 = gui_get_x_align(_xx * 2, fa_center)
-		var _center = display_get_gui_width()/2
-		var _middle = display_get_gui_height()/2
-		var _yysubtitle = string_height(_title) + (padding * 2)
-		var _score = 0
-	
-		/// get global score
-		for (var i = 0; i < array_length_1d(game.app.videogames); i++) begin
-			_score += variable_instance_get(game.app.videogames[i], "myscore")
-		end
-		
-		/// title videogame
-		draw_text_hd(_center, padding, _title, 1.0)
-		draw_text_transformed(_center, _yysubtitle, "total score: " + score_get_string(_score), 0.28, 0.28, 0)
-	
-		/// Configurar Textos da Interface
-		draw_set_text_config(fnt_game0, c_white, 1.0, fa_center, fa_top)
-	
-		/// Menu voltar
-		draw_set_alpha(select == 0? 1: 0.64)
-		mouse_select(_xx0, _middle -128, t(msg.back), 0)
-		draw_text(_xx0, _middle - 128, t(msg.back))
-	
-		/// Menu Opções
-		draw_set_alpha(select == 1? 1: 0.64)
-		mouse_select(_center, _middle -128, t(msg.menu_videogame_option), 1)
-		draw_text(_center, _middle - 128, t(msg.menu_videogame_option))
-	
-		/// Menu Reiniciar
-		draw_set_alpha(select == 2? 1: 0.64)
-		mouse_select(_xx3, _middle - 128, t(msg.menu_videogame_reset), 2)
-		draw_text(_xx3, _middle - 128, t(msg.menu_videogame_reset))		
-	
-		/// jogo da esquerda (ASTEROIDS)
-		draw_set_alpha(select == 3? 1: 0.64)
-		draw_rectangle(
-			_xx0 - 64,
-			_middle -32,
-			_xx0 + 64,
-			_middle + 32,
-			true	
-		)
-		draw_text(_xx0, _middle + 48, t(msg.menu_videogame_game1))
-	
-		/// jogo do meio (Space Invaders)
-		draw_set_alpha(select == 4? 1: 0.64)
-		draw_rectangle(
-			_center - 64,
-			_middle -32,
-			_center + 64,
-			_middle + 32,
-			true	
-		)
-		draw_text(_center, _middle + 48, t(msg.menu_videogame_game2))
-	
-		/// jogo da esquerda (Danki Towers)
-		draw_set_alpha(select == 5? 1: 0.64)
-		draw_rectangle(
-			_xx3 - 64,
-			_middle -32,
-			_xx3 + 64,
-			_middle + 32,
-			true	
-		)
-		draw_text(_xx3, _middle + 48, t(msg.menu_videogame_game3))
-	break
 	#endregion
 	#region GAME OVER
 	case fsm_game.over:
