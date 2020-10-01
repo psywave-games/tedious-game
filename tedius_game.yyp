@@ -3355,6 +3355,14 @@
             }
         },
         {
+            "Key": "de0acd9c-a421-4755-9eaa-ce52538bccd7",
+            "Value": {
+                "id": "f3cd9b2e-e3ca-4cba-a3a7-564e63bd9395",
+                "resourcePath": "scripts\/anim_fadetent\/anim_fadetent.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "de1a75fa-bf6c-459f-a569-fe43aef2ef4b",
             "Value": {
                 "id": "69a2cb49-eb6e-4fb6-ac44-9b3f40e36ac6",
@@ -3463,6 +3471,14 @@
             "Value": {
                 "id": "fd3072d7-f66f-446b-ab46-cbdd8397268a",
                 "resourcePath": "scripts\/draw_trapeze_color\/draw_trapeze_color.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e242b0ef-70f4-45a1-83c4-0decfaf3079b",
+            "Value": {
+                "id": "dbade255-c549-47de-9dc1-ffc2b5600579",
+                "resourcePath": "scripts\/outline\/outline.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -4185,6 +4201,7 @@
         "f3e53e8e-fdfb-4331-b04e-81776f3dbe67",
         "22ccbbf7-8684-4842-b478-43ceed4f2db0",
         "a3bef6c7-e4e8-49ee-881b-804df8e49060",
+        "de0acd9c-a421-4755-9eaa-ce52538bccd7",
         "9fb06a0b-6c88-4053-8097-4144a266e0e7",
         "5f1b5939-44bd-4b6f-b40c-46ced5c12f5c",
         "b206946d-8512-40eb-83cd-41556487f394",
@@ -4192,6 +4209,7 @@
         "8e2fdf19-bb3a-463a-ab0d-8fe1526d66e2",
         "b0f21a98-f4b8-4874-9fb3-1a677ece9e16",
         "0a1f4f52-02e1-4223-95bb-753657ab0b67",
+        "e242b0ef-70f4-45a1-83c4-0decfaf3079b",
         "a8b62c1b-99b3-4e1d-8288-a7937a2147e4",
         "c0540dab-80f9-4490-9b1c-1f83028e7fe3",
         "8936c2b3-5c95-449e-b7f5-ff82f01528b9",
