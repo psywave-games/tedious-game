@@ -6,14 +6,10 @@
 /// 1: direita (2)
 
 if not argument1 then
-	exit
+	return null_surface
 	
 if not game.app.render.mode_outline then
-	exit
-	
-/// @todo fix
-if browser() then
-	exit
+	return null_surface
 	
 var _width = sprite_get_width(argument0)
 var _height = sprite_get_width(argument0)
@@ -59,15 +55,7 @@ draw_set_blend_mode(bm_subtract)
 with game.app.player p_draw(_center + self.x - other.x, _middle + self.y - other.y, self.image_xscale, self.image_yscale, 1.0)
 draw_sprite_ext(_sprite, image_index, _center, _middle, image_xscale, image_yscale, image_angle, c_white, 1.0)
 draw_set_blend_mode(bm_normal)
+surface_free(_surface_role)
 surface_reset_target()
 
-
-draw_set_blend_mode(bm_add)
-var _sx = display_get_gui_width()/camera_get_view_width(view_camera[0])
-var _sy = display_get_gui_height()/camera_get_view_height(view_camera[0])
-var _xx = ((x - _center) - game.app.render.camx) * _sx
-var _yy = ((y - _middle) - game.app.render.camy) * _sy
-draw_surface_ext(_surface_line, _xx, _yy, _sx, _sy, 0, c_white, lerp(0.16, 0.64, anim_fadetent(game.app.step, 0, room_speed/2, room_speed/4)))
-surface_free(_surface_line)
-surface_free(_surface_role)
-draw_set_blend_mode(bm_normal)
+return _surface_line

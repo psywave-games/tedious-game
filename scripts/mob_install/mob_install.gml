@@ -16,3 +16,5 @@ self.switchs = 0
 self.visible = false
 self.reflex_world = false
 self.reflex_player = false
+
+self.surface_outline = null_surface

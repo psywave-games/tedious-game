@@ -30,3 +30,11 @@ end
 self.internal_light_force_old = self.light_force
 self.internal_doors_bitwise_old = game.app.render.doors
 #endregion
+#region OUTLINE
+var _can_interact = false
+
+with obj_baseLamp if self.can_interact and self.channel == other.channel then
+	_can_interact = true
+
+surface_outline = _can_interact? outline(outline_sprite, outline_signs): null_surface
+#endregion
