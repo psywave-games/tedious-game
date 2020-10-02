@@ -6,6 +6,7 @@ part_type_alpha3(_part_type, 1, 1, 0)
 part_type_speed(_part_type, 0.02, 0.025, 0, 0)
 part_type_direction(_part_type, 0, 0, 0, 0)
 part_type_gravity(_part_type, 0.002, 270)
+part_type_color3(_part_type, color_amarelo_b, color_amarelo_b, color_amarelo_a)
 return _part_type
 
 #define part_song_install
@@ -34,6 +35,7 @@ part_type_size(_part_type, 0.012, 0.012, 0, 0)
 part_type_shape(_part_type, pt_shape_square)
 part_type_gravity(_part_type, 0.002, 270)
 part_type_alpha1(_part_type, 0.75)
+part_type_color1(_part_type, color_azul_a)
 return _part_type
 
 #define part_depth
