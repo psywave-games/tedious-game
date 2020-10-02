@@ -133,12 +133,23 @@ _gamepad_axis_x += touch_get_axis(gp_axislh)
 _gamepad_axis_y += touch_get_axis(gp_axislv)
 #endregion
 #region GAMEPAD ADJUSTMENTS
-_gamepaded_axis_x = _gamepaded_right - _gamepaded_left
-_gamepaded_axis_y = _gamepaded_down - _gamepaded_up
+if sign(internal_gamepad_axis_x) != sign(_gamepad_axis_x) and _gamepad_axis_x != 0 then 
+	_gamepaded_axis_x += _gamepad_axis_x
+
+if sign(internal_gamepad_axis_y) != sign(_gamepad_axis_y) and _gamepad_axis_y != 0 then 
+	_gamepaded_axis_y += _gamepad_axis_y	
+
+_gamepaded_axis_x += _gamepaded_right - _gamepaded_left
+_gamepaded_axis_y += _gamepaded_down - _gamepaded_up
 _gamepaded_any = _gamepaded_cross or _gamepaded_circle  or _gamepaded_square or _gamepaded_triangle or _gamepaded_start or abs(_gamepaded_axis_x) or abs(_gamepaded_axis_y)
 
+_gamepaded_axis_x = sign(_gamepaded_axis_x)
+_gamepaded_axis_y = sign(_gamepaded_axis_y)
 _gamepad_axis_x = clamp(_gamepad_axis_x, -1, 1)
 _gamepad_axis_y = clamp(_gamepad_axis_y, -1, 1)
+
+internal_gamepad_axis_x = _gamepad_axis_x
+internal_gamepad_axis_y = _gamepad_axis_y
 #endregion
 #region KEYBOARD INPUTS
 var _keyd_enter = keyboard_check_pressed(vk_enter)

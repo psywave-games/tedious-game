@@ -28,6 +28,8 @@ screen = false
 mode_button = 0
 
 #region INTERNAL
+internal_gamepad_axis_x = 0
+internal_gamepad_axis_y = 0
 internal_old_buttons = 0
 internal_new_buttons = 0
 internal_analog_init = 0
