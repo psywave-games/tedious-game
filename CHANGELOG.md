@@ -1,5 +1,13 @@
 # CHANGELOG #
 
+## 0.9.1 - 2020-10-02 ##
+
+### Changed ###
+ * fixed outline html5 game
+ * improve asteroids teleport
+ * improve gamepad in single pong
+ * improve gamepad in game menus
+
 ## 0.9.0 - 2020-09-30 ##
 
 ### Added ###
