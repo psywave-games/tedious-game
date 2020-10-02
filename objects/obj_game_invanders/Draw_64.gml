@@ -43,7 +43,7 @@ end
 
 #region PLAYER [MOVE&DRAW]
 /// set player pos
-player_pos = clamp(player_pos + game.app.input.key_axis_x * 8, 8, 472)
+player_pos = clamp(player_pos + game.app.input.vgn_axis_x * 8, 8, 472)
 
 /// render player
 draw_set_color(c_yellow)
@@ -187,7 +187,7 @@ end
 
 #region SHOOT MOVE
 /// spawn shoot
-if game.app.input.key_fire then if fire_pos_y < 0 begin
+if game.app.input.vgn_fire then if fire_pos_y < 0 begin
 	audio_play(snd_invaders_fire, false)
 	fire_pos_x = player_pos
 	fire_pos_y = 238

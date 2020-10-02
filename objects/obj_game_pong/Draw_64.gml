@@ -8,7 +8,7 @@ draw_rectangle(vgn_x(0), vgn_y(0), vgn_x(480), vgn_y(240), true)
 #endregion
 
 #region PLAYER MOVE
-player = clamp( (player - (game.app.input.key_axis_y * 6)), 36, 204)
+player = clamp( (player + (game.app.input.vgn_axis_z * 6)), 36, 204)
 draw_set_color(c_white)
 draw_rectangle(
 	vgn_x(4), 

@@ -264,9 +264,10 @@ end
 #endregion
 #region VIDEOGAME
 if  game.app.state == fsm_game.insider begin
-	key_axis_x = _key_righ - _key_left + _gamepad_axis_x
-	key_axis_y = _key_up - _key_down + _gamepad_cross - _gamepad_square + _gamepad_triangle
-	key_fire = _keyd_ord_f + _gamepaded_circle
+	vgn_axis_x = _key_righ - _key_left + _gamepad_axis_x
+	vgn_axis_y =  _key_down - _key_up + _gamepad_cross + _gamepad_triangle - _gamepad_square
+	vgn_axis_z = _key_down - _key_up + _gamepad_axis_y
+	vgn_fire = _keyd_ord_f + _gamepaded_circle
 end
 #endregion
 #region INPUTEXT GAMEOVER
@@ -302,15 +303,15 @@ if game.app.state == fsm_game.over begin
 	else if keyboard_check_pressed(ord("Z")) then key_input_text = "z"
 	else if keyboard_check_pressed(vk_space) then key_input_text = " "
 	else if keyboard_check_pressed(vk_numpad0) then key_input_text = "0"
-	else if keyboard_check_pressed(vk_numpad0) then key_input_text = "1"
-	else if keyboard_check_pressed(vk_numpad0) then key_input_text = "2"
-	else if keyboard_check_pressed(vk_numpad0) then key_input_text = "3"
-	else if keyboard_check_pressed(vk_numpad0) then key_input_text = "4"
-	else if keyboard_check_pressed(vk_numpad0) then key_input_text = "5"
-	else if keyboard_check_pressed(vk_numpad0) then key_input_text = "6"
-	else if keyboard_check_pressed(vk_numpad0) then key_input_text = "7"
-	else if keyboard_check_pressed(vk_numpad0) then key_input_text = "8"
-	else if keyboard_check_pressed(vk_numpad0) then key_input_text = "9"
+	else if keyboard_check_pressed(vk_numpad1) then key_input_text = "1"
+	else if keyboard_check_pressed(vk_numpad2) then key_input_text = "2"
+	else if keyboard_check_pressed(vk_numpad3) then key_input_text = "3"
+	else if keyboard_check_pressed(vk_numpad4) then key_input_text = "4"
+	else if keyboard_check_pressed(vk_numpad5) then key_input_text = "5"
+	else if keyboard_check_pressed(vk_numpad6) then key_input_text = "6"
+	else if keyboard_check_pressed(vk_numpad7) then key_input_text = "7"
+	else if keyboard_check_pressed(vk_numpad8) then key_input_text = "8"
+	else if keyboard_check_pressed(vk_numpad9) then key_input_text = "9"
 	else key_input_text = "NONE"
 end
 #endregion

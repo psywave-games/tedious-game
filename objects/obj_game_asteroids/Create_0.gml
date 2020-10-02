@@ -8,6 +8,7 @@ player_y =    120
 player_hspeed = 0
 player_vspeed = 0
 player_direction = 270
+player_teleported = false
 
 shoot_hspeed = array_create(5, 0)
 shoot_vspeed = array_create(5, 0)

@@ -1,3 +1,8 @@
+vgn_axis_x = 0
+vgn_axis_y = 0
+vgn_axis_z = 0
+vgn_fire = false
+
 key_axis_x = 0
 key_axis_y = 0
 key_axis_switch = 0
@@ -10,7 +15,6 @@ key_menu_go = 0
 key_menu_in = 0
 
 key_run = false
-key_fire = false
 key_interact = false
 
 

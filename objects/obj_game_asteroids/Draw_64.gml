@@ -10,10 +10,10 @@ draw_set_color(c_white)
 draw_rectangle(vgn_x(0), vgn_y(0), vgn_x(480), vgn_y(240), true)
 #endregion
 #region PLAYER TELEPORT
-/// teleport
-if game.app.input.key_axis_y < 0 begin
+var _key_teleport = game.app.input.vgn_axis_y < 0
+if _key_teleport and not player_teleported begin
 	do begin
-		var success = true
+		player_teleported = true
 		player_x = irandom(480)
 		player_y = irandom(240)
 		
@@ -27,14 +27,16 @@ if game.app.input.key_axis_y < 0 begin
 		
 			/// colide
 			if point_distance(asteroid_x[i], asteroid_y[i], player_x, player_y) <= asteroid_size[i] * 3 then
-				success = false
+				player_teleported = false
 		end
-	end until success
+	end until player_teleported
 end
+/// reset when realese button teleport
+player_teleported = _key_teleport
 #endregion
 #region PLAYER ROTATE
 /// giroscopio
-player_direction += game.app.input.key_axis_x * 3
+player_direction += game.app.input.vgn_axis_x * 3
 
 /// do a barrel roll 360
 if player_direction > 360 then
@@ -46,7 +48,7 @@ else if player_direction < 0 then
 #endregion
 #region PLAYER TRUST
 /// impulsionar motor
-var engine = game.app.input.key_axis_y? 0.12: 0
+var engine = game.app.input.vgn_axis_y? 0.12: 0
 player_hspeed = clamp(player_hspeed + lengthdir_x(engine, player_direction), -2, 2)
 player_vspeed = clamp(player_vspeed - lengthdir_y(engine, player_direction), -2, 2)
 
@@ -77,19 +79,19 @@ if (abs(player_hspeed) + abs(player_vspeed)) < 0.12 begin
 end
 #endregion
 #region PLAYER SOUND
-if game.app.input.key_axis_y < 0 and not audio_is_playing(snd_asteroids_extraShip) then
+if game.app.input.vgn_axis_y < 0 and not audio_is_playing(snd_asteroids_extraShip) then
 	audio_play(snd_asteroids_extraShip, false)
 	
-if game.app.input.key_axis_y > 0 and not audio_is_playing(snd_asteroids_trust) then
+if game.app.input.vgn_axis_y > 0 and not audio_is_playing(snd_asteroids_trust) then
 	audio_play(snd_asteroids_trust, true)
 	
-else if game.app.input.key_axis_y == 0 then
+else if game.app.input.vgn_axis_y == 0 then
 	audio_stop(snd_asteroids_trust)
 #endregion
 #region SHOOT SCRIPT
 if not transition begin
 	/// shoot
-	if game.app.input.key_fire begin
+	if game.app.input.vgn_fire begin
 		for(var i =  array_length_1d(shoot_x) - 1; i >= 1; i--) begin
 			 shoot_x[i] = shoot_x[i - 1]
 			 shoot_y[i] = shoot_y[i - 1]
