@@ -1,5 +1,5 @@
 #region SURVIVAL CRON
-if game.app.state == fsm_game.play then
+if game.app.state == fsm_game.play or game.app.state == fsm_game.insider then
 	global.time_survival += delta_time
 #endregion
 

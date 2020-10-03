@@ -10,7 +10,7 @@ draw_set_color(c_white)
 draw_rectangle(vgn_x(0), vgn_y(0), vgn_x(480), vgn_y(240), true)
 #endregion
 #region PLAYER TELEPORT
-var _key_teleport = game.app.input.vgn_axis_y < 0
+var _key_teleport = game.app.input.vgn_axis_y > 0
 if _key_teleport and not player_teleported begin
 	do begin
 		player_teleported = true
@@ -48,7 +48,7 @@ else if player_direction < 0 then
 #endregion
 #region PLAYER TRUST
 /// impulsionar motor
-var engine = game.app.input.vgn_axis_y? 0.12: 0
+var engine = game.app.input.vgn_axis_y < 0? 0.12: 0
 player_hspeed = clamp(player_hspeed + lengthdir_x(engine, player_direction), -2, 2)
 player_vspeed = clamp(player_vspeed - lengthdir_y(engine, player_direction), -2, 2)
 
@@ -79,10 +79,10 @@ if (abs(player_hspeed) + abs(player_vspeed)) < 0.12 begin
 end
 #endregion
 #region PLAYER SOUND
-if game.app.input.vgn_axis_y < 0 and not audio_is_playing(snd_asteroids_extraShip) then
+if game.app.input.vgn_axis_y > 0 and not audio_is_playing(snd_asteroids_extraShip) then
 	audio_play(snd_asteroids_extraShip, false)
 	
-if game.app.input.vgn_axis_y > 0 and not audio_is_playing(snd_asteroids_trust) then
+if game.app.input.vgn_axis_y < 0 and not audio_is_playing(snd_asteroids_trust) then
 	audio_play(snd_asteroids_trust, true)
 	
 else if game.app.input.vgn_axis_y == 0 then

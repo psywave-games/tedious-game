@@ -166,6 +166,9 @@ if not game.app.happy
 	and self.state != fsm_player.dying 
 	and self.state != fsm_player.died begin 
 	
+	if game.app.state == fsm_game.insider then
+		state_reset(game.app, fsm_game.play)	
+	
 	self.state = fsm_player.dying
 	image_index = 0
 end
