@@ -1,4 +1,5 @@
 #region GAME BACKGROUND NOISE
+/*
 if game.app.render.mode_ratio == 0 and game.app.render.resolution <= 640
 	then if game.app.state == fsm_game.menuMain
 	or game.app.state == fsm_game.menuOptions
@@ -9,7 +10,7 @@ if game.app.render.mode_ratio == 0 and game.app.render.resolution <= 640
 	begin 
 	
 	draw_sprite_tiled_ext(pt_noise, image_index, 0, 0, 1.0, 1.0, 0x333333, 1.0)
-end
+end*/
 #endregion
 #region GAME LOGO
 if game.app.state == fsm_game.menuMain

@@ -1,6 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
-
+/// @description ev_init
 var _s = game.app.state
 
 screen = not (_s == fsm_game.waitFocus

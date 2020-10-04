@@ -276,7 +276,7 @@ end
 #region VIDEOGAME
 if  game.app.state == fsm_game.insider begin
 	vgn_axis_x = _key_righ - _key_left + _gamepad_axis_x
-	vgn_axis_y =  _key_down - _key_up + _gamepad_cross + _gamepad_triangle - _gamepad_square
+	vgn_axis_y =  _key_down - _key_up - _gamepad_cross - _gamepad_triangle + _gamepad_square
 	vgn_axis_z = _key_down - _key_up + _gamepad_axis_y
 	vgn_fire = _keyd_ord_f + _gamepaded_circle
 end

@@ -49,7 +49,7 @@
 #macro	button_default_ah			(game.app.render.mode_ratio? fa_left: fa_center)
 #macro	button_default_vh			(game.app.render.mode_ratio? fa_middle: fa_top)
 #macro	button_default_xx			0
-#macro	button_default_yy			(game.app.render.mode_ratio? 0: (game.app.render.resolution <= 640? 200: 100))
+#macro	button_default_yy			(game.app.render.mode_ratio? 0: 80)
 #macro	button_margin_vertical		10
 #macro	button_margin_horizontal	64
 #macro	button_tolerance_hover		8
