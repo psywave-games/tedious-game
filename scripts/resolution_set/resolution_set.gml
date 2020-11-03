@@ -134,6 +134,7 @@ draw_clear_alpha(c_black, 1.0)
 #endregion 
 
 #region SAVE
+game.app.render.camrange = sqrt(camera_get_view_width(view_camera[0]) * camera_get_view_height(view_camera[0])) * (_camera_ratio >= 1? _camera_ratio: 1/_camera_ratio)
 game.app.render.resolution = game.app.render.size_resolution[_mode_resolution]
 game.app.render.mode_resolution = _mode_resolution
 game.app.render.mode_ratio = _mode_ratio

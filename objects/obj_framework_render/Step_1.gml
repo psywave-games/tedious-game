@@ -84,6 +84,8 @@ end
 #region CAMERA POSITION SET
 self.camx = clamp(self.camx, 0, room_width - vw)
 self.camy = clamp(self.camy, 0, room_height - vh)
+self.cammidx = self.camx + (vw/2)
+self.cammidy = self.camy + (vh/2)
 
 camera_set_view_pos(view_camera[0], self.camx, self.camy)
 #endregion

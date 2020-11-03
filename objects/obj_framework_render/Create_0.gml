@@ -7,7 +7,10 @@ self.resolution = "#error_resolution_unknown"
 ///	posicionamento da camera no mapa
 self.camx = 0
 self.camy = 0
+self.cammidx = 0
+self.cammidy = 0
 self.camwait = false
+self.camrange = 0.0
 
 #region RESOLUTIONS
 self.name_resolution = [

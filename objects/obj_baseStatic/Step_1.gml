@@ -1,3 +1,14 @@
+#region RENDER DISTANCE
+if self.persistent_draw then
+	visible = true
+	
+else if point_distance(game.app.render.cammidx, game.app.render.cammidy, self.x, self.y) <= game.app.render.camrange then
+	visible = true 
+	
+else
+	visible = false
+#endregion
+
 #region IGNORE MOB
 if self.state == fsm_mob.none
 	or self.state == fsm_mob.broken

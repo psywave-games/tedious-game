@@ -7,13 +7,20 @@ internal_analog_dpad = 0
 internal_analog_axis_x = 0
 internal_analog_axis_y = 0
 
-if not screen 
-	or game.app.render.mode_ratio != 0 
-	or (game.app.state != fsm_game.play and game.app.render.resolution <= 640) then 
+#region DISABLE SCREEN TOUTCH BUTTONS
+if game.app.render.mode_ratio != 0 then 
+	exit
+
+if not screen then
+	exit
+	
+if game.app.render.resolution <= 640
+	and game.app.state != fsm_game.play
+	and game.app.state != fsm_game.insider then 
 		exit
+#endregion
 
 draw_set_alpha(1.0)
-
 var _press = mouse_check_button(mb_any)
 var _vw = display_get_gui_width()
 var _vh = display_get_gui_height()
