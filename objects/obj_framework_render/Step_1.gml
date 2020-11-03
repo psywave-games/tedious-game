@@ -60,8 +60,8 @@ switch self.mode_camera begin
 		
 	/// instant change room
 	case 3:
-		self.camx += (_xxt - self.camx) * 0.24
-		self.camy += (_yyt - self.camy) * 0.24
+		self.camx += (_xxt - self.camx) * 1.0
+		self.camy += (_yyt - self.camy) * 1.0
 		break
 		
 	/// soft change room
